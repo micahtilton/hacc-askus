@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1835">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Virtual Server: ITS Customer Backup Policy (non-ITS Backup Solution)
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Virtual Server: ITS Customer Backup Policy (non-ITS Backup Solution)
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p>This is a summary of the ITS Customer Backup Policy if customers  choose NOT to have their servers backed up by ITS and have their own  backup solution. ITS now <strong>requires</strong> backups for all Virtual Servers. For customers seeking a backup solution outside of ITS, these are the required guidelines.</p>
+<h3 id="ITSCustomerBackupPolicy-Whataretheguidelinesforcustomerswhodonotwanttouseenterprisebackup(ie.backuptoanexternaldriveconnectedtoauser&rsquo;sdesktop)?"><strong>What  are the guidelines for customers who do not want to use enterprise  backup (ie. backup to an external drive connected to a user&rsquo;s desktop)?</strong></h3>
+<ul>
+    <li>
+    <p><span>The customer should first determine what kind of Institutional Data will be backed up. </span></p>
+    <ul>
+        <li>
+        <p><span>If data is <span style="color: rgb(51,153,102);">Public</span> or <span style="color: rgb(51,153,102);">Restricted</span>, then the following are <strong>RECOMMENDED. </strong></span></p>
+        </li>
+        <li>
+        <p><span>If data is <span style="color: rgb(255,0,0);">Sensitive</span> or <span style="color: rgb(255,0,0);">Regulated</span>, then the following are <strong>REQUIRED</strong>.</span></p>
+        <div class="table-wrap">
+        <table class="wrapped confluenceTable tablesorter tablesorter-default" role="grid">
+            <colgroup><col /></colgroup>
+            <thead>
+                <tr role="row" class="tablesorter-headerRow">
+                </tr>
+            </thead>
+        </table>
+        </div>
+        </li>
+    </ul>
+    </li>
+</ul>
+<div id="main-content" class="wiki-content">
+<div class="table-wrap">
+<table class="wrapped confluenceTable tablesorter tablesorter-default" role="grid">
+    <tbody aria-live="polite" aria-relevant="all">
+        <tr role="row">
+            <td colspan="1" class="confluenceTd">
+            <p><strong>Ensure Regular Automated Backups:</strong><br />
+            Ensure that all system data is automatically backed up on a regular basis. (CIS Control 10.1)</p>
+            <ul>
+                <li>Example: Daily incremental backups with one full backup, and 30 day retention, depending on your data retention storage policy.</li>
+            </ul>
+            </td>
+        </tr>
+        <tr role="row">
+            <td colspan="1" class="confluenceTd">
+            <p><strong>Perform Complete System Backups:</strong><br />
+            Ensure  that all of the organization's key systems are backed up as a complete  system, through processes such as imaging, to enable the quick recovery  of an entire system. (CIS Control 10.2)</p>
+            <ul>
+                <li>Example: Backup all data as well as application configuration files to ensure a quicker recovery.</li>
+            </ul>
+            </td>
+        </tr>
+        <tr role="row">
+            <td class="confluenceTd">
+            <p><strong>Protect Backups:</strong><br />
+            Ensure  that backups are properly protected via physical security or encryption  when they are stored, as well as when they are moved across the  network. This includes remote backups and cloud services. (CIS Control  10.4)</p>
+            <ul>
+                <li>Backups should be BOTH physically secured and encrypted.</li>
+            </ul>
+            </td>
+        </tr>
+        <tr role="row">
+            <td colspan="1" class="confluenceTd">
+            <p><strong>Ensure Backups Have At least One Non-Continuously Addressable Destination:</strong><br />
+            Ensure  that all backups have at least one backup destination that is not  continuously addressable through operating system calls. (CIS Control  10.5)</p>
+            <ul>
+                <li>The backup destination should not be a device on an  open network, and it should be properly secured via permissions and  access controls.</li>
+            </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<ul>
+    <li>
+    <p>Example backup scenario if NOT choosing backups from ITS</p>
+    <ul>
+        <li>
+        <p>Purchase an additional virtual server and set it up as a storage repository for backups.</p>
+        </li>
+        <li>
+        <p>The backup solution should have a means of encrypting data in transit and in storage for sensitive or regulated data.</p>
+        <ul>
+            <li>
+            <p>An SSL certificate may need to be obtained, depending on how the backup solution works.</p>
+            </li>
+        </ul>
+        </li>
+        <li>
+        <p>Purchase a physical device or server that is meant for backups (i.e., a NAS unit).</p>
+        <ul>
+            <li>
+            <p>ITS does not provide support with setting up physical devices, the customer will need to contact the vendor.</p>
+            </li>
+            <li>
+            <p>Customer  will need to ensure the device can be secured and protected physically  and over the network (i.e., access control rules).</p>
+            </li>
+            <li>
+            <p>Minimum security standards still apply.</p>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+<h3 id="ITSCustomerBackupPolicy-Whatifacustomerdecidestobackuptothecloud(Google,AWS,etc.)?"><strong>What if a customer decides to backup to the cloud (Google, AWS, etc.)?</strong></h3>
+<ul>
+    <li>
+    <p><span>The  customer will be responsible for vetting third-party risk and  constructing backup services that meet the minimum security standards  and backup requirements, as applicable.&nbsp;</span></p>
+    </li>
+    <li>
+    <p><span>Consult with Data Governance (<a href="https://datagov.intranet.hawaii.edu/" class="external-link" rel="nofollow">https://datagov.intranet.hawaii.edu/</a>) before using a third-party cloud backup service.</span></p>
+    <ul>
+        <li>
+        <p><span>The additional Data Governance requirements for&nbsp;third-party IT services will also be required for the customer to complete.</span></p>
+        </li>
+    </ul>
+    </li>
+</ul>
+<h3 id="ITSCustomerBackupPolicy-AdditionalReferencesforFurtherReading"><span>Additional References for Further Reading</span></h3>
+<ul>
+    <li>
+    <p><span>ITS Minimum Security Standards - <a href="https://www.hawaii.edu/infosec/minimum-standards/" class="external-link" rel="nofollow">https://www.hawaii.edu/infosec/minimum-standards/</a></span></p>
+    </li>
+    <li>
+    <p><span>CIS Controls - <a href="https://www.cisecurity.org/controls/cis-controls-implementation-groups/" class="external-link" rel="nofollow">https://www.cisecurity.org/controls/cis-controls-implementation-groups/</a><br />
+    </span></p>
+    </li>
+    <li>
+    <p><span>NIST 800-171 - <a href="https://csrc.nist.gov/publications/detail/sp/800-171/rev-2/final" class="external-link" rel="nofollow">https://csrc.nist.gov/publications/detail/sp/800-171/rev-2/final</a></span></p>
+    </li>
+</ul>
+</div>
+<p>&nbsp;</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1835" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1835" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1835">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1835">
+		1835</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Wed, 18 Nov 2020 10:12am
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Wed, 18 Nov 2020 11:10am</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

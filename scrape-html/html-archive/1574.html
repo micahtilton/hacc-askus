@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1574">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Heartbleed OpenSSL Vulnerability Information
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Heartbleed OpenSSL Vulnerability Information
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p><span style="font-size: small;"><b>(This information is being updated frequently - please check back often for any updates.)</b></span></p>
+<p>A major security vulnerability named Heartbleed&nbsp;was disclosed on April 7, 2014.&nbsp;  This vulnerability affects many websites on the Internet that use OpenSSL to encrypt  webpages (pages that start with https).&nbsp; SSL, or  secure socket layer, is an Internet protocol which is designed to encrypt traffic over the Internet to hide sensitive information from prying eyes.  SSL is often used to encrypt passwords that are used to securely access services offered through a website.</p>
+<p>This OpenSSL security issue allows the stealing  of information protected by SSL by revealing the private keys that protect the  confidentiality of the information.&nbsp; Sites affected by the security vulnerability  can have login credentials stolen as well as other data that would normally be  protected by an encrypted SSL connection.&nbsp; In addition, once an attacker has the private key  for a particular website, they can use the key to decrypt traffic previously sent to  the server prior to the bug being disclosed.</p>
+<p>It is important to note that only specific versions of OpenSSL are vulnerable.  More detailed information  about Heartbleed can be found at:  <a href="http://heartbleed.com">http://heartbleed.com</a></p>
+<p>The Washington Post offered a  <a href="http://www.washingtonpost.com/news/morning-mix/wp/2014/04/09/major-bug-called-heartbleed-exposes-data-across-the-internet/"> reasonable summary</a> of this vulnerability and impact across the Internet.</p>
+<p>&nbsp;</p>
+<p><span style="color: rgb(153, 204, 0);"><span style="font-size: large;"><b>So what does this mean to you?</b></span></span></p>
+<p><span style="font-size: x-small;"><br />
+</span>  <span style="font-size: medium;"><font color="black"><b>Do I need to change my UH username password?</b></font></span></p>
+<p><strong><font color="red">NEW! as of 4/14/2014, 2:30pm</font></strong></p>
+<p>ITS has assessed the impact of the vulnerability for the primary UH services. The list of services and the impact of the Heartbleed bug  is available at: <a href="https://www.hawaii.edu/infosec/heartbleed/index.php">https://www.hawaii.edu/infosec/heartbleed/index.php</a><br />
+You will need to login with your UH username and password to view the page.</p>
+<p>Please note that individual campus or departmental applications are not listed here.  Check with your IT support staff for local service/application information.</p>
+<p>A few UH services were affected by the Heartbleed vulnerability.  Users of those services will be contacted directly to change their passwords.</p>
+<p>You may also be notified by your campus or department to change your UH password if it may have been exposed through their server or service.</p>
+<p>&nbsp;</p>
+<p><font color="black"><b>What about my personal accounts such as Facebook, Twitter, etc.?</b></font></p>
+<p>CNET is maintaining a list of the top 100 web sites and their status available at:  <a href="http://www.cnet.com/how-to/which-sites-have-patched-the-heartbleed-bug/">http://www.cnet.com/how-to/which-sites-have-patched-the-heartbleed-bug/</a></p>
+<p>If you logged-in to any website listed as vulnerable or if you have been notified by the service, you  should change your password AFTER the website has been fixed. If you are not sure if a site was vulnerable,  or if it has been fixed, you can check the website using the Heartbleed test site:  <a href="http://filippo.io/Heartbleed/">http://filippo.io/Heartbleed/</a></p>
+<p><b>IMPORTANT!</b> You should NOT use your UH username and password to login to any non-UH website!  If you did use your UH credentials to login to any vulnerable website, you should change your UH password using  the UH One-Step Password Change page: <a href="https://www.hawaii.edu/username/userprefs/password_only.cgi"> https://www.hawaii.edu/username/userprefs/password_only.cgi</a></p>
+<p>You may need to reset your UH password more than once if you used your UH credentials on   websites that are vulnerable <b>AND</b> used your new/reset password on a vulnerable website that has not yet been fixed.</p>
+<p><b>Be on the alert for phishing attempts!</b></p>
+<p>Watch for fraudulent email claiming to be from UH or other companies with which you do business.  Criminals will use this as an opportunity to create targeted phishing email messages to trick people into  divulging their passwords.  Information Technology Services (ITS) will NEVER ask for your password in an unsolicited  email. Be on the lookout for  sites that purport to tell you whether your site or your information has been compromised, especially if  they demand personal details, login credentials, or payment.</p>
+<p>&nbsp;</p>
+<p><font color="black"><b>For System Administrators:</b></font></p>
+<p><font color="black"><font color="black"><br />
+If you are a system administrator with OpenSSL installed, please see: <a href="http://www.hawaii.edu/askus/1575"> http://www.hawaii.edu/askus/1575</a>  for more information. </font></font></p>
+<p>&nbsp;</p>
+<p><font color="black">Last updated:  April 14, 2014 02:30 PM HST</font></p>
+<p><font color="black"> </font></p>
+<p><font color="black">&nbsp;</font></p>
+<p><font color="black">
+<p>&nbsp;</p>
+</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1574" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1574" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1574">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1574">
+		1574</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Wed, 09 Apr 2014 1:29pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Tue, 15 Apr 2014 11:34am</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1873">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Virtual Server: Dual-Homed to Single-Homed Network Conversion (Linux)
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Virtual Server: Dual-Homed to Single-Homed Network Conversion (Linux)
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<h3>SUMMARY:</h3>
+<p>In the past, virtual servers were provisioned with both a public and a  private network (&quot;dual-homed&quot;). ITS will be removing the use to the  private network, and self-managed VM customers will need to complete the  following steps to remove the private network on their server.</p>
+<p><strong>NOTE: You should contact itscs@hawaii.edu at least 1-2  business days before you plan this, as modifying the private network may  cause a downtime to other services or hosts that your server connects  to. ITS may also need to modify additional firewall rules on your VM, so  if you have critical services that need to be up, it is best that you  coordinate this with us ahead of time.</strong></p>
+<p><strong>You may also request for a snapshot of the server first to allow us to revert back in case a file is deleted or modified in error.</strong></p>
+<p>&nbsp;</p>
+<ol>
+    <li>As the root user, run the &quot;ifconfig&quot; command. You should get an output similar to the following. <br />
+    <br />
+    # ifconfig<br />
+    eno16780032: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;&nbsp; mtu 1500<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet 166.122.3.161&nbsp; netmask 255.255.255.0&nbsp; broadcast 166.122.3.255<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet6 fe80::250:56ff:feb0:2ddd&nbsp; prefixlen 64&nbsp; scopeid 0x20&lt;link&gt;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ether 00:50:56:b0:2d:dd&nbsp; txqueuelen 1000&nbsp; (Ethernet)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX packets 1185&nbsp; bytes 102807 (100.3 KiB)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX errors 0&nbsp; dropped 0&nbsp; overruns 0&nbsp; frame 0<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX packets 198&nbsp; bytes 23317 (22.7 KiB)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX errors 0&nbsp; dropped 0 overruns 0&nbsp; carrier 0&nbsp; collisions 0<br />
+    <br />
+    <span style="background-color: rgb(255, 255, 0);">ens224</span>: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;&nbsp; mtu 1500<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="background-color: rgb(255, 255, 0);">inet 172.17.36.14&nbsp;</span> netmask 255.255.255.0&nbsp; broadcast 172.17.36.255<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet6 fe80::250:56ff:feb0:5673&nbsp; prefixlen 64&nbsp; scopeid 0x20&lt;link&gt;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ether 00:50:56:b0:56:73&nbsp; txqueuelen 1000&nbsp; (Ethernet)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX packets 689&nbsp; bytes 146959 (143.5 KiB)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX errors 0&nbsp; dropped 0&nbsp; overruns 0&nbsp; frame 0<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX packets 688&nbsp; bytes 89245 (87.1 KiB)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX errors 0&nbsp; dropped 0 overruns 0&nbsp; carrier 0&nbsp; collisions 0<br />
+    <br />
+    lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;&nbsp; mtu 65536<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet 127.0.0.1&nbsp; netmask 255.0.0.0<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet6 ::1&nbsp; prefixlen 128&nbsp; scopeid 0x10&lt;host&gt;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; loop&nbsp; txqueuelen 1&nbsp; (Local Loopback)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX packets 0&nbsp; bytes 0 (0.0 B)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX errors 0&nbsp; dropped 0&nbsp; overruns 0&nbsp; frame 0<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX packets 0&nbsp; bytes 0 (0.0 B)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX errors 0&nbsp; dropped 0 overruns 0&nbsp; carrier 0&nbsp; collisions 0<br />
+    <br />
+    Note the highlighted line above with &quot;<strong>ens224</strong>&quot; and the highlighted IP address as a <strong>172.17.*.*</strong> IP. This indicates that &quot;ens224&quot; is the private network interface, and your server may have a different name such as &quot;eth1&quot;. Ensure the IP address starts with <strong>&quot;172.17.*.*&quot;</strong>, which indicates that it's a private IP.<br />
+    &nbsp;</li>
+    <li>Edit the <strong>/etc/resolv.conf</strong> file using the command &quot;vi /etc/resolv.conf&quot;<br />
+    <br />
+    Change the &quot;<strong>nameservers</strong>&quot; lines to use <strong>192.168.10.115</strong> and <strong>192.168.10.116</strong> like in the example below:<br />
+    <br />
+    <img src="data:image/png;base64,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" alt="" /><br />
+    <br />
+    Save the file and exit.<br />
+    &nbsp;</li>
+    <li>Delete the following file: <strong>/etc/sysconfig/network-scripts/ifcfg-&lt;name&gt;</strong>, where &lt;name&gt; is the name of the private network interface from the &quot;ifconfig&quot; command&quot;. For example, &quot;rm /etc/sysconfig/network-scripts/ifcfg-eth1&quot;<br />
+    <strong><br />
+    WARNING: Be sure to check if the file does contain the private IP first or you may be accidentally deleting the public IP!</strong><br />
+    &nbsp;</li>
+    <li>Delete the following file:<strong> /etc/sysconfig/network-scripts/route-&lt;name&gt;</strong>, where &lt;name&gt; is the name of the private network interface from the &quot;ifconfig&quot; command&quot;. For example, &quot;rm /etc/sysconfig/network-scripts/route-eth1&quot; if the interface's name is &quot;eth1&quot;<br />
+    &nbsp;</li>
+    <li>Edit <strong>/etc/sysconfig/network</strong> and ensure the gateway points to the gateway IP of the public network. If you are not sure what the public gateway is, email itscs@hawaii.edu. Example below of the file referring to the public gateway and the public network interface, eth0:<br />
+    <br />
+    <img src="data:image/png;base64,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" alt="" /><br />
+    <br />
+    &nbsp;</li>
+    <li>Email itscs@hawaii.edu that you have disabled the private network and removed the static routes. We will then remove the NIC from the VM, and modify additional firewall rules on our end if needed.<br />
+    <br />
+    Once we've confirmed removing the NIC from the VM, restart the VM and SSH back in. If you are unable to use SSH, <a href="https://www.hawaii.edu/askus/1693">access the VM from the vCenter console</a>.<br />
+    <br />
+    <strong>Please note that if the server needs to connect to critical services, this part may not work unless we modify the firewall rules. Therefore, it would be best if we are contacted during business hours to ensure this is completed.<br />
+    <br />
+    <br />
+    </strong></li>
+    <li>Re-register the server with Katello to continue to get Linux updates: <a href="https://www.hawaii.edu/askus/1752">https://www.hawaii.edu/askus/1752</a><br />
+    &nbsp;</li>
+</ol>
+<h3>RELATED ARTICLES:</h3>
+<ul>
+    <li><a href="https://www.hawaii.edu/askus/1871">Virtual Server: Dual-Homed to Single-Homed Network Conversion (Windows)</a></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1873" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1873" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1873">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1873">
+		1873</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Fri, 13 May 2022 12:33pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Fri, 13 May 2022 1:03pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

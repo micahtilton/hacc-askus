@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/694">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Creating Personal Homepages
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Creating Personal Homepages
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p><span class="reglineitems">Welcome to Creating Personal Homepages. One of the privileges of having a UH Username is that you are allowed to create a personal homepage in your account that is viewable to the world.<br />
+<br />
+</span><span class="smltext"><font color="#ff0000">PLEASE READ!</font><br />
+Pages which include offensive images or sounds, and copyrighted material and pages created for commercial purposes are strictly prohibited. Any violation of the <a href="/infotech/policies/itpolicy.html">Executive Policy Use and Management of Information Technology Resources</a> or the <a href="http://www.studentaffairs.manoa.hawaii.edu/policies/conduct_code/">Student Conduct Code</a> may result in disciplinary action and may also result in revocation of your computing privileges and/or complete or temporary disabling of your personal homepages from the system. Please read the <a href="http://www.hawaii.edu/askus/723">Homepage Policies</a> for more information.</span></p>
+<h2>Before You Begin</h2>
+<p><span class="reglineitems">Before you can create your personal homepage you must have a UH Username: </span><br />
+<a class="reglineitems" href="719">Getting Started with Your UH Username</a></p>
+<h2>Your URL Is...</h2>
+<p><span class="reglineitems">The URL (Uniform Resource Locator) of your page will be in the form: <strong>http://www2.hawaii.edu/~username</strong><br />
+For example: Jane Doe with a UH Username of &quot;jdoe&quot; has created a personal webspace. A user will be able to be access Jane Doe's website in a web browser with the url http://www2.hawaii.edu/~jdoe </span></p>
+<p>All files that Jane would like to make available for her webspace should be in a directory called &quot;public_html&quot; in her UH home account. The default file that gets loaded when somebody browses your Web page is &quot;index.html&quot;.</p>
+<p>The &quot;public_html&quot; directory and its contents that you'd like to be available on the Web needs to be set such that the web server can read them.&nbsp; New files can be uploading using a sftp client connecting at port 22 (see sftp section below).</p>
+<h2 id="ftp">Manual Updates</h2>
+<p>&nbsp;</p>
+<table border="0" cellspacing="2" cellpadding="0" width="95%">
+    <tbody>
+        <tr>
+            <td class="reglineitems" valign="top" width="50%"><u>General Settings for Personal Homepages</u><br />
+            Hostname: uhunix.hawaii.edu<br />
+            Username: &lt;Your UH Username&gt;<br />
+            Password: &lt;Your Password&gt;<br />
+            Directory: public_html</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<h3>SSH</h3>
+<p>ITS supports SSH for the PC.</p>
+<p>ITS supports the secure file transfer (sftp) protocol for uploading files onto your personal webspace. Some applications that support sftp are FileZilla for Windows and Mac OS X. File transfer protocal (ftp) clients such as (WS_FTP LE and Fetch 3.x - 4.x) no longer work with our services, as these programs do not support encryption.</p>
+<p>&nbsp;</p>
+<table border="1" width="75%">
+    <tbody>
+        <tr>
+            <td width="22%"><strong>Platform</strong>:</td>
+            <td width="27%"><strong>Protocol:</strong></td>
+            <td width="26%"><strong>Application: (click to download)</strong></td>
+            <td width="25%"><strong>Installation Instructions</strong></td>
+        </tr>
+        <tr>
+            <td width="22%">PC</td>
+            <td width="27%">SSH</td>
+            <td width="26%"><a href="https://drive.google.com/a/hawaii.edu/file/d/1gs7uqFwCG858ZZ9hiL8eSbNuUWRLc4gt/view?usp=sharing">PuTTY 0.73</a></td>
+            <td width="25%"><a target="_blank" href="http://www.hawaii.edu/askus/644">HTML</a></td>
+        </tr>
+        <tr>
+            <td>PC</td>
+            <td>SFTP</td>
+            <td><a href="https://www.hawaii.edu/itsdocs/sftpclients/FileZilla_3.26.0_win64-setup_bundled.exe">FileZilla</a></td>
+            <td><a href="1735">HTML</a></td>
+        </tr>
+        <tr>
+            <td>Macintosh OS X 10.9 and higher</td>
+            <td>SFTP</td>
+            <td><a href="https://drive.google.com/file/d/1iT9nLefYiCbDdGSzgtbj3DNBocpiLgTx/view?usp=sharing">FileZilla</a></td>
+            <td>
+            <p><a href="https://www.hawaii.edu/askus/1741">HTML</a></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p><br />
+Whichever sftp client you choose to use when uploading your Web content, remember to include the port number, which is 22, when connecting. This number comes after the host name when opening a sftp connection to the Web server. For instance, when connecting to uhunix, the host name should look like <strong>uhunix.hawaii.edu:22</strong>. Use this host name along with your uhunix username and password when creating a sftp connection to publish webpages. <!--This will set the file permissions so that the documents can be seen over the Internet.--></p>
+<p>&nbsp;</p>
+<p>For more information, please visit the <a href="692">SSH/SSL FAQ</a>.</p>
+<h2>Troubleshooting</h2>
+<ul>
+    <li>If you have trouble uploading your files, send mail to <a href="mailto:help@hawaii.edu">help@hawaii.edu</a></li>
+    <li>If your error message says the file is not readable, the directory is not readable, or permission denied, then use the <a href="/account/">Personal Homepage Management Utility</a> to make your file(s) viewable.</li>
+    <li>If you get an error messsage saying that the file is not found, be sure you have an 'index.html' file in your public_html subdirectory. You can use the <a href="/account/">Personal Homepage Management Utility</a> to create a default (index.html) page in the correct place or make sure your <a href="694#ftp">SFTP general settings</a> are correct.</li>
+    <li>If your error message states that the host is not found, be sure you type <a href="694#url">your URL</a> correctly.</li>
+    <li>Make sure that you include the port number for you sftp connection. For example, when connecting to uhunix use <strong>uhunix.hawaii.edu:22</strong>. <!--This will ensure that the permissions are set so that the page may be seen over the Internet.--></li>
+</ul>
+<h2>Scripting and ASP Info</h2>
+<p><span class="reglineitems">CGI scripting (other than features listed below), Microsoft Active Server Pages (ASP), and Microsoft Extensions are not supported on MyHomepages. CGI scripting is only offered for departmental pages. </span></p>
+<h2><span class="reglineitems">Add-On Features</span></h2>
+<p><span class="reglineitems"><strong>Form Methods</strong><br />
+For a simple method of retrieving a users comments (email or a text file) with a form see:<br />
+<a href="709">HFPM Method</a> </span></p>
+<p><strong>Server-side Includes</strong><br />
+To include the contents from another file in your page:<br />
+<a href="700">Server-side Includes</a></p>
+<p><strong>Page Counter</strong><br />
+For instructions on adding a page counter:<br />
+<a href="710">Adding a Page Counter</a></p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/694" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="694" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:694">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=694">
+		694</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Tue, 13 Feb 2007 10:13am
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Thu, 16 Jun 2022 1:50pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

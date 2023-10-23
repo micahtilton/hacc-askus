@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1886">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Proofpoint Personal Email Quarantine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Proofpoint Personal Email Quarantine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<ul>
+    <li><a href="#personalQuarantine">Personal Quarantine</a></li>
+    <li><a href="#quarantineDailyDigest">Quarantine Daily Digest</a></li>
+    <li><a href="#quarantineWebPortal">Quarantine Web Portal</a></li>
+    <li><a href="#spamVsLowPriority">Spam vs. Low Priority</a></li>
+    <li><a href="#turnOnRestrictive">Turning On Restrictive (Spam and Low Priority) Filtering</a></li>
+    <li><a href="#accessYourPersonalQuarantine">Accessing Your Personal Quarantine</a></li>
+    <li><a href="#releaseQuarantinedEmail">Releasing Quarantined Email to Your Inbox</a></li>
+    <li><a href="#safeBlockedSenders">Safe Senders and Blocked Senders Lists</a></li>
+    <li><a href="#addSafeSenders">Adding Senders to Your Safe Senders List</a></li>
+    <li><a href="#addBlockedSenders">Adding Senders to Your Blocked Senders List</a></li>
+    <li><a href="#manageSafeBlockedSenders">Managing your Safe/Blocked Senders Lists</a></li>
+    <li><a href="#requestOnDemandDigest">Requesting an On-Demand Quarantine Digest</a></li>
+    <li><a href="#optOutDailyDigest">Opting-Out of Receiving the Daily Digest</a></li>
+    <li><a href="#personalQuarantineFAQs">Personal Email Quarantine FAQs</a></li>
+</ul>
+<h2><a name="personalQuarantine">Personal Quarantine</a></h2>
+<div>Proofpoint is the University's email security gateway, providing additional malware, phishing, spam, and targeted attack protection. Proofpoint automatically evaluates all incoming email and protects against spam, malware, phishing, spoofing, and enforces other content policies for the University. Email messages that are evaluated as spam will be delivered to a user&rsquo;s personal quarantine for their review instead of being sent directly to their inbox. This personal quarantine serves as an additional layer of defense while still providing users with the control to manage the emails that Proofpoint is filtering. Each user/account has their own personal quarantine. Users will be notified of new messages in their personal quarantine via a daily digest sent by email. Users can also review messages in their personal quarantine at any time by visiting the quarantine web portal. Messages stored in a user&rsquo;s personal quarantine will be automatically deleted after 30 days.</div>
+<div>&nbsp;</div>
+<div>Note: to better protect users, Proofpoint will block highly malicious types of email (phishing, malware, etc.) before ever reaching a user&rsquo;s personal quarantine or inbox and, thus, users will be unable to interact with these more dangerous types of messages.</div>
+<div>&nbsp;</div>
+<hr />
+<h2><a name="quarantineDailyDigest">Quarantine Daily Digest</a></h2>
+<div>Users will receive a daily digest that will provide a list of any new emails that have been placed in their personal quarantine within the last 24 hours. These daily digests will be delivered to users every day at 7:00 AM. Emails in a user&rsquo;s personal quarantine are organized into spam or low priority (unsolicited invitations, newsletters, etc.) categories. From the emailed daily digest, users can review the sender, subject, and sent date/time of an email and can perform quick actions to release an email to their inbox or add a sender to their personal safe list. From the daily digest, users can also quickly pivot to the email quarantine web portal to further manage their personal quarantine.</div>
+<div>&nbsp;</div>
+<hr />
+<h2><a name="quarantineWebPortal">Quarantine Web Portal</a></h2>
+<div>The quarantine web portal provides users with additional tools to manage their quarantine. In the web portal, users can</div>
+<ul>
+    <li>view full email details including the body of a message,</li>
+    <li>view all emails still stored in their quarantine,</li>
+    <li>add or remove senders to or from their safe and block lists,</li>
+    <li>delete emails stored in their quarantine,</li>
+    <li>modify their daily digest preferences.<br />
+    &nbsp;</li>
+</ul>
+<hr />
+<h2><a name="spamVsLowPriority">Spam vs. Low Priority</a></h2>
+<div>Quarantined email in both the daily digest and web portal will be organized into two categories: Spam and Low Priority. In the daily digest, separate tables for Spam and Low Priority (with one email per row) will be presented to users. In the web portal, users will need to navigate between the Spam and Low Priority folders using the left-hand folder navigation menu.</div>
+<h3 style="margin-left: 40px;">Spam</h3>
+<div style="margin-left: 40px;">Spam emails, sometimes referred to as &ldquo;junk emails&rdquo;, are unsolicited email messages. Often these messages are sent in bulk and will contain advertisements or will be commercial in nature. Spammers obtain email addresses from compromised websites or email lists, by harvesting compromised users&rsquo; address books, or by buying/trading address lists with other malicious actors. Some spam messages are not only annoying, but potentially harmful - used as a mechanism to direct users to malicious websites, broadly drop malicious programs or files as attachments, or con/scam users out of money.</div>
+<h3 style="margin-left: 40px;">Low Priority</h3>
+<div style="margin-left: 40px;">Low Priority emails are often newsletters, invitations, or announcements from companies or services that users may have knowingly or unknowingly signed up for. Sometimes services that users sign up for may not inform users that they will be adding them to mailing lists or may share a user&rsquo;s email address with other businesses without plainly stating it to users at the time of sign-up. What is considered wanted or unwanted low priority email may differ from user to user, so it may be prudent to more carefully review messages quarantined as low priority.</div>
+<div>&nbsp;</div>
+<hr />
+<h2><a name="turnOnRestrictive">Turning On Restrictive (Spam and Low Priority) Filtering</a></h2>
+<div>By default, only spam filtering is turned on. To also turn on &quot;low priority&quot; message filtering:
+<ol>
+    <li>Access your <a href="https://quarantine.hawaii.edu" target="_blank">personal quarantine</a>.</li>
+    <li>Click on <strong>Profile</strong> (bottom left hand column). In <strong>My Settings</strong>, under <strong>What type of spam detection do you want?</strong>, select <strong>Restrictive</strong> to include &quot;low priority&quot; email message filtering.</li>
+    <li>Click <strong>Save</strong>.</li>
+</ol>
+</div>
+<div style="margin-left: 40px;"><input type="image" src="/help/chasek/images/Image/proofpoint/proofpoint_profile.png" /></div>
+<div>&nbsp;</div>
+<hr />
+<h2><a name="accessYourPersonalQuarantine">Accessing Your Personal Quarantine</a></h2>
+<h3 style="margin-left: 40px;">Daily Digest</h3>
+<div style="margin-left: 40px;">Users will receive a daily digest to their inbox every day at 7:00 AM if there are any new emails in their personal quarantine. If there are no new emails in their personal quarantine since the last daily digest was sent, users will not receive a scheduled daily digest. Users can also manually request an on-demand digest at any time by visiting any recent daily digest and clicking on the &ldquo;Request On-Demand Quarantine Digest&rdquo; link. The on-demand digest will show any new emails in their personal quarantine since the last daily digest in addition to any emails currently stored in their personal quarantine.</div>
+<h3 style="margin-left: 40px;">Web Portal</h3>
+<div style="margin-left: 40px;">Users can access their personal quarantine web portal by visiting <a href="https://quarantine.hawaii.edu"><strong>quarantine.hawaii.edu</strong></a> (available after Proofpoint's implementation on 5/22/2023). Users can also pivot to the web portal from any daily digest by clicking on the &ldquo;Manage My Quarantine (Quarantine Web Portal)&rdquo; link, or by clicking the Proofpoint icon in their Google App Drawer&nbsp;<img src="https://storage.googleapis.com/support-kms-prod/UjTPY4hdwc1YncvUDZEM0Y9sP5MkF0KKDMH8" alt="Apps" />.</div>
+<div><span style="white-space:pre">		</span></div>
+<hr />
+<h2>&nbsp;<a name="releaseQuarantinedEmail">Releasing Quarantined Email to Your Inbox</a></h2>
+<h3 style="margin-left: 40px;">Daily Digest</h3>
+<div style="margin-left: 40px;">To release quarantined items from your daily digest to your inbox, click on the &ldquo;Release&rdquo; link under the &ldquo;Action&rdquo; column next to the email you want to release. Repeat this process for any other emails in your daily digest that you wish to release. Optionally, you can also click &ldquo;Release and Allow Sender&rdquo; to release the quarantined email to your inbox and allow all future emails from the sender to bypass your personal quarantine.&nbsp;</div>
+<div style="margin-left: 40px;">&nbsp;</div>
+<div style="margin-left: 40px;"><input type="image" src="/help/chasek/images/Image/proofpoint/Quarantine_Digest_Release%20(4).jpg" width="800" height="93" /></div>
+<h3 style="margin-left: 40px;">Web Portal</h3>
+<div style="margin-left: 40px;">To release quarantined items from the Web Portal, tick the checkbox next to an email or multiple emails that you want to release to your inbox, then click &ldquo;Release&rdquo; in the toolbar. You can also click into an individual email to view additional details and then click &ldquo;Release&rdquo; in the toolbar. Optionally, you can click &ldquo;Release and Allow Sender&rdquo; to release selected quarantine emails to your inbox and allow all future emails from those sender(s) to bypass your personal quarantine.</div>
+<div style="margin-left: 40px;">&nbsp;</div>
+<div style="margin-left: 40px;"><input type="image" src="/help/chasek/images/Image/proofpoint/Quarantine_Web_Portal_Release.jpg" width="800" height="404" /></div>
+<div style="margin-left: 40px;">&nbsp;</div>
+<hr />
+<h2><a name="safeBlockedSenders">Safe Senders and Blocked Senders Lists</a></h2>
+<div>Adding senders to your safe senders list allows all future email sent from an address to bypass your personal quarantine and flow directly into your inbox regardless of whether Proofpoint evaluates the email as spam or low priority. This is useful if you trust all emails coming from a particular source and their emails sometimes end up in your personal quarantine.</div>
+<div>&nbsp;</div>
+<div>Adding senders to your blocked list causes all future email sent from an address to always filter into your personal quarantine and never flow directly into your inbox. This is useful if you would like to block all future emails coming from a particular source.</div>
+<div>&nbsp;</div>
+<hr />
+<h2><a name="addSafeSenders">Adding Senders to Your Safe Senders List</a></h2>
+<h3 style="margin-left: 40px;">Daily Digest</h3>
+<div style="margin-left: 40px;">To add senders to your safe senders list from your daily digest, click on the &ldquo;Release and Allow Sender&rdquo; link under the &ldquo;Action&rdquo; column next to the email sent by the address you wish to safe list. This will release the email to your inbox and add the sender to your safe senders list. Repeat this process for any other emails in your daily digest with different senders that you wish to safe list.</div>
+<div style="margin-left: 40px;">&nbsp;</div>
+<div style="margin-left: 40px;"><input type="image" src="/help/chasek/images/Image/proofpoint/Quarantine_Digest_Release_Allow.jpg" width="800" height="93" /></div>
+<h3 style="margin-left: 40px;">Web Portal</h3>
+<div style="margin-left: 40px;">To add senders to your safe senders list from the web portal, tick the checkbox next to an email or multiple emails sent by addresses you wish to safe list, then click &ldquo;Allow Sender&rdquo; in the toolbar. You can also click into an individual email to view additional details and then click &ldquo;Allow Sender&rdquo; in the toolbar. Optionally, you can click &ldquo;Release and Allow Sender&rdquo; to both release the selected quarantine emails to your inbox and allow all future emails from those sender(s) to bypass your personal quarantine.</div>
+<div style="margin-left: 40px;">&nbsp;</div>
+<div style="margin-left: 40px;"><input type="image" src="/help/chasek/images/Image/proofpoint/Quarantine_Web_Portal_Allow%20(1).jpg" width="800" height="404" /></div>
+<div>&nbsp;</div>
+<hr />
+<h2><a name="addBlockedSenders">Adding Senders to Your Blocked Senders List</a></h2>
+<h3 style="margin-left: 40px;">Daily Digest</h3>
+<div style="margin-left: 40px;">Adding senders to your blocked senders list is currently not available using the daily digest. You will need to use the web portal, instead.</div>
+<h3 style="margin-left: 40px;">Web Portal</h3>
+<div style="margin-left: 40px;">To add senders to your blocked senders list from the web portal, tick the checkbox next to an email or multiple emails sent by addresses you wish to block list, then click &ldquo;Block Sender&rdquo; in the toolbar. You can also click into an individual email to view additional details and then click &ldquo;Block Sender&rdquo; in the toolbar.</div>
+<div style="margin-left: 40px;">&nbsp;</div>
+<div style="margin-left: 40px;"><input type="image" src="/help/chasek/images/Image/proofpoint/Quarantine_Web_Portal_Block.jpg" width="800" height="404" /></div>
+<div>&nbsp;</div>
+<hr />
+<h2><a name="manageSafeBlockedSenders">Managing your Safe/Blocked Senders Lists</a></h2>
+<div>Your safe and blocked senders lists can be managed in the web portal. Actions available include adding new entries, editing existing entries, or deleting existing entries.</div>
+<h3 style="margin-left: 40px;">Daily Digest</h3>
+<p style="margin-left: 40px;">Managing your safe/blocked senders lists is currently not available using the daily digest. You will need to use the web portal, instead.</p>
+<h3 style="margin-left: 40px;">Web Portal</h3>
+<div style="margin-left: 40px;">To manage your safe/blocked senders lists from the web portal, click on &ldquo;Lists&rdquo; in the lower left-hand corner. In the left-hand navigation menu select the list you&rsquo;d like to manage - either &ldquo;Safe Senders List&rdquo; or &ldquo;Blocked Senders List&rdquo;. From here you will see a list of all entries in your selected list. To add a new entry, click &quot;New&quot; from the toolbar. To edit an existing entry, tick the checkbox next to the entry you wish to edit then select &quot;Edit&quot; from the toolbar. To delete an existing entry, tick the checkbox next to the entry you wish to edit then select &quot;Delete&quot; from the toolbar.</div>
+<div>&nbsp;</div>
+<div>Note: removing an entry from your blocked list will not guarantee that the sender&rsquo;s email will always be delivered to your inbox - their email will still be evaluated and potentially filtered into your personal quarantine unless you specifically add them to your safe list. Similarly, removing an entry from your safe list will not guarantee that the sender&rsquo;s email will always be filtered into your personal quarantine - their email will still be evaluated and potentially allowed to flow to your inbox.</div>
+<div>&nbsp;</div>
+<hr />
+<h2><a name="requestOnDemandDigest">Requesting an On-Demand Quarantine Digest</a></h2>
+<div>You can request an on-demand digest at any time to see an up-to-date list of emails contained in your personal quarantine. Note that, unlike the automated daily digests which only show emails that arrived in your personal quarantine since the last daily digest was sent, on-demand digests will list the latest (chronological) emails in your personal quarantine.</div>
+<h3 style="margin-left: 40px;">Daily Digest</h3>
+<div style="margin-left: 40px;">From any daily digest email, click on the &ldquo;Request On-Demand Quarantine Digest&rdquo; link.</div>
+<h3 style="margin-left: 40px;">Web Portal</h3>
+<div style="margin-left: 40px;">From the web portal, select &ldquo;Options&rdquo; from the toolbar, then &ldquo;Request Digest&rdquo;.</div>
+<div>&nbsp;</div>
+<hr />
+<h2><a name="optOutDailyDigest">Opting-Out of Receiving the Daily Digest</a></h2>
+<div>From the web portal, click &ldquo;Profile&rdquo; in the lower left-hand corner. Next, uncheck &ldquo;Send digest with new messages in my Email Quarantine Daily Digest&rdquo; option, then click &ldquo;Save&rdquo;.</div>
+<div>&nbsp;</div>
+<div>You can opt back in at any time by returning to the web portal and checking that option again.</div>
+<div>&nbsp;</div>
+<hr />
+<div>&nbsp;</div>
+<div>
+<h2><a name="personalQuarantineFAQs">Personal Email Quarantine FAQs</a></h2>
+</div>
+<h3 style="margin-left: 40px;">How long are emails stored in my personal quarantine?</h3>
+<div style="margin-left: 40px;">Email is stored for 30 days in your personal quarantine. Any email older than 30 days is automatically deleted.</div>
+<h3 style="margin-left: 40px;">What if I want to keep an email for longer than 30 days?</h3>
+<div style="margin-left: 40px;">It is recommended that you release any emails that you&rsquo;d like to store longer-term to your inbox.</div>
+<h3 style="margin-left: 40px;">I didn&rsquo;t get a daily digest today. Why is that?</h3>
+<div style="margin-left: 40px;">You will only receive a daily digest if new emails have been filtered to your personal quarantine since the last time you received a digest.</div>
+<h3 style="margin-left: 40px;">Do I need to take any action on messages in my personal quarantine?</h3>
+<div style="margin-left: 40px;">It is recommended to review your daily digests for email that you want to release to your inbox. As email in your personal quarantine will be deleted after 30 days, you have a limited window within which you can review and release emails in your quarantine.</div>
+<div style="margin-left: 40px;">&nbsp;</div>
+<div style="margin-left: 40px;">For email that you do not want to release, no further action is required on your part. Email can simply remain in your quarantine until they are deleted after 30 days.</div>
+<h3 style="margin-left: 40px;">Do I need to delete email in my personal quarantine?</h3>
+<div style="margin-left: 40px;">No, email will be automatically deleted after 30 days. You do not need to manually delete email in your personal quarantine.</div>
+<h3 style="margin-left: 40px;">Can I change the time at which I receive my daily digest?</h3>
+<div style="margin-left: 40px;">Unfortunately, no. Users cannot specify at which time they will receive the scheduled daily digests. Digests are currently scheduled to be sent at 7:00 AM daily. Alternatively, users can request an on-demand digest at any time or visit the web portal to review their personal quarantine at any time.</div>
+<h3 style="margin-left: 40px;">I can&rsquo;t find a message in my personal quarantine. Where did it go?</h3>
+<div style="margin-left: 40px;">Emails are only stored in your personal quarantine for 30 days. If the email you&rsquo;re looking for is older than 30 days, it will have been deleted.</div>
+<div style="margin-left: 40px;">&nbsp;</div>
+<div style="margin-left: 40px;">If you had already released an email from your personal quarantine, you will find it in your inbox or possibly other folders/labels at your Google@UH Gmail (remember, any filters you have configured within your Google@UH gmail will still trigger on matched email released from your quarantine).</div>
+<div style="margin-left: 40px;">&nbsp;</div>
+<div style="margin-left: 40px;">If you have many messages in your quarantine and are having trouble finding what you're looking for, try searching your quarantine for the sender or a part of the subject by clicking &ldquo;Find&rdquo; in the toolbar of the web portal.</div>
+<h3 style="margin-left: 40px;">Will I see all filtered messages in my personal quarantine?</h3>
+<div style="margin-left: 40px;">All spam and low priority email quarantined within the last 30 days will be visible in your personal quarantine.</div>
+<div style="margin-left: 40px;">&nbsp;</div>
+<div style="margin-left: 40px;">To better protect users, proofpoint will block more dangerous or malicious types of email (phishing, malware, etc.) before ever reaching a user&rsquo;s personal quarantine or inbox and thus users will be unable to view or interact with these types of messages.</div>
+<h3 style="margin-left: 40px;">How do I identify my daily digest?</h3>
+<div style="margin-left: 40px;">You will receive your daily digest every morning at 7:00 AM. Other details of the daily digest are as follows:</div>
+<div style="margin-left: 40px;">&nbsp;</div>
+<div style="margin-left: 40px;"><strong>from: </strong>Email Quarantine Daily Digest &lt;noreply@hawaii.edu&gt;</div>
+<div style="margin-left: 40px;"><strong>to: </strong>yourusername@hawaii.edu</div>
+<div style="margin-left: 40px;"><strong>subject: </strong>Email Quarantine Daily Digest: X Total Messages (&lsquo;X&rsquo; representing the number of new messages that have been quarantined since the last daily digest was sent)</div>
+<h3 style="margin-left: 40px;">What&rsquo;s the difference between the &ldquo;Release&rdquo; and &ldquo;Release and Allow Sender&rdquo; actions?</h3>
+<div style="margin-left: 40px;">&ldquo;Release&rdquo; will release a message from your quarantine to your inbox. &ldquo;Release and Allow Sender&rdquo; will both release a message to your inbox and add the sender of the email to your safe senders list, allowing all future email from that sender to bypass your personal quarantine and always arrive in your inbox.</div>
+<div style="margin-left: 40px;">&nbsp;</div>
+<h3 style="margin-left: 40px;">What's the difference between my personal quarantine and my gmail 'Spam' folder?</h3>
+<div style="margin-left: 40px;">In concept, the two are very similar. However, Proofpoint's personal quarantine adds an additional layer of defense by safely allowing users to review messages <em>before </em>they arrive in their inbox. This can help prevent accidental clicks on advertisements or attachments, the loading of tracking cookies/images, and unintentionally providing data on your activity to third parties.</div>
+<p>&nbsp;</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1886" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1886" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1886">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1886">
+		1886</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Tue, 25 Apr 2023 3:57pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Thu, 25 May 2023 3:22pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

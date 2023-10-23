@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1874">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Enabling the OpenSSH Client (SSH) on Windows
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Enabling the OpenSSH Client (SSH) on Windows
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<h2>Overview</h2>
+<p>Starting with Windows 10 1803 (build 17134), Microsoft has enabled OpenSSH within the Command Prompt application as an optional feature.</p>
+<h2>System Requirements</h2>
+<ul>
+    <li>Windows 10 version 1803 (build 17134) and above.</li>
+</ul>
+<h2>Enabling the OpenSSH Client on Windows 10</h2>
+<p>You can enable the OpenSSH Client on your Windows 10 device through the following steps:</p>
+<ol>
+    <li>
+    <p>Open the Start menu and search for &ldquo;Manage optional features&rdquo;.</p>
+    <img src="https://www.hawaii.edu/itsdocs/1874/windows10_ssh1.PNG" width="650" alt="Searching for manage optional features in the Windows Settings application in Windows 10." /></li>
+    <li>
+    <p>The &ldquo;Optional features&rdquo; menu lists out features already installed on your device under Installed features. If the OpenSSH Client is listed, the feature has already been enabled and no further action is necessary. If the OpenSSH Client is not listed, choose &ldquo;Add a feature&rdquo;.</p>
+    <img src="https://www.hawaii.edu/itsdocs/1874/windows10_ssh2.PNG" width="650" alt="The optional features menu in settings app in Windows 10." /></li>
+    <li>
+    <p>In the following menu, search for &quot;OpenSSH Client&quot;.</p>
+    <img src="https://www.hawaii.edu/itsdocs/1874/windows10_ssh3.PNG" width="650" alt="Searching the OpenSSH Client in the Settings application." /></li>
+    <li>Click on the checkbox next to OpenSSH Client and then click Install.</li>
+    <li>Windows will then install the OpenSSH client. Once completed, the feature will be listed under Installed features and will be ready to use.</li>
+</ol>
+<h2>Enabling the OpenSSH Client on Windows 11</h2>
+<p>You can enable the OpenSSH Client on your Windows 11 device through the following steps:</p>
+<ol>
+    <li>
+    <p>Open the Settings application and search for &ldquo;Optional features&rdquo;.</p>
+    <img src="https://www.hawaii.edu/itsdocs/1874/windows11_ssh1.png" width="650" alt="Searching for optional features in the settings application in Windows 11" /></li>
+    <li>
+    <p>The Manage optional features menu lists out features already installed on your device under Installed features. If the OpenSSH Client is listed, the feature has already been enabled and no further action is necessary. If the OpenSSH Client is not listed, choose &ldquo;View features&rdquo;.</p>
+    <img src="https://www.hawaii.edu/itsdocs/1874/windows11_ssh2.png" width="650" alt="The optional features menu in the settings application in windows 11." /></li>
+    <li>
+    <p>In the following menu, search for &ldquo;OpenSSH Client&rdquo;.</p>
+    <img src="https://www.hawaii.edu/itsdocs/1874/windows11_ssh3.png" width="650" alt="The optional features menu in the settings application in windows 11." /></li>
+    <li>
+    <p>Click on the checkbox next to OpenSSH Client and then click &ldquo;Next&rdquo;. In the following window, click &ldquo;Install&rdquo; to confirm the installation.</p>
+    <img src="https://www.hawaii.edu/itsdocs/1874/windows11_ssh4.png" width="650" alt="Confirming the OpenSSH client installation in Windows 11." /></li>
+    <li>Windows will then install the OpenSSH client. Once completed, the feature will be listed under Installed features and will be ready to use.</li>
+</ol>
+<h2>Using the OpenSSH Client to Access UHUNIX</h2>
+<p>You can use the OpenSSH Client in Windows to access your UHUNIX account through the following steps:</p>
+<ol>
+    <li>Open the Command Prompt application.</li>
+    <li>
+    <p>In the Command Prompt application, type the following command:<br />
+    <br />
+    &quot;<code>ssh &lt;username&gt;@uhunix.hawaii.edu</code>&quot;<br />
+    <br />
+    where <code>&lt;username&gt;</code> is your UH username.</p>
+    <ol type="a">
+        <li>
+        <p>If this is the first time you are connecting to your UHUNIX account through SSH on your Windows device, you will receive a message like the following:<br />
+        <br />
+        &quot;<code>The authenticity of host 'uhunix.hawaii.edu (128.171.24.203)' can't be established. ECDSA key fingerprint is SHA256:Sdod2cQGzoc8HQqkdYYa5yS4D/JBDvtiISeRWsdzncE. Are you sure you want to continue connecting (yes/no/[fingerprint])?</code>&quot;.</p>
+        </li>
+        <li>If you receive this message, type &ldquo;yes&rdquo; and press the enter key.</li>
+    </ol>
+    </li>
+    <li>When prompted, type the password to your UH account and then press the enter key. You will then be connected to your UHUNIX account.</li>
+</ol>
+<h2>Using the OpenSSH Client for SFTP</h2>
+<p>The OpenSSH Client also allows the use of SFTP within the Command Prompt application. To use the OpenSSH Client as a SFTP client, please use the following instructions:</p>
+<ol>
+    <li>Open the Command Prompt application.</li>
+    <li>
+    <p>In the Command Prompt application, type the following command:<br />
+    <br />
+    &quot;<code>sftp &lt;username&gt;@uhunix.hawaii.edu</code>&quot;<br />
+    <br />
+    where <code>&lt;username&gt;</code> is your UH username.</p>
+    <ol type="a">
+        <li>If this is the first time you are connecting to your UHUNIX account through SSH on your Windows device, you will receive a message like the following:<br />
+        <br />
+        &quot;<code>The authenticity of host 'uhunix.hawaii.edu (128.171.24.203)' can't be established. ECDSA key fingerprint is SHA256:Sdod2cQGzoc8HQqkdYYa5yS4D/JBDvtiISeRWsdzncE. ECDSA key fingerprint is MD5:26:5a:84:94:02:b8:c0:ec:87:75:af:94:ee:47:f3:25. Are you sure you want to continue connecting (yes/no)?</code>&quot;</li>
+        <br />
+        <li>If you receive this message, type &ldquo;yes&rdquo; and press the enter key.</li>
+    </ol>
+    </li>
+    <li>When prompted, type the password to your UH account and then press the enter key. You will then be connected to your UHUNIX account.</li>
+</ol>
+<p>The OpenSSH client does not offer a graphical user interface (GUI) for SFTP. For instructions on how to install a SFTP client with a GUI, please see <a href="https://www.hawaii.edu/askus/1740" target="_blank">Askus article 1740</a>.</p>
+<h2>Disabling the OpenSSH Client</h2>
+<p>You can disable the OpenSSH Client on your Windows device through the following steps:</p>
+<ol>
+    <li>Open the Start menu and search for &quot;Manage optional features&quot;.</li>
+    <li>In the list of Installed features, click on OpenSSH Client and select Uninstall.</li>
+    <li>Once the uninstall is complete, the OpenSSH Client will be disabled.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1874" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1874" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1874">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1874">
+		1874</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Thu, 23 Jun 2022 4:41pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Fri, 24 Jun 2022 3:30pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1758">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Getting setup for Multi-Factor Authentication (MFA)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Getting setup for Multi-Factor Authentication (MFA)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p><font size="5"><b>Step 1: Decide which method of authentication you wish to use</b></font></p>
+<ul>
+    <li><a href="1758#1679">
+	<span class="kb_embedded_article_title_toc">
+		UH Login Multi-Factor Authentication (MFA) - Which authentication method should I use?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</span>
+</a>
+</li>
+</ul>
+<p><font size="5"><b>Step 2: <a href="#multiple">Decide which two devices you want to use</a></b></font></p>
+<p><font size="5"><b>Step 3: Setup your first device</b></font></p>
+<ul>
+    <li><a href="1758#1680">
+	<span class="kb_embedded_article_title_toc">
+		UH Login Multi-Factor Authentication (MFA) - Getting started with your first device
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</span>
+</a>
+
+    <ul>
+        <li><a href="#smartphone">Setting up a Smartphone</a></li>
+        <li><a href="#landline">Setting up a Landline</a></li>
+        <li><a href="#cellular">Setting up a non-Smartphone Cellular Phone</a></li>
+        <li><a href="#tablet">Setting up a Tablet</a></li>
+    </ul>
+    </li>
+</ul>
+<p><font size="5"><b>Step 4: [optional] Add a second (or more) device</b></font></p>
+<ul>
+    <li><a href="1758#1681">
+	<span class="kb_embedded_article_title_toc">
+		UH Login Multi-Factor Authentication (MFA) - Adding Devices
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</span>
+</a>
+
+    <ul>
+        <li><a href="#smartphone2">Setting up a Smartphone</a></li>
+        <li><a href="#landline2">Setting up a Landline</a></li>
+        <li><a href="#tablet2">Setting up a Tablet</a></li>
+        <li><a href="#cellphone2">Setting up a non-Smartphone Cellular Phone</a></li>
+    </ul>
+    </li>
+</ul>
+<p><font size="5"><b>Step 5: Logging in</b></font></p>
+<ul>
+    <li><a href="1758#1765">
+	<span class="kb_embedded_article_title_toc">
+		UH Login Multi-Factor Authentication (MFA) - Logging in with MFA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</span>
+</a>
+
+    <ul>
+        <li><a href="#push">Duo Push (smartphone, tablet)</a></li>
+        <li><a href="#mobilecall">Phone call (mobile phone)</a></li>
+        <li><a href="#smstext">SMS text codes (mobile phone)</a></li>
+        <li><a href="#duogen">Duo App-generated code (smartphone, tablet)</a></li>
+        <li><a href="#landline">Landline</a></li>
+        <li><a href="#hardtoken">UH Hard Token (Yubikey)</a></li>
+    </ul>
+    </li>
+</ul>
+<p><font size="5"><b>Step 6: Manage your devices</b></font></p>
+<ul>
+    <li><a href="1758#1684">
+	<span class="kb_embedded_article_title_toc">
+		UH Login Multi-Factor Authentication (MFA) - Managing Devices
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</span>
+</a>
+
+    <ul>
+        <li><a href="#screen">My Settings &amp; Devices screen</a></li>
+        <li><a href="#default">Changing the default device</a></li>
+        <li><a href="#devname">Changing a device name</a></li>
+        <li><a href="#deldev">Deleting a device</a></li>
+        <li><a href="#reactive">Reactivating the Duo Mobile app (does not apply to landlines)</a></li>
+    </ul>
+    </li>
+</ul>
+<hr size="5" width="100%" />
+<p><font size="5"><b>Step 1: Decide which method of authentication you wish to use</b></font></p>
+<p><div id="1679" class="offset">
+</div>
+<div class="kb_embedded_article_title">
+	UH Login Multi-Factor Authentication (MFA) - Which authentication method should I use?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div class="kb_embedded_article_text">
+	<p>For more information about UH Login and Multi-Factor Authentication (MFA), go to <a href="http://www.hawaii.edu/its/uhlogin" target="_blank">www.hawaii.edu/its/uhlogin</a>.</p>
+<p>UH Login supports the following MFA methods:</p>
+<ul>
+    <li>Duo Push, using the Duo Mobile app on a mobile device (smartphone or tablet)</li>
+    <li>Duo Passcode, using the Duo Mobile app on a mobile device (smartphone or tablet)</li>
+    <li>Phone Call, using either a mobile phone or landline</li>
+    <li>SMS Passcodes, using a mobile phone that supports SMS (text messaging)</li>
+    <li>Yubikey Hard Token, which is inserted into your computer's USB port</li>
+</ul>
+<p>Review the following table for more information on the requirements for each method, and whether or not the method can be used when completely offline (no internet or telephone service).</p>
+<table width="600" border="1" align="left" cellpadding="2" cellspacing="2">
+    <tbody>
+        <tr>
+            <td style="text-align: center;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</td>
+            <td style="text-align: center;"><strong>Requires a Smartphone (Duo Mobile App)</strong></td>
+            <td style="text-align: center;"><strong>Requires Internet Access (Mobile Data or WiFi)</strong></td>
+            <td style="text-align: center;"><strong>Requires Telephony (Mobile Network or Landline)</strong></td>
+            <td style="text-align: center;"><strong>Can be used offline</strong></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><strong>Duo Push</strong></td>
+            <td style="text-align: center;">YES</td>
+            <td style="text-align: center;">YES</td>
+            <td style="text-align: center;">NO</td>
+            <td style="text-align: center;">NO</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><strong>Duo Passcode</strong></td>
+            <td style="text-align: center;">YES</td>
+            <td style="text-align: center;">NO</td>
+            <td style="text-align: center;">NO</td>
+            <td style="text-align: center;">YES</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><strong>Phone Call</strong></td>
+            <td style="text-align: center;">NO</td>
+            <td style="text-align: center;">NO</td>
+            <td style="text-align: center;">YES</td>
+            <td style="text-align: center;">NO</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><strong>SMS Passcode</strong></td>
+            <td style="text-align: center;">NO</td>
+            <td style="text-align: center;">NO</td>
+            <td style="text-align: center;">YES</td>
+            <td style="text-align: center;">NO&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><strong>Yubikey Hard Token</strong></td>
+            <td style="text-align: center;">NO</td>
+            <td style="text-align: center;">NO</td>
+            <td style="text-align: center;">NO</td>
+            <td style="text-align: center;">YES</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<h3>&nbsp;</h3>
+<h3>&nbsp;</h3>
+<h3>&nbsp;</h3>
+<h3>&nbsp;</h3>
+<h3>&nbsp;</h3>
+<h3>&nbsp;</h3>
+<h3>Duo Push via the Duo Mobile App</h3>
+<p>If you have a supported mobile device, <strong>Duo Push is the recommended method</strong>.  As long as your mobile device has mobile network or wi-fi service, authentication requests can be pushed to your device via the Duo Mobile app.  You can download the Duo Mobile app to an iOS or Android device that meets the minimum requirements.</p>
+<table style="border-style: solid; border-color: black; width: 675px; padding: 3px; border-spacing: 1px; margin-bottom: 20px;">
+    <tbody>
+        <tr>
+            <td style="border-style: solid; border-color: black; padding: 3px; border-spacing: 1px; border-collapse: separate;">iOS</td>
+            <td style="border-style: solid; border-color: black; padding: 3px; border-spacing: 1px; border-collapse: separate;">Please see&nbsp;<a href="https://guide.duo.com/iphone">https://guide.duo.com/iphone</a>&nbsp;for the supported version of iOS</td>
+        </tr>
+        <tr>
+            <td style="border-style: solid; border-color: black; padding: 3px; border-spacing: 1px; border-collapse: separate;">Android</td>
+            <td style="border-style: solid; border-color: black; padding: 3px; border-spacing: 1px; border-collapse: separate;">Please see&nbsp;<a href="https://guide.duo.com/android">https://guide.duo.com/android</a>&nbsp;for the supported version of Android</td>
+        </tr>
+    </tbody>
+</table>
+<p>Once you have downloaded the Duo Mobile app and registered your mobile device, authentication requests will be &quot;pushed&quot; to your device through the Duo Mobile app.  You would then open the Duo Mobile app and tap on &quot;Approve&quot; or &quot;Deny&quot; to approve or deny the authentication request.</p>
+<h3>Duo Passcode via the Duo Mobile App</h3>
+<p>The Duo Mobile app can be used to generate a passcode that can be used to login. Passcodes can be generated without requiring internet access, and can be used even if your mobile device is in airplane mode or otherwise not connected to a WiFi or mobile network with internet access. This is a great option to use when traveling or when in areas where access to the internet might not be guaranteed.</p>
+<h3>Phone Call</h3>
+<p>You can opt to authenticate via a phone call to a landline or mobile phone.  When it's time to authenticate, you will receive a call on your registered phone number.  You would then push &quot;1&quot; on your phone's keypad to authenticate, or push &quot;9&quot; to deny the authentication request.</p>
+<p><b>Regarding phone numbers beginning with &quot;+86&quot;</b></p>
+<p>ITS has been informed by Duo that due to recent telephony restrictions by the Chinese government, Duo is no longer able to authenticate by phone calls to users with +86 numbers.  If you have a +86 phone number registered in Duo, you will see the following notice:</p>
+<p>&nbsp;<img src="/help/chasek/images/Image/Duo China(2).png" width="500" height="268" alt="" /></p>
+<p>Other methods, such as Duo Push, SMS passcodes, or hard tokens will still work.  For more information, please refer to the following Duo knowledgebase article:</p>
+<p><a href="https://help.duo.com/s/article/5001">https://help.duo.com/s/article/5001</a></p>
+<h3>SMS Passcodes</h3>
+<p>If you do not have a smartphone, but you have a mobile phone with SMS/text messaging capabilities, you can use SMS passcodes to authenticate. When requested, a set of 10 passcodes will be sent to you as a text (SMS) message to your phone.  Each time you authenticate, you would use the next passcode in the sequence. After you've used all 10 passcodes, you can request a new set of 10 passcodes. You can also request a new set of 10 passcodes at any time. After you've requested a set of 10 passcodes, you can continue to use all of the passcodes in succession to authenticate even if your mobile device is no longer connected to mobile network.</p>
+<h3>Yubikey Hard Token</h3>
+<p>A hard token (sometimes called an authentication or security token) is a hardware security device that is used to authorize a user.  UH provides Yubikey hard tokens for purchase.  The UH hard token is a usb device and must be inserted into your usb port to be used.  You would then touch the hard token anytime you wanted to authenticate.  If you do not have an available usb port, you cannot authenticate with the UH hard token. Hard tokens are not recommended and should be purchased only if you cannot use any of the other above means for authenticating.</p>
+<p>For information on purchasing a UH hard token, please visit <a href="https://www.hawaii.edu/sitelic/tokens/" target="_blank">https://www.hawaii.edu/sitelic/tokens/</a></p>
+</div>
+</p>
+<hr size="5" width="100%" />
+<p><a name="multiple"><font size="5"><b>Step 2: Decide which two devices you want to use</b></font></a></p>
+<p>ITS <b>strongly</b> recommends that you setup at least two devices for MFA.  This is so that if one of your devices becomes unavailable (e.g smartphone forgotten or lost), you can still authenticate.  Some samples of multiple devices could be:</p>
+<ul>
+    <li>Smartphone and office landline</li>
+    <li>Smartphone, office landline, and home landline</li>
+</ul>
+<p>Once you have decided which two (or more) devices you will use for MFA, proceed to the next step (Step 3) of setting up your first device.  If you have already setup one device, you may proceed to step 4 to add more devices.</p>
+<hr size="5" width="100%" />
+<p><font size="5"><b>Step 3: Setup your first device</b></font></p>
+<p><div id="1680" class="offset">
+</div>
+<div class="kb_embedded_article_title">
+	UH Login Multi-Factor Authentication (MFA) - Getting started with your first device
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div class="kb_embedded_article_text">
+	<ul>
+    <li><a href="#smartphone">Setting up a Smartphone</a></li>
+    <li><a href="#landline">Setting up a Landline</a></li>
+    <li><a href="#cellular">Setting up a non-Smartphone Cellular Phone</a></li>
+    <li><a href="#tablet">Setting up a Tablet</a></li>
+</ul>
+<p>For more information about UH Login and Multi-Factor Authentication (MFA), go to <a href="https://www.hawaii.edu/its/uhlogin">www.hawaii.edu/its/uhlogin</a>.</p>
+<p>Before going through this article, please review <a href="http://www.hawaii.edu/askus/1679">UH Login Multi-Factor Authentication (MFA) - Which authentication method should I use?</a> to determine which authentication method suits your situation best.  Once you have decided which method to use, use this document to register your first device.  This document will explain how to register a mobile device, landline, or tablet as your first device to use for MFA.</p>
+<p><b>We strongly recommend registering at least 2 devices</b>.  For example: a smartphone and an office landline.  Please refer to <a href="http://www.hawaii.edu/askus/1684">UH Login Multi-Factor Authentication (MFA) - Managing Devices</a> for information on managing registered devices, or <a href="http://www.hawaii.edu/askus/1681">UH Login Multi-Factor Authentication (MFA) - Adding Devices</a> for information on registering additional devices.</p>
+<h3><a name="smartphone">Setting up a Smartphone</a></h3>
+<p>Although the screenshots and instructions that follow are for an iPhone, the steps are the same for iPhones and Android phones, except for identifying the type of smartphone.</p>
+<p><a href="https://www.hawaii.edu/itunesu/v3/?&amp;f=/video-op/productions/mfa-smartphone"><b>Watch video</b></a></p>
+<ol>
+    <li>Login to the UH Login MFA Device Registration site at <a href="https://www.hawaii.edu/its/uhlogin/device-reg">www.hawaii.edu/its/uhlogin/device-reg</a>.</li>
+    <br />
+    <li>You will see the following screen. Click on the <em>Start setup</em> button.</li>
+    <br />
+    <img alt="Start Setup" src="/help/chasek/images/Image/start setup.jpg" width="500" height="267" /><br />
+    <br />
+    <li>Select <em>Mobile phone</em>, then click <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/add_new_first_time.jpg" alt="What device type are you adding?" width="500" height="268" /><br />
+    <br />
+    <li>If necessary, select the country of your phone.  Type your phone number, including area code (no parentheses or dashes are needed).  Double check that the correct phone number is shown immediately beneath the box.  If so, check the box next to the phone number.  Click on <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/enter_phone_number_mobile.jpg" alt="Enter your phone number" width="500" height="267" /><br />
+    <br />
+    <li>Select the type of smartphone (in this case iPhone), then click <em>Continue</em>.</li>
+    <br />
+    <img alt="What type of phone" src="/help/chasek/images/Image/type_of_device_mobile-nobb.jpg" width="500" height="267" /><br />
+    <br />
+    <li>If you have downloaded the Duo Mobile app to your phone, go to the next step.  If you have not yet downloaded the Duo Mobile app to your phone, follow the directions within the box to download.  You can also visit one of the following links from your smartphone (not your computer):<br />
+    iOS: <a href="https://itunes.apple.com/us/app/duo-mobile/id422663827?mt=8">Duo Mobile for iOS</a>     <br />
+    Android: <a href="https://play.google.com/store/apps/details?id=com.duosecurity.duomobile&amp;hl=en_US">Duo Mobile for Android</a><br />
+    [Note: to download from the Google Play Store, you need to be&nbsp;logged in with a gmail.com account or&nbsp;<a href="https://www.hawaii.edu/google/extra">enrolled in Consumer Apps</a>.]<br />
+    <br />
+    <img alt="Install Duo Mobile app" src="/help/chasek/images/Image/install_for_ios.jpg" width="500" height="268" /></li>
+    <br />
+    <li>Once you have downloaded the app to your phone, or if you already have the app downloaded to your phone, click on <em>I have Duo Mobile installed</em>.</li>
+    <li>
+    <p>You will see a barcode displayed.</p>
+    <p>Open the Duo Mobile app on your phone. If you are asked if you want to allow Duo Mobile to send Notifications, please allow notifications.</p>
+    <p>Press the <strong>+</strong> icon in the upper right corner, or press on the <em>Add Account</em> button. If you are asked if you want to allow Duo Mobile to access the Camera, please allow access.</p>
+    <p>Point your phone's camera (the camera's display should be shown on the phone's screen) at the barcode. Once the barcode is properly within the display, it will automatically be recognized.  You can tell it was successful if you see a green checkmark within the barcode.</p>
+    <p>Once you see the green checkmark, click on <em>Continue</em>.</p>
+    </li>
+    <img src="/help/chasek/images/Image/ios-activated.jpg" alt="Activate Duo Mobile app" width="500" height="268" /><br />
+    <br />
+    <li>At the next screen, you should see a green <em>Saved</em> button in the lower left.  The <em>When I log in</em> option should be set to <strong>Ask me to choose an authentication method</strong>.  Click on the <em>Continue to Login</em> button.<br />
+    <br />
+    <img alt="My Settings and Devices" src="/help/chasek/images/Image/continue_to_login-2.jpg" width="500" height="268" /></li>
+    <br />
+    <li>If you were registering your device through the UH Login MFA Device Registration site, at the bottom of the next screen, you should see the message <em>Enrollment successful!...&nbsp;</em>This means that you have successfully registered your smartphone.  You can now logout of the UH Login MFA Device Registration site.</li>
+</ol>
+<p>For further information on the Duo Mobile app, please refer to Duo's guides:<br />
+iPhone: <a href="https://guide.duo.com/iphone">https://guide.duo.com/iphone</a><br />
+Android: <a href="https://guide.duo.com/android">https://guide.duo.com/android</a></p>
+<h3><a name="landline">Setting up a Landline</a></h3>
+<p><a href="https://www.hawaii.edu/itunesu/v3/?&amp;f=/video-op/productions/mfa-landline"><b>Watch video</b></a></p>
+<ol>
+    <li>Login to the UH Login MFA Device Registration site at <a href="https://www.hawaii.edu/its/uhlogin/device-reg">www.hawaii.edu/its/uhlogin/device-reg</a>.</li>
+    <br />
+    <li>You will see the following screen. Click on the <em>Start setup</em> button.</li>
+    <br />
+    <img alt="Start setup" src="/help/chasek/images/Image/start setup.jpg" width="500" height="267" /><br />
+    <br />
+    <li>Select <em>Landline</em>, then click <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/add_landline.jpg" alt="What device type are you adding?" width="500" height="266" /><br />
+    <br />
+    <li>If necessary, select the country of your phone.  Type your phone number, including area code (no parentheses or dashes are needed). If you have an extension, type it in the <em>Extension:</em> box.  Double check that the correct phone number is shown immediately beneath the box.  If so, check the box next to the phone number.  Scroll down, and click on <em>Continue</em>.</li>
+    <br />
+    <img alt="Enter your phone number" src="/help/chasek/images/Image/landline enter phone number.jpg" width="500" height="268" /><br />
+    <br />
+    <li>At the next screen, you should see a green <em>Saved</em> button in the lower left. The <em>When I log in</em> option should be set to <strong>Ask me to choose an authentication method</strong>. Click on the <em>Continue to Login</em> button.<br />
+    <br />
+    <img src="/help/chasek/images/Image/landline_continue_to_login-2.jpg" alt="My Settings and Devices" width="500" height="266" /></li>
+    <br />
+    <li>If you were registering your device through the UH Login MFA Device Registration site, you should see the message <em>Enrollment successful!...</em>&nbsp; This means that you have successfully registered your landline.  You can now logout of the UH Login MFA Device Registration site.</li>
+</ol>
+<h3><a name="cellular">Setting up a non-Smartphone Cellular Phone</a></h3>
+<p><a href="https://www.hawaii.edu/itunesu/v3/?&amp;f=/video-op/productions/mfa-nonsmartphone"><b>Watch video</b></a></p>
+<ol>
+    <li>Login to the UH Login MFA Device Registration site at <a href="https://www.hawaii.edu/its/uhlogin/device-reg">www.hawaii.edu/its/uhlogin/device-reg</a>.</li>
+    <br />
+    <li>You will see the following screen. Click on the <em>Start setup</em> button.</li>
+    <br />
+    <img alt="Start setup" src="/help/chasek/images/Image/start setup.jpg" width="500" height="267" /><br />
+    <br />
+    <li>Select <em>Mobile phone</em>, then click <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/add_new_first_time.jpg" alt="What device type are you adding?" width="500" height="268" /><br />
+    <br />
+    <li>If necessary, select the country of your phone.  Type your phone number, including area code (no parentheses or dashes are needed).  Double check that the correct phone number is shown immediately beneath the box.  If so, check the box next to the phone number.  Scroll down, and click on <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/enter_phone_number_mobile.jpg" alt="Enter your phone number" width="500" height="267" /><br />
+    <br />
+    <li>Select <em>Other</em> as the type of phone, then click <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/type of phone nonsmart-nobb.jpg" width="500" height="267" alt="What type of phone" /><br />
+    <br />
+    <li>At the next screen, you should see a green <em>Saved</em> button in the lower left. The <em>When I log in</em> option should be set to <strong>Ask me to choose an authentication method</strong>. Click on the <em>Continue to Login</em> button.<br />
+    <br />
+    <img src="/help/chasek/images/Image/my settings nonsmart.jpg" width="500" height="266" alt="My Settings and Devices" /></li>
+    <br />
+    <li>If you were registering your device through the UH Login MFA Device Registration site, you should see the message <em>Enrollment successful!... </em>This means that you have successfully registered your non-smartphone cellular phone.  You can now logout of the UH Login MFA Device Registration site.</li>
+</ol>
+<h3><a name="tablet">Setting up a Tablet</a></h3>
+<p>Although the screenshots and instructions that follow are for an iPad, the steps are the same for Android tablets.</p>
+<ol>
+    <li>Login to the UH Login MFA Device Registration site at <a href="https://www.hawaii.edu/its/uhlogin/device-reg">www.hawaii.edu/its/uhlogin/device-reg</a>.</li>
+    <br />
+    <li>You will see the following screen. Click on the <em>Start setup</em> button.</li>
+    <br />
+    <img alt="Start setup" src="/help/chasek/images/Image/start setup.jpg" width="500" height="267" /><br />
+    <br />
+    <li>Select <em>Tablet</em>, then click <em>Continue</em>.<br />
+    <br />
+    <img src="/help/chasek/images/Image/type of device tablet.jpg" alt="What type of device are you adding?" width="500" height="263" /></li>
+    <br />
+    <li>Select the type of tablet. &nbsp;In this example, we will select&nbsp;<em>iOS</em>. Click <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/type of tablet.jpg" alt="What type of tablet?" width="500" height="262" /><br />
+    <br />
+    <li>If you have downloaded the Duo Mobile app to your tablet, go to the next step.  If you have not yet downloaded the Duo Mobile app to your tablet, follow the directions within the box to download.  You can also visit one of the following links from your tablet (not your computer):<br />
+    iOS: <a href="https://itunes.apple.com/us/app/duo-mobile/id422663827?mt=8">Duo Mobile for iOS</a>     <br />
+    Android: <a href="https://play.google.com/store/apps/details?id=com.duosecurity.duomobile&amp;hl=en_US">Duo Mobile for Android</a><br />
+    [Note: to download from the Android Play Store, you need to be <a href="https://www.hawaii.edu/google/extra">enrolled in Consumer Apps</a> or logged in with a gmail.com account.]<br />
+    <br />
+    <img alt="Install Duo Mobile app" src="/help/chasek/images/Image/install_for_ios.jpg" width="500" height="268" /></li>
+    <br />
+    <li>
+    <p>You will see a barcode displayed.</p>
+    <p>Open the Duo Mobile app on your tablet. If you are asked if you want to allow Duo Mobile to send Notifications, please allow notifications.</p>
+    <p>Press the <strong>+</strong> icon in the upper right corner, or press on the <em>Add Account</em> button. If you are asked if you want to allow Duo Mobile to access the Camera, please allow access.</p>
+    <p>Point your tablet's camera (the camera's display should be shown on the phone's screen) at the barcode. Once the barcode is properly within the display, it will automatically be recognized.  You can tell it was successful if you see a green checkmark within the barcode.</p>
+    <p>Once you see the green checkmark, click on <em>Continue</em>.</p>
+    </li>
+    <img src="/help/chasek/images/Image/ios-activated.jpg" alt="Activate Duo Mobile app" width="500" height="268" /><br />
+    <br />
+    <li>At the next screen, you should see a green <em>Saved</em> button in the lower left.  The <em>When I log in</em> option should be set to <strong>Ask me to choose an authentication method</strong>.  Click on the <em>Continue to Login</em> button.<br />
+    <br />
+    <img src="/help/chasek/images/Image/my settings tablet.jpg" alt="My Settings and Devices" width="500" height="265" /></li>
+    <br />
+    <li>If you were registering your device through the UH Login MFA Device Registration site, at the bottom of the next screen, you should see the message <em>Enrollment successful!...&nbsp;</em>This means that you have successfully registered your tablet.  You can now logout of the UH Login MFA Device Registration site.</li>
+</ol>
+</div>
+</p>
+<p>&nbsp;</p>
+<p><font size="5"><b>Step 4: [optional] Add a second (or more) device</b></font></p>
+<p><div id="1681" class="offset">
+</div>
+<div class="kb_embedded_article_title">
+	UH Login Multi-Factor Authentication (MFA) - Adding Devices
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div class="kb_embedded_article_text">
+	<p>This article will explain how to register devices for multi-factor authentication.</p>
+<ul>
+    <li><a href="#smartphone2">Setting up a Smartphone</a></li>
+    <li><a href="#landline2">Setting up a Landline</a></li>
+    <li><a href="#tablet2">Setting up a Tablet</a></li>
+    <li><a href="#cellphone2">Setting up a non-Smartphone Cellular Phone</a></li>
+</ul>
+<p>If you are not sure which authentication method to use, please review the article, <a href="https://www.hawaii.edu/askus/1679">UH Login Multi-Factor Authentication (MFA) - Which authentication method should I use?</a>.</p>
+<p>ITS recommends that you <strong>register at least 2 devices</strong>.  For example: your office landline and your smartphone.</p>
+<hr />
+<h3><a name="smartphone2">Setting up a Smartphone</a></h3>
+<p>Although the screenshots are for an iPhone, the steps are the same for iPhones and Android phones.</p>
+<ol>
+    <li>Login to the UH Login MFA Device Registration site at <a href="https://www.hawaii.edu/its/uhlogin/device-reg">www.hawaii.edu/its/uhlogin/device-reg</a>.</li>
+    <br />
+    <li>If you have not yet registered any devices, you will see the following screen. Click on the <em>Start setup</em> button, then <strong>proceed to Step 4</strong>.<br />
+    <br />
+    <img src="/help/chasek/images/Image/start setup.jpg" alt="Start setup" width="500" height="267" /></li>
+    <br />
+    <li>If you have already setup a device, at the next screen, click on <em>Add a new device</em> (located on the left side, under the gold seal).<br />
+    You will then see the following screen.  Click on the green button for the method you wish to use.<br />
+    <br />
+    <img src="/help/chasek/images/Image/Duo add new device only one(1).jpg" alt="Choose an authentication method" width="500" height="266" /></li>
+    <br />
+    <li>Select the authentication method you wish to use.  For this example, we will register a mobile phone. Select <em>Mobile phone</em>, then click <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/type_of_device-mobile.jpg" alt="What device type are you adding?" width="500" height="266" /><br />
+    <br />
+    <li>If necessary, select the country of your phone.  Type your phone number, including area code (no parentheses or dashes are needed).  Double check that the correct phone number is shown immediately beneath the box.  If so, check the box next to the phone number.  Click on <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/enter_phone-mobile.jpg" alt="Enter your phone number" width="500" height="267" /><br />
+    <br />
+    <li>Select your device type, then click <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/choose_device-mobile-nobb.jpg" alt="What type of phone" width="500" height="263" /><br />
+    <br />
+    <li>If you have downloaded the Duo Mobile app to your phone, go to the next step.  If you have not yet downloaded the Duo Mobile app to your phone, follow the directions within the box to download.  You can also visit one of the following links from your smartphone (not your computer):<br />
+    iOS: <a href="https://itunes.apple.com/us/app/duo-mobile/id422663827?mt=8">Duo Mobile for iOS</a>     <br />
+    Android: <a href="https://play.google.com/store/apps/details?id=com.duosecurity.duomobile&amp;hl=en_US">Duo Mobile for Android</a><br />
+    [Note: to download from the Android Play Store, you need to be <a href="https://www.hawaii.edu/google/extra">enrolled in Consumer Apps</a> or logged in with a gmail.com account.]<br />
+    <br />
+    <img alt="Install Duo Mobile app" src="/help/chasek/images/Image/install_for_ios.jpg" width="500" height="268" /></li>
+    <br />
+    <li>
+    <p>You will see a barcode displayed.</p>
+    <p>Open the Duo Mobile app on your phone. If you are asked if you want to allow Duo Mobile to send Notifications, please allow notifications.</p>
+    <p>Press the <strong>+</strong> icon in the upper right corner, or press on the <em>Add Account</em> button. If you are asked if you want to allow Duo Mobile to access the Camera, please allow access.</p>
+    <p>Point your phone's camera (the camera's display should be shown on the phone's screen) at the barcode. Once the barcode is properly within the display, it will automatically be recognized.  You can tell it was successful if you see a green checkmark within the barcode.</p>
+    <p>Once you see the green checkmark, click on <em>Continue</em>.</p>
+    </li>
+    <img src="/help/chasek/images/Image/activate_duo_ios.jpg" alt="Activate Duo Mobile app" width="500" height="268" /><br />
+    <br />
+    <li>You should be at the <em>My Settings &amp; Devices</em> window. You should see a list of all your registered devices, with a <em>Just Added</em> next to the device you just added. This means that you have successfully registered the new device.</li>
+    <br />
+    <li>You can now logout of the UH Login MFA Device Registration site.</li>
+</ol>
+<hr />
+<h3><a name="landline2">Setting up a Landline</a></h3>
+<ol>
+    <li>Login to the UH Login MFA Device Registration site at <a href="https://www.hawaii.edu/its/uhlogin/device-reg">www.hawaii.edu/its/uhlogin/device-reg</a>.</li>
+    <br />
+    <li>If you have not yet registered any devices, you will see the following screen. Click on the <em>Start setup</em> button, then <strong>proceed to Step 4</strong>.<br />
+    <br />
+    <img src="/help/chasek/images/Image/start setup.jpg" alt="Start setup" width="500" height="267" /></li>
+    <br />
+    <li>If you have already setup a device, at the next screen, click on <em>Add a new device</em> (located on the left side, under the gold seal).<br />
+    You will then see the following screen.  Click on the green button for the method you wish to use.<br />
+    <br />
+    <img src="/help/chasek/images/Image/Duo add new device only one(1).jpg" alt="Choose an authentication method" width="500" height="266" /></li>
+    <br />
+    <li>Select the authentication method you wish to use.  For this example, we will register a landline.  Select <em>Landline</em>, then click <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/type_of_device-landline.jpg" alt="What device type are you adding?" width="500" height="264" /><br />
+    <br />
+    <li>If necessary, select the country of your phone.  Type your phone number, including area code (no parentheses or dashes are needed). If you have an extension, type it in the <em>Extension:</em> box.  Double check that the correct phone number is shown immediately beneath the box.  If so, check the box next to the phone number.  Scroll down, and click on <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/enter_phone-landline.jpg" alt="Enter your phone number" width="500" height="267" /><br />
+    <br />
+    <li>You should be at the <em>My Settings &amp; Devices</em> window. You should see a list of all your registered devices, with a <em>Just Added</em> next to the device you just added. This means that you have successfully registered the new device.</li>
+    <br />
+    <li>You can now logout of the UH Login MFA Device Registration site.</li>
+</ol>
+<hr />
+<h3><a name="tablet2">Setting up a Tablet</a></h3>
+<p>Although the screenshots are for an Android tablet, the steps are the same for iOS tablets (iPad and iPod Touch) and Android tablets.</p>
+<ol>
+    <li>Login to the UH Login MFA Device Registration site at <a href="https://www.hawaii.edu/its/uhlogin/device-reg">www.hawaii.edu/its/uhlogin/device-reg</a>.</li>
+    <br />
+    <li>If you have not yet registered any devices, you will see the following screen. Click on the <em>Start setup</em> button, then <strong>proceed to Step 4</strong>.<br />
+    <br />
+    <img src="/help/chasek/images/Image/start setup.jpg" alt="Start setup" width="500" height="267" /></li>
+    <br />
+    <li>If you have already setup a device, at the next screen, click on <em>Add a new device</em> (located on the left side, under the gold seal).<br />
+    You will then see the following screen.  Click on the green button for the method you wish to use.<br />
+    <br />
+    <img src="/help/chasek/images/Image/Duo add new device only one(1).jpg" alt="Choose an authentication method" width="500" height="266" /></li>
+    <br />
+    <li>Select the authentication method you wish to use. For this example, we will register a tablet. Select <em>Tablet</em>, then click <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/type_of_device-tablet.jpg" alt="What device type are you adding?" width="500" height="269" /><br />
+    <br />
+    <li>Select the appropriate type of device. For this example, we will select Android. Click <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/tablet_type-android.jpg" alt="What type of tablet?" width="500" height="266" /><br />
+    <br />
+    <li>If you have downloaded the Duo Mobile app to your tablet, go to the next step.  If you have not yet downloaded the Duo Mobile app to your tablet, follow the directions within the box to download.  You can also visit one of the following links from your tablet (not your computer):<br />
+    iOS: <a href="https://itunes.apple.com/us/app/duo-mobile/id422663827?mt=8">Duo Mobile for iOS</a>     <br />
+    Android: <a href="https://play.google.com/store/apps/details?id=com.duosecurity.duomobile&amp;hl=en_US">Duo Mobile for Android</a><br />
+    [Note: to download from the Android Play Store, you need to be <a href="https://www.hawaii.edu/google/extra">enrolled in Consumer Apps</a> or logged in with a gmail.com account.]<br />
+    <br />
+    <img alt="Install Duo Mobile app" src="/help/chasek/images/Image/install_duo_android.jpg" width="500" height="268" /></li>
+    <br />
+    <li>
+    <p>You will see a barcode displayed.</p>
+    <p>Open the Duo Mobile app on your tablet. If you are asked if you want to allow Duo Mobile to send Notifications, please allow notifications.</p>
+    <p>Press the <strong>+</strong> icon in the upper right corner, or press on the <em>Add Account</em> button. If you are asked if you want to allow Duo Mobile to access the Camera, please allow access.</p>
+    <p>Point your tablet's camera (the camera's display should be shown on the phone's screen) at the barcode. Once the barcode is properly within the display, it will automatically be recognized.  You can tell it was successful if you see a green checkmark within the barcode.</p>
+    <p>Once you see the green checkmark, click on <em>Continue</em>.</p>
+    </li>
+    <img src="/help/chasek/images/Image/activate_duo_android.jpg" alt="Activate Duo Mobile app" width="500" height="265" /><br />
+    <br />
+    <li>You should be at the <em>My Settings &amp; Devices</em> window. You should see a list of all your registered devices, with a <em>Just Added</em> next to the device you just added. This means that you have successfully registered the new device.</li>
+    <br />
+    <li>You can now logout of the UH Login MFA Device Registration site.</li>
+</ol>
+<hr />
+<h3><a name="cellphone2">Setting up a non-smartphone Cellular Phone</a></h3>
+<ol>
+    <li>Login to the UH Login MFA Device Registration site at <a href="https://www.hawaii.edu/its/uhlogin/device-reg">www.hawaii.edu/its/uhlogin/device-reg</a>.</li>
+    <br />
+    <li>If you have not yet registered any devices, you will see the following screen. Click on the <em>Start setup</em> button, then proceed to Step 4.<br />
+    <br />
+    <img src="/help/chasek/images/Image/start setup.jpg" alt="Start setup" width="500" height="267" /></li>
+    <br />
+    <li>If you have already setup a device, at the next screen, click on <em>Add a new device</em> (located on the left side, under the gold seal).<br />
+    You will then see the following screen.  Click on the green button for the method you wish to use.<br />
+    <br />
+    <img src="/help/chasek/images/Image/Duo add new device only one(1).jpg" alt="Choose an authentication method" width="500" height="266" /></li>
+    <br />
+    <li>Select the authentication method you wish to use.  For this example, we will register a mobile phone. Select <em>Mobile phone</em> then click <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/type_of_device-mobile.jpg" alt="What device type are you adding?" width="500" height="266" /><br />
+    <br />
+    <li>If necessary, select the country of your phone.  Type your phone number, including area code (no parentheses or dashes are needed).  Double check that the correct phone number is shown immediately beneath the box.  If so, check the box next to the phone number.  Click on <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/enter_phone-mobile.jpg" alt="Enter your phone number" width="500" height="267" /><br />
+    <br />
+    <li>Select <em>Other</em> as your device type, then click <em>Continue</em>.<br />
+    <br />
+    <img src="/help/chasek/images/Image/type_of_phone-other-nobb.jpg" alt="What type of phone" width="500" height="268" /></li>
+    <br />
+    <li>You should be at the <em>My Settings &amp; Devices</em> window. You should see a list of all your registered devices, with a <em>Just Added</em> next to the device you just added. This means that you have successfully registered the new device.</li>
+    <br />
+    <li>You can now logout of the UH Login MFA Device Registration site.</li>
+</ol>
+</div>
+</p>
+<p>&nbsp;</p>
+<p><font size="5"><b>Step 5: Logging in</b></font></p>
+<p><div id="1765" class="offset">
+</div>
+<div class="kb_embedded_article_title">
+	UH Login Multi-Factor Authentication (MFA) - Logging in with MFA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div class="kb_embedded_article_text">
+	<p>This article explains how to login through the UH Login page using the different MFA methods. Please note that ITS <b>strongly</b> recommends that you setup at least two devices for MFA.</p>
+<ul>
+    <li><a href="#push">Duo Push (smartphone, tablet)</a></li>
+    <li><a href="#mobilecall">Phone call (mobile phone)</a></li>
+    <li><a href="#smstext">SMS text codes (mobile phone)</a></li>
+    <li><a href="#duogen">Duo App-generated code (smartphone, tablet)</a></li>
+    <li><a href="#landline">Landline</a></li>
+    <li><a href="#hardtoken">UH Hard Token (Yubikey)</a></li>
+</ul>
+<p><a name="push"></a></p>
+<h3>Duo Push (smartphone, tablet)</h3>
+<ol>
+    <li>At the Duo MFA window, make sure your mobile phone or tablet is selected under the &quot;Device&quot; drop down menu.</li>
+    <br />
+    <li>Optionally, you can select the <b>Remember me for 7 days</b> option.  If you select this option, you will not see the Duo MFA window for 7 days.</li>
+    <br />
+    <li>Click on the <b>Send Me a Push</b> button.<br />
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/1%20Smartphone%20Tablet.png" alt="Send Me a Push" width="500" height="269" /></li>
+    <br />
+    <li>A notification will appear on your smartphone.<br />
+    <ul>
+        <li>iPhone: Press and hold on the notification, then tap on <b>Approve</b> to approve or <b>Deny</b> if it was a fraudulent request.  If necessary enter your iPhone's passcode.</li>
+        <li>Android: Tap on <b>Notifications</b>.  You may have to unlock your phone.  Tap on <b>Approve</b> to approve or <b>Deny</b> if it was a fraudulent request.</li>
+    </ul>
+    </li>
+</ol>
+<p>For further information on the Duo Mobile app, please refer to Duo's guides:<br />
+iPhone: <a href="https://guide.duo.com/iphone">https://guide.duo.com/iphone</a><br />
+Android: <a href="https://guide.duo.com/android">https://guide.duo.com/android</a></p>
+<p><a name="mobilecall"></a></p>
+<h3>Phone call (mobile phone)</h3>
+<ol>
+    <li>At the Duo MFA window, make sure your mobile phone is selected under &quot;Devices&quot;.</li>
+    <br />
+    <li>Optionally, you can select the <b>Remember me for 7 days</b> option.  If you select this option, you will not see the Duo MFA window for 7 days.</li>
+    <br />
+    <li>Click on the <b>Call Me</b> button.<br />
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/2%20Phone%20call.png" alt="Call Me" width="500" height="268" /></li>
+    <br />
+    <li>A phone call will be placed to your mobile phone.  Answer the call, then press <b>1</b> on the mobile phone's keypad to approve or press <b>9</b> to report a fraudulent request.</li>
+</ol>
+<p><a name="smstext"></a></p>
+<h3>SMS text codes (mobile phone)</h3>
+<ol>
+    <li>At the Duo MFA window, make sure your mobile phone is selected under &quot;Devices&quot;.</li>
+    <br />
+    <li>Optionally, you can select the <b>Remember me for 7 days</b> option.  If you select this option, you will not see the Duo MFA window for 7 days.</li>
+    <br />
+    <li>Click on the <b>Enter a Passcode</b> button.<br />
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/3%20SMS%20text%20codes.png" alt="Enter a Passcode" width="500" height="269" /></li>
+    <br />
+    <li>If this is your first time logging in, or if you need a new set of text codes, click on <b>Text me new codes</b>.<br />
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/4%20SMS%202.png" alt="Text me new codes" width="500" height="268" /></li>
+    <br />
+    <li>A set of 10 codes will be texted to your mobile phone.  Enter the first code (it should begin with the number 1) in the box, then click on <b>Log In</b>.<br />
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/5%20SMS%203.png" alt="Log in" width="500" height="268" /></li>
+    <br />
+    <li>The next time you login, you can enter the next code in the sequence (e.g. the one starting with the number 2) to login.  However, you can always click on <b>Text me new codes</b> to get a new set of codes.</li>
+</ol>
+<p><a name="duogen"></a></p>
+<h3>Duo App-generated code (smartphone, tablet)</h3>
+<p>The Duo App will generate codes even if the smartphone or tablet does not have wifi or cellular data service.</p>
+<ol>
+    <li>At the Duo MFA window, make sure your smartphone or tablet is selected under &quot;Devices&quot;.</li>
+    <br />
+    <li>Optionally, you can select the <b>Remember me for 1 day</b> option.  If you select this option, you will not see the Duo MFA window for 7 days.</li>
+    <br />
+    <li>Click on the <b>Enter a Passcode</b> button.</li>
+    <br />
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/6%20DUO%201.png" alt="Enter a Passcode" width="500" height="269" /><br />
+    <br />
+    <li>Open the Duo Mobile app on your smartphone or tablet.</li>
+    <br />
+    <li>Select &quot;Show&quot; next to the hidden passcode for &quot;University of Hawaii&quot;.</li>
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/7%20DUO%202.png" width="300" height="348" alt="Duo Mobile" /><br />
+    <li>A code will display. The code will remain valid until it is used.  If you have the newer version of the Duo Mobile app, you can tap on the &quot;circular arrows&quot; icon to get a new code.</li>
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/8%20Duo%203.png" alt="Circular arrows icon" width="300" height="422" /><br />
+    <li>Enter the displayed code into the box, then click on <b>Log In</b>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/9%20DUO%204(1).png" width="500" height="266" alt="Passcode Login" /><br />
+</ol>
+<h3><a name="landline">Landline</a></h3>
+<ol>
+    <li>At the Duo MFA window, make sure your landline (e.g office) number is selected under &quot;Devices&quot;.</li>
+    <br />
+    <li>Optionally, you can select the <b>Remember me for 7 days</b> option.  If you select this option, you will not see the Duo MFA window for 7 days.</li>
+    <br />
+    <li>Click on the <b>Call Me</b> button.<br />
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/10%20Landline%201.png" alt="Landline Call me" width="500" height="266" /></li>
+    <br />
+    <li>A phone call will be placed to your designated landline phone. Answer the call, then press <b>1</b> on the Landline's keypad to approve or press <b>9</b> to report a fraudulent request.</li>
+</ol>
+<p><a name="hardtoken"></a></p>
+<h3>UH Hard Token (Yubikey)</h3>
+<p>The UH hard token is a usb device that you would insert into your computer's usb port.  You would then &quot;touch&quot; the gold area of the hard token to authenticate. UH hard tokens can be purchased through the ITS Site License office.&nbsp; Please visit <a href="https://www.hawaii.edu/sitelic/tokens">www.hawaii.edu/sitelic/tokens</a>. Both USB A and USB C hard tokens are available.</p>
+<ol>
+    <li>Insert the hard token into your computer's USB port prior to any login attempts.<br />
+    <i>Note for Macintosh users</i>: the first time you insert a hard token into a Macintosh, you may be told, &quot;Your keyboard is unrecognizable&quot; or &quot;Your keyboard cannot be identified&quot;.  This message can be ignored; close the window by clicking on the red dot in the upper left.</li>
+    <br />
+    <li>When you get to the Duo MFA window, make sure either your mobile phone, tablet, or &quot;Token&quot; is selected under &quot;Device&quot;.</li>
+    <br />
+    <li>Optionally, you can select the <strong>Remember me for 7 days</strong> option.  If you select this option, you will not see the Duo MFA window for 7 days.</li>
+    <br />
+    <li>Click on the <b>Enter a Passcode</b> button.<br />
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/11%20Token%201.png" alt="Enter a passcode" width="500" height="264" /></li>
+    <br />
+    <li>If you have the USB A hard token, make sure you see the green light flashing on the &quot;Y&quot; in the gold circle. For either hard token, press down on the token's gold area with any finger (see below for where to press).</li>
+    <br />
+    <table width="800" cellspacing="1" cellpadding="1" border="1">
+        <tbody>
+            <tr>
+                <td>USB A hard token</td>
+                <td>USB C hard token</td>
+            </tr>
+            <tr>
+                <td><img src="/help/chasek/images/Image/YubiKey_4A_square.jpg" alt="USB A Hard Token" width="300" height="300" /></td>
+                <td>&nbsp;<img src="/help/chasek/images/Image/yubikey_4c_square.jpg" alt="USB C Hard Token" width="284" height="243" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <li>A (long) code will automatically be entered into the box, and the &quot;Login&quot; button will automatically be pressed, and you should now be logged in.<br />
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/12%20Token%202.png" alt="Long code automatically entered" width="500" height="265" /></li>
+</ol>
+</div>
+</p>
+<p>&nbsp;</p>
+<p><font size="5"><b>Step 6: Manage your devices</b></font></p>
+<p><div id="1684" class="offset">
+</div>
+<div class="kb_embedded_article_title">
+	UH Login Multi-Factor Authentication (MFA) - Managing Devices
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div class="kb_embedded_article_text">
+	<ul>
+    <li><a href="#screen">My Settings &amp; Devices screen</a></li>
+    <li><a href="#default">Changing the default device</a></li>
+    <li><a href="#devname">Changing a device name</a></li>
+    <li><a href="#deldev">Deleting a device</a></li>
+    <li><a href="#reactive">Reactivating the Duo Mobile app (does not apply to landlines)</a></li>
+</ul>
+<hr />
+<h3><a name="screen">My Settings &amp; Devices screen</a></h3>
+<p>To manage your Duo devices, you need to go to the My Settings &amp; Devices screen.</p>
+<ol>
+    <li>Login to the UH Login MFA Device Registration site at <a href="https://www.hawaii.edu/its/uhlogin/device-reg">www.hawaii.edu/its/uhlogin/device-reg</a>.</li>
+    <br />
+    <li>You will see the following screen. Click on <em>My Settings &amp; Devices</em> (located on the left side, under the gold seal).</li>
+    <br />
+    <img src="/help/chasek/images/Image/login_screen_one_device_box.jpg" alt="My Settings &amp; Devices link" width="500" height="264" /><br />
+    <br />
+    <li>You will then be asked to authenticate with your second factor again.  Click on the appropriate button to proceed.</li>
+    <br />
+    <li>You will now be at the <em>My Settings &amp; Devices</em> screen. You will see a list of your registered devices. This screenshot shows a sample of one registered device:<br />
+    <br />
+    <img src="/help/chasek/images/Image/my_settings_and_devices.jpg" alt="My Settings &amp; Devices screen" width="500" height="266" /><br />
+    <br />
+    This screenshot shows a sample of multiple registered devices:<br />
+    <br />
+    <img src="/help/chasek/images/Image/list_of_devices.jpg" alt="List of registered devices" width="500" height="267" /></li>
+</ol>
+<hr />
+<h3><a name="default">Changing the default device</a></h3>
+<p>You can only change the default device if you have more than one device setup.</p>
+<ol>
+    <li>Go to the the <em>My Settings &amp; Devices</em> screen as described in the <a href="#screen">My Settings &amp; Devices screen</a> section.</li>
+    <br />
+    <li>If necessary, scroll down. Under <em>Default Device</em>, click on the down arrow, then select the device you wish to be the default. Note: the <em>When I login</em> option should remain <em>Ask me to choose an authentication method</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/select_default_device(1).jpg" alt="Default Device drop-down" width="500" height="264" /><br />
+    <br />
+    <li>If necessary, scroll down. Click on the <em>Save</em> button. When the change has been saved, the <em>Save</em> button will change to a <em>Saved</em> button.</li>
+    <br />
+    <li>If you are done with managing your devices, you can logout of the UH Login MFA Device Registration site.</li>
+</ol>
+<hr />
+<h3><a name="devname">Changing a device name</a></h3>
+<ol>
+    <li>Go to the the <em>My Settings &amp; Devices</em> screen as described in the <a href="#screen">My Settings &amp; Devices screen</a> section.</li>
+    <br />
+    <li>Click on the <em>Device Options</em> button that's on the same line as the device whose name you wish to change.</li>
+    <br />
+    <img src="/help/chasek/images/Image/list_of_devices.jpg" alt="List of registered devices" width="500" height="267" /><br />
+    <br />
+    <li>The screen will now look like the one below.  Click on the <em>Change Device Name</em> button.</li>
+    <br />
+    <img src="/help/chasek/images/Image/change_device_name.jpg" alt="Change Device Name button" width="500" height="263" /><br />
+    <br />
+    <li>In the box that appears, type a new name for your device.  Click on the <em>Save</em> button.  To cancel the change, click on the <em>X</em> button.</li>
+    <br />
+    <img src="/help/chasek/images/Image/type_new_name(1).jpg" alt="Type new name and save or cancel" width="500" height="265" /><br />
+    <br />
+    <li>You will see a message that you have successfully modified the device name. If you are done with managing your devices, you can logout of the UH Login MFA Device Registration site.</li>
+</ol>
+<hr />
+<h3><a name="deldev">Deleting a device</a></h3>
+<ol>
+    <li>Go to the the <em>My Settings &amp; Devices</em> screen as described in the <a href="#screen">My Settings &amp; Devices screen</a> section.</li>
+    <br />
+    <li>Click on the <em>Device Options</em> button that's on the same line as the device you wish to delete.</li>
+    <br />
+    <img src="/help/chasek/images/Image/list_of_devices.jpg" alt="List of registered devices" width="500" height="267" /><br />
+    <br />
+    <li>The screen will now look like the one below. Click on the <em>Trash Can</em> icon.</li>
+    <br />
+    <img src="/help/chasek/images/Image/device_to_delete.jpg" alt="Trash Can icon" width="500" height="267" /><br />
+    <br />
+    <li>You will be asked if you're sure you want to remove the device. If you are sure, click on the <em>Remove</em> button; otherwise, click on <em>Cancel</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/delete are you sure.jpg" alt="Delete confirmation window" width="500" height="266" /><br />
+    <br />
+    <li>You will see a message that you have successfully removed the device. If you are done with managing your devices, you can logout of the UH Login MFA Device Registration site.</li>
+</ol>
+<hr />
+<h3><a name="reactive">Reactivating the Duo Mobile app (does not apply to landlines)</a></h3>
+<p>If you have a new phone but have the same phone number, you need to &quot;reactivate&quot; the Duo Mobile app on your new phone. (If you have a new phone AND a new phone number, activate the new phone as a <a href="http://www.hawaii.edu/askus/1680">new device</a>.)</p>
+<ol>
+    <li>Go to the the <em>My Settings &amp; Devices</em> screen as described in the <a href="#screen">My Settings &amp; Devices screen</a> section. For Step 3, click on the <b>Call Me</b> button. Your phone will ring. Answer the call and press &quot;1&quot; on the keypad to approve the login and proceed.</li>
+    <br />
+    <li>Click on the <em>Device Options</em> button that's on the same line as the device you wish to reactivate.</li>
+    <br />
+    <img src="/help/chasek/images/Image/list_of_devices.jpg" alt="List of registered devices" width="500" height="267" /><br />
+    <br />
+    <li>The screen will now look like the one below. Click on the <em>Reactivate Duo Mobile</em> button.</li>
+    <br />
+    <img src="/help/chasek/images/Image/reactivate_duo_1(1).jpg" alt="Reactivate Duo Mobile button" width="500" height="268" /><br />
+    <br />
+    <li>Select the appropriate phone type for the new phone, then click <em>Continue</em>.<br />
+    <br />
+    <img src="/help/chasek/images/Image/reactivate_type_of_phone-nobb.jpg" alt="What type of phone" width="500" height="267" /></li>
+    <br />
+    <li>Below is the next screen you will see if you picked iPhone in step 5 (if you picked Android the remaining steps are similar). If you have not yet downloaded the Duo Mobile app to your new phone, follow the directions within the box to download and install the app. Once you have downloaded the app to your new phone, or if you already have the app downloaded to your new phone, click on <em>I have Duo Mobile installed</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/install_duo_ios.jpg" alt="Install Duo Mobile app" width="500" height="267" /><br />
+    <br />
+    <li>
+    <p>You will see a barcode displayed.</p>
+    <p>Open the Duo Mobile app on your phone. If you are asked if you want to allow Duo Mobile to send Notifications, please allow notifications.</p>
+    <p>Press the <strong>+</strong> icon in the upper right corner, or press on the <em>Add Account</em> button. If you are asked if you want to allow Duo Mobile to access the Camera, please allow access.</p>
+    <p>Point your phone's camera (the camera's display should be shown on the phone's screen) at the barcode. Once the barcode is properly within the display, it will automatically be recognized.  You can tell it was successful if you see a green checkmark within the barcode.</p>
+    <p>Once you see the green checkmark, click on <em>Continue</em>.</p>
+    </li>
+    <br />
+    <img src="/help/chasek/images/Image/barcode-ios.jpg" alt="Activate Duo Mobile app" width="500" height="266" /><br />
+    <br />
+    <li>You have now activated the Duo Mobile app on your new phone. If you are done with managing your devices, you can logout of the UH Login MFA Device Registration site.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+</p>
+<p class="kb_article_refLink">ref: <a href="http://www.hawaii.edu/infotech/uhusernamepractices.html">http://www.hawaii.edu/infotech/uhusernamepractices.html</a></p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1758" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1758" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1758">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1758">
+		1758</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Fri, 05 Jan 2018 5:14am
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Wed, 26 Dec 2018 12:51pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1323">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Installing and Using Find_SSNs on Linux and Solaris
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Installing and Using Find_SSNs on Linux and Solaris
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p>This article is intended for Facutly/Staff who may have certain types of PI (personal information) located on a computer, running the Linux or Solaris operating systems.</p>
+<h2>Overview:</h2>
+<p>Find_SSNs is a piece of software written in python at VirginiaTech that searches a computers files for Social Security #'s and Credit Card numbers. It requires python version 2.4+ to run. By default Find_SSNs searches the following file types: doc, docx, xlsx, xls, rtf, zip, text files (e.g. html, xml, txt) and Open Office 2 documents. It can additionally search pdf files when the pdftotext binary is installed. (It's part of the poppler package.) We provide two versions of Find_SSNs: One that searchs pdfs and another version that doesn't search pdfs (in case you can't install the poppler package). Our instructions below will include the necessary steps to get the poppler package installed. 	<br />
+<br />
+The Find_SSNs software webpage at Virginia Polytechnic Institute is located here: <a href="https://security.vt.edu/software/Find_SSNs.html">https://security.vt.edu/software/Find_SSNs.html</a> 	<br />
+The full Find_SSNs documentation at Virginia Polytechnic Institute is located here: <a href="https://security.vt.edu/software/Find_SSNs/find_ssns_referance_manual.html">https://security.vt.edu/software/Find_SSNs/find_ssns_referance_manual.html</a> 	<br />
+Find SSN download: <a href="http://www.hawaii.edu/its/docs/find_ssns.tar">http://www.hawaii.edu/its/docs/find_ssns.tar</a> 	<br />
+Find SSN without pdf download: <a href="http://www.hawaii.edu/its/docs/find_ssns_nopdf.tar">http://www.hawaii.edu/its/docs/find_ssns_nopdf.tar</a></p>
+<h2>Requirements</h2>
+<p><strong>Linux:</strong></p>
+<ul>
+    <li>Python v2.4+ <em> <strong>Note:</strong> RHEL and Ubuntu with a default install come with python installed.</em></li>
+    <li>pdftotext binary, which is part of the poppler-utils package on both RHEL and Ubuntu.</li>
+</ul>
+<p><strong>Solaris 10:</strong></p>
+<ul>
+    <li>Python v2.4+</li>
+    <li>pdftotext binary which is part of the poppler package*. (if you need to search pdfs)</li>
+</ul>
+<p>*The poppler package is not a part of the default install on Solaris so needs to be installed from a third-party package (and it's dependencies). 	To ease the process of installing poppler and it's deps. we've created a tar download which bundles the poppler package and it's dependencies together with a install script which will automate the process of installing the packages. <br />
+The script verifies that none of the packages it installs are already installed on the system and it installs the packages in the /usr/local directory structure.<br />
+Download the Solaris poppler install bundle here: <a href="http://www.hawaii.edu/its/docs/poppler_install.tar.gz">http://www.hawaii.edu/its/docs/poppler_install.tar.gz</a><br />
+Extract it and run the 'install_poppler.sh' which will install poppler and it's dependencies if any are not already installed.</p>
+<h2>Installation:</h2>
+<p><strong>Linux:</strong> <br />
+<em> <strong> Note: </strong> While these install steps should work on any modern Linux distro we've only verified that they work on RHEL5, RHEL6 and Ubuntu 11.04.</em></p>
+<ol>
+    <li>Install Python, if not already installed</li>
+    <li>Install poppler-utils package
+    <ol>
+        <li>On RHEL5 install it with this command: <code>yum install poppler-utils</code></li>
+        <li>On Ubuntu install it with this command: <code>  apt-get install poppler-utils</code></li>
+    </ol>
+    </li>
+    <li>Grab a copy of Find_SSNs here: <a href="http://www.hawaii.edu/its/docs/find_ssns.tar">http://www.hawaii.edu/its/docs/find_ssns.tar</a></li>
+    <li>Extract the Find_SSNs to the root users home directory or somewhere else where only root has access to it.</li>
+</ol>
+<p><em> <strong>Note:</strong> If for some reason you can't install poppler-utils to scan pdf files you can grab a copy of Find_SSNs with pdf searching turned off: <a href="http://www.hawaii.edu/its/docs/find_ssns_nopdf.tar">http://www.hawaii.edu/its/docs/find_ssns_nopdf.tar</a></em></p>
+<p>&nbsp;</p>
+<p><strong>Solaris 10: </strong></p>
+<ol>
+    <li>Install the poppler-utils package. By default it is not installed on Solaris, and will need to be installed from a third-party package (and it's dependencies).</li>
+    <li>Download the Find_SSNs package here: <a href="http://www.hawaii.edu/its/docs/find_ssns.tar">http://www.hawaii.edu/its/docs/find_ssns.tar</a></li>
+    <li>Extract the Find_SSNs package.</li>
+</ol>
+<p><em> <strong> Note: </strong> If you cannot install poppler and it's dependencies to search pdfs you can download a copy of Find_SSNs with pdf support turned off: <a href="http://www.hawaii.edu/its/docs/find_ssns_nopdf.tar">http://www.hawaii.edu/its/docs/find_ssns_nopdf.tar</a> </em></p>
+<p>&nbsp;</p>
+<h2>Before Scanning:</h2>
+<ul>
+    <li>Ensure poppler-utils is installed</li>
+    <li>Ensure you are connected to the internet, so the program can download the latest SSN patterns</li>
+    <li>Ensure Python interpreter in your $PATH environmental variable.</li>
+    <li>pdftotext binary in your $PATH environmental variable. (unless you are using the version of Find_SSNs with pdf support disabled)</li>
+</ul>
+<h2>Reducing False Positives:</h2>
+<p>Find_SSNs uses a few innovative methods to reduce false positives, but it *will* still find some false positives when it scans your computer.</p>
+<ul>
+    <li>We've found that the best way to reduce the number of false positives is to only scan locations on the servers that could hold PII information. For example, /home, /fileshare, etc...</li>
+    <li>We've included the false positives that Find_SSNs finds on a full scan of a default install of RHEL5 and Solaris 10 in the Find_SSNs packages in the directory named &quot;default_false_positives&quot;.</li>
+</ul>
+<h2>Scanning:</h2>
+<p>For the full documentation on Find_SSNs, please refer to the Find_SSNs official documentation, located here: <a href="http://security.vt.edu/software/Find_SSNs/find_ssns_referance_manual.html">http://security.vt.edu/software/Find_SSNs/find_ssns_referance_manual.html</a>. <br />
+Scanning your filesystem(s) for files that contain SSN or CC #'s is the same across all Unix/Linux boxes. <br />
+<br />
+To scan your whole computer for SSN's and CC #'s use this command:<br />
+<code> 		python Find_SSNs.pyw -p / -o /root/find_ssns/ -t csv -a 		</code></p>
+<ul><code> 			'-p' indicates the starting path. <br />
+    '-o' indicates the directory to output the scan results. <br />
+    '-t' tells Find_SSNs that you want your results in a csv file. <br />
+    '-a' tells Find_SSNs to search for both SSN #'s and CC #'s. <br />
+    </code></ul>
+    <p><code> 	</code> 	 	Note: If you're receiving this error: &quot;Error - Cannot load SSA areas to groups information. Are you connected to the Internet?&quot; <br />
+    Replace the URL in numbers.py line 89 to http://www.hawaii.edu/infosec/assets/find_ssn/areas_groups.txt</p>
+    <p>&nbsp;</p>
+    <h2>Output Files:</h2>
+    <ul>
+        <li>A csv file which lists the files that have suspicious numbers</li>
+        <li>A txt file which lists the filenames and the actual suspicious numbers.</li>
+    </ul>
+    <p>After reviewing the two output files they should be securely deleted from the computer.</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1323" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1323" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1323">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1323">
+		1323</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Sun, 11 Sep 2011 4:14pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Tue, 15 Sep 2020 1:40pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1806">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Enabling Screen Lock on macOS
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Enabling Screen Lock on macOS
+
+</h2>
+<div id="kb_article_text">
+	<h2>Enabling the Lock Screen</h2>
+<ol>
+    <li><strong>Open your System Preferences.</strong> This can be found either in your dock or by clicking on the apple logo in the top-left corner of the screen and selecting &quot;System Preferences&quot; in the drop-down menu.</li>
+    <br />
+    <center> <img alt="System Preferences" src="https://www.hawaii.edu/infosec/assets/askus/1806-images/syspref.png" width="200px" border="1px" /> </center> <br />
+    <li><strong>Select Security and Privacy.</strong> This will be in the top row of icons.</li>
+    <br />
+    <center> <img alt="Security and Privacy" src="https://www.hawaii.edu/infosec/assets/askus/1806-images/securityandprivacy.png" width="400px" border="1px" /> </center> <br />
+    <p>This window gives you access to setting lock screen delay, changing or setting new passwords, disk encryption, firewall, and app permissions. For this article, we will focus on the lock screen delay setting, which is located in the &quot;General&quot; tab.</p>
+    <li><strong>Set a password if you have not already and click on the first checkbox to require a password. Click on the &quot;Immediately&quot; option in the drop-down menu.</strong> This will cause your laptop to immediately initiate the lock screen whenever the screen turns off or the screensaver turns on.</li>
+    <br />
+    <center> <img alt="Immediate Lock" src="https://www.hawaii.edu/infosec/assets/askus/1806-images/immediatelock.png" width="450px" border="1px" /> </center> <br />
+    <p>Please consider using a strong, complex password for your lock screen, as it is your only defense against attackers who have physical access to your Mac. Unlike mobile devices, there is no limit to how many chances an attacker has to crack your password, which makes it easier for brute force attacks utilizing wordlists and rainbow tables (password databases) to quickly guess your password.</p>
+    <p>If you need guidance for setting a strong password, please refer to <a href="https://hawaii.edu/askus/705">this article on Password Guidelines.</a></p>
+</ol>
+<h2>Locking Methods</h2>
+<p>There are a few different ways of locking your screen: Keychain Access, keyboard shortcuts, and Hot Corners. One is not necessarily better than the other; whichever one you feel most comfortable with doing is the best choice.</p>
+<ul>
+    <li>
+    <h3>Keychain Access</h3>
+    </li>
+    <p>The Keychain Access method uses a built-in utility to add a button to the top-right portion of the menu bar. This method does not require you to memorize anything and gives graphical feedback, unlike the other two methods, making this one the easiest to remember.</p>
+    <br />
+    <center> <img alt="Keychain Access Lock Button" src="https://www.hawaii.edu/infosec/assets/askus/1806-images/lock.png" width="300px" border="1px" /> </center> <br />
+    <ol>
+        <li><strong>Navigate to the Utilities Folder in Applications and double click on Keychain Access. </strong> This can be found by opening Finder, clicking on Applications on the left-hand menu and scrolling down to the folder.</li>
+        <br />
+        <center> <img alt="Applications Folder" src="https://www.hawaii.edu/infosec/assets/askus/1806-images/applications.png" width="350px" border="1px" /> <img alt="Utilities Folder" src="https://www.hawaii.edu/infosec/assets/askus/1806-images/utilities.png" width="336px" border="1px" /> </center> <br />
+        <li><strong>Once in Keychain Access, open the Preferences. </strong> This can be found in the top bar by clicking on &quot;Keychain Access&quot;.</li>
+        <br />
+        <center> <img alt="Keychain Access Preferences" src="https://www.hawaii.edu/infosec/assets/askus/1806-images/keychainpreferences.png" width="350px" border="1px" /> </center> <br />
+        <li><strong>Check the &quot;Show keychain status in menu bar&quot; box.</strong> After doing so, you can close Keychain Access. This will make the lock icon appear in the menu bar.</li>
+        <br />
+        <center> <img alt="KA Checkbox" src="https://www.hawaii.edu/infosec/assets/askus/1806-images/checkbox.png" width="350px" border="1px" /> </center> <br />
+        <li><strong>To lock you screen, click on the lock button, and select &quot;Lock Screen&quot;.</strong> Now your laptop will require a password when it is next woken up.</li>
+        <br />
+        <center> <img alt="Lock Dropdown" src="https://www.hawaii.edu/infosec/assets/askus/1806-images/lockdropdown.png" width="250px" border="1px" /> </center>     </ol>
+        <li>
+        <h3>Keyboard Shortcut</h3>
+        </li>
+        <p>This method is the easiest to implement of the three due to not requiring you to access any settings, but it does require you to memorize a few keystrokes. There are two different keystrokes for different Macs. Once these keys are pressed, your screen will instantly turn black and initiate the lock screen.</p>
+        <ol>
+            <li><strong>Control + Shift + Eject</strong> are the keys to press for Macs with the eject button in the upper right corner of the keyboard.</li>
+            <li><strong>Control + Shift + Power</strong> are the keys to press for Macs without the eject button.</li>
+        </ol>
+        <p>Note that both methods will work with Macs that have the eject button, so memorize whichever one is easiest for you. On newer MacBooks, the power button is located where the eject key is on older models.</p>
+        <li>
+        <h3>Hot Corners</h3>
+        </li>
+        <p>Hot Corners is a feature that allows for different functions to execute when you drag your cursor to a corner of the screen. You can use this to set a corner to initiate either the screensaver or to turn the display off. All four corners can be customized to do different things, so when setting this up, remember which corner you put the lock screen on.</p>
+        <ol>
+            <li><strong>Open Mission Control.</strong> This can be found in System Preferences in the first row of icons.</li>
+            <br />
+            <center> <img alt="Mission Control" src="https://www.hawaii.edu/infosec/assets/askus/1806-images/missioncontrol.png" width="100px" border="1px" /> </center> <br />
+            <li><strong>Click on Hot Corners.</strong> This button is located on the lower left corner of the Mission Control window. A drop-down menu should appear at the top of the Mission Control window.</li>
+            <br />
+            <center> <img alt="Hot Corners" src="https://www.hawaii.edu/infosec/assets/askus/1806-images/hotcorners.png" width="300px" border="1px" /> </center> <br />
+            <li><strong>Choose a corner to &quot;Put Display to Sleep&quot;.</strong> Alternatively, you can choose to start the screensaver instead, which will also initiate the lock screen underneath it.</li>
+            <br />
+            <center> <img alt="DropDown Menu" src="https://www.hawaii.edu/infosec/assets/askus/1806-images/hcdropdownmenu.png" width="500px" border="1px" /> </center>     </ol>
+        </ul>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1806" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1806" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1806">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1806">
+		1806</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Tue, 17 Mar 2020 4:56pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Wed, 19 Aug 2020 2:10pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

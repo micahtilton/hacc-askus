@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1727">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Virtual Server: File Level Backup Policy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Virtual Server: File Level Backup Policy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p class="MsoNormal">The following information is provided to help virtual server customers of Information Technology Services (ITS) Managed Services understand the nature  of the backup procedures if they choose the ITS offered backup service.</p>
+<p class="MsoNormal">Virtual servers are <strong>required</strong> to have backups.</p>
+<p class="MsoNormal">See more information at&nbsp;<a href="https://www.hawaii.edu/its/datacenter/services.php?cat=dc">Data Center Services</a> for pricing information.</p>
+<p class="MsoNormal">To use a non-ITS backup solution, please see: <a href="https://www.hawaii.edu/askus/1835">Virtual Server: ITS Customer Backup Policy (non-ITS Backup Solution)</a></p>
+<h3>Important information to consider:</h3>
+<ul>
+    <li>Bacula takes <span style="color: rgb(255, 0, 0);"><strong>file-level backups</strong></span>, and cannot perform system restores.&nbsp;&nbsp;
+    <ul>
+        <li>Should a catastrophe occur, essential data that was backed up would be recoverable, but the operating system, settings, and any applications would need to be reinstalled and configured.<br />
+        &nbsp;</li>
+    </ul>
+    </li>
+    <li>Windows files that are open while a backup is being made will be backed up by Volume Snapshot Servers (VSS). VSS allows for files to be backed up when in use.<br />
+    &nbsp;</li>
+    <li>Linux does not have VSS, so files should be closed prior to the backup window to ensure they are backed up.<br />
+    &nbsp;</li>
+    <li>Bacula will <strong>not</strong> backup databases live.&nbsp; If you are running a database server, you will either need to stop or pause your database services during the backup window, or export your database and store the copy in a location that's being backed up.<br />
+    &nbsp;</li>
+    <li>Please refer to the&nbsp;<a href="http://www.hawaii.edu/askus/1852">Virtual Hosting SLA</a>&nbsp;on <strong>retention period</strong> for your backup. <span style="color: rgb(255, 0, 0);">Backups that are beyond this retention period are automatically expired.</span> Recovery is not possible after that, and neither the backup window nor retention period can be modified.</li>
+</ul>
+<div>&nbsp;</div>
+<p class="MsoNormal">Backups are performed nightly, and are scheduled to start after work hours. The backup times vary based on load and amount of data to backup, <em>so we cannot guarantee a specific backup time. </em><span class="s1"><br />
+</span></p>
+<p class="MsoNormal"><span class="s1">Upon request, we can initiate one test restore per year to ensure the integrity of the backups.&nbsp; Customers do not have direct access to the backups, and restore requests are initiated through ITS Managed Services (itscs@hawaii.edu).&nbsp; At this time, there are no additional fees to request a restore, pending availability.</span></p>
+<p class="MsoNormal">To request a backup, we will need the following information:</p>
+<ol>
+    <li>The name of your virtual server hosted by ITS Managed Services</li>
+    <li>Which directories need to be backed up</li>
+    <li>An estimate of how much storage space the backup will require</li>
+</ol>
+<p class="MsoNormal">&nbsp;If there are any questions, please email itscs@hawaii.edu.&nbsp;&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h3>RELATED ARTICLES:&nbsp;</h3>
+<ul>
+    <li><a href="https://www.hawaii.edu/its/datacenter/services.php?cat=dc">Data Center Services</a></li>
+    <li><a href="http://hawaii.edu/askus/1716">Virtual Server: How to install and configure backups (Bacula) on a Windows Server</a></li>
+    <li><a href="http://hawaii.edu/askus/1732">Virtual Server: How to Install and Configure Backups (Bacula) on a RHEL Server</a></li>
+    <li><a href="http://www.hawaii.edu/askus/1717">Virtual Hosting: How to Submit a Restore Request</a></li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1727" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1727" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1727">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1727">
+		1727</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Fri, 10 Feb 2017 8:50am
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Mon, 02 Aug 2021 10:02am</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

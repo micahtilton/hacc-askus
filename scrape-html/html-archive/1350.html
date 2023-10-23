@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1350">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Google@UH Gmail Thunderbird (Windows) setup
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Google@UH Gmail Thunderbird (Windows) setup
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p><strong>Note</strong>: These instructions were written for Thunderbird 38 . &nbsp;If you have another version, the below steps might differ slightly.<br />
+<strong>Note</strong>: Make sure you have enabled IMAP in Google@UH Gmail before you continue, instructions can be found <a href="http://hawaii.edu/askus/1147">here</a>.</p>
+<ol>
+    <li>Launch Thunderbird and set or skip the System Integration pop-up. (Set as Default if you would like Thunderbird to be your default mail client)</li>
+    <li>If this is your first time setting up Thunderbird, it should automatically take you to the <strong>Set Up Your Existing Email Address</strong> page. If you already have an account signed into Thunderbird and would like to add another, Left click on your first email address, select <strong>Email </strong>in the<strong> Set Up Another Account </strong>section.<b> </b>This will bring you to the<strong>&nbsp;</strong><strong>Set Up Your Existing Email Address </strong>page.</li>
+    <li>On <strong>Set Up Your Existing Email Address, </strong>enter your First and Last Name and your full @hawaii.edu email address. You may optionally select the box to <strong>Remember password</strong>, then click on <strong>Configure manually</strong>.<br />
+    <p>&nbsp;<img src="/help/chasek/images/Image/natwell/Thunderbird/Setup.PNG" width="600" height="327" alt="" /></p>
+    </li>
+    <li>To setup the IMAP filter, use the following options:<br />
+    <br />
+    Protocol should be set to&nbsp;<strong>IMAP</strong>.<br />
+    <strong>Hostname</strong>&nbsp;should be set to&nbsp;<strong>imap.gmail.com</strong>.<br />
+    Change the Incoming server (IMAP) port to&nbsp;<strong>993</strong><br />
+    Set&nbsp;<strong>Connection Security&nbsp;</strong>to&nbsp;<strong>SSL/TLS</strong>.<br />
+    Set&nbsp;<strong>Authentication method&nbsp;</strong>to&nbsp;<strong>OAuth2</strong>.<br />
+    <strong>Username&nbsp;</strong>should be&nbsp;<strong>your full email address</strong>&nbsp;(username@hawaii.edu).<br />
+    <br />
+    <strong>Outgoing</strong><strong>Sever hostname</strong>&nbsp;should be set to&nbsp;<strong>smtp.gmail.com</strong>.<br />
+    Change the Outgoing server (SMTP) port number to&nbsp;<strong>465&nbsp;</strong>if using SSL(Note: SMTP port&nbsp;<strong>587&nbsp;</strong>should also work with&nbsp;<strong>TLS/</strong><strong>STARTTLS</strong>).<br />
+    Set&nbsp;<strong>Connection Security&nbsp;</strong>to&nbsp;<strong>SSL/TLS&nbsp;</strong>or&nbsp;<strong>STARTTLS</strong>.<br />
+    Set&nbsp;<strong>Authentication method&nbsp;</strong>to&nbsp;<strong>OAuth2</strong>.<br />
+    <strong>Username&nbsp;</strong>should be&nbsp;<strong>your full email address</strong>&nbsp;(username@hawaii.edu).<br />
+    <br />
+    <p><a href="/help/chasek/images/Image/natwell/Thunderbird/SetupAdvanced.PNG"><img src="/help/chasek/images/Image/natwell/Thunderbird/SetupAdvanced.PNG" width="400" height="803" alt="" /></a></p>
+    </li>
+    <li>
+    <p>Select <strong>Done </strong>after inputting the IMAP options. A Google Sign in page should appear. Type in your full UH email address, then select <strong>Next</strong>.</p>
+    <p><img src="/help/chasek/images/Image/natwell/Thunderbird/SetupGoogle.PNG" width="400" height="508" alt="" /></p>
+    </li>
+    <li>On the <strong>Mozilla Thunderbird Email wants to access your Google Account: </strong>screen, click on<strong> Allow</strong>.
+    <p><img src="/help/chasek/images/Image/natwell/Thunderbird/MozillaAccess(1).png" width="400" height="332" alt="" /></p>
+    </li>
+    <li>You will then be greeted with an <strong>Account successfully created</strong> banner.&nbsp;<br />
+    <img src="/help/chasek/images/Image/natwell/Thunderbird/SuccessBanner.PNG" width="500" height="80" alt="" /></li>
+    <li>Thunderbird is now configured, click on Inbox to start downloading emails. A popup may appear with options for setting Mozilla Thunderbird as your default application for email or calendar. These settings are optional.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1350" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1350" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1350">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1350">
+		1350</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Fri, 09 Mar 2012 11:21am
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Wed, 23 Aug 2023 7:46am</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

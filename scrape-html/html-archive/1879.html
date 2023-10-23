@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1879">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Virtual Server: How to Re-register Your ITS-Hosted Red Hat Linux Virtual 7 Server with Satellite
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Virtual Server: How to Re-register Your ITS-Hosted Red Hat Linux Virtual 7 Server with Satellite
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<h3>OVERVIEW</h3>
+<p>UH Information Technology Services (ITS) will be replacing the Katello content management service with Red Hat Satellite.&nbsp; All ITS-hosted Red Hat  Enterprise Linux (RHEL) 7 virtual servers using the Katello service are required to re-register with the new  Red Hat Satellite service.&nbsp;</p>
+<p>&nbsp;</p>
+<h3>PROCEDURE</h3>
+<p>To re-register your RHEL 7 virtual server with Satellite, do the following as either user root or using the  &quot;sudo&quot; command:</p>
+<ol class="ol1">
+    <li>Enter the following commands one at a time in the order shown  (each command is a single line, even if it displays as wrapped text due  to the right margin of this page).<br />
+    <br />
+    <br />
+    <br />
+    <code><strong>subscription-manager repos --list-enabled</strong></code><strong><br />
+    <br />
+    </strong><br />
+    <code><strong>subscription-manager unregister</strong></code><br />
+    <br />
+    <br />
+    <code><strong>subscription-manager clean</strong></code><br />
+    <br />
+    <br />
+    <code><strong>yum -y remove katello-ca-consumer-kat02.pvt.hawaii.edu.noarch</strong></code><br />
+    <br />
+    <br />
+    <code><strong>curl http://satellite.pvt.hawaii.edu/pub/katello-ca-consumer-latest.noarch.rpm -o /var/tmp/katello-ca-consumer-latest.noarch.rpm</strong></code><br />
+    <br />
+    <br />
+    <code><strong>yum install /var/tmp/katello-ca-consumer-latest.noarch.rpm</strong></code><br />
+    <br />
+    <br />
+    <code><strong>subscription-manager register --force --org='UH-ITS' --activationkey='ak-UH,ak-CS-RHEL7'</strong></code><br />
+    <br />
+    <br />
+    <code><strong>/usr/sbin/subscription-manager repos --disable &quot;*&quot;</strong></code><span style="font-size:11pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;" id="docs-internal-guid-5df9dc6d-7fff-6db6-e054-cff36ca3c0e7"><br />
+    </span><br />
+    <strong><br />
+    </strong><code><strong>/usr/sbin/subscription-manager repos --enable rhel-7-server-rpms --enable rhel-7-server-extras-rpms --enable rhel-7-server-optional-rpms --enable UH-ITS_EPEL_7Server_x86_64 --enable UH-ITS_DuoSecurity_Duo_Redhat_7Server_x86_64 --enable rhel-server-rhscl-7-rpms</strong></code><span style="font-size:11pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;" id="docs-internal-guid-11bd8d71-7fff-d314-d2f5-5bd4d9b22a88"><br />
+    </span><br />
+    <br />
+    <code><strong>/usr/bin/yum clean all</strong></code><br />
+    <br />
+    <br />
+    <code><strong>service rhsmcertd restart</strong></code><br />
+    <br />
+    <br />
+    <code><strong>/bin/rm /var/tmp/katello-ca-consumer-latest.noarch.rpm</strong></code><br />
+    <br />
+    &nbsp;</li>
+</ol>
+<ol class="ol1" start="2">
+    <li>Verify that &quot;yum&quot; sees all the new Satellite repositories you enabled in step 1 above by using the &quot;<code>yum repolist enabled</code>&quot; command. Example below shows repos highlighted that the server should have.</li>
+</ol>
+<p style="margin-left: 40px;"><strong><code>yum repolist enabled</code></strong><br />
+<font face="monospace">Loaded plugins: enabled_repos_upload, langpacks, package_upload, product-id, search-disabled-<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : repos, subscription-manager<br />
+repo id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; repo name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; status<br />
+<span style="background-color: rgb(255, 255, 0);">!UH-ITS_DuoSecurity_Duo_Redhat_7Server_x86_64 Duo Redhat 7Server x86_64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22<br />
+!UH-ITS_EPEL_7Server_x86_64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7Server x86_64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13,745</span><br />
+azure-cli&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Azure CLI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 122<br />
+duosecurity/7Server/x86_64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Duo Security Repository&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22<br />
+hashicorp/7Server/x86_64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hashicorp Stable - x86_64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 934<br />
+influxdb/7Server/x86_64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; InfluxDB Repository - RHEL 7Server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 282<br />
+<span style="background-color: rgb(255, 255, 0);">rhel-7-server-extras-rpms/x86_64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Red Hat Enterprise Linux 7 Server - Extras&nbsp; 1,444<br />
+rhel-7-server-optional-rpms/7Server/x86_64&nbsp;&nbsp;&nbsp; Red Hat Enterprise Linux 7 Server - Option 23,643<br />
+rhel-7-server-rpms/7Server/x86_64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Red Hat Enterprise Linux 7 Server (RPMs)&nbsp;&nbsp; 33,401<br />
+rhel-server-rhscl-7-rpms/7Server/x86_64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Red Hat Software Collections RPMs for Red&nbsp; 14,337</span><br />
+repolist: 87,952<br />
+Uploading Enabled Repositories Report<br />
+<br />
+</font></p>
+<ol class="ol1" start="3">
+    <li>
+    <p>(Optional) Run the following commands to verify the subscription is current and registered. The output should look like this:<br />
+    <br />
+    <strong><span style="font-family: Courier New;">subscription-manager status</span></strong><br />
+    <span style="font-family: Courier New;">+-------------------------------------------+<br />
+    &nbsp;&nbsp; System Status Details<br />
+    +-------------------------------------------+<br />
+    Overall Status: Disabled<br />
+    Content Access Mode is set to Simple Content Access. This host has access to content, regardless of subscription status.<br />
+    <br />
+    System Purpose Status: Disabled<br />
+    <br />
+    </span></p>
+    </li>
+    <li><span class="s2">Notify ITS Managed Services (e-mail&nbsp;<a href="mailto:itscs@hawaii.edu"><span class="s3">itscs@hawaii.edu</span></a>) when you&rsquo;re done re-registering your virtual server with Satellite, letting them know the hostname and IP of your virtual server.</span><br />
+    &nbsp;</li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1879" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1879" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1879">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1879">
+		1879</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Mon, 12 Dec 2022 10:58am
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Tue, 17 Jan 2023 11:24am</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

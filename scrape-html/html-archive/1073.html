@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1073">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Common List Configuration Settings
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Common List Configuration Settings
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<h3><strong>Simple Mail Redirect (Mail Alias)</strong></h3>
+<div style="margin: 0in 0in 0pt"><strong>Description:</strong> This configuration simulates a mail alias. A message posted to the list is simply forwarded to all subscribers. Messages sent to the list are not archived or kept on the server. Subscription to this list is restricted and requires the owner&rsquo;s approval; however, anyone may post to the list.</div>
+<div style="margin: 0in 0in 0pt">&nbsp;</div>
+<div style="margin: 0in 0in 0pt; page-break-after: auto"><span style="text-transform: none"><strong>Header Settings:</strong></span></div>
+<div style="margin: 0in 0in 0pt; page-break-after: auto">&nbsp;</div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><span style="font-size: 11pt">My LISTSERV list (MYLIST-L)</span></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><b><span style="font-size: 11pt">Subscription= By_Owner</span></b></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><b><span style="font-size: 11pt">Send= Public</span></b></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;">Attachments= All</div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><span style="font-size: 11pt">Errors-To= Owner</span></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><span style="font-size: 11pt">Confidential= No</span></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><span style="font-size: 11pt">Validate= Yes, Confirm</span></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><span style="font-size: 11pt">Reply-to= List, Respect</span></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><span style="font-size: 11pt">Review= Owners</span></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><b><span style="font-size: 11pt">Notebook= No</span></b></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><span style="font-size: 11pt">Owner= joe@example.com</span></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;">&nbsp;</div>
+<h3><strong>Public Listserv Lists</strong></h3>
+<div style="margin: 0in 0in 0pt"><strong>Description: </strong>Public LISTSERV lists are available for people to search for and request a subscription. Set &ldquo;Confidential&rdquo; to &ldquo;No&rdquo; to make your LISTSERV list public and &ldquo;Subscription&rdquo; to &ldquo;Open&rdquo; to allow a user to subscribe without the need of the owner&rsquo;s approval.</div>
+<div style="margin: 0in 0in 0pt">&nbsp;</div>
+<div style="margin: 0in 0in 0pt; page-break-after: auto"><span style="text-transform: none"><strong>Header Settings: </strong></span></div>
+<div style="margin: 0in 0in 0pt; page-break-after: auto">&nbsp;</div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><span style="font-size: 14.6667px;">My LISTSERV list (MYLIST-L)</span></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><strong><span style="font-size: 11pt">Subscription= Open</span><br />
+</strong></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><span style="font-size: 11pt">Send= Public</span><b><span style="font-size: 11pt"> </span></b></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;">Attachments= All</div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><span style="font-size: 11pt">Errors-To= Owner</span></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><b><span style="font-size: 11pt">Confidential= No</span></b></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><span style="font-size: 11pt">Validate= Yes, Confirm</span></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><span style="font-size: 11pt">Reply-to= List, Respect</span></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><span style="font-size: 11pt">Review= Owners</span></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><span style="font-size: 11pt">Notebook= Yes,/listserv/root/lists/mylist-l,Monthly</span></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;"><span style="font-size: 11pt">Owner= joe@example.com</span></div>
+<div style="margin: 0in 0in 0pt 40px; break-after: auto;">&nbsp;</div>
+<h3><strong>One-Way Announcement List</strong></h3>
+<div style="margin: 0in 0in 0pt"><b>Description:</b> Only the owner(s) or moderator(s)/editor(s), in this case joe@example.com, are allowed to send mail to this list. Subscription is unrestricted (anyone can subscribe to this list). The list is archived monthly.</div>
+<div style="margin: 0in 0in 0pt">&nbsp;</div>
+<div style="margin: 0in 0in 0pt"><b>Header Settings:</b></div>
+<div style="margin: 0in 0in 0pt">&nbsp;</div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 14.6667px;">My LISTSERV list (MYLIST-L)</span></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt"><b>Subscription= Open</b></span></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt"><b>Send= joe@example.com</b></span></div>
+<div style="margin: 0in 0in 0pt 40px;">Attachments= All</div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Errors-To= Owner </span></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Confidential= No</span></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Validate= Yes, Confirm</span></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Reply-to= List, Respect</span></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Review= Owners </span></div>
+<div style="margin: 0in 0in 0pt 40px;"><strong><span style="font-size: 11pt">Notebook= Yes,/listserv/lists/mylist-l,Monthly</span></strong></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Owner= joe@example.com</span></div>
+<div style="margin: 0in 0in 0pt 40px;">&nbsp;</div>
+<div style="margin: 0in 0in 0pt"><b><span style="font-size: 11pt">Note:</span></b><i><font size="2"> To allow multiple senders to the list, add email addresses separated by commas next to the send keyword:</font></i></div>
+<div style="margin: 0in 0in 0pt">&nbsp;</div>
+<div style="margin: 0in 0in 0pt 40px;"><i><font size="2"><span>Send= joe@example.com, jane@example.com, jack@example.com</span></font></i></div>
+<div style="margin: 0in 0in 0pt">&nbsp;</div>
+<div style="margin: 0in 0in 0pt"><i><font size="2"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Or</span></font></i></div>
+<div style="margin: 0in 0in 0pt">&nbsp;</div>
+<div style="margin: 0in 0in 0pt 40px;"><i><font size="2"><span>Send= joe@example.com</span></font></i></div>
+<div style="margin: 0in 0in 0pt 40px;"><i><font size="2"><span>Send= jane@example.com</span></font></i></div>
+<div style="margin: 0in 0in 0pt 40px;"><i><font size="2"><span>Send= jack@example.com</span></font></i></div>
+<div style="margin: 0in 0in 0pt 40px;">&nbsp;</div>
+<h3><strong>Moderated (Editor Based)</strong></h3>
+<div style="margin: 0in 0in 0pt"><b>Description:</b> All messages sent to the list are reviewed by an editor, who is responsible for checking the appropriateness and correctness of a message, before forwarding the message to the list. Moderated lists reduce the amount of &ldquo;spam&rdquo; messages received by subscribers since postings are filtered by the editor.</div>
+<div style="margin: 0in 0in 0pt">&nbsp;</div>
+<div style="margin: 0in 0in 0pt"><b>Note:</b><i><span style="font-size: 10pt;">&nbsp;You must have at least one editor specified. Click on&nbsp;</span></i><b><span style="font-size: 10pt;"><i>List Configuration</i>.</span></b><span style="font-size: 10pt;"><i>&nbsp;Then, click on the&nbsp;</i><em><b>Administrators</b></em><b>&nbsp;</b></span><i><span style="font-size: 10pt;">tab and enter the desired email address(es).</span></i></div>
+<div style="margin: 0in 0in 0pt">&nbsp;</div>
+<div style="margin: 0in 0in 0pt"><span style="font-style: normal"><strong>Header Settings:</strong></span></div>
+<div style="margin: 0in 0in 0pt">&nbsp;</div>
+<div style="margin: 0in 0in 0pt 40px;">
+<div style="margin-top: 0in; margin-right: 0in; margin-bottom: 0pt; break-after: auto;"><span style="font-size: 11pt;">My LISTSERV list (MYLIST-L)</span></div>
+</div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Subscription= By_Owner</span></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt"><b>Send= Editor</b></span></div>
+<div style="margin: 0in 0in 0pt 40px;"><b><span style="font-size: 11pt">Editor= jane@example.com</span></b></div>
+<div style="margin: 0in 0in 0pt 40px;">Attachments= All</div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Errors-To= Owner </span></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Confidential= No</span></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Validate= Yes, Confirm</span></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Reply-to= List, Respect</span></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Review= Owners</span></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Notebook= Yes,/listserv/lists/mylist-l,Monthly</span></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Owner= joe@example.com</span></div>
+<div style="margin: 0in 0in 0pt">&nbsp;</div>
+<h3><strong>Moderated (Approve/Disapprove)</strong>&nbsp;</h3>
+<div style="margin: 0in 0in 0pt"><b>Description:</b> All messages sent to the list are reviewed and approved by the moderator(s) of the list. Subscription to this list is restricted and must be approved by the list owner. Unlike a moderated list with an editor, the moderator approves or disapproves a message, but cannot change its contents.</div>
+<div style="margin: 0in 0in 0pt">&nbsp;</div>
+<div style="margin: 0in 0in 0pt"><b>Note:</b><i><span style="font-size: 10pt"> You must have at least one editor specified. Click on </span></i><b style=""><span style="font-size: 10pt;"><i>List Configuration</i>.</span></b><span style="font-size: 10pt;"><i>&nbsp;Then, click on the </i><em><b>Administrators</b></em><b>&nbsp;</b></span><i><span style="font-size: 10pt">tab and enter the desired email address(es).</span></i></div>
+<div style="margin: 0in 0in 0pt">&nbsp;</div>
+<div style="margin: 0in 0in 0pt"><b>Header Settings:</b></div>
+<div style="margin: 0in 0in 0pt">&nbsp;</div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">My LISTSERV list (MYLIST-L)</span></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Subscription= By_Owner</span></div>
+<div style="margin: 0in 0in 0pt 40px;">
+<div style="margin-top: 0in; margin-right: 0in; margin-bottom: 0pt;"><strong><span style="font-size: 11pt;">Send= Editor, Hold, Confirm</span></strong></div>
+<div style="margin-top: 0in; margin-right: 0in; margin-bottom: 0pt;"><b><span style="font-size: 11pt;">Editor= jane@example</span></b></div>
+<div style="margin-top: 0in; margin-right: 0in; margin-bottom: 0pt;"><b style="font-size: 11pt;">Moderator= All, jack@example.com, jill@example.com</b></div>
+<div style="margin-top: 0in; margin-right: 0in; margin-bottom: 0pt;">Attachments= All</div>
+</div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Errors-To= Owner</span></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt;">Confidential</span><span style="font-size: 11pt;">= No</span></div>
+<div style="margin: 0in 0in 0pt 40px;">
+<div style="margin-top: 0in; margin-right: 0in; margin-bottom: 0pt;"><span style="font-size: 11pt;">Validate= Yes, Confirm</span></div>
+</div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Reply-to= List, Respect</span></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Review= Owners</span></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Notebook= Yes,/listserv/lists/mylist-l,Monthly</span></div>
+<div style="margin: 0in 0in 0pt 40px;"><span style="font-size: 11pt">Owner= joe@example.com</span></div>
+<div style="margin: 0in 0in 0pt">&nbsp;</div>
+<div style="margin: 0in 0in 0pt"><b>Note:</b><i><span style="font-size: 10pt"> Moderation can also be done in a round-robin fashion. To enable this, simply remove the </span></i><span style="font-size: 10pt">&lsquo;All&rsquo;<i> following Moderator.</i></span></div>
+<p><i><span style="font-size: 11pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Moderator= jack@example.com, jill@example.com</span></i></p>
+</div>
+<div class="kb_article_parentslink">
+	This article is part of the 
+<a href="/askus/1066">
+    Getting Started with Managing a LISTSERV Mailing List (Owners)
+
+
+
+
+
+
+
+
+</a>
+ article.
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1073" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1073" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1073">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1073">
+		1073</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Thu, 15 Oct 2009 8:39am
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Tue, 15 Jun 2021 9:40am</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

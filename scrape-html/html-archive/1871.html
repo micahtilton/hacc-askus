@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1871">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Virtual Server: Dual-Homed to Single-Homed Network Conversion (Windows)
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Virtual Server: Dual-Homed to Single-Homed Network Conversion (Windows)
+
+
+
+</h2>
+<div id="kb_article_text">
+	<h3>SUMMARY:</h3>
+<p>In the past, virtual servers were provisioned with both a public and a private network (&quot;dual-homed&quot;). ITS will be removing the use to the private network, and self-managed VM customers will need to complete the following steps to remove the private network on their server.</p>
+<p><strong>NOTE: You should contact itscs@hawaii.edu at least 1-2 business days before you plan this, as modifying the private network may cause a downtime to other services or hosts that your server connects to. ITS may also need to modify additional firewall rules on your VM, so if you have critical services that need to be up, it is best that you coordinate this with us ahead of time.<br />
+</strong></p>
+<p>&nbsp;</p>
+<ol>
+    <li>Go the the Control Panel on the server and edit the public network interface, which should have a 128.171.*.* IP address.<br />
+    &nbsp;</li>
+    <li>Change the DNS servers to the following:<br />
+    <br />
+    192.168.10.115<br />
+    192.168.10.116<br />
+    &nbsp;</li>
+    <li>Open the command prompt (cmd) to remove the static routes that were set up on the server. Run &quot;netstat -r&quot; to confirm the following routes show:<br />
+    <img src="data:image/png;base64,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" alt="" /><br />
+    &nbsp;</li>
+    <li>Enter the following commands to remove each route:<br />
+    <br />
+    route -p delete 10.0.0.0<br />
+    route -p delete 172.16.0.0<br />
+    route -p delete 192.168.0.0<br />
+    &nbsp;</li>
+    <li>Go back to the Control Panel and disable the private network interface, which should have an IP of 172.17.*.*<br />
+    &nbsp;</li>
+    <li>Email itscs@hawaii.edu that you have disabled the private network and removed the static routes. We will then remove the NIC from the VM, and modify additional firewall rules on our end if needed.<br />
+    <br />
+    <strong>Please note that if the server needs to connect to critical services, this part may not work unless we modify the firewall rules. Therefore, it would be best if we are contacted during business hours to ensure this is completed.</strong></li>
+</ol>
+<p>&nbsp;</p>
+<h3>RELATED ARTICLES:</h3>
+<ul>
+    <li><a href="http://hawaii.edu/askus/1873">Virtual Server: Dual-Homed to Single-Homed Network Conversion (Linux) </a></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1871" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1871" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1871">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1871">
+		1871</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Fri, 13 May 2022 11:02am
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Fri, 13 May 2022 1:01pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

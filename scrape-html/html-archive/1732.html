@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1732">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Virtual Server: How to Install and Configure Backups (Bacula) on a RHEL Server
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Virtual Server: How to Install and Configure Backups (Bacula) on a RHEL Server
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<h3><span style="font-size: medium;">SUMMARY</span></h3>
+<p>The Bacula Enterprise Edition (BEE) backup service is the optional daily backup service listed in the&nbsp;<a href="http://www.hawaii.edu/its/datacenter/services.php?cat=dc">ITS VMware Hosted Solutions</a>&nbsp;page. Backups are <em>file level</em> only.</p>
+<p>If you are a virtual server customer and have purchased the daily backup service, a BEE client  will need to be configured on your server to communicate with the backup  server. This article describes installing and configuring the BEE client on a Red Hat Enterprise Linux (RHEL) virtual server.</p>
+<h3><span style="font-size: medium;">PREREQUISITES</span></h3>
+<ul>
+    <li>You should already have the daily backup service purchased through ITS Managed Services. If you have not already done so, please contact ITS Managed Services at itscs@hawaii.edu to do so.<br />
+    &nbsp;</li>
+    <li>You should already have a private network connection on your virtual server. For more information, please see <a href="http://hawaii.edu/askus/1753">Virtual Server: How to Connect Your ITS-Hosted RHEL 7 Virtual Server to an ITS Private Network</a>.</li>
+</ul>
+<h3><span style="font-size: medium;">PROCEDURE</span></h3>
+<p>Do the following to install a BEE client on your RHEL virtual server:</p>
+<ol>
+    <li>Contact ITS Managed Services at itscs@hawaii.edu asking that the latest version of the BEE client .rpm packages be file dropped to you (via the <a href="http://www.hawaii.edu/filedrop">UH Filedrop</a> service). Once you have these files, upload them to your virtual server's /root directory.</li>
+</ol>
+<ol start="2">
+    <li>Log into your virtual server and switch user to the root user.<br />
+    &nbsp;</li>
+    <li>Install the BEE client software:</li>
+</ol>
+<p style="margin-left: 40px;"><code>#&nbsp;<strong>cd /root</strong><br />
+#&nbsp;</code><strong><code>yum install -y ./bacula-enterprise-*.rpm<br />
+<br />
+</code></strong></p>
+<p style="margin-left: 40px;">NOTE: You may need to install the bacula-enterprise-lib-*.rpm file first before installing the bacula-enterprise-client-*.rpm file.</p>
+<ol start="4">
+    <li>Modify the <tt>/opt/bacula/etc/bacula-fd.conf</tt> file (installed when you install the BEE client) as outlined in the following example. In this example, &quot;bac10&quot; is used as the hostname, but for your server, it should be the short hostname of your virtual server.</li>
+</ol>
+<p style="margin-left: 40px;">(a)&nbsp;<u>Change this:</u></p>
+<p style="margin-left: 40px;"><code>Director {</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; Name = bac10-dir</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; Password = &quot;&lt; random_password_1 &gt;&quot;</code></p>
+<p style="margin-left: 40px;"><code>}</code></p>
+<p style="margin-left: 40px;"><u>To this (c<em>hange the Name and use the randomly generated password, or create your own):</em></u></p>
+<p style="margin-left: 40px;"><code>Director {</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; Name = </code><span style="background-color: yellow;"><code>bacula-dir</code></span></p>
+<p style="margin-left: 40px;"><code>&nbsp; Password = </code><span style="background-color: yellow;"><code>&quot;&lt;random-password&gt;&quot;</code></span></p>
+<p style="margin-left: 40px;"><code>}</code></p>
+<p style="margin-left: 40px;">&nbsp;</p>
+<p style="margin-left: 40px;">(b)&nbsp;<u>Change this:</u></p>
+<p style="margin-left: 40px;"><code>Director {</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; Name = bac10-mon</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; Password = &quot;a long random password&quot;</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; Monitor = yes</code></p>
+<p style="margin-left: 40px;"><code>}&nbsp;</code></p>
+<p style="margin-left: 40px;"><u>To this (</u><em><u>comment out all lines by prefixing them with a &quot;#&quot;</u></em><u>)</u>:</p>
+<p style="margin-left: 40px;"><span style="background-color: yellow;"><code>#</code></span><code>Director {</code></p>
+<p style="margin-left: 40px;"><span style="background-color: yellow;"><code>#</code></span><code>&nbsp;&nbsp;Name =&nbsp;</code><span style="background-color: yellow;"><code>bacula-dir-mon</code></span></p>
+<p style="margin-left: 40px;"><span style="background-color: yellow;"><code>#</code></span><code>&nbsp;&nbsp;Password = &quot;a long random password&quot;</code></p>
+<p style="margin-left: 40px;"><span style="background-color: yellow;"><code>#</code></span><code>&nbsp;&nbsp;Monitor = yes</code></p>
+<p style="margin-left: 40px;"><span style="background-color: yellow;"><code>#</code></span><code>}</code></p>
+<p style="margin-left: 40px;">&nbsp;&nbsp;</p>
+<p style="margin-left: 40px;">(c)&nbsp;<u>Change this:</u></p>
+<p style="margin-left: 40px;"><code>FileDaemon { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# this is me</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; Name = bac10-fd</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; FDport = 9102 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# where we listen for the director</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; WorkingDirectory = /opt/bacula/working</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; Pid Directory = /opt/bacula/working</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; Maximum Concurrent Jobs = 20</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; Plugin Directory = /opt/bacula/plugins</code></p>
+<p style="margin-left: 40px;"><code>}</code>&nbsp;</p>
+<p style="margin-left: 40px;"><u>To this (<em>remove &quot;-fd&quot; from shortname of the host. &nbsp;Change Maximum Concurrent Jobs to 20</em>):</u></p>
+<p style="margin-left: 40px;"><code>FileDaemon { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# this is me</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; Name =&nbsp;</code><span style="background-color: yellow;"><code>bac10</code></span></p>
+<p style="margin-left: 40px;"><code>&nbsp; FDport = 9102 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# where we listen for the director</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; WorkingDirectory = /opt/bacula/working</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; Pid Directory = /opt/bacula/working</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; Maximum Concurrent Jobs =&nbsp;</code><span style="background-color: yellow;"><code>20</code></span></p>
+<p style="margin-left: 40px;"><code>&nbsp; Plugin Directory = /opt/bacula/plugins</code></p>
+<p style="margin-left: 40px;"><code>}</code></p>
+<p style="margin-left: 40px;">&nbsp;</p>
+<p style="margin-left: 40px;">(d)&nbsp;<u>Change this:</u></p>
+<p style="margin-left: 40px;"><code>Messages {</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; Name = Standard</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; director = bac10-dir = all, !skipped, !restored, !saved</code></p>
+<p style="margin-left: 40px;"><code>}</code></p>
+<p style="margin-left: 40px;"><u>To this (<em>change director name</em>):</u></p>
+<p style="margin-left: 40px;"><code>Messages {</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; Name = Standard</code></p>
+<p style="margin-left: 40px;"><code>&nbsp; director =&nbsp;<span style="background-color: yellow;">bacula-dir</span>&nbsp;= all, !skipped, !restored, !saved</code></p>
+<p style="margin-left: 40px;"><code>}</code></p>
+<ol start="5">
+    <li>Enable automatic start of the BEE client upon server boot:<strong><code><br />
+    </code></strong></li>
+</ol>
+<p style="margin-left: 40px;"><code>RHEL 7 and 8: # </code><strong><code>systemctl enable&nbsp;bacula-fd</code></strong></p>
+<ol start="6">
+    <li>Restart bacula-fd service:<strong><code><br />
+    </code></strong></li>
+</ol>
+<p style="margin-left: 40px;"><code>RHEL 7 and 8: # </code><strong><code>systemctl&nbsp;start bacula-fd</code></strong></p>
+<ol start="7">
+    <li>Run the following command to allow port 9102 incoming for the backup traffic:<br />
+    <br />
+    <code>firewall-cmd --permanent --zone=public --add-port=9102/tcp &amp;&amp; firewall-cmd --reload</code>.<br />
+    &nbsp;</li>
+</ol>
+<ol start="8">
+    <li>(Optional) If TCP Wrappers is configured in the OS, add a rule to allow incoming connections from the Bacula Director Server <tt>dr-dir12.pvt.hawaii.edu</tt>. E.g., modify the&nbsp;<span style="font-family: &quot;Courier New&quot;;"><span style="font-size: small;">/etc/hosts.allow </span></span>file to add the line &quot;<span style="font-family: Courier New;"><span style="font-size: small;">ALL: 172.24.100.11 dr-dir12.pvt.hawaii.edu</span><span style="font-family: Arial;"><span style="font-size: small;">&quot;).</span></span></span></li>
+</ol>
+<ol start="9">
+    <li>(Optional) Delete the bacula-enterprise-* .rpm files from /root.<br />
+    &nbsp;</li>
+    <li>Notify IT TI-Applications&nbsp;that you have completed installing the BEE client on your virtual server. Please let us know the name of your virtual server, which directories you want backed up, and an estimate of you much storage space you expect the backup to require.&nbsp;<strong>Do not include the Bacula password in this email. If it is emailed in clear text, you will be required to change the password. </strong>A staff member from Contract Services will respond to you and ask you to send the password you made note of in step 4b above via the&nbsp;<a href="http://www.hawaii.edu/filedrop">UH Filedrop</a>&nbsp;service.</li>
+</ol>
+<h3><span style="font-size: medium;">RELATED ARTICLES</span></h3>
+<ul>
+    <li><a href="http://www.hawaii.edu/its/datacenter/services.php?cat=dc">Data Center Services</a></li>
+    <li><a href="http://www.hawaii.edu/askus/1717">Virtual Hosting: How to Submit a Restore Request</a></li>
+    <li><a href="http://www.hawaii.edu/askus/1727">Virtual Server: File Level Backup Policy</a></li>
+    <li><a href="http://www.hawaii.edu/askus/1716">Virtual Server: How to install and configure backups (Bacula) on a Windows Server                          </a></li>
+    <li><a href="http://hawaii.edu/askus/1744">Virtual Server: How to Connect Your ITS-Hosted RHEL 6 Virtual Server to an ITS Private Network</a></li>
+    <li><a href="http://hawaii.edu/askus/1753">Virtual Server: How to Connect Your ITS-Hosted RHEL 7 Virtual Server to an ITS Private Network</a></li>
+</ul>
+<p>&nbsp;</p>
+<p><style type="text/css"></style></p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1732" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1732" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1732">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1732">
+		1732</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Fri, 31 Mar 2017 10:36am
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Wed, 15 Feb 2023 9:35am</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

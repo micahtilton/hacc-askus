@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1753">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Virtual Server: How to Connect Your ITS-Hosted RHEL 7 Virtual Server to an ITS Private Network
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Virtual Server: How to Connect Your ITS-Hosted RHEL 7 Virtual Server to an ITS Private Network
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<div>
+<h3>OVERVIEW</h3>
+</div>
+<div>Sometimes in order to access certain services offered by UH Information Technology Services (ITS) from your ITS-hosted virtual server, you will need to have access to an ITS private network. The instructions in this article give you instructions on how to make sure your virtual server is connected to an ITS private network.</div>
+<div>&nbsp;</div>
+<div>These instructions only apply to Red Hat Enterprise Linux (RHEL) 7 virtual servers created by ITS Managed Services for your use, and only to RHEL systems that have the Network Manager service removed or turned off (e.g., &ldquo;systemctl networkmanager stop&rdquo; and &ldquo;systemctl networkmanager disable&rdquo;; also see https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/Networking_Guide/sec-NetworkManager_and_the_Network_Scripts.html).</div>
+<div>&nbsp;</div>
+<div>These instructions are for RHEL 7 environments where the network configuration files are manually maintained, which is the standard configuration for RHEL 6 virtual servers created by ITS Managed Services. You can still use Network Manager if you like, but ITS does not provide instructions for adding a private network connection when Network Manager is enabled so you will have to determine the appropriate procedure yourself.</div>
+<div>&nbsp;</div>
+<div>
+<h3>PROCEDURE&nbsp;</h3>
+<p><strong>NOTE</strong>: All the commands given in the steps below are assumed to be issued as either user root or via &quot;sudo&quot;.</p>
+</div>
+<ol>
+    <li>Enter the command:</li>
+</ol>
+<p style="margin-left: 40px;"><strong><code>ifconfig</code></strong></p>
+<div>&nbsp;</div>
+<div style="margin-left: 40px;">to see all installed and connected NICs on your virtual server, and make note of the interface/NIC names of the NICs that are installed (e.g., &ldquo;eno16780032&rdquo;, &ldquo;ens224&rdquo; ,etc.). You may want to send the output of the &ldquo;<code>ifconfig</code>&rdquo; command to a text file for later reference&mdash;e.g., &ldquo;<code>ifconfig &gt; ifconfig_results_2017-07-06.txt</code>&rdquo;.</div>
+<div style="margin-left: 40px;"><br />
+For example:<br />
+<br />
+<div><code>#&nbsp;</code><strong><code>ifconfig</code></strong></div>
+<div>
+<div><font face="monospace">eno16780032: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;&nbsp; mtu 1500</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; inet 166.122.3.161&nbsp; netmask 255.255.255.0&nbsp; broadcast 166.122.3.255</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; inet6 fe80::250:56ff:feb0:2ddd&nbsp; prefixlen 64&nbsp; scopeid 0x20&lt;link&gt;</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; ether 00:50:56:b0:2d:dd&nbsp; txqueuelen 1000&nbsp; (Ethernet)</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; RX packets 1185&nbsp; bytes 102807 (100.3 KiB)</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; RX errors 0&nbsp; dropped 0&nbsp; overruns 0&nbsp; frame 0</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; TX packets 198&nbsp; bytes 23317 (22.7 KiB)</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; TX errors 0&nbsp; dropped 0 overruns 0&nbsp; carrier 0&nbsp; collisions 0</font></div>
+<div><font face="monospace"><br />
+</font></div>
+<div><font face="monospace">ens224: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;&nbsp; mtu 1500</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; inet 172.17.36.14&nbsp; netmask 255.255.255.0&nbsp; broadcast 172.17.36.255</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; inet6 fe80::250:56ff:feb0:5673&nbsp; prefixlen 64&nbsp; scopeid 0x20&lt;link&gt;</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; ether 00:50:56:b0:56:73&nbsp; txqueuelen 1000&nbsp; (Ethernet)</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; RX packets 689&nbsp; bytes 146959 (143.5 KiB)</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; RX errors 0&nbsp; dropped 0&nbsp; overruns 0&nbsp; frame 0</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; TX packets 688&nbsp; bytes 89245 (87.1 KiB)</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; TX errors 0&nbsp; dropped 0 overruns 0&nbsp; carrier 0&nbsp; collisions 0</font></div>
+<div><font face="monospace"><br />
+</font></div>
+<div><font face="monospace">lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;&nbsp; mtu 65536</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; inet 127.0.0.1&nbsp; netmask 255.0.0.0</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; inet6 ::1&nbsp; prefixlen 128&nbsp; scopeid 0x10&lt;host&gt;</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; loop&nbsp; txqueuelen 1&nbsp; (Local Loopback)</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; RX packets 0&nbsp; bytes 0 (0.0 B)</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; RX errors 0&nbsp; dropped 0&nbsp; overruns 0&nbsp; frame 0</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; TX packets 0&nbsp; bytes 0 (0.0 B)</font></div>
+<div><font face="monospace">&nbsp; &nbsp; &nbsp; &nbsp; TX errors 0&nbsp; dropped 0 overruns 0&nbsp; carrier 0&nbsp; collisions 0</font></div>
+</div>
+</div>
+<div>&nbsp;</div>
+<ol start="2">
+    <li>In the output of the &quot;<code>ifconfig</code>&quot; command, look at the &ldquo;inet&rdquo; setting for each NIC (if there is one) and see if any have a value&nbsp;<u>other than</u>&nbsp;128.171.*.* (e.g., 128.171.38.164) or 166.122.3.* (e.g., 166.122.3.3) or 127.0.0.1 (the standard internal loopback interface). Any value other than those subnets indicate the NIC does have a private network IP associated with it. If no &quot;inet addr&quot; setting is listed for a NIC, it means that the NIC is connected but has not been configured with an IPv4 IP address yet, and ITS CS will need to verify if the NIC is connected to a private network or not (step 4 below).<br />
+    &nbsp;</li>
+    <li>If a NIC on your virtual server does have a private network IP associated with it, please skip to step 17 below (verify DNS resolves .pvt and .mgt). Otherwise, continue with the next step below.</li>
+</ol>
+<ol start="4">
+    <li>Contact ITS Managed Services (itscs@hawaii.edu) and ask that your virtual server be assigned to and connected to an ITS private network. As part of your request, please provide the following info:</li>
+</ol>
+<p style="margin-left: 80px;">* The reason you want to add an ITS private network connection to your virtual server<br />
+<br />
+* Your virtual server&rsquo;s fully qualified domain name (FQDN) (e.g., leeddash.its.hawaii.edu)<br />
+<br />
+* Your virtual server&rsquo;s public network IP address (128.171.x.x or 166.122.3.x)</p>
+<div>&nbsp;</div>
+<ol start="5">
+    <li>ITS Managed Services will verify that your virtual server does not have a connection to an ITS private network, and if so they will assign your virtual server an IP within an ITS private network, attach a new NIC on your virtual server that connects to that network, and provide you with the private network IP, gateway, and subnet mask information.<br />
+    &nbsp;</li>
+    <li>Once you have the private network IP, gateway, and subnet mask information from ITS CS, do an &ldquo;<strong><code>ifconfig</code></strong>&rdquo; command and make note of the newly added NIC&rsquo;s name (e.g., &ldquo;ens224&rdquo;), as well as the NIC name of the existing primary NIC for the public network (e.g., &ldquo;eno16780032&rdquo;).<br />
+    &nbsp;</li>
+    <li>Back up the existing&nbsp;<code>/etc/sysconfig/network</code>&nbsp;file (e.g., &ldquo;<code>cp /etc/sysconfig/network /etc/sysconfig/network.2017-07-06</code>&rdquo;) and then edit the&nbsp;<code>/etc/sysconfig/network</code>&nbsp;file and ensure it contains only the following lines (substitute the bracketed items with appropriate values):</li>
+</ol>
+<div>&nbsp;</div>
+<div style="margin-left: 40px;"><code>NETWORKING=yes</code></div>
+<div style="margin-left: 40px;"><code>HOSTNAME=</code><em><code>&lt;Host-FQDN&gt;</code></em></div>
+<div style="margin-left: 40px;"><code>GATEWAY=</code><em><code>&lt;Gateway-IP-For-Primary-NIC-Public-Network&gt;</code></em></div>
+<div style="margin-left: 40px;"><code>GATEWAYDEV=</code><em><code>&lt;Primary-NIC-Name&gt;</code></em></div>
+<div style="margin-left: 40px;">&nbsp;</div>
+<div style="margin-left: 40px;">For example:</div>
+<div style="margin-left: 40px;">&nbsp;</div>
+<div style="margin-left: 40px;"><code>NETWORKING=yes</code></div>
+<div style="margin-left: 40px;"><code>HOSTNAME=cstemplate06.its.hawaii.edu</code></div>
+<div style="margin-left: 40px;"><code>GATEWAY=166.122.3.1</code></div>
+<div style="margin-left: 40px;"><code>GATEWAYDEV=eno16780032</code></div>
+<div>&nbsp;</div>
+<ol start="8">
+    <li>Create a&nbsp;<code>/etc/sysconfig/network-scripts/ifcfg-</code><em><code>&lt;NIC-name&gt;</code></em>&nbsp;file (where&nbsp;<em><code>&lt;NIC-name&gt;</code></em>&nbsp;is the name of the new NIC as determined in step 6; e.g.,&nbsp;<code>/etc/sysconfig/network-scripts/ifcfg-</code><span style="font-family: monospace;">ens224</span>). You can do so with &ldquo;vi&rdquo; or &quot;nano&quot; any basic text editor of your choice (or perhaps just copying the primary non-private NIC&rsquo;s config file and just editing it&mdash;e.g., &ldquo;<code>cp /etc/sysconfig/network-scripts/ifcfg-eno16780032 /etc/sysconfig/network-scripts/ifcfg-</code><span style="font-family: monospace;">ens224</span>&rdquo;).<br />
+    &nbsp;</li>
+    <li>Edit the new&nbsp;<code>ifcfg-</code><em><code>&lt;NIC-name&gt;</code></em>&nbsp;file created in the previous step so that it contains the following minimal entries:</li>
+</ol>
+<div>&nbsp;</div>
+<div style="margin-left: 40px;"><code>DEVICE=&ldquo;<em>&lt;NIC-name&gt;</em>&rdquo;</code></div>
+<div style="margin-left: 40px;"><code>BOOTPROTO=static</code></div>
+<div style="margin-left: 40px;"><code>ONBOOT=yes</code></div>
+<div style="margin-left: 40px;"><code>USERCTL=no</code></div>
+<div style="margin-left: 40px;"><code>IPADDR=</code><em><code>&lt;Assigned-Private-Network-IP&gt;</code></em></div>
+<div style="margin-left: 40px;"><code>NETMASK=</code><em><code>&lt;Assigned-Private-Network-Subnet-Mask&gt;</code></em></div>
+<div style="margin-left: 40px;"><code>PEERDNS=no</code></div>
+<div style="margin-left: 40px;">&nbsp;</div>
+<div style="margin-left: 40px;">For example:</div>
+<div style="margin-left: 40px;">&nbsp;</div>
+<div style="margin-left: 40px;"><code>DEVICE=&quot;ens224&quot;</code></div>
+<div style="margin-left: 40px;"><code>BOOTPROTO=static</code></div>
+<div style="margin-left: 40px;"><code>ONBOOT=yes</code></div>
+<div style="margin-left: 40px;"><code>USERCTL=no</code></div>
+<div style="margin-left: 40px;"><code>IPADDR=172.17.36.14</code></div>
+<div style="margin-left: 40px;"><code>NETMASK=255.255.255.0</code></div>
+<div style="margin-left: 40px;"><code>PEERDNS=no</code></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<ol start="10">
+    <li>Create and edit a new&nbsp;<code>/etc/sysconfig/network-scripts/route-</code><em><code>&lt;NIC-name&gt;</code></em>&nbsp;file (where&nbsp;<em><code>&lt;NIC-name&gt;</code></em>&nbsp;is the name of the new NIC; e.g.,&nbsp;<code>/etc/sysconfig/network-scripts/route-</code><span style="font-family: monospace;">ens224</span>) that contains the following lines:</li>
+</ol>
+<div>&nbsp;</div>
+<div style="margin-left: 40px;"><code>192.168.0.0/16 via&nbsp;<em>&lt;Assigned-Private-Network-Gateway-IP&gt;</em>&nbsp;dev&nbsp;</code><em><code>&lt;NIC-name&gt;</code></em></div>
+<div style="margin-left: 40px;"><code>172.16.0.0/12 via&nbsp;<em>&lt;Assigned-Private-Network-Gateway-IP&gt;</em>&nbsp;dev&nbsp;</code><em><code>&lt;NIC-name&gt;</code></em></div>
+<div style="margin-left: 40px;"><code>10.0.0.0/8 via&nbsp;<em>&lt;Assigned-Private-Network-Gateway-IP&gt;</em>&nbsp;dev&nbsp;</code><em><code>&lt;NIC-name&gt;</code></em></div>
+<div style="margin-left: 40px;">&nbsp;</div>
+<div style="margin-left: 40px;">For example:</div>
+<div style="margin-left: 40px;">&nbsp;</div>
+<div style="margin-left: 40px;"><code>192.168.0.0/16 via 172.17.65.1 dev eth1</code></div>
+<div style="margin-left: 40px;"><code>172.16.0.0/12 via 172.17.65.1 dev eth1</code></div>
+<div style="margin-left: 40px;"><code>10.0.0.0/8 via 172.17.65.1 dev eth1</code></div>
+<div>&nbsp;</div>
+<ol start="11">
+    <li>Schedule a reboot the virtual server to incorporate all the changes you&rsquo;ve made so far (just restarting the network service doesn't seem to be enough). E.g., when ready, as user root, enter the following command to reboot:</li>
+</ol>
+<div style="margin-left: 40px;"><strong><code>reboot</code></strong></div>
+<div>&nbsp;</div>
+<ol start="12">
+    <li>Log back into the server and switch user to the &quot;root&quot; user (if you cannot access the server after rebooting, you may need to log in via the virtual console to troubleshoot if you have access [see <a href="https://www.hawaii.edu/askus/1693">Virtual Server: How to Access Your Virtual Server via VMware Console Access</a>] or contact ITS CS at itscs@hawaii.edu to help you); one there, print out the current network routing table using the command:</li>
+</ol>
+<div style="margin-left: 40px;">&nbsp;<strong><code>ip route show</code></strong></div>
+<div>&nbsp;</div>
+<ol start="13">
+    <li>Examine the results of the &ldquo;<code>ip route show</code>&rdquo; command and ensure that among the entries shown are ones similar to those given in step 10 above and also a &ldquo;default&rdquo; entry that specifies the primary (public) NIC&rsquo;s gateway and NIC name. E.g.:</li>
+</ol>
+<div>&nbsp;</div>
+<div style="margin-left: 40px;"><code>#&nbsp;</code><strong><code>ip route show</code></strong></div>
+<div style="margin-left: 40px;"><code>166.122.3.0/24 dev eth0 &nbsp;proto kernel &nbsp;scope link &nbsp;src 166.122.3.160&nbsp;</code></div>
+<div style="margin-left: 40px;"><code>172.17.65.0/24 dev eth1 &nbsp;proto kernel &nbsp;scope link &nbsp;src 172.17.65.11&nbsp;</code></div>
+<div style="margin-left: 40px;"><code>169.254.0.0/16 dev eth0 &nbsp;scope link &nbsp;metric 1002&nbsp;</code></div>
+<div style="margin-left: 40px;"><code>169.254.0.0/16 dev eth1 &nbsp;scope link &nbsp;metric 1003&nbsp;</code></div>
+<div style="margin-left: 40px;"><span style="background-color: yellow;"><code>192.168.0.0/16 via 172.17.65.1 dev eth1&nbsp;</code></span></div>
+<div style="margin-left: 40px;"><span style="background-color: yellow;"><code>172.16.0.0/12 via 172.17.65.1 dev eth1&nbsp;</code></span></div>
+<div style="margin-left: 40px;"><span style="background-color: yellow;"><code>10.0.0.0/8 via 172.17.65.1 dev eth1&nbsp;</code></span></div>
+<div style="margin-left: 40px;"><span style="background-color: yellow;"><code>default via 166.122.3.1 dev eth0</code></span>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<ol start="14">
+    <li>Verify that you can ping google.com okay:</li>
+</ol>
+<div>&nbsp;</div>
+<div style="margin-left: 40px;"><code>#&nbsp;</code><strong><code>ping google.com</code></strong></div>
+<div style="margin-left: 40px;"><code>PING google.com (216.58.193.78) 56(84) bytes of data.</code></div>
+<div style="margin-left: 40px;"><code>64 bytes from sea15s07-in-f78.1e100.net (216.58.193.78): icmp_seq=1 ttl=55 time=66.7 ms</code></div>
+<div style="margin-left: 40px;"><code>64 bytes from sea15s07-in-f78.1e100.net (216.58.193.78): icmp_seq=2 ttl=55 time=65.5 ms</code></div>
+<div style="margin-left: 40px;"><code>64 bytes from sea15s07-in-f78.1e100.net (216.58.193.78): icmp_seq=3 ttl=55 time=65.6 ms</code></div>
+<div style="margin-left: 40px;"><code>64 bytes from sea15s07-in-f78.1e100.net (216.58.193.78): icmp_seq=4 ttl=55 time=65.7 ms</code></div>
+<div style="margin-left: 40px;"><code>64 bytes from sea15s07-in-f78.1e100.net (216.58.193.78): icmp_seq=5 ttl=55 time=65.7 ms</code></div>
+<div style="margin-left: 40px;"><code>64 bytes from sea15s07-in-f78.1e100.net (216.58.193.78): icmp_seq=6 ttl=55 time=65.7 ms</code></div>
+<div style="margin-left: 40px;"><code>^C</code></div>
+<div style="margin-left: 40px;"><code>--- google.com ping statistics ---</code></div>
+<div style="margin-left: 40px;"><code>6 packets transmitted, 6 received, 0% packet loss, time 5645ms</code></div>
+<div style="margin-left: 40px;"><code>rtt min/avg/max/mdev = 65.535/65.862/66.790/0.470 ms</code></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<ol start="15">
+    <li>Back up the existing&nbsp;<code>/etc/resolv.conf</code>&nbsp;file (e.g., &ldquo;<code>cp /etc/resolv.conf /etc/resolv.conf.2017-07-06</code>&rdquo;) and then edit the&nbsp;<code>/etc/resolv.conf</code>&nbsp;file and ensure it consists of only the following three lines:</li>
+</ol>
+<div style="margin-left: 40px;"><code>search hawaii.edu its.hawaii.edu pvt.hawaii.edu mgt.hawaii.edu colo.hawaii.edu</code></div>
+<div style="margin-left: 40px;"><code>nameserver 192.168.10.115</code></div>
+<div style="margin-left: 40px;"><code>nameserver 192.168.10.116</code></div>
+<div>&nbsp;</div>
+<ol start="16">
+    <li>Once again, verify that you can ping google.com okay (this verifies that you can reach the private DNS servers specified in the previous step; if the ping doesn't work, then back out by restoring the original contents of your /etc/resolv.conf file so that you have DNS resolution again, and then troubleshoot):</li>
+</ol>
+<div>&nbsp;</div>
+<div style="margin-left: 40px;"><code>#&nbsp;</code><strong><code>ping google.com</code></strong></div>
+<div style="margin-left: 40px;"><code>PING google.com (216.58.193.78) 56(84) bytes of data.</code></div>
+<div style="margin-left: 40px;"><code>64 bytes from sea15s07-in-f78.1e100.net (216.58.193.78): icmp_seq=1 ttl=55 time=66.7 ms</code></div>
+<div style="margin-left: 40px;"><code>64 bytes from sea15s07-in-f78.1e100.net (216.58.193.78): icmp_seq=2 ttl=55 time=65.5 ms</code></div>
+<div style="margin-left: 40px;"><code>64 bytes from sea15s07-in-f78.1e100.net (216.58.193.78): icmp_seq=3 ttl=55 time=65.6 ms</code></div>
+<div style="margin-left: 40px;"><code>64 bytes from sea15s07-in-f78.1e100.net (216.58.193.78): icmp_seq=4 ttl=55 time=65.7 ms</code></div>
+<div style="margin-left: 40px;"><code>64 bytes from sea15s07-in-f78.1e100.net (216.58.193.78): icmp_seq=5 ttl=55 time=65.7 ms</code></div>
+<div style="margin-left: 40px;"><code>64 bytes from sea15s07-in-f78.1e100.net (216.58.193.78): icmp_seq=6 ttl=55 time=65.7 ms</code></div>
+<div style="margin-left: 40px;"><code>^C</code></div>
+<div style="margin-left: 40px;"><code>--- google.com ping statistics ---</code></div>
+<div style="margin-left: 40px;"><code>6 packets transmitted, 6 received, 0% packet loss, time 5645ms</code></div>
+<div style="margin-left: 40px;"><code>rtt min/avg/max/mdev = 65.535/65.862/66.790/0.470 ms</code></div>
+<div>&nbsp;</div>
+<ol start="17">
+    <li>Verify that you can resolve a .pvt hostname via DNS okay. E.g., using the &ldquo;nslookup&rdquo; command:</li>
+</ol>
+<div>&nbsp;</div>
+<div style="margin-left: 40px;"><code>#&nbsp;</code><strong><code>nslookup dns11.pvt.hawaii.edu</code></strong></div>
+<div style="margin-left: 40px;"><code>Server: &nbsp; &nbsp; &nbsp; &nbsp; 192.168.10.115</code></div>
+<div style="margin-left: 40px;"><code>Address: &nbsp; &nbsp; &nbsp; &nbsp;192.168.10.115#53</code></div>
+<div style="margin-left: 40px;"><code>&nbsp;</code></div>
+<div style="margin-left: 40px;"><code>Name: &nbsp; dns11.pvt.hawaii.edu</code></div>
+<div style="margin-left: 40px;"><code>Address: 192.168.10.116</code></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<ol start="18">
+    <li>Schedule a reboot of your virtual server and, after it comes back up, do the previous two tests again (see if you can ping google.com okay, and see if you can resolve a .pvt hostname via DNS okay). This step verifies that your network configuration changes and private network connectivity will survive intact upon system reboot.</li>
+</ol>
+<div>&nbsp;</div>
+<div>This completes the steps necessary to add private network connectivity to your ITS-hosted RHEL 7 virtual server.</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>
+<h3>RELATED ARTICLES:</h3>
+<ul>
+    <li><a href="http://www.hawaii.edu/askus/1752">Virtual Server: How to Re-register Your ITS-Hosted RHEL 7 Virtual Server with RHSM<br />
+    <br type="_moz" />
+    </a></li>
+    <li><a href="http://www.hawaii.edu/askus/1732">Virtual Server: How to Install and Configure Backups (Bacula) on a RHEL Server<br />
+    </a></li>
+</ul>
+</div>
+<p>&nbsp;</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1753" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1753" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1753">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1753">
+		1753</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Tue, 03 Oct 2017 4:49pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Wed, 12 Aug 2020 1:34pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

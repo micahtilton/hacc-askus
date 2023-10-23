@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1606">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>UH VPN Setup - Macintosh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+UH VPN Setup - Macintosh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p>The following are instructions on how to connect to the UH VPN service by using the L2TP/IPsec VPN Client which is built-in to MacOS. Please choose the appropriate instructions for your version of macOS. To see which version of macOS is installed on your computer, please visit <a href="https://support.apple.com/en-us/HT201260">https://support.apple.com/en-us/HT201260</a>.</p>
+<hr />
+<h2>Table of Contents</h2>
+<ul>
+    <li><a href="#ventura">macOS Ventura (13.0) and above</a></li>
+    <li><a href="#monterey">macOS Monterey (12.0) and below</a></li>
+    <li><a href="#resources">Additional Resources</a></li>
+</ul>
+<hr />
+<h2 id="ventura">Instructions for macOS Ventura (13.0) and Above</h2>
+<h3>Initial Configuration</h3>
+<ol>
+    <li>
+    <p>Open the &ldquo;System Settings&rdquo; application on your computer.</p>
+    </li>
+    <li>
+    <p>Select the &ldquo;Network&rdquo; option from the side menu on the left. This will bring up the Network menu.</p>
+    </li>
+    <li>
+    <p>Click on the &ldquo;...&rdquo; button on the bottom right of the Network menu.</p>
+    </li>
+    <li>
+    <p>Select &ldquo;Add VPN Configuration&rdquo;, then &ldquo;L2TP over IPSec&hellip;&rdquo; from the dropdown menu.</p>
+    <img height="500" src="https://www.hawaii.edu/itsdocs/1606/network_menu.png" alt="The network menu in macOS 13." /></li>
+    <li>
+    <p>The VPN configuration window will then appear.</p>
+    <img height="500" src="https://www.hawaii.edu/itsdocs/1606/vpn_config.png" alt="The VPN configuration window in macOS 13." /></li>
+    <li>
+    <p>Make the following changes in the VPN configuration window:</p>
+    <ol type="a">
+        <li>
+        <p>In the &ldquo;Display Name&rdquo; section, type &ldquo;UH VPN&rdquo; or any easily identifiable name. This is the name that will be used for the VPN connection.</p>
+        </li>
+        <li>
+        <p>In the &ldquo;Configuration&rdquo; section, make sure &ldquo;Default&rdquo; is selected from the dropdown.</p>
+        </li>
+        <li>
+        <p>In the &ldquo;Server address&rdquo; section, type &ldquo;sevpn.its.hawaii.edu&rdquo;.</p>
+        </li>
+        <li>
+        <p>In the &ldquo;Account name&rdquo; section, type in your UH username. For example, if your hawaii.edu address is help@hawaii.edu, then your UH Username is &ldquo;help&rdquo;.</p>
+        </li>
+        <li>
+        <p>In the &ldquo;User Authentication&rdquo; section, make sure &ldquo;Password&rdquo; is selected from the dropdown.</p>
+        </li>
+        <li>
+        <p>The &ldquo;Password&rdquo; section can be left blank.</p>
+        </li>
+        <li>
+        <p>In the &ldquo;Machine Authentication&rdquo; section, make sure &ldquo;Shared Secret&rdquo; is selected from the dropdown.</p>
+        </li>
+        <li>
+        <p>In the &ldquo;Shared Secret&rdquo; section, type in the shared secret. If you don&rsquo;t know the shared secret, you can obtain it at <a href="https://www.hawaii.edu/its/vpn">https://www.hawaii.edu/its/vpn</a>. (Note: You may need to scroll down to see this option).</p>
+        </li>
+        <li>
+        <p>Open the &ldquo;Options&rdquo; section from the menu on the left and toggle the &ldquo;Send all traffic over VPN connection&rdquo; switch to the &ldquo;on&rdquo; position by clicking the switch.</p>
+        <img height="500" src="https://www.hawaii.edu/itsdocs/1606/vpn_configuration_options.png" alt="The Options menu in the VPN configuration menu." /></li>
+    </ol>
+    </li>
+    <li>
+    <p>Once the changes specified above have been made, click on the &ldquo;Create&rdquo; button. This will create a new &ldquo;VPN&rdquo; section in the &ldquo;Network&rdquo; menu. The VPN section will also appear in the side menu on the left.</p>
+    <img height="500" src="https://www.hawaii.edu/itsdocs/1606/system_settings_with_vpn.png" alt="macOS 13 System Settings with VPN section" /></li>
+</ol>
+<h3>Starting A VPN Connection</h3>
+<ol>
+    <li>
+    <p>Open the &ldquo;System Settings&rdquo; application on your computer.</p>
+    </li>
+    <li>
+    <p>Select the &ldquo;VPN&rdquo; option from the side menu on the left. This will bring up the VPN menu.</p>
+    <img height="500" src="https://www.hawaii.edu/itsdocs/1606/vpn_menu.png" alt="The VPN settings panel in System Settings." /></li>
+    <li>
+    <p>Toggle the switch next to your VPN connection to the &ldquo;on&rdquo; position by clicking the switch.</p>
+    </li>
+    <li>
+    <p>You will then be prompted for your username and password.</p>
+    <ol type="a">
+        <li>
+        <p>In the &ldquo;Please enter your name&rdquo; section, make sure your UH username is entered correctly.</p>
+        </li>
+        <li>
+        <p>In the &ldquo;please enter your password&rdquo; section, enter your UH password.</p>
+        </li>
+        <li>
+        <p>Once the above information has been entered, press &ldquo;OK&rdquo;.</p>
+        <img height="400" src="https://www.hawaii.edu/itsdocs/1606/vpn_login.png" alt="The VPN login panel in macOS 13" /></li>
+    </ol>
+    </li>
+    <li>
+    <p>Once connected to the UH VPN, the text under the name of your VPN will display &ldquo;Connected&rdquo;.</p>
+    <img height="500" src="https://www.hawaii.edu/itsdocs/1606/vpn_connected.png" alt="The VPN settings panel when connected to the UH VPN." />
+    <ol type="a">
+        <li>
+        <p>To disconnect from the UH VPN, toggle the switch next to the VPN connection to the &ldquo;off&rdquo; position by clicking on the switch.</p>
+        </li>
+    </ol>
+    </li>
+</ol>
+<h3>Adding the VPN Status Icon to the Menu Bar</h3>
+<p>In macOS, you have the option of adding a VPN icon to the menu bar which allows you to manage your VPN connections without opening the System Settings application. You can find instructions on how to add the VPN status icon to your menu bar at <a href="https://support.apple.com/guide/mac-help/vpn-status-icon-menu-bar-mac-mchl7f06ab80/mac">https://support.apple.com/guide/mac-help/vpn-status-icon-menu-bar-mac-mchl7f06ab80/mac</a>.</p>
+<h2 id="monterey">Instructions for macOS Monterey (12.0) and Below</h2>
+<h3>Video Tutorial</h3>
+<p><iframe src="https://drive.google.com/file/d/1No9SdkqiehdaPi3IsDOIDzCLIrvZlyju/preview" width="640" height="480"></iframe></p>
+<h3>Initial Configuration (one time only)</h3>
+<ol>
+    <li>Near the top right of the screen (to the left of the time), click on the Network (WiFi) icon. From the menu that drops down, select <b>Open Network Preferences...</b><br />
+    <br />
+    <img alt="Open Network Preferences... option from the Network icon" src="/help/chasek/images/Image/open network pref.jpg" height="384" width="418" /></li>
+    <br />
+    <li>The Network system preference window will open.  Click on the <b>+</b> (plus) button near the lower left of the window.</li>
+    <br />
+    <li>Under the &quot;Interface&quot; option, select <b>VPN</b>.  Under the &quot;VPN Type&quot; option, select <b>L2TP over IPsec</b>.  In the &quot;Service Name&quot; box, type <b>UH VPN</b>.  Click on the <b>Create</b> button.<br />
+    <br />
+    <img alt="New network pop-up box showing Interface and VPN Type fields" src="/help/chasek/images/Image/vpn config name(1).jpg" height="400" width="459" /></li>
+    <br />
+    <li>A new L2TP VPN configuration will be created, and its configuration screen will appear.<br />
+    In the &quot;Server Address&quot; box, type <b>sevpn.its.hawaii.edu</b><br />
+    In the &quot;Account Name&quot; box, type your UH Username.  For example, if your hawaii.edu address is help@hawaii.edu, then your UH Username is &quot;help&quot;.<br />
+    Check the box for &quot;Show VPN status in menu bar&quot;<br />
+    <br />
+    <img alt="New L2TP VPN configuration screen" src="/help/chasek/images/Image/vpn config window.jpg" height="400" width="461" /></li>
+    <br />
+    <li>Click on the <b>Authentication Settings...</b> button.<br />
+    Under the &quot;User Authentication&quot; section, make sure &quot;Password&quot; is selected.  Do not type anything in the box next to &quot;Password&quot;.<br />
+    Under the &quot;Machine Authentication&quot; section, make sure &quot;Shared Secret&quot; is selected.  In the box next to &quot;Shared Secret&quot; type the shared secret.<br />
+    (If you don't know the shared secret, you can obtain it at <a href="https://www.hawaii.edu/its/vpn">https://www.hawaii.edu/its/vpn</a>)<br />
+    Click on <b>OK</b><br />
+    <br />
+    <img alt="Authentication configuration pop-up box" src="/help/chasek/images/Image/shared secret.jpg" height="478" width="550" /></li>
+    <br />
+    <li>You will be back at the VPN configuration screen.  Click on the <b>Advanced...</b> button.<br />
+    Check the box for &quot;Send all traffic over VPN connection&quot;<br />
+    Click on <b>OK</b><br />
+    <br />
+    <img alt="Advanced VPN configuration screen" src="/help/chasek/images/Image/send all traffic.jpg" height="478" width="550" /></li>
+    <br />
+    <li>In the lower right corner of the window, click on <b>Apply</b>.</li>
+    <br />
+    <li>Close the VPN configuration screen by clicking on the red dot in the upper left corner of the window.</li>
+</ol>
+<h3>Start a VPN Connection</h3>
+<ol>
+    <li>Go to the VPN icon (<img alt="VPN icon" src="/help/chasek/images/Image/vpn icon only(1).jpg" height="23" width="30" />) in the upper right of the screen, to the left of the time.  From the menu that drops down, select <b>Connect UH VPN</b>.<br />
+    <br />
+    <img alt="Connect UH VPN option from the VPN dropdown menu" src="/help/chasek/images/Image/connect vpn menu.jpg" height="250" width="338" /></li>
+    <br />
+    <li>Enter your UH Username's password, and click <b>OK</b>.</li>
+    <br />
+    <li>If you connected successfully, you should see a timer counting next to the VPN icon.<br />
+    <br />
+    <img alt="VPN connection timer" src="/help/chasek/images/Image/vpn icon connected.jpg" height="30" width="125" /></li>
+    <br />
+    <li>To disconnect from the UH VPN, go to the VPN icon and select <b>Disconnect UH VPN</b>.</li>
+</ol>
+<h2 id="resources">Additional Resources</h2>
+<p>For more information about the UH VPN service please visit <a href="https://www.hawaii.edu/askus/819">https://www.hawaii.edu/askus/819</a>. If you have any questions about the UH VPN or need additional assistance, please email <a href="mailto:vpn-help@lists.hawaii.edu?subject=UH%20VPN&amp;body=https%3A%2F%2Fwww.hawaii.edu%2Faskus%2F1606">vpn-help@lists.hawaii.edu</a>.</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1606" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1606" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1606">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1606">
+		1606</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Thu, 04 Sep 2014 1:23pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Mon, 03 Apr 2023 4:32pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

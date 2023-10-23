@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/624">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Backing Up Thunderbird Emails for MacOS
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Backing Up Thunderbird Emails for MacOS
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p>Please note that this documentation assumes you have set up your email in Thunderbird with IMAP or POP3.  If you do not already have IMAP/POP3 enabled in your email address settings you will first need to enable less secure apps in Google.  Instructions to do so may be found <a href="http://www.hawaii.edu/askus/1667">here</a>.  Once enabled, you may go <a href="http://hawaii.edu/askus/1147">here</a> for instructions on how to enable IMAP/POP3 for your gmail account.  If you are using Gmail 2-step verification, you may need to create an app-specific password when signing into your gmail account.  Instructions to do so can be found <a href="https://support.google.com/mail/answer/185833?hl=en&amp;visit_id=637553566455021273-2617462651&amp;rd=1">here</a>.  If you are using POP3, you will need to update your authentication setting to use OAuth2 for both incoming and outgoing server settings.  This is done by clicking on &ldquo;Configure manually&hellip;&rdquo; at the bottom left window after entering in your email address.</p>
+<h2>General Information on Mozilla Thunderbird</h2>
+<p>Mozilla Thunderbird will automatically create a Thunderbird Profile which stores your email data and Thunderbird configurations.  If you would like to create a backup of your email data you will first have to locate your Thunderbird Profile.  Once located you will have two options: copying your entire profile, or copying just your email data.  Instructions on how to locate your Thunderbird Profile are included below.  All screenshots taken in this article were done in MacOS Catalina version 10.15.4.</p>
+<h2>Locating Your Thunderbird Profile</h2>
+<p>To locate your profile, click on <strong>Help</strong> within the Thunderbird menu bar at the top.  From there, click on <strong>Troubleshooting Information</strong> which should open a new tab with that name.  Under the <strong>Application Basics</strong> header there will be a field labeled <strong>Profiles</strong> with a link, &ldquo;about:profiles&rdquo; next to it.  Clicking on that link will open a new tab called <strong>About Profiles</strong> and will display all of the Thunderbird profiles you currently have.  The current profile in use will be indicated by a &ldquo;yes&rdquo; next to the <strong>Default Profile </strong>field.  Click on the &ldquo;Show in Finder&rdquo; button in the <strong>Root Directory</strong> field to be taken directly to your profile.</p>
+<p><span id="docs-internal-guid-18aba954-7fff-0ffa-2a72-5deb955d750e"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;"><span style="border:none;display:inline-block;overflow:hidden;width:624px;height:505px;"><img src="https://lh4.googleusercontent.com/aTKe5BwxozhnN9I4LtvpIGcCa3wjFzcYasgpSC3IJQRlOLSnOPVlgMOXLb4HBvTtJNwxiqZgTfqSoaKThSSbT8SIoaQvEyYXcWpsb8Yu_YFtGbj3kh7NnQdjdqJY7KdskoB30y4T" width="624" height="505" style="margin-left:0px;margin-top:0px;" alt="" /></span></span></span></p>
+<h2>Copying Your Entire Thunderbird Profile</h2>
+<p>Once you have located your profile folder, you can simply copy and paste the entire folder into a desired location to create a backup.</p>
+<h2>Copying Your Email Data</h2>
+<p>If you would like to copy just your email data, there are two different ways to go about this.</p>
+<ul>
+    <li>Copying all of your email data - The steps for this option will differ slightly depending on whether you used IMAP or POP3 when setting up your email account in Thunderbird.</li>
+    <li>Copying specific email folders to Local Folders - This will require you to set up Local Folders and move mail into them from whichever email folders you would like to backup.</li>
+</ul>
+<p>&nbsp;The following sections contain the instructions on how to copy your data using the above methods:</p>
+<h3>Copying All Email Data (from an IMAP or POP3 Account)</h3>
+<p>If you have set up your email account using IMAP, your emails will be stored in the &ldquo;ImapMail&rdquo; folder.  You can copy and paste that folder onto a storage device for a backup.    If you have set up your email account using POP3, your emails will be stored in the &ldquo;Mail&rdquo; folder under &ldquo;<em>pop.service-name.com</em>&rdquo;.  The &lsquo;service-name&rsquo; will be the type of account you use, such as Gmail or Yahoo.  You can copy and paste that folder onto a storage device for a backup.</p>
+<h3>Copying Specific Email Folders to Local Folders</h3>
+<p>Instead of copying all of your emails through your Thunderbird Profile or through email folders for IMAP or POP3, you may instead choose to copy specific email folders in the Thunderbird application to Local Folders that you will need to set up manually and move your email to them.</p>
+<h4>Creating Local Folders</h4>
+<p>The first step in moving your mail to your hard drive is to create local mail folders that have the same name as your folders on the mail server.</p>
+<ol>
+    <ol style="margin-top:0;margin-bottom:0;padding-inline-start:48px;">
+        <li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre;" aria-level="1"><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">In the list of folders on the left side pane, click once on &quot;Local Folders&quot; to select it.&nbsp; Go to the &quot;File&quot; menu, select New, then select Folder</span><span style="font-size: small; background-color: transparent;"><span style="background-color: transparent; font-size: 11pt;">      </span></span></li>
+    </ol>
+    <ol style="margin-top:0;margin-bottom:0;padding-inline-start:48px;" start="2">
+        <li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre;" aria-level="1"><span style="font-size: small;"><span style="white-space: pre-wrap;">The &quot;Create as a subfolder of&quot; should already be set to &quot;Local Folders&quot;</span>         </span></li>
+    </ol>
+    <ol style="margin-top:0;margin-bottom:0;padding-inline-start:48px;" start="3">
+        <li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre;" aria-level="1"><span style="font-size: small;"><span style="white-space: pre-wrap;">In the &quot;Name&quot; box, type UH Email Backup.&nbsp; Click Create Folder.</span>        </span></li>
+    </ol>
+    <ol style="margin-top:0;margin-bottom:0;padding-inline-start:48px;" start="4">
+        <li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre;" aria-level="1"><span style="font-size: small;"><span style="white-space: pre-wrap;">If necessary, click on the triangle next to Local Folders to expand it and see your newly created folder.</span>         </span></li>
+    </ol>
+    <ol style="margin-top:0;margin-bottom:0;padding-inline-start:48px;" start="5">
+        <li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre;" aria-level="1"><span style="font-size: small;"><span style="white-space: pre-wrap;">Click once on the &quot;UH Email Backup&quot; folder to select it.&nbsp; Go to the &quot;File&quot; menu, select New, the select Subfolder.</span>               </span></li>
+    </ol>
+    <ol style="margin-top:0;margin-bottom:0;padding-inline-start:48px;" start="6">
+        <li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre;" aria-level="1"><span style="font-size: small;"><span style="white-space: pre-wrap;">Make sure the &quot;Create as a subfolder of&quot; is set to UH Email Backup.</span>      </span></li>
+    </ol>
+    <ol style="margin-top:0;margin-bottom:0;padding-inline-start:48px;" start="7">
+        <li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre;" aria-level="1"><span style="font-size: small;"><span style="white-space: pre-wrap;">In the &quot;Name&quot; box, type Inbox. Click Create Folder.</span>          </span></li>
+    </ol>
+    <ol style="margin-top:0;margin-bottom:0;padding-inline-start:48px;" start="8">
+        <li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre;" aria-level="1"><span style="font-size: small;"><span style="white-space: pre-wrap;">Repeat steps 5 - 7 and create folders for all the different folders that you wish to copy off of the server.&nbsp; (E.g. Drafts, Sent, Trash, and whatever else is listed on the left-hand side under your hawaii.edu email address.)</span>    </span></li>
+    </ol>
+</ol>
+<p>When you are done, if necessary, click on the triangle next to &quot;UH Email Backup&quot; to expand and show what's stored inside.  Your Thunderbird window should look similar to below, except with your information. The next step will be moving the mail to your newly created Local Folders.</p>
+<p style="text-align: left;"><span id="docs-internal-guid-e7de9d21-7fff-e136-158f-e872b60a8e98"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;"><span style="border:none;display:inline-block;overflow:hidden;width:624px;height:387px;"><img src="https://lh5.googleusercontent.com/bPYhgI3jy85MmGY83XKOVf0qXeuc06wQRgNAyvJ8f4OLbPrSn7Fuc-IywDwGP-Cd49UNnivGVK7gnZHkinjD84iaYP1gW1w_eM39jIwTEchcbANTDz0-MN0dE2tHmx2XIbFAVBjn" width="624" height="387" style="margin-left:0px;margin-top:0px;" alt="" /></span></span></span></p>
+<h4>Moving Mail to Your Local Folders</h4>
+<p>You should try the following steps on a small amount of messages first.  Be sure you are comfortable with this process before attempting to move mail from a critical folder such as Sent or Inbox.  Before doing the steps below, please be sure you are not logged into your UH Gmail in a web browser or other computer.</p>
+<ol>
+    <li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre; margin-left: 36pt;" aria-level="1"><span style="font-size: small; white-space: pre-wrap;">You first have to select the folder that contains the messages you want to move.&nbsp; In this example, we will move messages from the &quot;Inbox&quot; folder.&nbsp; On the left side of the screen, click on the folder &quot;Inbox&quot; that's listed under the &quot;username@hawaii.edu&quot; section (do not select the one under &quot;UH Email Backup&quot;).</span></li>
+    <li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre; margin-left: 36pt;" aria-level="1"><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Go to the &quot;Edit&quot; menu, select </span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Select</span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">, then select </span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">All</span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">.&nbsp; All the messages in the &quot;meetings&quot; folder will now be selected.&nbsp; If there are a large amount of messages in the folder, do </span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">not</span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;"> use &quot;Select All&quot;.&nbsp; Instead, select a portion of the messages by clicking on the first message you want to move, then hold down the </span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">shift</span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;"> key and click on the last message you want to move.</span></li>
+    <li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre; margin-left: 36pt;" aria-level="1"><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Go to the &quot;Message&quot; menu</span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;"><br />
+    </span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">--&gt; then select </span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Copy To</span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">&nbsp; [IMPORTANT: you should copy the messages rather than move them, in case anything goes wrong during the transfer]</span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;"><br />
+    </span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">--&gt; then select </span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Local Folders</span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;"><br />
+    </span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">--&gt; then select </span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">UH Email Backup</span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;"><br />
+    </span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">--&gt; then select </span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Inbox</span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;"> (and let go of the mouse button)</span></li>
+    <li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre; margin-left: 36pt;" aria-level="1"><span style="font-size: small; white-space: pre-wrap;">The highlighted messages will be moved to the meetings folder.&nbsp; Depending on how many messages you selected to move, this could take some time.</span></li>
+    <li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre; margin-left: 36pt;" aria-level="1"><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">On the left side, select the </span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Inbox</span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;"> folder under the UH Email Backup section and verify the messages are there.&nbsp; Once you have verified that the messages were successfully copied, you may delete them from the server (in other words, delete them from under the &quot;username@hawaii.edu&quot; section).</span></li>
+    <li dir="ltr" style="list-style-type: decimal; font-size: 12pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre; margin-left: 36pt;" aria-level="1"><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Repeat steps 1 - 5 for each of the folders that you wish to move off of the server</span><span style="font-size: small; font-variant-numeric: normal; font-variant-east-asian: normal; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">.<br />
+    </span><span style="white-space:pre">	</span><span style="white-space:pre">	</span></li>
+</ol>
+<p><span id="docs-internal-guid-b0ffe033-7fff-88cf-b997-51479bd4af94"><span style="font-size: 12pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;"><span style="border:none;display:inline-block;overflow:hidden;width:624px;height:268px;"><img src="https://lh6.googleusercontent.com/iUniRa-1mS2LZG6YCliTmU0RWqWDyLNGkxObC_igi4v22qXVgPUJzBUTIA25OIKlqjjgXRz7Og4tPtsi4Dpx17k4YiyLbrA_Kqy_xZfJtbvwVvySnaj-U2DX3l8-Enmdct65-jgi" width="682.5045475746268" height="293.126953125" style="margin-left:-58.50454757462688px;margin-top:0px;" alt="" /></span></span></span></p>
+<p style="text-align: left;">&nbsp;</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/624" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="624" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:624">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=624">
+		624</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Fri, 04 Aug 2006 12:22am
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Tue, 17 Aug 2021 3:23pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>
