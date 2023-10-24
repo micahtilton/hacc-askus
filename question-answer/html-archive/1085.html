@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1085">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Setting up Dreamweaver with secure FTP (sFTP)
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Setting up Dreamweaver with secure FTP (sFTP)
+</h2>
+<div id="kb_article_text">
+	<h2><big><a name="top"></a>Contents</big></h2>
+<ul>
+    <li><a href="http://www.hawaii.edu/askus/1085/#notes-hosted">Notes on departmental websites under <abbr title="University of Hawaii">UH</abbr> Hosted Website Service</a></li>
+    <li><a href="http://www.hawaii.edu/askus/1085/#create-new">Creating a new website profile</a></li>
+    <li><a href="http://www.hawaii.edu/askus/1085/#manage-existing">Managing an existing website profile</a><a href="#delete-existing"><br />
+    </a></li>
+</ul>
+<p>&nbsp;</p>
+<hr />
+<h2><a name="notes-hosted"></a>Notes on departmental websites under <abbr title="University of Hawaii">UH</abbr> Hosted Website Service</h2>
+<ul>
+    <li>This replaces Ask Us ID 697, &quot;Transfer files with Dreamweaver through a SSH Tunnel&quot;. SSH is no longer supported under the web servers of the UH Hosted Website Service.</li>
+    <li>Any departmental website will have a beginning URL such as <em>www.hawaii.edu</em> or <em>manoa.hawaii.edu</em>. Websites beginning with <em>www2.hawaii.edu</em> are normally associated with personal homepages.</li>
+    <li>You cannot modify file permissions through Dreamweaver. You must use an secure FTP (sFTP) client such as <a href="https://filezilla-project.org/index.php" target="_blank">Filezilla</a> for <a href="https://www.hawaii.edu/askus/1735" target="_blank">PC</a> or <a href="https://www.hawaii.edu/askus/1741" target="_blank">Mac</a>.</li>
+    <li>Your version of Dreamweaver must be MX 2004 or higher, or must have <abbr title="secure FTP">sFTP</abbr> capability for the following instructions to properly work.</li>
+    <li>Dreamweaver is not listed as <a href="http://www.hawaii.edu/askus/575"><abbr title="Information Technology Services">ITS</abbr> supported software</a>. Therefore, Dreamweaver support is limited within <abbr title="Information Technology Services">ITS</abbr>. You may also want to check the <a href="http://forums.adobe.com/thread/429114">Dreamweaver <abbr title="Frequently Asked Questions">FAQ</abbr> on Adobe Forums</a> for additional general support.</li>
+</ul>
+<p style="text-align: right;"><a href="http://www.hawaii.edu/askus/1085/#top">top</a></p>
+<hr style="border: 1px solid rgb(204, 204, 204); width: 70%;" />
+<h2><a name="create-new"></a><strong>Creating a new website profile</strong></h2>
+<p>To set up a profile to manage your website, please follow the provided instructions.</p>
+<ol>
+    <li>Open <strong>Dreamweaver<br />
+    <br />
+    </strong></li>
+    <li>Once Dreamweaver is displayed, go to <strong>Site &gt;&gt; New Site...</strong><br />
+    <br />
+    <img height="514" width="682" alt="Screenshot of Dreamweaver menu bar at the top; going to Site &gt;&gt; New Site..." title="Screenshot of Dreamweaver menu bar at the top; going to Site &gt;&gt; New Site..." src="/help/chasek/images/Image/dreamweaver/new-site-1.jpg" /><br />
+    <br />
+    &nbsp;</li>
+    <li>A <strong>Site Definition</strong> window will appear. Fill in the following fields:<br />
+    <br />
+    <em>What would you like to name your site?</em><br />
+    Enter a profile name that best describes the website Dreamweaver will manage. The name you chose should allow you to be able to distinguish it among other profile names already created or later created.<br />
+    <em><br />
+    What is the HTTP Address (URL) of your site?</em><strong><br />
+    </strong>Enter the URL of the website that the profile is made for.<br />
+    <br />
+    <img height="544" width="663" alt="Screenshot of Dreamweaver Site Definition" title="Screenshot of Dreamweaver Site Definition" src="/help/chasek/images/Image/dreamweaver/new-site-2.jpg" /><br />
+    <br />
+    Click the <strong>Next </strong>button.<br />
+    &nbsp;</li>
+    <li>
+    <p>Choose <strong>Yes, I want to use a server technology.</strong> Select <strong>PHP MySQL </strong>as the server technology.<br />
+    <br />
+    <img height="523" width="691" alt="Screenshot of Dreamweaver; Editing Files, Part II" title="Screenshot of Dreamweaver; Editing Files, Part II" src="/help/chasek/images/Image/dreamweaver/new-site-3.jpg" /><br />
+    <br />
+    Click <strong>Next</strong>.<br />
+    &nbsp;</p>
+    </li>
+    <li>
+    <p>Click on the <strong>Advanced</strong> tab. Select <strong>Local Info</strong>, if not selected, from the left side panel as shown in the provided screenshot.<br />
+    <br />
+    <img height="433" width="443" alt="Screenshot of Dreamweaver; Advanced tab in Site Definition, configuring Local Info" title="Screenshot of Dreamweaver; Advanced tab in Site Definition - Local Info" src="/help/chasek/images/Image/dreamweaver/new-site-4.jpg" /><br />
+    <br />
+    Complete the following changes, which should result in something similar to the example above (your information will be different from that in the example):</p>
+    <div style="padding-left: 25px;">a) <strong>Local root folder<br />
+    </strong>Click on the folder to the right side of the text box. Locate or make the folder for which the website files are to be stored. If you are making a new folder, be sure to place the folder in an area you are able to find it (e.g. Desktop).<br />
+    <br />
+    b) <strong>Default images folder<br />
+    </strong>Perform the same step as the local root folder, except specifying where the images are to be stored for the website. You may choose to keep your images in a new folder, or you may choose to place your images in the same place as your web page files. It is recommended that you keep your images in a new folder to keep your  files organized.<br />
+    <br />
+    c) <strong>Check the box for &quot;Use case-sensitive link checking&quot;</strong><br />
+    The web servers under the UH Hosted Website Service are case-sensitive, meaning the website files &quot;home.html&quot; and &quot;HOME.html' are different.<br />
+    &nbsp;</div>
+    </li>
+    <li>
+    <p>On the <strong>Advanced </strong>tab, select <strong>Remote Info</strong> from the left hand side.<br />
+    <br />
+    <img height="466" width="474" alt="Screenshot of Dreamweaver; Advanced tab in Site Definition, configuring Remote Info" title="Screenshot of Dreamweaver; Advanced tab in Site Definition, configuring Remote Info" src="/help/chasek/images/Image/dreamweaver/new-site-5.jpg" /><br />
+    <br />
+    Complete the following changes, which should result in something similar to the example above (your information will be different from that in the example):</p>
+    <div style="padding-left: 25px;"><strong>Access:</strong> FTP<br />
+    <strong>FTP host:</strong> Hostname of the server which hosts the website you are managing.<br />
+    <strong>Host directory: </strong>enter the directory which the website files are stored on the web server.<br />
+    <strong>Login:</strong> &lt;your UH username&gt;<br />
+    <strong>Password:</strong> &lt;your password&gt;<br />
+    <br />
+    You may choose to check <strong>Save </strong>check box if you would like Dreamweaver to keep your password. Note this field must be edited should you change your password in the future.<br />
+    <br />
+    Check <strong>Use Secure FTP</strong>, as required to access the web server.     <br />
+    &nbsp;</div>
+    </li>
+    <li>
+    <p>Click the <strong>Test</strong> button. If you are successfully able to access the web server, you should receive a similar message:<br />
+    <br />
+    <img height="151" width="429" alt="Screenshot of Dreamweaver; Success message upon clicking Test button to confirm settings" title="Screenshot of Dreamweaver; Success message upon clicking Test button to confirm settings" src="/help/chasek/images/Image/dreamweaver/new-site-6.jpg" /></p>
+    &nbsp;</li>
+    <li>On the <strong>Advanced </strong>tab, click on <strong>Design Notes</strong> from the left hand side. Optionally, you may choose to uncheck <strong>Maintain Design Notes</strong>.<br />
+    <br />
+    <img height="466" width="474" alt="Screenshot of Dreamweaver; Advanced tab of Site Definition, configuring Design Notes" title="Screenshot of Dreamweaver; Advanced tab of Site Definition, configuring Design Notes" src="/help/chasek/images/Image/dreamweaver/new-site-7.jpg" /><br />
+    &nbsp;</li>
+    <li>To save and exit the setup, click <strong>OK</strong>.</li>
+</ol>
+<p style="text-align: right;"><a href="http://www.hawaii.edu/askus/1085/#top">top</a></p>
+<hr style="border: 1px solid rgb(204, 204, 204); width: 70%;" />
+<h2><a name="manage-existing"></a>Managing an existing profile</h2>
+<p>To manage an existing website profile, please follow the provided instructions.</p>
+<ol>
+    <li>Open <strong>Dreamweaver</strong><br />
+    &nbsp;</li>
+    <li>Once Dreamweaver is displayed, go to <strong>Site &gt;&gt; Manage Sites...</strong><br />
+    <br />
+    <img height="514" width="682" alt="Screenshot of Dreamweaver menu bar at top; going to Site &gt;&gt; Manage Sites.." title="Screenshot of Dreamweaver menu bar at top; going to Site &gt;&gt; Manage Sites.." src="/help/chasek/images/Image/dreamweaver/manage-site-1.jpg" /><br />
+    &nbsp;</li>
+    <li>In the <strong>Manage Sites</strong> window, example displayed below, select the site profile you would like to modify.<br />
+    <br />
+    <img height="645" width="741" alt="Screenshot of Dreamweaver; Manage Sites" src="/help/chasek/images/Image/dreamweaver/new-site-8.jpg" /></li>
+    <li>Click <strong>Edit...</strong><br />
+    &nbsp;</li>
+    <li>Edit the site profile as needed. To close the window saving your changes, click <strong>OK</strong>.</li>
+</ol>
+<p style="text-align: right;"><a href="http://www.hawaii.edu/askus/1085/#top"><br />
+top</a></p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1085" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1085" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1085">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1085">
+		1085</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Mon, 23 Nov 2009 11:39pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Tue, 08 Aug 2017 9:55pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

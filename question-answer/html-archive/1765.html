@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1765">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>UH Login Multi-Factor Authentication (MFA) - Logging in with MFA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+UH Login Multi-Factor Authentication (MFA) - Logging in with MFA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p>This article explains how to login through the UH Login page using the different MFA methods. Please note that ITS <b>strongly</b> recommends that you setup at least two devices for MFA.</p>
+<ul>
+    <li><a href="#push">Duo Push (smartphone, tablet)</a></li>
+    <li><a href="#mobilecall">Phone call (mobile phone)</a></li>
+    <li><a href="#smstext">SMS text codes (mobile phone)</a></li>
+    <li><a href="#duogen">Duo App-generated code (smartphone, tablet)</a></li>
+    <li><a href="#landline">Landline</a></li>
+    <li><a href="#hardtoken">UH Hard Token (Yubikey)</a></li>
+</ul>
+<p><a name="push"></a></p>
+<h3>Duo Push (smartphone, tablet)</h3>
+<ol>
+    <li>At the Duo MFA window, make sure your mobile phone or tablet is selected under the &quot;Device&quot; drop down menu.</li>
+    <br />
+    <li>Optionally, you can select the <b>Remember me for 7 days</b> option.  If you select this option, you will not see the Duo MFA window for 7 days.</li>
+    <br />
+    <li>Click on the <b>Send Me a Push</b> button.<br />
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/1%20Smartphone%20Tablet.png" alt="Send Me a Push" width="500" height="269" /></li>
+    <br />
+    <li>A notification will appear on your smartphone.<br />
+    <ul>
+        <li>iPhone: Press and hold on the notification, then tap on <b>Approve</b> to approve or <b>Deny</b> if it was a fraudulent request.  If necessary enter your iPhone's passcode.</li>
+        <li>Android: Tap on <b>Notifications</b>.  You may have to unlock your phone.  Tap on <b>Approve</b> to approve or <b>Deny</b> if it was a fraudulent request.</li>
+    </ul>
+    </li>
+</ol>
+<p>For further information on the Duo Mobile app, please refer to Duo's guides:<br />
+iPhone: <a href="https://guide.duo.com/iphone">https://guide.duo.com/iphone</a><br />
+Android: <a href="https://guide.duo.com/android">https://guide.duo.com/android</a></p>
+<p><a name="mobilecall"></a></p>
+<h3>Phone call (mobile phone)</h3>
+<ol>
+    <li>At the Duo MFA window, make sure your mobile phone is selected under &quot;Devices&quot;.</li>
+    <br />
+    <li>Optionally, you can select the <b>Remember me for 7 days</b> option.  If you select this option, you will not see the Duo MFA window for 7 days.</li>
+    <br />
+    <li>Click on the <b>Call Me</b> button.<br />
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/2%20Phone%20call.png" alt="Call Me" width="500" height="268" /></li>
+    <br />
+    <li>A phone call will be placed to your mobile phone.  Answer the call, then press <b>1</b> on the mobile phone's keypad to approve or press <b>9</b> to report a fraudulent request.</li>
+</ol>
+<p><a name="smstext"></a></p>
+<h3>SMS text codes (mobile phone)</h3>
+<ol>
+    <li>At the Duo MFA window, make sure your mobile phone is selected under &quot;Devices&quot;.</li>
+    <br />
+    <li>Optionally, you can select the <b>Remember me for 7 days</b> option.  If you select this option, you will not see the Duo MFA window for 7 days.</li>
+    <br />
+    <li>Click on the <b>Enter a Passcode</b> button.<br />
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/3%20SMS%20text%20codes.png" alt="Enter a Passcode" width="500" height="269" /></li>
+    <br />
+    <li>If this is your first time logging in, or if you need a new set of text codes, click on <b>Text me new codes</b>.<br />
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/4%20SMS%202.png" alt="Text me new codes" width="500" height="268" /></li>
+    <br />
+    <li>A set of 10 codes will be texted to your mobile phone.  Enter the first code (it should begin with the number 1) in the box, then click on <b>Log In</b>.<br />
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/5%20SMS%203.png" alt="Log in" width="500" height="268" /></li>
+    <br />
+    <li>The next time you login, you can enter the next code in the sequence (e.g. the one starting with the number 2) to login.  However, you can always click on <b>Text me new codes</b> to get a new set of codes.</li>
+</ol>
+<p><a name="duogen"></a></p>
+<h3>Duo App-generated code (smartphone, tablet)</h3>
+<p>The Duo App will generate codes even if the smartphone or tablet does not have wifi or cellular data service.</p>
+<ol>
+    <li>At the Duo MFA window, make sure your smartphone or tablet is selected under &quot;Devices&quot;.</li>
+    <br />
+    <li>Optionally, you can select the <b>Remember me for 1 day</b> option.  If you select this option, you will not see the Duo MFA window for 7 days.</li>
+    <br />
+    <li>Click on the <b>Enter a Passcode</b> button.</li>
+    <br />
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/6%20DUO%201.png" alt="Enter a Passcode" width="500" height="269" /><br />
+    <br />
+    <li>Open the Duo Mobile app on your smartphone or tablet.</li>
+    <br />
+    <li>Select &quot;Show&quot; next to the hidden passcode for &quot;University of Hawaii&quot;.</li>
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/7%20DUO%202.png" width="300" height="348" alt="Duo Mobile" /><br />
+    <li>A code will display. The code will remain valid until it is used.  If you have the newer version of the Duo Mobile app, you can tap on the &quot;circular arrows&quot; icon to get a new code.</li>
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/8%20Duo%203.png" alt="Circular arrows icon" width="300" height="422" /><br />
+    <li>Enter the displayed code into the box, then click on <b>Log In</b>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/9%20DUO%204(1).png" width="500" height="266" alt="Passcode Login" /><br />
+</ol>
+<h3><a name="landline">Landline</a></h3>
+<ol>
+    <li>At the Duo MFA window, make sure your landline (e.g office) number is selected under &quot;Devices&quot;.</li>
+    <br />
+    <li>Optionally, you can select the <b>Remember me for 7 days</b> option.  If you select this option, you will not see the Duo MFA window for 7 days.</li>
+    <br />
+    <li>Click on the <b>Call Me</b> button.<br />
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/10%20Landline%201.png" alt="Landline Call me" width="500" height="266" /></li>
+    <br />
+    <li>A phone call will be placed to your designated landline phone. Answer the call, then press <b>1</b> on the Landline's keypad to approve or press <b>9</b> to report a fraudulent request.</li>
+</ol>
+<p><a name="hardtoken"></a></p>
+<h3>UH Hard Token (Yubikey)</h3>
+<p>The UH hard token is a usb device that you would insert into your computer's usb port.  You would then &quot;touch&quot; the gold area of the hard token to authenticate. UH hard tokens can be purchased through the ITS Site License office.&nbsp; Please visit <a href="https://www.hawaii.edu/sitelic/tokens">www.hawaii.edu/sitelic/tokens</a>. Both USB A and USB C hard tokens are available.</p>
+<ol>
+    <li>Insert the hard token into your computer's USB port prior to any login attempts.<br />
+    <i>Note for Macintosh users</i>: the first time you insert a hard token into a Macintosh, you may be told, &quot;Your keyboard is unrecognizable&quot; or &quot;Your keyboard cannot be identified&quot;.  This message can be ignored; close the window by clicking on the red dot in the upper left.</li>
+    <br />
+    <li>When you get to the Duo MFA window, make sure either your mobile phone, tablet, or &quot;Token&quot; is selected under &quot;Device&quot;.</li>
+    <br />
+    <li>Optionally, you can select the <strong>Remember me for 7 days</strong> option.  If you select this option, you will not see the Duo MFA window for 7 days.</li>
+    <br />
+    <li>Click on the <b>Enter a Passcode</b> button.<br />
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/11%20Token%201.png" alt="Enter a passcode" width="500" height="264" /></li>
+    <br />
+    <li>If you have the USB A hard token, make sure you see the green light flashing on the &quot;Y&quot; in the gold circle. For either hard token, press down on the token's gold area with any finger (see below for where to press).</li>
+    <br />
+    <table width="800" cellspacing="1" cellpadding="1" border="1">
+        <tbody>
+            <tr>
+                <td>USB A hard token</td>
+                <td>USB C hard token</td>
+            </tr>
+            <tr>
+                <td><img src="/help/chasek/images/Image/YubiKey_4A_square.jpg" alt="USB A Hard Token" width="300" height="300" /></td>
+                <td>&nbsp;<img src="/help/chasek/images/Image/yubikey_4c_square.jpg" alt="USB C Hard Token" width="284" height="243" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <li>A (long) code will automatically be entered into the box, and the &quot;Login&quot; button will automatically be pressed, and you should now be logged in.<br />
+    <br />
+    <img src="/help/chasek/images/Image/natwell/MFA%20Pictures/12%20Token%202.png" alt="Long code automatically entered" width="500" height="265" /></li>
+</ol>
+</div>
+<div class="kb_article_parentslink">
+	This article is part of the 
+<a href="/askus/1758">
+    Getting setup for Multi-Factor Authentication (MFA)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a>
+ article.
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1765" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1765" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1765">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1765">
+		1765</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Wed, 14 Mar 2018 1:54pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Wed, 16 Aug 2023 7:58am</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

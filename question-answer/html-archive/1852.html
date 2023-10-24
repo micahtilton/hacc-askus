@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1852">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>ITS Service Level Agreement - Virtual Server Hosting Service
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+ITS Service Level Agreement - Virtual Server Hosting Service
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<h1><span style="color: rgb(0, 0, 0);">Description</span></h1>
+<p style="margin: 10px 0px 0px; padding: 0px;">The Virtual Server Hosting Service provides the UH community with access to virtual servers running a Red Hat Enterprise Linux (RHEL) or a Microsoft Windows operating system. ITS utilizes a VMware cluster for the provisioning of the virtual servers. The size/configuration of the virtual servers can change over time as needs change.</p>
+<p style="margin: 10px 0px 0px; padding: 0px;">&nbsp;</p>
+<h1><span style="font-size: 20px; letter-spacing: -0.008em;">Show Stoppers</span></h1>
+<p style="margin: 10px 0px 0px; padding: 0px;">There are some scenarios where this service will not be appropriate.&nbsp; Below are some examples:</p>
+<ul>
+    <li>This service may&nbsp;<strong>not</strong>&nbsp;be used where PCI compliance is required.<br />
+    &nbsp;</li>
+    <li>Hardware requirements for peripherals such as sound cards.
+    <ul>
+        <li>A colocation request may have to be considered instead.<br />
+        &nbsp;</li>
+    </ul>
+    </li>
+    <li>Operating systems that are not ITS-supported (i.e. Ubuntu, CentOS, etc.)<br />
+    &nbsp;</li>
+    <li>This limitation is due to our need to provide monthly auditing of OS patching.<br />
+    &nbsp;</li>
+    <li>Firewall rules that are deemed to be a security risk by the ITS TI-Security team.
+    <ul>
+        <li>I.e. Open MySQL to the world.</li>
+    </ul>
+    </li>
+</ul>
+<h1><span style="color: rgb(0, 0, 0);">Benefits</span></h1>
+<h2><span style="color: rgb(0, 0, 0);">Infrastructure Benefits</span></h2>
+<ul>
+    <li>The environmentally hardened IT Center Data Center can reduce the risk of your equipment being damaged or unavailable due to natural disasters.<br />
+    &nbsp;</li>
+    <li>Efficient power and cooling reduces UH&rsquo;s use of natural resources and overall expenses.<br />
+    &nbsp;</li>
+    <li>Highly redundant components; reliable power and cooling will increase the uptime of your hosted applications.<br />
+    &nbsp;</li>
+    <li>Continue to have full control to your system without worries about buying, installing, supporting or replacing hardware.</li>
+</ul>
+<h2><span style="color: rgb(0, 0, 0);">Hosted Virtual Server Benefits</span></h2>
+<ul>
+    <li>New servers can be set-up within a few days so you no longer have to go through long procurement processes to get your equipment.<br />
+    &nbsp;</li>
+    <li>Can grow or shrink your virtual server over time; ensures you don&rsquo;t spend too much money by over-configuring your systems.
+    <ul>
+        <li>Caveats include:
+        <ul>
+            <li>Shrinking disk on on Windows is generally not recommended.</li>
+            <li>While we can increase resources without a reboot; decreasing resources will require a reboot.<br />
+            &nbsp;</li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li>OS upgrade support for major releases
+    <ul>
+        <li>A new virtual server of similar configuration will be provided at no additional cost for a period of 1 month to facilitate migration.</li>
+        <li>Where possible IP addresses will be preserved upon request.</li>
+        <li>CNAME(s) will be updated as needed for cutover to the new virtual server.<br />
+        &nbsp;</li>
+    </ul>
+    </li>
+    <li>Duo integration is supported at no additional cost
+    <ul>
+        <li>The catch is that only UH Usernames are supported since the Duo namespace is integrated with the UH Login username space.</li>
+        <li>Multi-factor is highly recommended for securing shell access.</li>
+    </ul>
+    </li>
+</ul>
+<h2><span style="color: rgb(0, 0, 0);">Optional Benefits, at Additional Cost</span></h2>
+<p>Your server can be backed-up to a second location providing additional protecting from data loss even in the case of a major disaster.</p>
+<h1><span style="color: rgb(0, 0, 0);">Operating Systems</span></h1>
+<h2><span style="color: rgb(0, 0, 0);">Available</span></h2>
+<p style="margin: 10px 0px 0px; padding: 0px;">Operating systems are no longer available once they reach end-of-life.&nbsp; New operating systems are added as ITS fully incorporates them into its deployment scripts.</p>
+<p style="margin: 10px 0px 0px; padding: 0px;">Highly recommended:</p>
+<ul>
+    <li>Multifactor authentication is highly recommended for securing remote access, such as RDP and SSH.</li>
+</ul>
+<h2><span style="color: rgb(0, 0, 0);">OS Support Resources</span></h2>
+<p style="margin: 10px 0px 0px; padding: 0px;"><span style="color: rgb(0, 0, 0);">OS support is not included in this service, nor is there support for the applications you plan to install. There are resources available online and the UH App Dev community via their LISTSERV list may be able to help since many of them manage operating systems. ITS staff also participate on this list. Here are some resources to consider:</span></p>
+<ul>
+    <li><span style="color: rgb(0, 0, 0);">UH App Dev community: </span><a href="https://uhawaii.atlassian.net/wiki/spaces/UHIAM/pages/13402608/App+Developers+Forum">https://uhawaii.atlassian.net/wiki/spaces/UHIAM/pages/13402608/App+Developers+Forum</a><span style="color: rgb(0, 0, 0);">.&nbsp; You will need to sign up.</span></li>
+    <li><span style="color: rgb(0, 0, 0);">RHEL mailing lists: </span><a href="https://www.redhat.com/mailman/listinfo" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">https://www.redhat.com/mailman/listinfo</a></li>
+    <li><span style="color: rgb(0, 0, 0);">Red Hat Services: </span><a href="https://www.redhat.com/en/services"><span style="text-decoration-line: none;" class="external-link">https://www.redhat.com/en/services</span></a></li>
+</ul>
+<h1><span style="color: rgb(0, 0, 0);">ITS Responsibilities</span></h1>
+<h2><span style="color: rgb(0, 0, 0);">Initial</span></h2>
+<ul>
+    <li><span style="color: rgb(0, 0, 0);">Review the &quot;Production Readiness Questionnaire&quot; and Virtual Server Intake Form.<br />
+    <br />
+    </span></li>
+    <li><span style="color: rgb(0, 0, 0);">Perform initial installation of the new virtual server's OS<br />
+    <br />
+    Note: ITS will&nbsp;<strong>not</strong>&nbsp;have access to the operating system (OS) once it is handed over to the owner.<br />
+    <br />
+    </span></li>
+    <li><span style="color: rgb(0, 0, 0);">Provide vCenter console access to the new virtual server<br />
+    <br />
+    Provide for virtual server reboot, shutdown, and the viewing of resource utilization statistics.<br />
+    <br />
+    </span></li>
+    <li><span style="color: rgb(0, 0, 0);">Register the virtual server in the InfoSec Server Registration database.<br />
+    <br />
+    </span></li>
+    <li><span style="color: rgb(0, 0, 0);">Preinstall backup client if backups are included with the new virtual server request.&nbsp;</span><span style="color: rgb(23, 43, 77);"><a href="http://www.hawaii.edu/askus/1835" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;"><span style="color: rgb(0, 0, 0);">Backups are required, but customers can use their own backup service</span></a></span><span style="color: rgb(0, 0, 0);">.</span></li>
+</ul>
+<h2><span style="color: rgb(0, 0, 0);">Ongoing</span></h2>
+<ul>
+    <li>Provide firewall changes as needed, upon request and pending vetting from TI-Sec.</li>
+    <li>Response to requests for support for using this service.&nbsp;
+    <ul>
+        <li>Requests can be sent to <a href="mailto:itscs@hawaii.edu?subject=virtual%20server%20hosting%20service">itscs@hawaii.edu</a>.</li>
+        <li>Support for the hosted applications is not provided.</li>
+    </ul>
+    </li>
+    <li>Adjust virtual server resource utilization as needed, upon request.</li>
+    <li>Perform monthly security audit to ensure that the OS is being updated monthly.</li>
+    <li>Provide annual billing. Billing inquires can be made to&nbsp;<a href="mailto:itsdc@hawaii.edu?subject=billing%20for%20virtual%20server%20hosting%20service">itsdc@hawaii.edu</a>.<br />
+    &nbsp;</li>
+    <li>Provide
+    <ul>
+        <li>Backups and restores, if this optional cost service is requested.
+        <ul>
+            <li>Support.
+            <ul>
+                <li>ITS can provide consulting assistance to help you plan for your use of the service.</li>
+                <li>ITS will provide best effort support during business hours, subject to availability&nbsp;of staff resources.<br />
+                &nbsp;</li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li>Power, cooling, and network services.<br />
+        &nbsp;</li>
+        <li>Physical monitoring.
+        <ul>
+            <li>ITS will physically monitor the data center to make sure only approved personnel enter the facility. Ensure physical security, monitoring and other services.<br />
+            &nbsp;</li>
+        </ul>
+        </li>
+        <li>Network monitoring.
+        <ul>
+            <li>ITS will monitor the data center network, and other support services to ensure they are available and operating as expected.<br />
+            &nbsp;</li>
+        </ul>
+        </li>
+        <li>Outage communications:
+        <ul>
+            <li>Unplanned outages.
+            <ul>
+                <li>
+                <p style="margin: 0px; padding: 0px;">An unplanned outage is a service interruption of the hardware or the supporting network infrastructure.&nbsp;&nbsp;ITS will post information about any unexpected outages on the ITS web site at <span class="nolink"><a href="http://www.hawaii.edu/alerts" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">http://www.hawaii.edu/alerts</a></span>.<br />
+                &nbsp;</p>
+                </li>
+            </ul>
+            </li>
+            <li>Planned outages.
+            <ul>
+                <li>A planned outage is defined as a service interruption that has been arranged in advance by ITS personnel.</li>
+                <li>Outages will be scheduled during non-&shy;business hours when possible.</li>
+                <li>ITS will give customers as much advanced notice as possible for scheduled outages.<br />
+                &nbsp;</li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li>
+        <p class="auto-cursor-target" style="margin: 0px; padding: 0px;">Security vulnerability outages will follow the ITS TI-Security patching principles.</p>
+        </li>
+        <li>
+        <p class="auto-cursor-target" style="margin: 0px; padding: 0px;">ITS teams use the following table to determine when patches should be applied.</p>
+        <div class="table-wrap" style="margin: 10px 0px 0px; padding: 0px; overflow-x: auto;">
+        <table class="wrapped confluenceTable" resolved="" style="border-collapse: collapse; margin: 0px; overflow-x: auto;">
+            <colgroup><col /><col /><col /></colgroup>
+            <tbody>
+                <tr>
+                    <td class="highlight-blue confluenceTd" data-highlight-colour="blue" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px; background-color: rgb(222, 235, 255);">
+                    <p style="margin: 0px; padding: 0px;"><strong>Grouping</strong></p>
+                    </td>
+                    <td class="highlight-blue confluenceTd" data-highlight-colour="blue" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px; background-color: rgb(222, 235, 255);">
+                    <p style="margin: 0px; padding: 0px;"><strong>Description</strong></p>
+                    </td>
+                    <td class="highlight-blue confluenceTd" colspan="1" data-highlight-colour="blue" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px; background-color: rgb(222, 235, 255);"><strong>Time to Patch Within</strong></td>
+                </tr>
+                <tr>
+                    <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">
+                    <p style="margin: 0px; padding: 0px;">Emergency</p>
+                    </td>
+                    <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">
+                    <p style="margin: 0px; padding: 0px;">A very rare high profile security exposure that is specially designated by the CISO (e.g. Heartbleed).</p>
+                    </td>
+                    <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">
+                    <p style="margin: 0px; padding: 0px;">ASAP (ideally within 24-48 hours)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">
+                    <p style="margin: 0px; padding: 0px;">Critical</p>
+                    </td>
+                    <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">
+                    <p style="margin: 0px; padding: 0px;">A vendor (or patch provider) has denoted its highest rating for the patch. &nbsp;Generally this means that vulnerability that could be exploited by a remote unauthenticated attacker and could lead to system compromise without requiring user interaction. &nbsp;</p>
+                    </td>
+                    <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">
+                    <p style="margin: 0px; padding: 0px;">14 days</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">Monthly</td>
+                    <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">Operating System patches, such as RHEL and Windows.</td>
+                    <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">30 days</td>
+                </tr>
+                <tr>
+                    <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">
+                    <p style="margin: 0px; padding: 0px;">Other</p>
+                    </td>
+                    <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">
+                    <p style="margin: 0px; padding: 0px;">All other patches.</p>
+                    </td>
+                    <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">
+                    <p style="margin: 0px; padding: 0px;">90 day</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        </li>
+    </ul>
+    </li>
+</ul>
+<h2><span style="color: rgb(0, 0, 0);">End-of-Life</span></h2>
+<ul>
+    <li>Upon request, securely decommission the virtual server and cease billing.</li>
+</ul>
+<h1><span style="color: rgb(0, 0, 0);">Virtual Server Owner Responsibilities</span></h1>
+<h2><span style="color: rgb(0, 0, 0);">Preparation</span></h2>
+<ul>
+    <li>Complete the &quot;Production Readiness Questionnaire&quot; as part of the Virtual Server Intake Form: <a href="http://hawaii.edu/askus/1848">http://hawaii.edu/askus/1848</a></li>
+    <li>Design for compliance with UH Executive Policies such as EP 2.210, EP 2.214, and EP 2.215. Links to policies can be found at <a href="https://www.hawaii.edu/infosec/policies/" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">https://www.hawaii.edu/infosec/policies/</a></li>
+    <li>Ensure that the appropriate firewall rules are specified.</li>
+    <li>Ensure that a backup strategy for institutional data protection is planned from the outset.</li>
+</ul>
+<h2><span style="color: rgb(0, 0, 0);">Administrative</span></h2>
+<h3><span style="color: rgb(0, 0, 0);">You must:</span></h3>
+<ul>
+    <li>Identify at least one full-time staff as the virtual server's system administrator.
+    <ul>
+        <li>Ensure that at least one full-time staff member is assigned system and application administration responsibilities. Students cannot be the primary system administrator.</li>
+        <li>Let ITS know in a timely fashion when changes to personnel are necessary, for example, when a designated system administrator leaves your department.</li>
+        <li>It is highly recommended that you have a backup system administrator assigned to your virtual server.<br />
+        &nbsp;</li>
+    </ul>
+    </li>
+    <li>When requesting additional CPUs for example, ensure that any associated increases in application licensing costs are appropriately addressed.
+    <ul>
+        <li>E.G.: An increase in CPU resources might required increase Microsoft SQL Server costs.<br />
+        &nbsp;</li>
+    </ul>
+    </li>
+    <li>If requesting ITS backups
+    <ul>
+        <li>Install the ITS backup client (see reference section at the end of this document).&nbsp;&nbsp;</li>
+        <li>Ensure that you have purchased sufficient disk space for your backups.<br />
+        &nbsp;</li>
+    </ul>
+    </li>
+    <li>Annually confirm the virtual server registration in the InfoSec Server Registration database (you will receive an email reminder).
+    <ul>
+        <li>For more information: <a href="https://hawaii.edu/askus/1312" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">https://hawaii.edu/askus/1312</a>.<br />
+        &nbsp;</li>
+    </ul>
+    </li>
+    <li>Make the requested annual payment to ITS for resources utilized.</li>
+</ul>
+<h2><span style="color: rgb(0, 0, 0);">Data Protection</span></h2>
+<p>Ensure your familiarity with and comprehension&nbsp;of the following:</p>
+<ul>
+    <li><span style="color: rgb(23, 43, 77);"><span style="color: rgb(0, 0, 0);">The UH Information Security Program: </span><a href="https://www.hawaii.edu/infosec/infosecprogram/" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">https://www.hawaii.edu/infosec/infosecprogram/</a>.</span></li>
+    <li>Protecting Sensitive Information at UH: <a href="https://www.hawaii.edu/askus/1266" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">https://www.hawaii.edu/askus/1266</a>.</li>
+    <li>Know and understand the data classification that is applicable to the data being stored and accessed on the virtual server <a href="https://datagov.intranet.hawaii.edu/institutional-data-classification-levels/" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">https://datagov.intranet.hawaii.edu/institutional-data-classification-levels/</a>.</li>
+    <li>Inform ITS in advance when planning to host protected information (HIPAA, FERPA, PCI, PII, etc) on the virtual server.</li>
+    <li>Properly manage information by assigning at least one full-time staff member as a protected data compliance officer.</li>
+    <li>Implement a backup strategy to protect institutional data.</li>
+</ul>
+<h2><span style="color: rgb(0, 0, 0);">Security</span></h2>
+<p style="margin: 10px 0px 0px; padding: 0px;">Maintaining the security of your virtual servers is the customer responsibility. The customer should make sure software is patched, malware is blocked, passwords are secure and access lists are managed. If for some reason you experience a virtual server compromise, and it becomes a threat to the greater UH community (e.g. it is being used as a host to attack other services), ITS reserves the right to block its network traffic. If this occurs, ITS will notify you immediately.&nbsp;</p>
+<p style="margin: 10px 0px 0px; padding: 0px;">University guidelines and general best practices for securing the hosted virtual servers&nbsp;according to established policies are available here: <a href="http://www.hawaii.edu/askus/1266" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">http://www.hawaii.edu/askus/1266</a><span class="s1">.</span></p>
+<ul>
+    <li><span style="color: rgb(0, 0, 0);">Manage the applications, administer user access, etc.</span></li>
+    <li>Perform monthly (minimally) OS patching utilizing the UH patch servers to ensure that OS patching activities are auditable.</li>
+    <li>Mitigate critical application vulnerabilities in a timely fashion (within 7 calendar days is recommended).</li>
+    <li>Ensure continued compliance with Minimum Security Standards for Virtual Server and all Desktops and devices that may connect to the Server <a href="https://www.hawaii.edu/infosec/minimum-standards/" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">https://www.hawaii.edu/infosec/minimum-standards/</a>.</li>
+    <li>Proactively upgrade your Operating System before it is End of Service Life (EOSL).
+    <ul>
+        <li>ITS will contact the server administrator on record when systems are becoming EOSL. It is the administrator's reponsiblity to respond in a timely manner and work on upgrading to server. Failure to upgrade will leave your OS vulnerable. <em>ITS reserves the right to shut down or block from the network.</em></li>
+    </ul>
+    </li>
+</ul>
+<h1><span style="color: rgb(0, 0, 0);">Policies</span></h1>
+<p style="margin: 10px 0px 0px; padding: 0px;">ITS will continue to ensure that security remains a priority, and will verify ongoing compliance to executive policies. Examples of such policies regarding security and data handling would be&nbsp;<strong>EP 2.210</strong>&nbsp;(Information Technology Resources Policy),&nbsp;<strong>EP 2.214</strong>&nbsp;(Institutional Data Classification &amp; Information Security Guidelines) &amp;&nbsp;<strong>EP 2.215</strong>&nbsp;(Protected Data).&nbsp;</p>
+<p style="margin: 10px 0px 0px; padding: 0px;">Excerpt from EP 2.214</p>
+<p style="margin: 10px 0px 0px; padding: 0px;"><em>&quot;3. &nbsp; &nbsp;As stated in Executive Policy EP2.215, Information Technology Services (ITS) has the full authority to enforce technical measures to ensure the security and confidentiality of protected data that are stored or transmitted, whether intentionally or unintentionally, on University systems and networks, including but not limited to immediate disconnection of compromised systems and devices from the University network.<br />
+4. &nbsp; &nbsp;ITS has the authority to conduct network and device scanning to identify security weaknesses in any University information system, device, or network that may compromise sensitive information or the operations and availability of institutional services.<br />
+&nbsp; &nbsp; ITS also has the authority to require all servers operating on the University network be regularly scanned for sensitive information, vulnerabilities and be protected in accordance with appropriate data security guidelines based on data classification categories.<br />
+5. &nbsp; &nbsp;To better protect the University&rsquo;s Institutional Data, ITS may require departments/units/programs to periodically report on the data element/records that they manage. Reporting requirements administered by ITS include PII and Health Insurance Portability and Accountability Act (HIPAA) surveys and server registrations.<br />
+The PII survey is part of an HRS &sect;487N-7 requirement where UH must annually prepare a report describing the information systems that contain personal information. ITS is responsible for submitting this report and maintains a secure online system for units to report such systems. Chancellors and Vice Presidents are responsible to ensure that units under their purview report systems containing Protected Data and update the information at least annually. &quot;</em></p>
+<h2><span style="color: rgb(0, 0, 0);">References:</span></h2>
+<p style="margin: 10px 0px 0px; padding: 0px;">UH Policies Related to Information Security:&nbsp;<a href="https://www.hawaii.edu/infosec/policies/" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">https://www.hawaii.edu/infosec/policies/</a></p>
+<p style="margin: 10px 0px 0px; padding: 0px;">EP 2.210:&nbsp;<a href="https://hawaii.edu/policy/ep2.210" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">https://hawaii.edu/policy/ep2.210</a></p>
+<p style="margin: 10px 0px 0px; padding: 0px;">EP 2.214:&nbsp;<a href="http://hawaii.edu/policy/ep2.214" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">http://hawaii.edu/policy/ep2.214</a></p>
+<p style="margin: 10px 0px 0px; padding: 0px;">EP 2.215:&nbsp;<a href="http://hawaii.edu/policy/ep2.215" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">http://hawaii.edu/policy/ep2.21</a>5</p>
+<h1><span style="color: rgb(0, 0, 0);">Applications Support</span></h1>
+<ul>
+    <li><span style="color: rgb(0, 0, 0);">Install and support the required application(s).</span></li>
+    <li>Ensure ongoing compliance with UH Executive Policies such as EP 2.210, EP 2.214, and EP 2.215.</li>
+    <li>Patch/upgrade application(s) as required.</li>
+    <li>Upgrade your backup client as needed.</li>
+</ul>
+<h1><span style="color: rgb(0, 0, 0);">Virtual Server Ownership Costs</span></h1>
+<h2><span style="color: rgb(0, 0, 0);">Baseline Virtual Server Host Configuration</span></h2>
+<div class="table-wrap" style="margin: 10px 0px 0px; padding: 0px; overflow-x: auto;">
+<table class="relative-table wrapped confluenceTable" resolved="" style="border-collapse: collapse; margin: 0px; overflow-x: auto; width: 515.385px;">
+    <colgroup><col style="width: 74.1771px;" /><col style="width: 440.208px;" /></colgroup>
+    <tbody>
+        <tr>
+            <td class="highlight-red confluenceTd" colspan="2" data-highlight-colour="red" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px; background-color: rgb(255, 235, 230);">
+            <p style="margin: 0px; padding: 0px;"><strong>Baseline Configuration</strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="highlight-blue confluenceTd" data-highlight-colour="blue" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px; background-color: rgb(222, 235, 255);">Quantity</td>
+            <td class="highlight-blue confluenceTd" data-highlight-colour="blue" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px; background-color: rgb(222, 235, 255);">Component</td>
+        </tr>
+        <tr>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">75 GB</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">System disk</td>
+        </tr>
+        <tr>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">4 GB</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">RAM</td>
+        </tr>
+        <tr>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">1</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">vCPU (2.2GHz or better)</td>
+        </tr>
+        <tr>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">1</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">
+            <p style="margin: 0px; padding: 0px;">Operating System</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">1</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">
+            <p style="margin: 0px; padding: 0px;">Named VPN account (requires a UH Username)</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">1</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">
+            <p style="margin: 0px; padding: 0px;">vCenter Console access (requires a VPN account)</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">1000 Mbps</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">Network connection (non-dedicated)</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<h2><span style="color: rgb(0, 0, 0);">Price Structure</span></h2>
+<div class="confluence-information-macro confluence-information-macro-tip conf-macro output-block" data-hasbody="true" data-macro-name="tip" style="margin: 10px 0px 1em; padding: 10px 10px 10px 36px; background: rgb(243, 249, 244); border: 1px solid rgb(145, 200, 156); border-radius: 5px; color: rgb(51, 51, 51); min-height: 20px; position: relative;">
+<div class="confluence-information-macro-body" style="margin: 0px; padding: 0px;">The information in the following table is from the ITS 2023 Price List, and current as of 02/14/2023.</div>
+</div>
+<p style="margin: 10px 0px 0px; padding: 0px;"><strong>Instructions</strong>: Select one of the baseline configurations.&nbsp; Determine which if any of the optional cost items are to be included.&nbsp;&nbsp;</p>
+<p style="margin: 10px 0px 0px; padding: 0px;">Optional cost items may be specified with the initial request or requested at a later time.&nbsp;&nbsp;</p>
+<div class="table-wrap" style="margin: 10px 0px 0px; padding: 0px; overflow-x: auto;">
+<table class="wrapped confluenceTable" resolved="" style="border-collapse: collapse; margin: 0px; overflow-x: auto;">
+    <colgroup><col /><col /><col /></colgroup>
+    <tbody>
+        <tr>
+            <td class="highlight-blue confluenceTd" colspan="1" data-highlight-colour="blue" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px; background-color: rgb(222, 235, 255);"><strong>Baseline Configurations</strong></td>
+            <td class="highlight-blue confluenceTd" colspan="1" data-highlight-colour="blue" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px; background-color: rgb(222, 235, 255);"><strong>Cost</strong></td>
+            <td class="highlight-blue confluenceTd" colspan="1" data-highlight-colour="blue" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px; background-color: rgb(222, 235, 255);"><strong>Notes</strong></td>
+        </tr>
+        <tr>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;"><strong>Standard virtual server</strong></td>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;"><strong>$280.00</strong></td>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">
+            <p style="margin: 0px; padding: 0px;">See Configuration table above. Includes SATA system disk.</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;"><strong>High Performance virtual server</strong></td>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;"><strong>$300.00</strong></td>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">See Configuration table above. Includes SAS system disk.</td>
+        </tr>
+        <tr>
+            <td class="highlight-blue confluenceTd" data-highlight-colour="blue" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px; background-color: rgb(222, 235, 255);"><strong>Optional Cost Items</strong></td>
+            <td class="highlight-blue confluenceTd" data-highlight-colour="blue" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; text-align: center; min-width: 8px; background-color: rgb(222, 235, 255);"><strong>Annual Cost</strong></td>
+            <td class="highlight-blue confluenceTd" colspan="1" data-highlight-colour="blue" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px; background-color: rgb(222, 235, 255);"><strong>Notes</strong></td>
+        </tr>
+        <tr>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">Off-site Backup, per GB</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; text-align: right; min-width: 8px;">$0.30</td>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">The quantity is calculated once annually. Backup retention is 7 days.</td>
+        </tr>
+        <tr>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">Additional vCPU</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; text-align: right; min-width: 8px;">$170</td>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;"><span style="color: rgb(23, 43, 77);">2.2GHz or better</span></td>
+        </tr>
+        <tr>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">1 GB&nbsp;Additional Memory</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; text-align: right; min-width: 8px;">$11</td>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">
+            <p style="margin: 0px; padding: 0px;">Additional Storage per GB (min. 25GB increments)</p>
+            </td>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; text-align: right; min-width: 8px;">$0.13</td>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">SATA, 7.5k RPM</td>
+        </tr>
+        <tr>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">Additional High Performance Storage per GB (min. 25GB increments)</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; text-align: right; min-width: 8px;">$0.80</td>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">SAS, 15k RPM</td>
+        </tr>
+        <tr>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">Additional named VPN accounts and vCenter Console access</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; text-align: right; min-width: 8px;">$0.00</td>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">There will be no additional cost should an associated CAL for console access be required.&nbsp; ITS plans to switch to LDAP authentication in the future.</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<h3><span style="color: rgb(0, 0, 0);">Additional Costs May Apply</span></h3>
+<ul>
+    <li>Additional costs, especially CALs (Client Access Licenses) for Microsoft products may also apply.</li>
+</ul>
+<h3><span style="color: rgb(0, 0, 0);">Subject to Availability of Resources</span></h3>
+<ul>
+    <li>ITS strives to ensure that we maintain ample capacity for all requests. It is possible, in what should be rare circumstances, that more capacity will have to be purchased in order to fulfill a request. You will be advised should this happen and we will work with you to accommodate your request as well as possible, such as partial fulfillment until more resources become available.</li>
+</ul>
+<h3><span style="color: rgb(0, 0, 0);">Costs Subject to Change</span></h3>
+<ul>
+    <li>These costs are subject to periodic reevaluation and changes.&nbsp;</li>
+</ul>
+<h3 id="VirtualServerHostingService-MinimalConfigurationRecommendations" style="margin: 30px 0px 0px; padding: 0px; color: rgb(23, 43, 77); font-size: 16px; line-height: 1.5; letter-spacing: -0.006em;"><span style="color: rgb(0, 0, 0);">Minimal Configuration Recommendations</span></h3>
+<div class="table-wrap" style="margin: 10px 0px 0px; padding: 0px; overflow-x: auto;">
+<table class="wrapped confluenceTable tablesorter tablesorter-default stickyTableHeaders" role="grid" resolved="" style="border-collapse: collapse; margin: 0px; overflow-x: auto; padding: 0px;">
+    <colgroup><col /><col /><col /><col /></colgroup>
+    <thead class="tableFloatingHeaderOriginal" style="position: static; margin-top: 0px; left: 325px; z-index: 3; width: 308px; top: 0px;">
+        <tr role="row" class="tablesorter-headerRow">
+            <th class="highlight-blue confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-highlight-colour="blue" data-column="0" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="OS: No sort applied, activate to apply an ascending sort" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 15px 7px 10px; vertical-align: top; text-align: left; min-width: 8px; background: right center no-repeat rgb(222, 235, 255); color: rgb(23, 43, 77); cursor: pointer; user-select: none; max-width: none;">
+            <div class="tablesorter-header-inner" style="margin: 0px; padding: 0px;">OS</div>
+            </th>
+            <th class="highlight-blue confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-highlight-colour="blue" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="vCPU: No sort applied, activate to apply an ascending sort" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 15px 7px 10px; vertical-align: top; text-align: left; min-width: 8px; background: right center no-repeat rgb(222, 235, 255); color: rgb(23, 43, 77); cursor: pointer; user-select: none; max-width: none;">
+            <div class="tablesorter-header-inner" style="margin: 0px; padding: 0px;">vCPU</div>
+            </th>
+            <th class="highlight-blue confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-highlight-colour="blue" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="RAM GB: No sort applied, activate to apply an ascending sort" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 15px 7px 10px; vertical-align: top; text-align: left; min-width: 8px; background: right center no-repeat rgb(222, 235, 255); color: rgb(23, 43, 77); cursor: pointer; user-select: none; max-width: none;">
+            <div class="tablesorter-header-inner" style="margin: 0px; padding: 0px;">RAM<br title="" style="margin-top: 0.2px;" />
+            GB</div>
+            </th>
+            <th class="highlight-blue confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" colspan="1" data-highlight-colour="blue" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Storage GB: No sort applied, activate to apply an ascending sort" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 15px 7px 10px; vertical-align: top; text-align: left; min-width: 8px; background: right center no-repeat rgb(222, 235, 255); color: rgb(23, 43, 77); cursor: pointer; user-select: none; max-width: none;">
+            <div class="tablesorter-header-inner" style="margin: 0px; padding: 0px;">Storage<br title="" style="margin-top: 0.2px;" />
+            GB</div>
+            </th>
+        </tr>
+    </thead>
+    <tbody aria-live="polite" aria-relevant="all">
+        <tr role="row">
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">RHEL 7</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">1</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">4</td>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">75</td>
+        </tr>
+        <tr role="row">
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">Windows 2016</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">2</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">16</td>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">75</td>
+        </tr>
+        <tr role="row">
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">Windows 2019</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">2</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">16</td>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">75</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<h3 id="VirtualServerHostingService-DeliveredConfigurations" style="margin: 30px 0px 0px; padding: 0px; color: rgb(23, 43, 77); font-size: 16px; line-height: 1.5; letter-spacing: -0.006em;"><span style="color: rgb(0, 0, 0);">Delivered Configurations</span></h3>
+<div class="table-wrap" style="margin: 10px 0px 0px; padding: 0px; overflow-x: auto;">
+<table class="wrapped confluenceTable tablesorter tablesorter-default stickyTableHeaders" role="grid" resolved="" style="border-collapse: collapse; margin: 0px; overflow-x: auto; padding: 0px;">
+    <colgroup><col /><col /><col /></colgroup>
+    <thead class="tableFloatingHeaderOriginal" style="position: static; margin-top: 0px; left: 325px; z-index: 3; width: 808px; top: 0px;">
+        <tr role="row" class="tablesorter-headerRow">
+            <th class="highlight-blue confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-highlight-colour="blue" data-column="0" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="OS: No sort applied, activate to apply an ascending sort" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 15px 7px 10px; vertical-align: top; text-align: left; min-width: 8px; background: right center no-repeat rgb(222, 235, 255); color: rgb(23, 43, 77); cursor: pointer; user-select: none; max-width: none;">
+            <div class="tablesorter-header-inner" style="margin: 0px; padding: 0px;">OS</div>
+            </th>
+            <th class="highlight-blue confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-highlight-colour="blue" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Storage: No sort applied, activate to apply an ascending sort" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 15px 7px 10px; vertical-align: top; text-align: left; min-width: 8px; background: right center no-repeat rgb(222, 235, 255); color: rgb(23, 43, 77); cursor: pointer; user-select: none; max-width: none;">
+            <div class="tablesorter-header-inner" style="margin: 0px; padding: 0px;">Storage</div>
+            </th>
+            <th class="highlight-blue confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" colspan="1" data-highlight-colour="blue" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Notes: No sort applied, activate to apply an ascending sort" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 15px 7px 10px; vertical-align: top; text-align: left; min-width: 8px; background: right center no-repeat rgb(222, 235, 255); color: rgb(23, 43, 77); cursor: pointer; user-select: none; max-width: none;">
+            <div class="tablesorter-header-inner" style="margin: 0px; padding: 0px;">Notes</div>
+            </th>
+        </tr>
+    </thead>
+    <tbody aria-live="polite" aria-relevant="all">
+        <tr role="row">
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">RHEL (all versions)</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">
+            <p style="margin: 0px; padding: 0px;">/boot - 1GB<br />
+            /fdisk - 75GB</p>
+            </td>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">
+            <ul style="margin: 0px; padding-left: 22px;">
+                <li>Placing the OS on /boot allows for storage expansion without the need to performing partitioning or rebooting the OS.</li>
+                <li>Swap space is 4GB, which leaves 71GB of remaining storage. This partition includes the OS.</li>
+            </ul>
+            </td>
+        </tr>
+        <tr role="row">
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">Windows (all versions)</td>
+            <td class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">
+            <p style="margin: 0px; padding: 0px;">C: - 75GB</p>
+            <p style="margin: 10px 0px 0px; padding: 0px;">F: -</p>
+            </td>
+            <td colspan="1" class="confluenceTd" style="border-style: solid; border-color: rgb(193, 199, 208); padding: 7px 10px; vertical-align: top; min-width: 8px;">
+            <ul style="margin: 0px; padding-left: 22px;">
+                <li>Place the OS on C: allowing for storage expansion of the system disk without affecting the data</li>
+                <li>Place data on next available drive for separation from system disk.</li>
+            </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<h1><span style="color: rgb(0, 0, 0);">Availability &amp; Response Times</span></h1>
+<h2><span style="color: rgb(0, 0, 0);">VM Hosting Service</span></h2>
+<ul>
+    <li>Operational 24x7</li>
+</ul>
+<h2><span style="color: rgb(0, 0, 0);">Virtual Server Requests</span></h2>
+<ul>
+    <li>Requests are usually processed during normal business hours.</li>
+    <li>Most new virtual server&nbsp;requests should receive a reply within 2 business days.</li>
+    <li>Most new virtual server support requests should receive a reply within 8 business hours.</li>
+</ul>
+<h2><span style="color: rgb(0, 0, 0);">Storage Requests</span></h2>
+<ul>
+    <li>RHEL
+    <ul>
+        <li>By default all storage is allocated to &quot;\&quot;.</li>
+        <li>If slow and fast disk are allocated, there will be one filesystem each.</li>
+    </ul>
+    </li>
+    <li>Windows
+    <ul>
+        <li>By default the system disk is allocated to &quot;C:&quot;.</li>
+        <li>By default the data disk is allocated as the next available drive.</li>
+    </ul>
+    </li>
+    <li>Requests to expand storage are processed during normal business hours.</li>
+    <li>Requests should receive a reply within 2 business days.</li>
+    <li>On Windows removing storage is okay only if the entire disk is deleted. VMware doesn't support decreasing disk allocation size, e.g., decrease a 100GB disk to 75GB.</li>
+</ul>
+<h2 id="VirtualServerHostingService-FirewallRequests" style="margin: 30px 0px 0px; padding: 0px; color: rgb(23, 43, 77); font-weight: normal; font-size: 20px; line-height: 1.5; letter-spacing: -0.008em; border-bottom-color: rgb(255, 255, 255);"><strong><span style="color: rgb(0, 0, 0);">Firewall Requests</span></strong></h2>
+<p style="margin: 10px 0px 0px; padding: 0px;">Firewall requests are subject to review and approval by the TI security team.</p>
+<ul>
+    <li>Requests are usually processed during normal business hours.</li>
+    <li>Most firewall configuration requests should receive a reply within 2 business days.</li>
+    <li>By default all traffic is blocked incoming to virtual servers and are behind a firewall.</li>
+    <li>By default all traffic is open outgoing from a virtual server.</li>
+</ul>
+<p style="margin: 10px 0px 0px; padding: 0px;">Note:&nbsp;the default the firewall configuration is very restrictive.&nbsp; For example, requests to register a CAS URL will result in troubleshooting to figure out why CAS is not working and it will be determined that the firewall configuration must be adjusted.</p>
+<h2><span style="color: rgb(0, 0, 0);">Backup/Restores</span></h2>
+<p style="margin: 10px 0px 0px; padding: 0px;">Note that file-level backups are performed when using the ITS backup solution. One implication is that only database exports are useful for backups. When requesting backups you will have the opportunity to indicate which directories are to be included.</p>
+<ul>
+    <li>Backups are provided at additional cost and based on resource use.</li>
+    <li>Backup strategy
+    <ul>
+        <li>Daily - incremental backups</li>
+        <li>Weekly - full backup</li>
+    </ul>
+    </li>
+    <li>Retention policy
+    <ul>
+        <li>7 calendar days</li>
+    </ul>
+    </li>
+    <li>Restores
+    <ul>
+        <li>Available upon request.&nbsp;</li>
+        <li>At this time no additional fees are applicable.</li>
+        <li>See section &quot;Availability, item &quot;New support requests&quot; for response times.</li>
+    </ul>
+    </li>
+</ul>
+<h1><span style="color: rgb(0, 0, 0);">Service Owner</span></h1>
+<ul>
+    <li>Director of Technology Infrastructure,&nbsp;Information Technology Services (ITS)</li>
+</ul>
+<h1><span style="color: rgb(0, 0, 0);">Service Representative</span></h1>
+<ul>
+    <li>TI-Managed Services team (TI-MS)</li>
+    <li>Contact information: <a href="mailto:itscs@hawaii.edu?subject=virtual%20server%20hosting%20service">itscs@hawaii.edu</a></li>
+</ul>
+<h1><span style="color: rgb(0, 0, 0);">Service Criticality</span></h1>
+<ul>
+    <li>Business Critical</li>
+</ul>
+<h1>Disclaimer</h1>
+<ul>
+    <li>
+    <p><em>ITS reserves the right to modify or revoke this service at any time, in response to and not limited to the following:</em></p>
+    <ul>
+        <li>
+        <p>Changes in infrastructure applications and operating system licensing and/or resources and allocation.</p>
+        </li>
+        <li>
+        <p>Response to security breaches, in which a hosted server may be potentially shut down to avoid a breach.</p>
+        </li>
+    </ul>
+    </li>
+</ul>
+<h1><span style="color: rgb(0, 0, 0);">References</span></h1>
+<ul>
+    <li>ITIL: <a href="https://www.itilnews.com/index.php?pagename=ITIL_Service_Catalogue_How_to_produce_a_Service_Catalogue" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">https://www.itilnews.com/index.php?pagename=ITIL_Service_Catalogue_How_to_produce_a_Service_Catalogue</a></li>
+    <li>Version 1: VMWare Hosted Solutions, <a href="https://www.hawaii.edu/its/servers-data-center-storage-services/vmware-hosted-solutions/" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">https://www.hawaii.edu/its/servers-data-center-storage-services/vmware-hosted-solutions/</a></li>
+    <li>Online pricing/request form: <a href="https://www.hawaii.edu/its/dcservices/virtualmachine.php" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">https://www.hawaii.edu/its/dcservices/virtualmachine.php</a></li>
+    <li>Terminology: <a href="https://www.nakivo.com/blog/physical-servers-vs-virtual-machines-key-differences-similarities/#:~:text=A%20virtual%20machine%20(VM)%20is,on%20the%20same%20physical%20hardware.&amp;text=After%20that%2C%20you%20can%20load,top%20of%20the%20virtual%20hardware." class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">virtual machine vs virtual server</a></li>
+    <li>Installing Backup Client
+    <ul>
+        <li><span style="color: rgb(0, 0, 0);">RHEL:&nbsp;</span><a href="http://www.hawaii.edu/askus/1732" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">http://www.hawaii.edu/askus/1732</a><span style="color: rgb(0, 0, 0);">         </span></li>
+        <li><a href="http://www.hawaii.edu/askus/1732" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;"><span style="color: rgb(0, 0, 0);">Windows:&nbsp;</span></a><a href="http://www.hawaii.edu/askus/1716" class="external-link" rel="nofollow" style="color: rgb(0, 82, 204); text-decoration-line: none;">http://www.hawaii.edu/askus/1716</a></li>
+    </ul>
+    </li>
+</ul>
+<h3>Change Log:</h3>
+<ul>
+    <li>2023-01-09: Formatting and backup terminology updated; replaced &quot;Bacula&quot; with &quot;backup service/client&quot;. Pricing list updated. Disclaimer clause added.</li>
+    <li>2023-02-14: Corrected pricing list for storage.</li>
+    <li>2023-09-19: Added clause under &quot;Proactively upgrade your Operating System before it is End of Service Life (EOSL).&quot;</li>
+</ul>
+<p style="margin: 10px 0px 0px; padding: 0px;">&nbsp;</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1852" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1852" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1852">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1852">
+		1852</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Fri, 25 Jun 2021 10:28am
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Tue, 19 Sep 2023 11:09am</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

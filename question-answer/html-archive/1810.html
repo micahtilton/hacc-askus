@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1810">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Digitally Signing PDFs using Acrobat DC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Digitally Signing PDFs using Acrobat DC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p><span style="color: rgb(255, 0, 0);">Electronic or digital signing must adhere to University policies, including <a href="https://www.hawaii.edu/policy/index.php?action=viewPolicy&amp;policySection=ep&amp;policyChapter=2&amp;policyNumber=218&amp;menuView=closed" target="_blank">EP 2.218</a>.</span></p>
+<h2>Using a Digital ID to sign a PDF</h2>
+<h4>What is a Digital ID?</h4>
+<p>A digital ID is like an electronic driver&rsquo;s license or passport that proves your identity. A digital ID usually contains your name and email address, the name of the organization that issued it, a serial number, and an expiration date. Digital IDs are used for certificate security and digital signatures.<br />
+<br />
+Digital IDs contain two keys: the public key locks, or encrypts data; the private key unlocks, or decrypts that data. When you sign PDFs, you use the private key to apply your digital signature. The public key is in a certificate that you distribute to others. For example, you can send the certificate to those who want to validate your signature or identity. Store your digital ID in a safe place, because it contains your private key that others can use to decrypt your information.</p>
+<p><strong>To sign a document with a certificate-based signature, you must obtain a digital ID or create a self-signed digital ID in Acrobat or Adobe Reader.</strong></p>
+<h4><a name="create"></a>Create a self-signed digital ID</h4>
+<p>Self-signed digital IDs can be adequate for personal use or small-to-medium businesses. Their use should be limited to parties that have established mutual trust.</p>
+<p><a href="https://helpx.adobe.com/acrobat/using/digital-ids.html#create_a_self_signed_digital_id">https://helpx.adobe.com/acrobat/using/digital-ids.html#create_a_self_signed_digital_id</a></p>
+<h4>Using the created digital IDs to sign a PDF</h4>
+<p><a href="https://www.hawaii.edu/askus/1812">https://www.hawaii.edu/askus/1812</a></p>
+<h4>Trusting Self-Signed digital certificates</h4>
+<p><a href="https://www.hawaii.edu/askus/1811">https://www.hawaii.edu/askus/1811</a></p>
+<h4>&nbsp;</h4>
+<h2>Using Fill &amp; Sign on non-fillable PDFs</h2>
+<p>An interactive or fillable form contains fields that you can select or fill in. For such forms, the Fill &amp; Sign tool displays only the Sign option. <br />
+<br />
+A flat form does not have interactive fields. It could be a paper form or PDF that hasn&rsquo;t been optimized for form filling. The Fill &amp; Sign tool automatically detects the form fields like text fields, comb fields, checkboxes, and radio button. You can also manually add text and other symbols anywhere on the form using the Fill &amp; Sign tool if required.</p>
+<p><a href="https://helpx.adobe.com/acrobat/using/fill-and-sign.html#fill_your_PDF_form">https://helpx.adobe.com/acrobat/using/fill-and-sign.html#fill_your_PDF_form</a></p>
+<p>&nbsp;</p>
+<h2>Related Articles</h2>
+<p><a href="https://www.hawaii.edu/askus/1811">Trusting Self-Signed Digital Signatures</a></p>
+<p><a href="https://www.hawaii.edu/askus/1812">Using a Digital Signature in Acrobat DC</a></p>
+<p><a href="https://www.hawaii.edu/its/docs/Memo-DigitalSignaturesonUniversityPurchasingDocuments.pdf">Digital Signatures on University Purchasing Documents(PDF, 256kb)</a></p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1810" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1810" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1810">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1810">
+		1810</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Tue, 31 Mar 2020 10:10am
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Mon, 13 Apr 2020 12:38pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

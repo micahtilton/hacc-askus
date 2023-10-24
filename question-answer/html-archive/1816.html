@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1816">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Encryption using VeraCrypt
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Encryption using VeraCrypt
+</h2>
+<div id="kb_article_text">
+	<p>In this article are instructions on the use of the external drive encryption software from VeraCrypt. VeraCrypt works across Microsoft Windows, MacOS, and Linux (<a href="https://www.veracrypt.fr/en/Supported%20Operating%20Systems.html">https://www.veracrypt.fr/en/Supported%20Operating%20Systems.html</a>).</p>
+<h2>Table of Contents</h2>
+<ul>
+    <li><a href="#drive-encryption">Encrypt External Drive</a></li>
+    <li><a href="#drive-mounting">Mounting Encrypted External Drive</a></li>
+    <li><a href="#drive-dismounting">Dismounting the Encrypted External Drive</a></li>
+    <li><a href="#container-create">Creating an Encrypted File Container</a></li>
+    <li><a href="#container-mounting">Mounting an Encrypted File Container</a></li>
+    <li><a href="#container-dismounting">Dismounting an Encrypted File Container</a></li>
+    <li><a href="#links">Links</a></li>
+</ul>
+<h2>Download and Install VeraCrypt</h2>
+<p>Download VeraCrypt for your operating system from here: <a href="https://www.veracrypt.fr/en/Downloads.html">https://www.veracrypt.fr/en/Downloads.html</a> and install it onto your computer.</p>
+<h2>External Drive - Full Disk Encryption</h2>
+<h3 id="drive-encryption">Encrypt External Drive</h3>
+<p><strong>***IMPORTANT: With an attached external drive (e.g., a USB drive), the setup process will delete all existing files on this external drive. Backup any files on this drive you wish to save or restore. Be sure you select the right drive and partition before encrypting***</strong></p>
+<ol>
+    <li>Open VeraCrypt and select <strong>Create Volume</strong>.</li>
+    <li>In the VeraCrypt Volume Creation choose where you wish the VeraCrypt volume to be created. A VeraCrypt volume can reside in a file, which is also called container, in a partition or drive. For these instructions, choose the second option, <strong>Encrypt a non-system partition/drive</strong>, and then click Next.</li>
+    <li>Click on <strong>Standard VeraCrypt Volume</strong>, then click <strong>Next</strong>.</li>
+    <li>Make sure the <strong>Never save history</strong> option is checked, then click on <strong>Select Device</strong>.</li>
+    <li>Select the external drive you wish to encrypt. Make sure you select the &quot;Partition&quot;.</li>
+    <li>Verify the correct partition is populated, and then click <strong>Next</strong>.</li>
+    <li>If you want to delete all of the data on your drive or if the drive is empty, select the <strong>Create encrypted volume and format it</strong> option. If you want to preserve and encrypt the files on your drive, select the <strong>Encrypt partition in place</strong> option. Click Next when ready.</li>
+    <strong>***IMPORTANT: With an attached external drive (e.g., a USB drive), the setup process will delete all existing files on this external drive. Backup any files on this drive you wish to save or restore.***</strong>
+    <li>The default Encryption Algorithm should be <strong>AES</strong> and the default <strong>Hash Algorithm</strong> should be <strong>SHA-512</strong>. If not, change to <strong>AES</strong> and <strong>SHA-512</strong>, the click <strong>Next</strong>.</li>
+    <li>Verify the <strong>Volume Size</strong> matches the size of the external drive you are encrypting. You should not be able to modify this. Click <strong>Next</strong> when are sure you have the right volume selected.</li>
+    <li>Enter a complex password, which will be used to encrypt the volume. Follow the guidance in this window to help you create a complex password. Click <strong>Next</strong> after you have entered the password twice.</li>
+    <li>Select <strong>Yes</strong> for this screen and then click <strong>Next</strong>.</li>
+    <li>Verify the Filesystem is set to <strong>exFat</strong>. Now move the mouse as randomly as possible within the Volume Creation Wizard window until the <strong>Randomness Collected From Mouse Movements</strong> indicator becomes green. The longer you move the mouse the better, as this significantly increases the cryptographic strength of the encryption keys. Click <strong>Format</strong> when ready.</li>
+    <li>You will receive a final warning about all data being erased on this external drive. Click Yes when ready.</li>
+    <strong>***IMPORTANT: With an attached external drive (e.g., a USB drive), the setup process will delete all existing files on this external drive. Backup any files on this drive you wish to save or restore.***</strong>
+    <li>The external drive will now begin formatting and encrypting.</li>
+    <li>Once complete, you may receive this warning. In this example, when the external drive was connected the E: drive was used. Click <strong>OK</strong> when ready.</li>
+    <li>The external drive is now encrypted.</li>
+</ol>
+<h3 id="drive-mounting">Mounting Encrypted External Drive</h3>
+<ol>
+    <li>From the main VeraCrypt window select an available drive letter. This will be where the VeraCrypt encrypted external drive will be mounted. Then click on the <strong>Select Device button</strong>.</li>
+    <li>Select the partition you used for the setup. In this example we are selecting Partition 1. Click <strong>OK</strong> when ready.</li>
+    <li>Confirm the partition you selected is populating. In this example you will see <strong>\Device\Harddisk1\Partition1</strong>. Once confirmed, click <strong>Mount</strong>.</li>
+    <li>Enter the password you used to create the encrypted external drive. Click <strong>OK</strong> when ready.</li>
+    <li>Verify the drive you selected is now populated with the encrypted external drive you connected to your computer. Click <strong>Exit</strong> when ready. You will now see the drive letter selected as a location to copy files.</li>
+</ol>
+<h3 id="drive-dismounting">Dismounting the Encrypted External Drive</h3>
+<ol>
+    <li>Select the volume from the list of mounted volumes in the main VeraCrypt window and then click <strong>Dismount</strong>.</li>
+    <li>To make files stored on the encrypted external drive accessible again, follow the steps in the <a href="#mounting">Mounting the Encrypted External Drive</a> section.</li>
+    <li>If you restart Windows or turn off your computer, the encrypted external drive will be also be dismounted.</li>
+    <li>Regardless of which way the encrypted external drive is dismounted, the files in the encrypted external drive remain encrypted.</li>
+</ol>
+<h2>Veracrypt Container Encryption</h2>
+<h3 id="container-create">Creating an Encrypted File Container</h3>
+<ol>
+    <li>After installing VeraCypt, open and select <strong>Create Volume</strong>.</li>
+    <li>In the VeraCrypt Volume Creation choose where you wish the VeraCrypt volume to be created. A VeraCrypt volume can reside in a file, which is also called container, in a partition or drive. For these instructions, choose the first option, <strong>Create an encrypted File Container</strong>, and then click <strong>Next</strong>.</li>
+    <li>Select <strong>Standard VeraCrypt volume</strong> and then click <strong>Next</strong>. As the option is selected by default, you can just click Next.</li>
+    <li>Select where the VeraCrypt volume (file container) is to be created. Note that a VeraCrypt container is like any normal file and can be moved and deleted. Click <strong>Select File</strong>.</li>
+    <li>In this example, we will create the VeraCrypt volume in the folder <strong>F:\Data\</strong> and the filename of the volume (container) will be &quot;<strong>My Volume</strong>&quot;.<br />
+    <ul>
+        <li>You may choose any other filename and location based on your situation (e.g., on a USB Drive). Please note the file <strong>My Volume</strong> does not exist &ndash; VeraCrypt will create this volume as part of this setup.</li>
+        <li><strong>IMPORTANT: If you select an existing file, this file will be overwritten by VeraCrypt and replaced with a newly created volume.</strong></li>
+        <li>Select the desired path (where you wish the container to be created) in the file selector (for example, <strong>F:\Data</strong>).</li>
+        Type the desired container file name (for example, <strong>My Volume)</strong> in the File name box and then click <strong>Save</strong>.         </ul>
+        </li>
+        <li>In the <strong>Volume Location</strong> window, click <strong>Next</strong>.</li>
+        <li>The default <strong>Encryption Algorithm</strong> should be <strong>AES</strong> and the default <strong>Hash Algorithm</strong> should be <strong>SHA-512</strong>. If not, change to <strong>AES</strong> and <strong>SHA-512</strong>, the click <strong>Next</strong>.</li>
+        <li>Enter this size of the VeraCrypt container. This window informs you how much space is available. Click <strong>Next</strong> when ready.</li>
+        <li>Enter a complex password, which will be used to encrypt the volume. Follow the guidance in this window to help you create a complex password. Select <strong>Next</strong> after you have entered the password twice.</li>
+        <li>Move the mouse as randomly as possible within the Volume Creation Wizard window until the <strong>Randomness Collected From Mouse Movements</strong> indicator becomes green. The longer you move the mouse the better, as this significantly increases the cryptographic strength of the encryption keys. 		Click <strong>Format</strong>when ready.</li>
+        <li>VeraCrypt will now create a file called <strong> My Volume </strong>in the folder <strong>F:\Data</strong>. This file will be a VeraCrypt container (it will contain the encrypted VeraCrypt volume). The following box will appear once the encrytion is complete:</li>
+        <li>The VeraCrypt volume (file container) has now been successfully created. Click <strong>Exit</strong>.</li>
+        <li>Refer to the <a href="#container-mounting">Mounting the Encrypted File Container</a> steps to begin using this created encrypted file container.</li>
+    </ol>
+    <h3 id="container-mounting">Mounting an Encrypted File Container</h3>
+    <ol>
+        <li>From the main VeraCrypt window select a drive letter. This will be the drive letter the VeraCrypt container is mounted. For this example, the M drive has been selected. You will choose any available drive letter.</li>
+        <li>Click <strong>Select File</strong>.</li>
+        <li>Browse to the container file you previously created (e.g., <strong>My Volume</strong>), clock on the file, and then select <strong>Open.</strong></li>
+        <li>Next, click <strong>Mount</strong>.</li>
+        <li>Enter the <strong>Password</strong> you provided during the setup process. Then Select the PRF algorithm used during the creation of the volume (SHA-512 is the default PRF used by VeraCrypt).
+        <ul>
+            <li>If you do not remember which PRF was used, select <strong>Autodetection. </strong>Select <strong>OK</strong> when ready. VeraCrypt will now attempt to mount the volume.</li>
+        </ul>
+        </li>
+        <li>The virtual disk has now been successfully mounted. In this example the M Drive has been mounted. The virtual disk is entirely encrypted (including file names, allocation tables, free space, etc.). 		You can now save, copy, or move files to this virtual disk and they will be encrypted. 		When accessing a file on the mounted volume you will not be asked for the password again. You can open the mounted volume by selecting it on the list as shown in the screenshot below (blue selection) and then double-clicking on the selected item.</li>
+        <li>You can also browse to the mounted volume the way you normally browse to any other types of volumes. Copy files/folder to and from the VeraCrypt volume as you would with any normal drive.</li>
+    </ol>
+    <h3 id="container-dismounting">Dismounting an Encrypted File Container</h3>
+    <ol>
+        <li>Select the volume from the list of mounted volumes in the main VeraCrypt window and then click <strong>Dismount</strong>. To make files stored on the volume accessible again, follow the steps in the <strong>Mounting the Encrypted File Container</strong> section.</li>
+        <li>If you restart Windows or turn off your computer, the volume will be also be dismounted.</li>
+        <li>Regardless of which way the volume is dismounted, the files in the encrypted container remain encrypted.</li>
+    </ol>
+    <h2 id="links">Links</h2>
+    <ul>
+        <li>VeraCrypt Documentation: <a href="https://www.veracrypt.fr/en/Documentation.html">https://www.veracrypt.fr/en/Documentation.html</a></li>
+        <li>VeraCrypt Download: <a href="https://www.veracrypt.fr/en/Downloads.html">https://www.veracrypt.fr/en/Downloads.html</a></li>
+        <li>VeraCrypt Setup: <a href="https://www.veracrypt.fr/en/Beginner%27s%20Tutorial.html">https://www.veracrypt.fr/en/Beginner%27s%20Tutorial.html</a></li>
+        <li>VeraCrypt Operating Systems: <a href="https://www.veracrypt.fr/en/Supported%20Operating%20Systems.html">https://www.veracrypt.fr/en/Supported%20Operating%20Systems.html</a></li>
+    </ul>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1816" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1816" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1816">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1816">
+		1816</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Thu, 18 Jun 2020 3:54pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Thu, 18 Jun 2020 3:55pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

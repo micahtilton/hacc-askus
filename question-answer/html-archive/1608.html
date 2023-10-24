@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1608">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>UH VPN Setup - Android
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+UH VPN Setup - Android
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<ul>
+    <li><a href="#l2tp">Built-in L2TP/IPsec VPN client</a></li>
+    <li><a href="#openvpn">OpenVPN Client (for Android 12 or later only)</a></li>
+</ul>
+<hr />
+<h2><a name="l2tp">Built-in L2TP/IPsec VPN client</a></h2>
+<p>The following are instructions on how to connect to the UH VPN service by using the L2TP/IPsec VPN client which is built into the Android operating system.&nbsp; If you have Android version 12 or later, you will have to install and use the OpenVPN Connect app instead, by follow the instructions in the next section, <em><a href="#openvpn">OpenVPN Client (for Android 12 or later only)</a></em>.</p>
+<p>Depending on what version of Android you have, there may be minor differences between the appearance of the screenshots and your screen.  Using the VPN on an Android will require you to enable a screen lock PIN or Password on your device.</p>
+<h3>Initial Configuration (one time only)</h3>
+<ol>
+    <li>Tap on the <b>Settings</b> icon.<br />
+    <br />
+    <img alt="" src="/help/chasek/images/Image/android vpn 01(1).jpg" width="225" height="400" /></li>
+    <br />
+    <li>Under the &quot;Wireless &amp; Networks&quot; section, tap on <b>More...</b>, then tap on <b>VPN</b>.<br />
+    <br />
+    <img src="/help/chasek/images/Image/android vpn 02.jpg" alt="" width="225" height="400" /><img src="/help/chasek/images/Image/android vpn 03.jpg" alt="" width="225" height="400" /></li>
+    <br />
+    <li>If you do not already have a lock screen PIN or Password set up on your Android device, you will be prompted to create one:<br />
+    Tap on <b>OK</b>.<br />
+    Tap either <b>PIN</b> or <b>Password</b>.  (PIN is all numbers, Password can be a combination of letters and numbers.  Do NOT use your UH username's password.)<br />
+    Type a pin or password of your choice (must be at least 4 digits or characters), then tap <b>Continue</b>.<br />
+    Retype the pin or password, then tap <b>OK</b>.</li>
+    <br />
+    <li>Tap on <b>Add VPN profile</b>.<br />
+    <br />
+    <img src="/help/chasek/images/Image/android vpn 04.jpg" alt="" width="225" height="400" /></li>
+    <br />
+    <li>A new &quot;Edit VPN profile&quot; screen will appear.<br />
+    In the &quot;Name&quot; filed, type <b>UH VPN</b><br />
+    Set the &quot;Type&quot; field to <b>L2TP/IPSec PSK</b><br />
+    In the &quot;Server address&quot; field, type <b>sevpn.its.hawaii.edu</b><br />
+    You may have to scroll down a little, then in the &quot;IPSec pre-shared key&quot; box, type the shared secret.&nbsp; (If you don't know the shared secret, you can obtain it at&nbsp;<a href="http://www.hawaii.edu/its/vpn" style="box-sizing: border-box; color: blue; font-family: Arial, Helvetica, sans-serif; font-size: 14.4px;">http://www.hawaii.edu/its/vpn</a><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14.4px;">)</span><br />
+    <br />
+    <br />
+    <img src="/help/chasek/images/Image/edit vpn profile 1 crop.jpg" alt="" width="408" height="400" /></li>
+    <br />
+    <li>Tap the checkbox for &quot;Show advanced options&quot;<br />
+    You may have to scroll down a little, then in the &quot;Forwarding routes&quot; box, type <b>0.0.0.0/0</b><br />
+    <br />
+    <img src="/help/chasek/images/Image/edit vpn profile 2 crop.jpg" alt="" width="322" height="400" /></li>
+    <br />
+    <li>Tap the <b>Save</b> button to save the UH VPN configuration.</li>
+</ol>
+<h3>Start a VPN connection</h3>
+<ol>
+    <li>Tap on <b>Settings</b>, then <b>More...</b>, then <b>VPN</b>, then tap on <b>UH VPN</b>.<br />
+    <br />
+    <img src="/help/chasek/images/Image/vpn connected.jpg" alt="" width="500" height="223" /></li>
+    <br />
+    <li>In the &quot;Username&quot; field, type your UH username.  If your email address is help@hawaii.edu, your UH username is help.<br />
+    In the &quot;Password&quot; field, type your UH username's password.<br />
+    <br />
+    <img src="/help/chasek/images/Image/connect  to uh vpn.jpg" alt="" width="453" height="400" /></li>
+    <br />
+    <li>Tap <b>Connect</b></li>
+    <br />
+    <li>You should now be connected to the UH VPN, indicated by a &quot;VPN is activated&quot; message on your screen.<br />
+    <br />
+    <img src="/help/chasek/images/Image/vpn activated.jpg" alt="" width="357" height="53" /></li>
+</ol>
+<h3>Disconnect a VPN connection</h3>
+<ol>
+    <li>Look for and tap on the VPN &quot;key&quot; icon in one of the corners of your screen.  The icon looks like this: <img alt="" src="/help/chasek/images/Image/vpn key icon.png" width="36" height="48" /></li>
+    <br />
+    <li>Tap on the <b>VPN activated</b> box</li>
+    <br />
+    <li>Tap on <b>Disconnect</b><br />
+    <br />
+    <img src="/help/chasek/images/Image/vpn disconnect.jpg" alt="" width="400" height="188" /></li>
+</ol>
+<h2><a name="openvpn">OpenVPN Client (for Android 12 or later only)</a></h2>
+<p>The following are instructions on how to connect to the UH VPN  service by using the OpenVPN client.&nbsp; Please use these instructions only if you are using a device with Android 12 or later.</p>
+<p>Note: the following instructions should be done from the phone or device that you want to use OpenVPN from.</p>
+<ol>
+    <li>Download the <em>OpenVPN Connect </em>client (from OpenVPN) from the Google Play Store to your phone.</li>
+    <li>Go to <a href="https://net.its.hawaii.edu/vpndocs/openvpn/">https://net.its.hawaii.edu/vpndocs/openvpn/</a>, and click on <strong>Login here</strong></li>
+    <li>Enter a Private Key Password for the OpenVPN profile in the <em>Enter a Password</em> and <em>Password Again</em> boxes.&nbsp; Do <strong>not</strong> use your UH username's password.&nbsp; Click on <strong>Generate Config</strong>.</li>
+    <li>Tap the <strong>DOWNLOAD PROFILE</strong><span> </span>link.</li>
+    <li>Open the OpenVPN app.</li>
+    <li>Tap on <strong>FILE</strong>.</li>
+    <li>If needed, allow the app to access files on the device.</li>
+    <li>Select the folder to which the file was downloaded.</li>
+    <li>Select the file that was downloaded, and touch <strong>Import</strong>.</li>
+    <li>Add your <em>UH Username</em>, <em>UH Password</em>, and <em>Private Key Password</em> to the profile, then tap <strong>ADD</strong> in the top right.</li>
+    <li>Tap the installed profile to connect to the UH VPN.</li>
+</ol>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1608" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1608" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1608">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1608">
+		1608</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Fri, 12 Sep 2014 8:30am
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Mon, 07 Mar 2022 11:17am</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

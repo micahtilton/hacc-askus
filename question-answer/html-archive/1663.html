@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1663">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Updating WordPress on Hosted Departmental Sites
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Updating WordPress on Hosted Departmental Sites
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p><strong>Setting Administration over SSL</strong><br />
+Before starting any updates, the first thing you should do is setup 'Administration Over SSL' for your wordpress site.&nbsp; This is because if updates are done using http, your authentication information could be transmitted unencrypted and potentially be stolen. To do this, add the following line to your wp-config.php above the line:&nbsp; /* That's all, stop editing! Happy blogging. */</p>
+<pre style="margin-top: 0px; margin-bottom: 22px; padding: 11px; font-family: Consolas, Monaco, &quot;Courier New&quot;, Courier, monospace; background: rgb(243, 243, 247); border: 1px solid rgb(222, 222, 227); line-height: 1.3em; overflow: auto; white-space: pre-wrap; word-wrap: break-word; font-variant-numeric: normal !important; font-variant-east-asian: normal !important;">
+define('FORCE_SSL_ADMIN', true);</pre>
+<p>Note that your domain will need to be SSL enabled to use this setting so if you are using your own special subdomain (ex. program.campus.hawaii.edu, and https://program.campus.hawaii.edu does not work for you) you may need to <a href="http://www.hawaii.edu/sitelic/incommon/">buy a certificate</a>&nbsp;for the domain you are using to securely update your site.</p>
+<p><strong>Download SSH SFTP Updater Support Plugin</strong><br />
+To enable <a href="https://codex.wordpress.org/Updating_WordPress#One-click_Update">WordPress One-Click update</a> for your site, you will first need to download the wordpress plugin SSH SFTP Updater Support. &nbsp;To get the plugin, click the download link at:&nbsp;<a href="https://wordpress.org/plugins/ssh-sftp-updater-support/">https://wordpress.org/plugins/ssh-sftp-updater-support/</a>&nbsp;. &nbsp;After downloading, uncompress the .zip file you receive and place the folder named &quot;ssh-sftp-updater-support&quot; somewhere in your computer's work area, for example the desktop.</p>
+<p><strong>Upload Plugin to Site</strong><br />
+Next, you need to upload this plugin to your site. &nbsp;<a href="http://www.hawaii.edu/askus/685">Connect to webedit with your preferred sFTP client</a>, you should have received your connection settings via email when your site was created. &nbsp;Go to your site's directory and upload the folder named &quot;ssh-sftp-updater-support&quot; from your work area to your site's wordpress plugin directory. &nbsp;To get to this directory, first go to your site's home directory, then look within your site's structure for a directory named /wp-content/plugins/. (ex. if your site is located at /1/mysite, the plugin directory would typically be located at /1/mysite/wp-content/plugins). &nbsp;Once there, upload the whole &quot;ssh-sftp-updater-support&quot; directory from your computer's work area to the &quot;plugins&quot; directory.</p>
+<p><strong>Activate Plugin</strong><br />
+After uploading, log into your wordpress site and click on Menu Item at the left named &quot;Plugins&quot;. &nbsp;Find the plugin named SSH SFTP Updater Support in the list and enable it by pressing the Activate link as shown below.</p>
+<p><img src="http://www.hawaii.edu/itsdocs/1663/1-activate_plugin.jpg" alt="Activate Plugin" /></p>
+<p><strong>Start Update</strong><br />
+After activation, go back to your Dashboard, and either click on the Menu Item &quot;Updates&quot;, or click on the link labeled &quot;Please update now&quot; to go to WordPress Updates. &nbsp;After the page loads, click the button named &quot;Update Now&quot; as shown below to begin the update process.</p>
+<p><img src="http://www.hawaii.edu/itsdocs/1663/2-update_button.jpg" alt="Update Button" /></p>
+<p>On the Update Screen, first make sure your &quot;Connection Type&quot; at the bottom is set to SSH2. (webedit does not support FTP or FTPS connections)</p>
+<p>After that is set, please use the following settings:</p>
+<p>Hostname: webedit.its.hawaii.edu<br />
+FTP/SSH Username: &lt;your <abbr title="University of Hawaii">UH</abbr> Username&gt;<br />
+FTP/SSH Password: &lt;your password&gt; (note: your <strong><abbr title="University of Hawaii">UH</abbr> email password</strong>, <u>not</u> your WordPress password)</p>
+<p>The Private Key setting should be left blank. &nbsp;After this, press the &quot;Proceed&quot; button at the bottom of your screen.</p>
+<p><img src="http://www.hawaii.edu/itsdocs/1663/3-ssh_settings.jpg" alt="SSH Settings" /></p>
+<p><strong>Update Plugins / Themes</strong><br />
+This will begin the update process. &nbsp;A screen will describe what's being updated on your site, and when that is completed it will bring you back to your WordPress Dashboard. &nbsp;Make sure after you update WordPress, you go back to WordPress Updates, (Updates in the Left Menu, or a circular arrow icon with a number at the top of your screen) and update your Plugins and Themes as well. &nbsp;To do this, check the checkmark next to the plugins/themes that needs updating, then press the Update Plugins/Update Theme button. &nbsp;The plugin/theme update process will be similar to the wordpress update process you've just gone through.</p>
+<p><strong>Troubleshooting<br />
+</strong>If the Auto-Update fails, and your site displays a message saying it is unavailable for scheduled maintenance, delete the .maintenance file from your site's home directory using your sFTP client and try again.</p>
+<p>Another common occurence in failed site updates is a configuration themes sometimes add to a site's wp-config.php file.&nbsp; The setting of FS_METHOD to 'direct' doesn't allow sites to update via sftp. To remedy this, comment out the line by adding two slashes '//' in front of the line, and start the update process again.&nbsp; After doing updates, remove the slashes as it may be needed by the theme to perform certain functions.</p>
+<pre style="margin-top: 0px; margin-bottom: 22px; padding: 11px; font-family: Consolas, Monaco, &quot;Courier New&quot;, Courier, monospace; background: rgb(243, 243, 247); border: 1px solid rgb(222, 222, 227); line-height: 1.3em; overflow: auto; white-space: pre-wrap; word-wrap: break-word; font-variant-numeric: normal !important; font-variant-east-asian: normal !important;"><strong>Before:</strong>
+define ( FS_METHOD , 'direct' );
+
+<strong>After:</strong>
+//define ( FS_METHOD , 'direct' );<br type="_moz" /></pre>
+<p>Should you continue to have issues updating, please contact the web group at <a href="mailto:web-support-l@lists.hawaii.edu?subject=Issues%20Updating%20Wordpress">web-support-l@lists.hawaii.edu</a>&nbsp;with information about what step in the process is failing along with any error messages that appeared during the update process. &nbsp;Taking screenshots of the errors you run into is usually very helpful for us to help diagnose your problem.</p>
+<p>&nbsp;</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1663" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1663" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1663">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1663">
+		1663</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Tue, 11 Aug 2015 1:03pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Mon, 25 Jun 2018 3:46pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

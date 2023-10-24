@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/977">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>UH Username End of Life - Saving Email and Personal Webpages (MacOS)
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+UH Username End of Life - Saving Email and Personal Webpages (MacOS)
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p>This document is for users who are no longer affiliated with UH, and who have received a notice that they have 180 day grace period before their email and personal webpage data are removed from the UH servers. The following instructions show you how to copy webpage data and emails stored on your UH account to a local drive on your computer.</p>
+<h2>Saving your UH Email</h2>
+<p>You will also need to copy any email stored on your UH email account that you wish to keep after your 180 day grace period ends.&nbsp;We recommend using&nbsp;<a href="https://hawaii.edu/askus/1764">Google Takeout</a>&nbsp;to export and download all email messages from your UH email account. Please note that you will need to enable&nbsp;<a href="https://hawaii.edu/askus/1649">Consumer Apps</a>&nbsp;to use Google Takeout with your UH account.</p>
+<h2>Saving personal webpages using FileZilla</h2>
+<p>Prior to the end of your 180 day grace period, you will need to copy any data stored on the UHUnix server onto your own computer. The data stored on UHUnix includes any personal webpages that you created on your allocated UH web space at&nbsp;<strong>http://www2.hawaii.edu/~youruhusername</strong>.</p>
+<p><em><strong>Note:</strong>&nbsp;This document was written using FileZilla on Mac OS 10.12. Other SFTP applications should work as well, but the procedures may differ.</em></p>
+<h3>Copy files/folders to your computer</h3>
+<p>In FileZilla, connect to your UHUnix account using either the <a href="http://hawaii.edu/askus/1741#Setup with Quickconnect">Quickconnet</a> or <a href="http://hawaii.edu/askus/1741#Setup with Site Manager">Site Manager</a> setup. &nbsp;See the&nbsp;<a href="http://www.hawaii.edu/askus/1741">FileZilla for Macintosh</a>&nbsp;article for assistance with installation.</p>
+<p align="left">Once authenticated, you will be taken to your home directory in UHUnix, and you should see any data stored on the server in the right pane of the FileZilla window.</p>
+<p align="left"><img alt="Connected to UHUnix" src="http://www.hawaii.edu/itsdocs/977/local_remote.png" width="800" height="519" /></p>
+<p align="left">Next, open the folder on your computer where you would like to copy your data to in the left pane of the FileZilla window. Optionally, you can create a new folder on your computer through FileZilla by ctrl + clicking on&nbsp;and typing a name for the folder. &nbsp;You have the option to <strong>create directory</strong> or&nbsp;<strong>create a directory and enter it </strong>so that you are in the correct directory on the local side.</p>
+<p align="left"><img alt="Creating a new folder on your computer" src="http://www.hawaii.edu/itsdocs/977/create_enter.png" width="500" height="529" /></p>
+<p align="left">Copy the files/folders from UHUnix to the open folder on your computer by selecting the files/folders that you want from the right pane of the FileZilla window, and dragging them to the left pane. Multiple files/folders may be selected by pressing Command+A (to select all items), or by holding SHIFT or Command and clicking on the files you want to select.</p>
+<p align="left"><img alt="Selecting the files for transfer" src="http://www.hawaii.edu/itsdocs/977/multiple_folders.png" width="800" height="418" /></p>
+<h3>Verify successful copy of files and folders</h3>
+<p align="left">Once you have completed copying all of the necessary files and folders, verify that all files and folders are now stored on your computer by browsing to the folder where your data was copied on your computer using the&nbsp;<strong>Finder</strong>.</p>
+<p align="left"><img alt="Use the finder to locate the files you just copied" src="http://www.hawaii.edu/itsdocs/webimg/fugu17.png" /></p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/977" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="977" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:977">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=977">
+		977</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Mon, 23 Mar 2009 2:11pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Thu, 29 Dec 2022 1:20pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>
