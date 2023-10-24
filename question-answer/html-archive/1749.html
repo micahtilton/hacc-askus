@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1749">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Getting started with Nano
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Getting started with Nano
+
+
+</h2>
+<div id="kb_article_text">
+	<p><em>Nano,</em> a clone of Pico, emulates the functionality of Pico. Pico is a simple full screen ASCII editor for UNIX systems developed at the University of Washington.</p>
+<p>Although we will cover only the basics of the Nano editor, you are invited to use the online help to explore the other features of Nano on your own. &nbsp;</p>
+<h2>Notation</h2>
+<p>The circumflex (^) denotes a CONTROL key press. Examples are shown in <code>Courier </code>typeface; user input is shown in <strong>boldface.</strong></p>
+<h2>Starting Nano</h2>
+<p>&nbsp;</p>
+<p>To start Pico with a blank page, at the unix % prompt type:</p>
+<ul><strong>nano</strong></ul>
+    <p>To start Pico with an existing file, at the unix % prompt type:</p>
+    <ul><strong>nano &lt;filename&gt;</strong></ul>
+        <p>You will either be presented with a blank page or the first page of text from your existing document as shown in Figure 1.</p>
+        <p>&nbsp;</p>
+        <center>
+        <table bgcolor="#ffffff" width="130" height="73" border="1">
+            <tbody>
+                <tr>
+                    <td>
+                    <pre><font size="2" face="courier" color="#000000">\f0\fs20 \cf2 \expnd0\expndtw0\kerning0<br />\outl0\strokewidth0 \strokec2 data list /1 id 1-3 sex 6 birthwt 7-12 (2)\<br />             list cases from 1 to 2\<br />             begin data\<br />             123   0245311\<br />             124   0167932\<br />             125   1342597\<br />             126   0189421\<br />             end data\<br />             select if id=123\<br />             write outfile=new /1 id 1-3 sex 6 birthwt 7-12 (2)\<br />             execute<br /><br />                                [ Read 24 lines ]<br />^G Get Help  ^O WriteOut  ^R Read File  ^Y Prev Page  ^K Cut Text    ^C Cur Pos<br />^X Exit      ^J Justify   ^W Where Is   ^V Next Page  ^U UnCut Text  ^T To Spell<br /></font></pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        </center>                  <center>Figure 1.</center>
+        <p>Notice that the bottom of the screen shows the options available to you such as Get Help, Exit, and so forth. Also, note that the cursor (arrow) keys can be used to move around on the page and the backspace key will (if properly set up) erase characters. ^G will provide more information on the menu options.</p>
+        &nbsp;
+        <h2>Moving the Cursor</h2>
+        <p>Assume we have either entered some text or started Nano with an existing document. If the termcap entry for your terminal supports the cursor keypad, you can move the cursor around a character or line at a time using the arrow keys. If you do not have arrow keys or UNIX does not support them on your terminal, you can use the following Control-Key sequences to move the cursor:&nbsp;</p>
+        <ul><font roman="" size="+1" face="times">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>^P</td>
+                        <td>&nbsp;</td>
+                        <td>Previous</td>
+                    </tr>
+                    <tr>
+                        <td>^B</td>
+                        <td>&nbsp;</td>
+                        <td>Backward</td>
+                    </tr>
+                    <tr>
+                        <td>^F</td>
+                        <td>&nbsp;</td>
+                        <td>Forward</td>
+                    </tr>
+                    <tr>
+                        <td>^N</td>
+                        <td>&nbsp;</td>
+                        <td>Next Line</td>
+                    </tr>
+                </tbody>
+            </table>
+            </font></ul>
+            <p>If you want to move greater distances, you can use the following Control-Key sequences:<br />
+            <font roman="" size="+1" face="times">         </font></p>
+            <ul><font roman="" size="+1" face="times">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>^A</td>
+                            <td>&nbsp;</td>
+                            <td>Move to the beginning of the current line.</td>
+                        </tr>
+                        <tr>
+                            <td>^E</td>
+                            <td>&nbsp;</td>
+                            <td>Move to the end of the current line.</td>
+                        </tr>
+                        <tr>
+                            <td>^V</td>
+                            <td>&nbsp;</td>
+                            <td>Move forward a page of text.</td>
+                        </tr>
+                        <tr>
+                            <td>^Y</td>
+                            <td>&nbsp;</td>
+                            <td>Move backward a page of text.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <font roman="" size="+1" face="times">         </font>             </font></ul>
+                &nbsp;
+                <h2>Deleting Text</h2>
+                <p>To delete individual characters or lines of text, use the following:</p>
+                <ul>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>&lt;BACKSPACE&gt;</td>
+                                <td>&nbsp;</td>
+                                <td>Delete the character left of the cursor position.</td>
+                            </tr>
+                            <tr>
+                                <td>^D</td>
+                                <td>&nbsp;</td>
+                                <td>Delete the character at the cursor position.</td>
+                            </tr>
+                            <tr>
+                                <td>^K</td>
+                                <td>&nbsp;</td>
+                                <td>Delete (kill) the entire line at the cursor position.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </ul>
+                <p>To undelete lines in which the ^K command was used:</p>
+                <ul>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>^U</td>
+                                <td width="40">&nbsp;</td>
+                                <td>Undelete last deleted line[s] at the cursor position.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </ul>
+                &nbsp;
+                <h2>Input and Output</h2>
+                <p>The following are helpful commands for reading in a file and outputting a file:</p>
+                <ul>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>^R</td>
+                                <td width="40">&nbsp;</td>
+                                <td>Insert an external file at the current cursor position.</td>
+                            </tr>
+                            <tr>
+                                <td>^O</td>
+                                <td>&nbsp;</td>
+                                <td>Output the current buffer to a file and save it.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </ul>
+                &nbsp;
+                <h2>Other Useful Commands</h2>
+                <p>These commands, although not totally necessary, may come in handy:</p>
+                <ul>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>^W</td>
+                                <td>&nbsp;</td>
+                                <td>Search for (where is) specific text., ignoring case.</td>
+                            </tr>
+                            <tr>
+                                <td>^L</td>
+                                <td>&nbsp;</td>
+                                <td>Refresh the display.</td>
+                            </tr>
+                            <tr>
+                                <td>^J</td>
+                                <td>&nbsp;</td>
+                                <td>Justify the text in the current paragraph.</td>
+                            </tr>
+                            <tr>
+                                <td>^T</td>
+                                <td>&nbsp;</td>
+                                <td>Invoke the spelling checker.</td>
+                            </tr>
+                            <tr>
+                                <td>^C</td>
+                                <td>&nbsp;</td>
+                                <td>Report the cursor position.</td>
+                            </tr>
+                            <tr>
+                                <td>^G</td>
+                                <td>&nbsp;</td>
+                                <td>Get online help.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </ul>
+                &nbsp;
+                <h2>Quitting Nano</h2>
+                <p>When you are done editing and ready to leave Nano, do the following:</p>
+                <ul>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>^X</td>
+                                <td width="40">&nbsp;</td>
+                                <td>Exit Nano with the option to save the current file.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </ul>
+                <p>&nbsp;</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1749" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1749" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1749">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1749">
+		1749</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Thu, 10 Aug 2017 9:01pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Thu, 11 Apr 2019 9:49am</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

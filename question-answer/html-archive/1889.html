@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1889">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Proofpoint URL Defense (URL rewrite)
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Proofpoint URL Defense (URL rewrite)
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<ul>
+    <li><a href="#urlDefense">What is URL Defense?</a></li>
+    <li><a href="#howUrlDefenseWorks">How does URL Defense work?</a></li>
+    <li><a href="#urlFormat">What do rewritten URLs look like?</a></li>
+    <li><a href="#areAllUrlsRewritten">Are all URLs sent in email rewritten?</a></li>
+    <li><a href="#howLongToScan">How long does URL Defense take to scan a website before sending me to the website?</a></li>
+    <li><a href="#whatDevices">Do I need to be using a certain device or email client for URL Defense to work?</a></li>
+    <li><a href="#delayedPhishing">What if the malicious actor changes the website after the email is delivered to me?</a></li>
+    <li><a href="#whatIfBlocked">What if a website I visited was identified as malicious and blocked by Proofpoint?</a></li>
+</ul>
+<h2><a name="urlDefense">What is URL Defense?</a></h2>
+<p>Proofpoint is the University's email security gateway, providing additional malware, phishing, spam, and targeted attack protection. One of the security features provided by Proofpoint is called URL Defense. URL Defense works by rewriting URLs (web addresses and links) in emails as they pass through our Proofpoint gateway on their way to your inbox. By rewriting URLs, Proofpoint is able to send all &ldquo;clicks&rdquo; of a URL to an isolated sandbox and scan the destination website to ensure it&rsquo;s safe before you visit.</p>
+<hr />
+<h2><a name="howUrlDefenseWorks">How does URL Defense work?</a></h2>
+<p>Email-based attacks, especially phishing attacks, are often triggered when users click on malicious links (URLs) provided to them in email. Malicious actors often try to imitate the URLs of legitimate websites or hide malicious URLs behind shortened URLs to obfuscate the actual website users will visit upon clicking. The malicious website may closely resemble a login page the user is accustomed to in an attempt to fool even the most vigilant of users into logging in, thereby exposing their credentials and providing the malicious actor with an avenue into the user&rsquo;s email or other systems. The malicious website may have been developed with the intent to exploit browser or OS vulnerabilities and infect the user&rsquo;s device with ransomware, cryptojacks, or other malware. Once infected, malware often scans local networks, hunting for other devices vulnerable to infection - sometimes lying dormant on host devices for hours, days, or weeks to prevent detection - before initializing and executing its attack.</p>
+<p>This all starts with clicking a link sent via email. URL Defense works by rewriting URLs before they reach your inbox. When a rewritten URL is clicked, URL Defense will open the destination website in a remote sandbox in order to safely scan the website before your visit. If a website is determined to be safe, URL Defense will seamlessly forward you along to the destination website. If the website is determined to be malicious, URL Defense will not send you to the website and will instead display a message to inform you that the site has been blocked and why.</p>
+<hr />
+<h2><a name="urlFormat">What do rewritten URLs look like?</a></h2>
+<p>In the email body text, a rewritten URL will appear no different from when it was sent. However, when hovering over or inspecting URLs, you will notice that rewritten URLs begin with&nbsp;<strong>https://urldefense.com/</strong><strong>&hellip;</strong>&nbsp;or&nbsp;<strong>https://urldefense.proofpointcom/&hellip;</strong>&nbsp;This is normal and is an indication that URL Defense will be used to scan the website before your visit.</p>
+<hr />
+<h2><a name="areAllUrlsRewritten">Are all URLs sent in email rewritten?</a></h2>
+<p>No, the following URLs will not be rewritten:</p>
+<ul>
+    <li>URLs sent internally (from @hawaii.edu to @hawaii.edu)</li>
+    <li>URLs that link to known-safe domains or websites</li>
+    <li>URLs that link to services provided by Proofpoint (proofpoint.com, pphosted.com, urldefense.com, urldefense.proofpoint.com)</li>
+</ul>
+<hr />
+<h2><a name="howLongToScan">How long does URL Defense take to scan a website before sending me to the website?</a></h2>
+<p>The process to sandbox and scan the website usually takes no longer than a few moments and the delay is often unnoticeable.</p>
+<hr />
+<h2><a name="whatDevices">Do I need to be using a certain device or email client for URL Defense to work?</a></h2>
+<p>No, URL Defense is device and network-agnostic. URL Defense will work to protect you whether you are using Google@UH Gmail on the web, a mail client like Outlook or Thunderbird, or checking your email on your mobile device.</p>
+<hr />
+<h2><a name="delayedPhishing">What if the malicious actor changes the website after the email is delivered to me?</a></h2>
+<p>&ldquo;Delayed phishing&rdquo; or &ldquo;post-delivery weaponization&rdquo; is a process where a malicious actor initially sends an email with a link that routes to a harmless website, then later weaponizes the link by redirecting to a malicious site or replacing the harmless website content with malicious content. This is effective in fooling some email protection methods that only scan websites upon email delivery, leaving users who view the email after the link has been weaponized vulnerable.</p>
+<p>Conversely, URL Defense performs its scans of websites when a link is clicked by a user and thus is still effective in blocking delayed phishing attacks. Regardless of if or when a destination website changes, URL Defense will always scan the website you&rsquo;re about to visit.</p>
+<hr />
+<h2><a name="whatIfBlocked">What if a website I visited was identified as malicious and blocked by Proofpoint?</a></h2>
+<p>If URL Defense identifies the website you&rsquo;re about to visit as malicious it will send you to an informational page explaining that the website was blocked and why. You will not be directed to the destination website. Blocked pages are automatically reported for analysis and no further action is needed on your part.</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1889" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1889" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1889">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1889">
+		1889</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Wed, 26 Apr 2023 5:55pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Thu, 27 Apr 2023 6:11pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

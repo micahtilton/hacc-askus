@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1684">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>UH Login Multi-Factor Authentication (MFA) - Managing Devices
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+UH Login Multi-Factor Authentication (MFA) - Managing Devices
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<ul>
+    <li><a href="#screen">My Settings &amp; Devices screen</a></li>
+    <li><a href="#default">Changing the default device</a></li>
+    <li><a href="#devname">Changing a device name</a></li>
+    <li><a href="#deldev">Deleting a device</a></li>
+    <li><a href="#reactive">Reactivating the Duo Mobile app (does not apply to landlines)</a></li>
+</ul>
+<hr />
+<h3><a name="screen">My Settings &amp; Devices screen</a></h3>
+<p>To manage your Duo devices, you need to go to the My Settings &amp; Devices screen.</p>
+<ol>
+    <li>Login to the UH Login MFA Device Registration site at <a href="https://www.hawaii.edu/its/uhlogin/device-reg">www.hawaii.edu/its/uhlogin/device-reg</a>.</li>
+    <br />
+    <li>You will see the following screen. Click on <em>My Settings &amp; Devices</em> (located on the left side, under the gold seal).</li>
+    <br />
+    <img src="/help/chasek/images/Image/login_screen_one_device_box.jpg" alt="My Settings &amp; Devices link" width="500" height="264" /><br />
+    <br />
+    <li>You will then be asked to authenticate with your second factor again.  Click on the appropriate button to proceed.</li>
+    <br />
+    <li>You will now be at the <em>My Settings &amp; Devices</em> screen. You will see a list of your registered devices. This screenshot shows a sample of one registered device:<br />
+    <br />
+    <img src="/help/chasek/images/Image/my_settings_and_devices.jpg" alt="My Settings &amp; Devices screen" width="500" height="266" /><br />
+    <br />
+    This screenshot shows a sample of multiple registered devices:<br />
+    <br />
+    <img src="/help/chasek/images/Image/list_of_devices.jpg" alt="List of registered devices" width="500" height="267" /></li>
+</ol>
+<hr />
+<h3><a name="default">Changing the default device</a></h3>
+<p>You can only change the default device if you have more than one device setup.</p>
+<ol>
+    <li>Go to the the <em>My Settings &amp; Devices</em> screen as described in the <a href="#screen">My Settings &amp; Devices screen</a> section.</li>
+    <br />
+    <li>If necessary, scroll down. Under <em>Default Device</em>, click on the down arrow, then select the device you wish to be the default. Note: the <em>When I login</em> option should remain <em>Ask me to choose an authentication method</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/select_default_device(1).jpg" alt="Default Device drop-down" width="500" height="264" /><br />
+    <br />
+    <li>If necessary, scroll down. Click on the <em>Save</em> button. When the change has been saved, the <em>Save</em> button will change to a <em>Saved</em> button.</li>
+    <br />
+    <li>If you are done with managing your devices, you can logout of the UH Login MFA Device Registration site.</li>
+</ol>
+<hr />
+<h3><a name="devname">Changing a device name</a></h3>
+<ol>
+    <li>Go to the the <em>My Settings &amp; Devices</em> screen as described in the <a href="#screen">My Settings &amp; Devices screen</a> section.</li>
+    <br />
+    <li>Click on the <em>Device Options</em> button that's on the same line as the device whose name you wish to change.</li>
+    <br />
+    <img src="/help/chasek/images/Image/list_of_devices.jpg" alt="List of registered devices" width="500" height="267" /><br />
+    <br />
+    <li>The screen will now look like the one below.  Click on the <em>Change Device Name</em> button.</li>
+    <br />
+    <img src="/help/chasek/images/Image/change_device_name.jpg" alt="Change Device Name button" width="500" height="263" /><br />
+    <br />
+    <li>In the box that appears, type a new name for your device.  Click on the <em>Save</em> button.  To cancel the change, click on the <em>X</em> button.</li>
+    <br />
+    <img src="/help/chasek/images/Image/type_new_name(1).jpg" alt="Type new name and save or cancel" width="500" height="265" /><br />
+    <br />
+    <li>You will see a message that you have successfully modified the device name. If you are done with managing your devices, you can logout of the UH Login MFA Device Registration site.</li>
+</ol>
+<hr />
+<h3><a name="deldev">Deleting a device</a></h3>
+<ol>
+    <li>Go to the the <em>My Settings &amp; Devices</em> screen as described in the <a href="#screen">My Settings &amp; Devices screen</a> section.</li>
+    <br />
+    <li>Click on the <em>Device Options</em> button that's on the same line as the device you wish to delete.</li>
+    <br />
+    <img src="/help/chasek/images/Image/list_of_devices.jpg" alt="List of registered devices" width="500" height="267" /><br />
+    <br />
+    <li>The screen will now look like the one below. Click on the <em>Trash Can</em> icon.</li>
+    <br />
+    <img src="/help/chasek/images/Image/device_to_delete.jpg" alt="Trash Can icon" width="500" height="267" /><br />
+    <br />
+    <li>You will be asked if you're sure you want to remove the device. If you are sure, click on the <em>Remove</em> button; otherwise, click on <em>Cancel</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/delete are you sure.jpg" alt="Delete confirmation window" width="500" height="266" /><br />
+    <br />
+    <li>You will see a message that you have successfully removed the device. If you are done with managing your devices, you can logout of the UH Login MFA Device Registration site.</li>
+</ol>
+<hr />
+<h3><a name="reactive">Reactivating the Duo Mobile app (does not apply to landlines)</a></h3>
+<p>If you have a new phone but have the same phone number, you need to &quot;reactivate&quot; the Duo Mobile app on your new phone. (If you have a new phone AND a new phone number, activate the new phone as a <a href="http://www.hawaii.edu/askus/1680">new device</a>.)</p>
+<ol>
+    <li>Go to the the <em>My Settings &amp; Devices</em> screen as described in the <a href="#screen">My Settings &amp; Devices screen</a> section. For Step 3, click on the <b>Call Me</b> button. Your phone will ring. Answer the call and press &quot;1&quot; on the keypad to approve the login and proceed.</li>
+    <br />
+    <li>Click on the <em>Device Options</em> button that's on the same line as the device you wish to reactivate.</li>
+    <br />
+    <img src="/help/chasek/images/Image/list_of_devices.jpg" alt="List of registered devices" width="500" height="267" /><br />
+    <br />
+    <li>The screen will now look like the one below. Click on the <em>Reactivate Duo Mobile</em> button.</li>
+    <br />
+    <img src="/help/chasek/images/Image/reactivate_duo_1(1).jpg" alt="Reactivate Duo Mobile button" width="500" height="268" /><br />
+    <br />
+    <li>Select the appropriate phone type for the new phone, then click <em>Continue</em>.<br />
+    <br />
+    <img src="/help/chasek/images/Image/reactivate_type_of_phone-nobb.jpg" alt="What type of phone" width="500" height="267" /></li>
+    <br />
+    <li>Below is the next screen you will see if you picked iPhone in step 5 (if you picked Android the remaining steps are similar). If you have not yet downloaded the Duo Mobile app to your new phone, follow the directions within the box to download and install the app. Once you have downloaded the app to your new phone, or if you already have the app downloaded to your new phone, click on <em>I have Duo Mobile installed</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/install_duo_ios.jpg" alt="Install Duo Mobile app" width="500" height="267" /><br />
+    <br />
+    <li>
+    <p>You will see a barcode displayed.</p>
+    <p>Open the Duo Mobile app on your phone. If you are asked if you want to allow Duo Mobile to send Notifications, please allow notifications.</p>
+    <p>Press the <strong>+</strong> icon in the upper right corner, or press on the <em>Add Account</em> button. If you are asked if you want to allow Duo Mobile to access the Camera, please allow access.</p>
+    <p>Point your phone's camera (the camera's display should be shown on the phone's screen) at the barcode. Once the barcode is properly within the display, it will automatically be recognized.  You can tell it was successful if you see a green checkmark within the barcode.</p>
+    <p>Once you see the green checkmark, click on <em>Continue</em>.</p>
+    </li>
+    <br />
+    <img src="/help/chasek/images/Image/barcode-ios.jpg" alt="Activate Duo Mobile app" width="500" height="266" /><br />
+    <br />
+    <li>You have now activated the Duo Mobile app on your new phone. If you are done with managing your devices, you can logout of the UH Login MFA Device Registration site.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<div class="kb_article_parentslink">
+	This article is part of the 
+<a href="/askus/1758">
+    Getting setup for Multi-Factor Authentication (MFA)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a>
+ article.
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1684" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1684" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1684">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1684">
+		1684</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Thu, 28 Jan 2016 1:08pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Tue, 11 Sep 2018 1:56pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1766">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Departmental Website PHP Upgrade
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Departmental Website PHP Upgrade
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p>In our efforts to provide a better web hosting experience, we will be upgrading PHP from version 7.4 to PHP 8.0.&nbsp; This upgrade is tentatively scheduled for the morning of Monday, March 13, 2023.</p>
+<table width="500" border="0" cellspacing="1" cellpadding="1" style="font-family: Arial, Helvetica, sans-serif; font-size: 14.4px;">
+    <tbody style="box-sizing: border-box;">
+        <tr style="box-sizing: border-box;">
+            <td width="50%" style="box-sizing: border-box;">
+            <p style="box-sizing: border-box;"><strong style="box-sizing: border-box;">Previous Environment</strong><br style="box-sizing: border-box;" />
+            PHP 7.4.19</p>
+            </td>
+            <td width="50%" style="box-sizing: border-box;"><strong style="box-sizing: border-box;">Current Environment</strong><br style="box-sizing: border-box;" />
+            PHP 8.0.13</td>
+        </tr>
+    </tbody>
+</table>
+<p>This upgrade is a major-version PHP change and your website may cease to function or may not be fully functional if your site is not checked for compatibility with the new version of PHP.</p>
+<ul>
+    <li>
+    <p><a href="http://www.hawaii.edu/askus/1766#1">Setting up your computer to test the new PHP environment</a></p>
+    </li>
+    <li>
+    <p><a href="http://www.hawaii.edu/askus/1766#2">Notes for application developers about the PHP upgrade</a></p>
+    </li>
+    <li>
+    <p><a href="http://www.hawaii.edu/askus/1766#3">Other notes</a>&nbsp;</p>
+    </li>
+</ul>
+<h3><strong><a name="1">Setting up your computer to test the new PHP environment</a></strong></h3>
+<div dir="ltr">The first step is to point your computer's hosts file to the test webserver directly. &nbsp;This is accomplished differently depending on which Operating System you are using.</div>
+<p><a href="https://www.hawaii.edu/askus/1766#win">Windows Setup</a><br />
+<a href="https://www.hawaii.edu/askus/1766#mac">Mac Setup</a><br />
+<a href="https://www.hawaii.edu/askus/1766#linux">Linux Setup</a></p>
+<h3><a name="win">Windows Setup</a></h3>
+<div dir="ltr">Open your favorite text editor such as Notepad as an administrator (right-click, run as administrator).</div>
+<p>From your text editor, open up your computer's hosts file. &nbsp;You will find your hosts file here: %systemroot%\system32\drivers\etc\hosts &nbsp;(%systemroot% is usually c:\windows\ but may be somewhere else if your Windows was set up differently.)</p>
+<p>If your website is hosted on one of the domains shown below, add the line as shown.&nbsp; If not, please contact web-support-l@lists.hawaii.edu with your domain name and we will let you know what your line should be.</p>
+<p>128.171.149.219&nbsp; www.hawaii.edu<br />
+128.171.149.220&nbsp; manoa.hawaii.edu<br />
+128.171.149.221&nbsp; hawaii.hawaii.edu<br />
+128.171.149.222&nbsp; maui.hawaii.edu<br />
+128.171.149.223&nbsp; uhcc.hawaii.edu</p>
+<div dir="ltr">Save the file (for Notepad: from the menu, File -&gt; Save or ctrl+s), and when you open your browser to your website, it will now point to the test webservers running in the enterprise Linux environment.</div>
+<div dir="ltr">&nbsp;</div>
+<div dir="ltr">You can test compatibility by going to your website, and doing what you regularly do on your website and seeing if any errors arise.&nbsp; If everything works fine, you're all set.</div>
+<div dir="ltr">&nbsp;</div>
+<div dir="ltr">After you complete testing, remember to remove the line from your hosts file that you added in step three to have your browsers point back to the production websites.</div>
+<h3><a name="mac">Mac Setup</a></h3>
+<p>Open your Terminal app. For most users, this &nbsp;is under Applications Folder -&gt; Utilities Folder</p>
+<p>In Terminal, your first step is to open your hosts file with your console's text editor as Super User.&nbsp; This can be done by typing the following into the Terminal app: sudo nano /private/etc/hosts</p>
+<p>Next, you will need to update your hosts file by adding your website's domain to it.&nbsp; If your website is hosted on one of the domains shown below, add the line as shown.&nbsp; If not, please contact web-support-l@lists.hawaii.edu with your domain name and we will let you know what your line should be.</p>
+<p>128.171.149.219&nbsp; www.hawaii.edu<br />
+128.171.149.220&nbsp; manoa.hawaii.edu<br />
+128.171.149.221&nbsp; hawaii.hawaii.edu<br />
+128.171.149.222&nbsp; maui.hawaii.edu<br />
+128.171.149.223&nbsp; uhcc.hawaii.edu</p>
+<p>Add the appropriate line above to your hosts file then to save the file, Hit ctrl+x, type 'y', and press enter.</p>
+<p>After the file has been saved, the next time you open your browser and visit your website, it will now point to the test webservers running the newer version of PHP.</p>
+<p>You can test compatibility by going to your website, and doing what you regularly do on your website and seeing if any errors arise.&nbsp; If everything works fine, you're all set.</p>
+<p>After you complete testing, remember to remove the line from your hosts file that you added in Terminal to stop your browsers from pointing at the test webserver.</p>
+<h3><a name="linux">Linux Setup</a></h3>
+<p>Open up your favorite text editor with Super User (root) access.</p>
+<p>From your text editor, open up your computer's hosts file. &nbsp;You will typically find your hosts file here: /etc/hosts</p>
+<p>If your website is hosted on one of the domains shown below, add the line as shown.&nbsp; If not, please contact web-support-l@lists.hawaii.edu with your domain name and we will let you know what your line should be.</p>
+<p>128.171.149.219&nbsp; www.hawaii.edu<br />
+128.171.149.220&nbsp; manoa.hawaii.edu<br />
+128.171.149.221&nbsp; hawaii.hawaii.edu<br />
+128.171.149.222&nbsp; maui.hawaii.edu<br />
+128.171.149.223&nbsp; uhcc.hawaii.edu</p>
+<p>Save the file, and when you open your browser to your website, it will now point to the test webservers running in the enterprise Linux environment.</p>
+<p>You can test compatibility by going to your website, and doing what you regularly do on your website and seeing if any errors arise.&nbsp; If everything works fine, you're all set.</p>
+<p>After you complete testing, make sure you remember to remove the line from your hosts file and save to have your browsers point back to the production websites.</p>
+<h3><strong><a name="2">Notes for application developers about the PHP upgrade</a></strong>&nbsp;</h3>
+<p>Notable change(s):</p>
+<ul>
+    <li>The ability to define <strong>case-insensitive constants has been removed</strong>. The third argument to define() may no longer be true.</li>
+    <li>The ability to specify an autoloader using an <strong>__autoload()</strong> function has been removed. spl_autoload_register() should be used instead.</li>
+    <li><strong>create_function()</strong> has been removed. Anonymous functions may be used instead.</li>
+    <li><strong>each()</strong> has been removed. foreach or ArrayIterator should be used instead.</li>
+    <li>The ability to unbind <strong>this </strong>from closures that were created from a method, using Closure::fromCallable() or ReflectionMethod::getClosure(), has been removed.</li>
+    <li>The ability to unbind <strong>this </strong>from proper closures that contain uses of this has also been removed.</li>
+    <li>The ability to use <strong>array_key_exists()</strong> with objects has been removed. isset() or property_exists() may be used instead.</li>
+    <li>The <strong>@ operator will no longer silence fatal errors</strong> (E_ERROR, E_CORE_ERROR, E_COMPILE_ERROR, E_USER_ERROR, E_RECOVERABLE_ERROR, E_PARSE).</li>
+    <li><strong>#[</strong> is no longer interpreted as the start of a comment, as this syntax is now used for attributes.</li>
+    <li>Support for deprecated <strong>curly braces for offset access</strong> has been removed.</li>
+    <li>EXIF: <strong>read_exif_data()</strong> has been removed; exif_read_data() should be used instead.</li>
+    <li>GD: The deprecated function <strong>image2wbmp()</strong> has been removed.</li>
+    <li>GD: The deprecated functions <strong>png2wbmp()</strong> and <strong>jpeg2wbmp()</strong> have been removed.</li>
+    <li>GMP: <strong>gmp_random()</strong> has been removed. One of gmp_random_range() or gmp_random_bits() should be used instead.</li>
+    <li>IMAP: The <strong>imap_header()</strong> function which is an alias of <strong>imap_headerinfo()</strong> has been removed.</li>
+    <li>LDAP: The deprecated functions <strong>ldap_sort()</strong>, <strong>ldap_control_paged_result()</strong> and <strong>ldap_control_paged_result_response()</strong> have been removed.</li>
+    <li>MBString:&nbsp;&nbsp;The ISO_8859-* character encoding aliases have been replaced by ISO8859-* aliases for better interoperability with the iconv extension. The mbregex ISO 8859 aliases with underscores (ISO_8859_* and ISO8859_*) have also been removed.</li>
+    <li>OCI8:&nbsp; <strong>oci_internal_debug()</strong> and its alias <strong>ociinternaldebug()</strong> have been removed.</li>
+    <li>SPL:&nbsp; <strong>SplFileObject::fgetss()</strong> has been removed.</li>
+    <li>SPL:&nbsp;&nbsp;SplFixedArray is now an IteratorAggregate and not an Iterator. <strong>SplFixedArray::rewind(), SplFixedArray::current(), SplFixedArray::key(), SplFixedArray::next(),</strong> and <strong>SplFixedArray::valid()</strong> have been removed. In their place, SplFixedArray::getIterator() has been added. Any code which uses explicit iteration over SplFixedArray must now obtain an Iterator through SplFixedArray::getIterator(). This means that SplFixedArray is now safe to use in nested loops.</li>
+    <li><strong>assert() will no longer evaluate string arguments</strong>, instead they will be treated like any other argument. assert($a == $b) should be used instead of assert('$a == $b'). The assert.quiet_eval ini directive and the ASSERT_QUIET_EVAL constant have also been removed, as they would no longer have any effect.</li>
+    <li>The <strong>string.strip_tags filter</strong> has been removed.</li>
+    <li>The following functions have been removed:
+    <ul>
+        <li><strong>hebrevc()</strong></li>
+        <li><strong>convert_cyr_string()</strong></li>
+        <li><strong>money_format()</strong></li>
+        <li><strong>ezmlm_hash()</strong></li>
+        <li><strong>restore_include_path()</strong></li>
+        <li><strong>get_magic_quotes_gpc()</strong></li>
+        <li><strong>get_magic_quotes_runtime()</strong></li>
+        <li><strong>fgetss()</strong><span id="1662671540722E" style="display: none;">&nbsp;</span></li>
+    </ul>
+    </li>
+    <li><strong>FILTER_SANITIZE_MAGIC_QUOTES</strong> has been removed.</li>
+    <li><strong>gzgetss()</strong> has been removed.</li>
+</ul>
+<p>For detailed information about the php upgrade, please check out this PHP migration guide, with particular focus on 'Backward Incompatible Changes' and 'Removed Extensions' :</p>
+<ul>
+    <li><a href="https://www.php.net/manual/en/migration80.incompatible.php" target="_blank">PHP 7.4 &gt; PHP 8.0</a></li>
+</ul>
+<h3><strong><a name="3">Other notes</a></strong></h3>
+<p>If you are experiencing errors with your site, please email us at web-support-l@lists.hawaii.edu with the date and time of your error and a copy of the error messages you may have received.&nbsp;</p>
+<p>If you any comments, concerns, or questions, please email us at web-support-l@lists.hawaii.edu</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1766" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1766" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1766">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1766">
+		1766</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Mon, 30 Apr 2018 3:10pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Mon, 17 Oct 2022 4:28pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

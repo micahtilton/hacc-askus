@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1357">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Securing Network Printers and Multi-Function Devices
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Securing Network Printers and Multi-Function Devices
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p>Network Printers and Multi-Function Devices (MFD) are common in offices because they provide the ability to copy, print, scan, and fax from one central machine that is shared by many.  The MFD's typically store information and are connected to the network, therefore security controls need to be enforced to protect the information being printed, copied, scanned, faxed, etc.  UH policy <a href="http://www.hawaii.edu/policy/index.php?action=viewPolicy&amp;policySection=ep&amp;policyChapter=2&amp;policyNumber=214&amp;menuView=closed">EP 2.214 Security and Protection of Sensitive Information</a> defines security requirements when MFD's are used for protected data.</p>
+<p>The following is a list of best practices that should be followed to harden Network Printers and MFD's.  This checklist is a guideline since the management interfaces for MFD's vary, so refer to the MFD's documentation or the vendor to ensure you implement the security controls available for the various models.</p>
+<ul>
+    <li><strong>Change default Administrator password -</strong> Change the default passwords and SNMP community strings to complex passwords.  If possible the passwords should be changed at least annually.</li>
+    <li><strong>Disable unneeded management protocols -</strong> Disable unused network protocols.  TCP/IP is necessary for the network device with restrictions.  SMTP, SNMP V3 and HTTPS  may be used for device management, updates, monitoring, and communications.  Other protocols provide potential for unauthorized access or compromise so they should be disabled if possible.</li>
+    <li><strong>Assign a Static or Fixed IP -</strong> Network printers and MFD's should have a static or fixed IP.  This will provide protection in the event that the DNS cache is poisoned; print files will not be able to be redirected.</li>
+    <li><strong>IP Filtering -</strong> If possible, restrict access to the MFD by allowing access to a specific set or range of IP Addresses.</li>
+    <li><strong>Updates -</strong> To protect the network printer or MFD from known security vulnerabilities the firmware needs to be kept up to date.  To ensure that updates are applied in a timely manner the MFD Administrator should request automatic update notifications if the manufacturer offers them.  The MFD Administrator should also check for patches available to mitigate the vulnerabilities. <br /><a href="https://cve.mitre.org/">Common Vulnerabilities and Exposures (CVE)</a> Click on "Search CVE List" and enter your MFD or printer manufacturer/model.</li>
+    <li><strong>Physical Security -</strong> If there is a hard drive in the MFD, physical access to the device should be restricted / secured to prevent unauthorized access / removal of the hard drive.</li>
+    <li><strong>Data Security -</strong> If there is a hard drive in the MFD, enable encryption for data stored and data transmitted to and from the device.  The recommended encryption algorithm is Advanced Encryption Standard (AES 128-bit).  Also enable immediate and scheduled image overwrite to erase data from the hard drive and non-volatile storage.  Check the manufacturer's technical specifications to ensure the hard drive can be encrypted.</li>
+    <li><strong>Authentication -</strong> Enable network authentication restricting Users access to authorized services and ensure Users can not access the MFD global configuration.</li>
+    <li><strong>Secure Printing -</strong> If available, enable the secure printing option that holds the print job until the owner enters a pin to release the document.</li>
+    <li><strong>Logging -</strong> Enable logging to capture job activity, User access, fax logging, configuration changes, etc.  The logs are necessary to identify malicious activity and in the event of a security incident, logs can assist with prosecution.  Logs should be reviewed for irregular activity that may be considered a security incident, for example transmitting large amounts of data after regular business hours or many failed log on attempts in a short amount of time.</li>
+</ul>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1357" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1357" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1357">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1357">
+		1357</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Tue, 20 Mar 2012 12:33pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Fri, 11 Jan 2019 3:54pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

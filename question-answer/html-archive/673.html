@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/673">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>UH File Drop
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+UH File Drop
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<div>
+<p><font size="3"><strong>What is UH File Drop?</strong></font></p>
+</div>
+<p>UH File Drop is a service for the UH community for allowing transfer of large files (up to 999MB) to others in UH and/or people unaffiliated with the University.&nbsp;It is recognized that there is a growing need within the University community to share more and larger amounts of information with others.&nbsp;</p>
+<div><a href="../../../filedrop">http://www.hawaii.edu/filedrop</a><br />
+&nbsp;</div>
+<div>
+<p><font size="3"><strong>Is it secure?</strong></font></p>
+</div>
+<p>The file transfer (both in uploading and downloading) is secure, in the sense that &quot;SSL&quot; is used to encrypt the file(s) over the Internet. This should provide sufficient security for most users. However, it's true that in the basic mode of operation, the security of the system depends entirely on the security of the randomly generated URLs used to download the files. It is extremely unlikely that anyone would be able to guess one of these URLs. But there may be other ways for an attacker to learn the download URL, and since in the basic mode of operation that's all we require to download the files, the attacker would gain access to the files.</p>
+<div>&nbsp;We do offer an additional level of protection, for users exchanging files containing sensitive information. When uploading files, you can check off the &quot;Optional Authentication&quot; checkbox. If this checkbox is selected, the UH user who is the recipient of the transfer (and in this case, the recipient must be a UH user) will have to login before retrieving the files. That is, the recipient must know both the secret URL and the recipient's UH Username and password.</div>
+<div>&nbsp;</div>
+<div>
+<p><font size="3"><strong>How does it work?</strong></font></p>
+</div>
+<p>The basic idea behind this service is simple: we allow people to upload potentially large files to our servers, where they will be stored for a limited period. We generate a random URL which can be used to download the files during that period. Once the files have been completely uploaded, we send an email containing this URL to the address or UH Username you have specified as the recipient. Note that the use of the service must comply with all relevant University policies, including <a href="https://www.hawaii.edu/policy/index.php?action=viewPolicy&amp;policySection=ep&amp;policyChapter=2&amp;policyNumber=210&amp;menuView=closed">E2.210</a>.</p>
+<p>This service is provided to the UH community, and is not meant to be open to the general public. However, we do wish to provide the ability for people unaffiliated with the University to use the service to share files with people within UH. In all cases, we require at least one end of the transaction (sender or receiver, that is) to be a UH person. The only practical consequence of this is that for a UH person to send files to a non-UH person, the UH person <strong>must</strong> use the link on the service home page to login prior to uploading files.</p>
+<div>&nbsp;</div>
+<div>
+<p><font size="3"><strong>Step by Step Upload of files</strong></font></p>
+</div>
+<ol>
+    <li>The sender must go the File Drop webpage to start the process.
+    <div>&nbsp;</div>
+    </li>
+    <li>Click on &ldquo;login here&rdquo; for UH users or type in your name and email address if you don&rsquo;t have a UH Username.
+    <p style="margin-left: 0.25in" align="center"><img border="0" width="500" height="288" v:shapes="_x0000_i1025" src="http://www.hawaii.edu/itsdocs/673/loginfiledrop.png" alt="" /></p>
+    <div style="margin-left: 0.25in">&nbsp;</div>
+    </li>
+    <li>Type in the name and email address of the person that will receive your transferred file.&nbsp;You can also enter in any comments that you wish to pass on.&nbsp;An email with this information and URL will be sent to the person entered into this page.&nbsp;Press the Proceed button to continue.
+    <div>&nbsp;</div>
+    </li>
+    <li>Note that you can only enter one recipient name and email address.&nbsp;If you wish to send the same file to multiple people you can leave this page blank so that you can email to everyone at one time.&nbsp;This only works if you have logged in with a UH Username.&nbsp;More information is provided below.
+    <p style="margin-left: 0.25in" align="center"><img border="0" width="500" height="526" v:shapes="_x0000_i1026" src="http://www.hawaii.edu/itsdocs/673/fileselect.png" alt="" /></p>
+    <div style="margin-left: 0.25in">&nbsp;</div>
+    </li>
+    <li>You will now select the file(s) from your local computer that will be uploaded to our UH File Drop site.&nbsp;Click on the Browse button to find and select the file(s) that you wish to upload.&nbsp;You can also put in a description of the file but this is optional.&nbsp;Note that you can enter up to three files to be transferred but the combined size of all three files must not exceed 999MB.&nbsp;You can setup multiple File Drops if you have more than three files.&nbsp;Just go through the steps again after you finish with this File Drop.&nbsp;Press the &ldquo;Start Upload&rdquo; button when you are done.
+    <p style="margin-left: 0.25in" align="center"><img border="0" width="500" height="549" v:shapes="_x0000_i1027" src="http://www.hawaii.edu/itsdocs/673/upload.png" alt="" /></p>
+    <div style="margin-left: 0.25in">&nbsp;</div>
+    </li>
+    <li>Note the download page in the following screen.&nbsp;This is a randomly generated page and it is sent to the recipient you entered earlier.&nbsp;You can also copy this link and email it to others.
+    <div style="margin-left: 0.25in">&nbsp;</div>
+    </li>
+    <li>Copy the link on the page and open up your email program.&nbsp;Enter the people that you wish to receive the file information and in the body of your message paste the link you just copied then send the email when you are done.
+    <div>&nbsp;</div>
+    </li>
+    <li>Note that you can &ldquo;Click here&rdquo; if you have more files to upload to the UH File Drop.&nbsp;It will take you back to step 3.
+    <p style="margin-left: 0.25in" align="center"><img border="0" width="500" height="199" v:shapes="_x0000_i1028" src="http://www.hawaii.edu/itsdocs/673/downloadlink.png" alt="" /></p>
+    <div style="margin-left: 0.25in">&nbsp;</div>
+    </li>
+</ol>
+<div>
+<p><font size="3"><strong>Step by Step Download of Files</strong></font></p>
+</div>
+<ol>
+    <li>The File Drop service will send an email similar to the one below to the&nbsp;recipient that was entered during the upload process.&nbsp;Your email may look different if the sender sends a personal email.
+    <p style="margin-left: 0.25in" align="center"><img border="0" width="500" height="319" v:shapes="_x0000_i1029" src="http://www.hawaii.edu/itsdocs/673/email.png" alt="" /></p>
+    <div style="margin-left: 0.25in">&nbsp;</div>
+    </li>
+    <li>Click on the link at the bottom of the screen above.&nbsp;This should open your browser and display the following page.&nbsp;If the sender selected&nbsp;&ldquo;Require authentication&rdquo; you will need to login using your UH Username and password before you will see the following screen.
+    <div style="margin-left: 0.25in">&nbsp;</div>
+    </li>
+    <li>Click on the file name to begin the download process.
+    <p>&nbsp;</p>
+    <p style="margin-left: 0.25in" align="center"><img border="0" width="500" height="243" v:shapes="_x0000_i1030" src="http://www.hawaii.edu/itsdocs/673/file.png" alt="" /></p>
+    <div style="margin-left: 0.25in">&nbsp;</div>
+    </li>
+    <li>You can either save the file to your local computer or open it.&nbsp;I would suggest that you download the file before opening it.&nbsp;Remember that the file is only on the File Drop site for a short period of time before it is removed.&nbsp;
+    <div style="margin-left: 0.25in" align="center">&nbsp;</div>
+    </li>
+    <li>That completes the process of sending and receiving files using the UH File Drop service.
+    <div style="margin-left: 0.25in">&nbsp;</div>
+    </li>
+</ol>
+<p>You can get more information by going to the FAQ webpage, <a href="../../../filedrop/help">http://www.hawaii.edu/filedrop/help</a>.</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/673" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="673" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:673">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=673">
+		673</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Fri, 01 Dec 2006 9:50am
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Wed, 06 Feb 2019 1:11pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

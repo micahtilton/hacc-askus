@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/823">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Using LDAP with Email Clients
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Using LDAP with Email Clients
+
+
+</h2>
+<div id="kb_article_text">
+	<p>ITS has a Lightweight Directory Access Protocol (LDAP) server available for use by the UH community.&nbsp; For faculty and staff directory listings, a public search of the ITS LDAP directory from your email client might be useful when you need to send a message and you know the person's name, but not their email address.&nbsp; [Note: due to privacy issues, no students are included in the LDAP server.]</p>
+<p>LDAP works better in some email clients than others.&nbsp; At the time this article was written, LDAP seems to work best in Thunderbird (PC and Macintosh), or Mac Mail. Please note that the more information you provide in the search fields the better and faster your results will be. However, we do not recommend searching by anything other than first name, last name, both first and last, or username. If your search comes up empty try searching a different way.<br />
+The following are instructions on setting up the ITS supported email clients to use the UH LDAP.</p>
+<h3>Thunderbird 2.0 and higher (Windows and Macintosh)</h3>
+<p><strong><em>Setup </em></strong><br />
+&nbsp;</p>
+<ol>
+    <li>Go to the <strong>Tools </strong>menu and select <strong>Account Settings</strong>.</li>
+    <li>On the left side, click on <strong>Composition &amp; Addressing</strong>.</li>
+    <li>On the right, select <strong>Use a different LDAP server</strong>, then click on <strong>Edit directories</strong>.</li>
+    <li>Click on <strong>Add</strong>.</li>
+    <li>Fill out the screen as follows: <br />
+    Name: <strong>UH LDAP</strong> <br />
+    Hostname: <strong>ldap1.its.hawaii.edu</strong> <br />
+    Base DN: <strong>ou=people,dc=hawaii,dc=edu</strong></li>
+    <li>Click <strong>OK</strong>. Click <strong>OK</strong> again, and then click <strong>OK</strong>one more time.</li>
+    <li>Close Thunderbird and then reopen it for the new settings to take effect.</li>
+</ol>
+<p><br />
+<em><strong>Usage</strong></em><br />
+&nbsp;</p>
+<ol>
+    <li>Create a new message.</li>
+    <li>Click on the <strong>Contacts </strong>button a search field will come up. (Or enable the Contacts pane in newer versions of Thunderbird)</li>
+    <li>Select the <strong>UH LDAP </strong>address book from the <strong>Address Book:</strong> drop down.</li>
+    <li>You may <strong>type a combination of first name, last name, or part of first name/part of last name</strong> in the&nbsp;<strong>Search For:</strong>&nbsp;field provided.</li>
+    <li>Thunderbird will display a list of choices. Click on the correct choice and it will be inserted into your message.</li>
+</ol>
+<p>Optionally you can click on the address book icon to perform a search.</p>
+<p>&nbsp;&nbsp;</p>
+<h3>Outlook 2007 and higher for Windows</h3>
+<p><em><strong>Setup </strong></em><br />
+&nbsp;</p>
+<ol>
+    <li>Go to the <strong>Tools </strong>menu and select <strong>Account settings</strong>. (In newer versions of Outlook this can be found under the <strong>File </strong>tab)</li>
+    <li>If this is the first time you are doing this, you might be asked if you want to synchronize your RSS feeds.&nbsp; Click <strong>Yes </strong>unless you are sure you don't want to.</li>
+    <li>Click on the <strong>Address Books </strong>tab.&nbsp; Click <strong>New</strong>.</li>
+    <li>Select <strong>Internet Directory Service (LDAP)</strong>.&nbsp; Click <strong>Next</strong>.</li>
+    <li>In the &quot;Server name&quot; box, type <strong>ldap1.its.hawaii.edu</strong></li>
+    <li>Click on <strong>More settings</strong>.&nbsp; You will be prompted that it will not be active until you exit and restart Outlook.&nbsp; Click <strong>OK</strong>.</li>
+    <li>Click on the <strong>Search </strong>tab.&nbsp; In the &quot;Search base&quot; box, select <strong>Custom</strong>, then in the box type: <strong>ou=people,dc=hawaii,dc=edu </strong></li>
+    <li>Click <strong>OK</strong>.&nbsp; Click <strong>Next</strong>.&nbsp; Click <strong>Finish</strong>.&nbsp; Click <strong>Close</strong>.</li>
+</ol>
+<p><br />
+<em><strong>Usage </strong></em><br />
+&nbsp;</p>
+<ol>
+    <li>Create a new mail message</li>
+    <li>Click on <strong>To... </strong></li>
+    <li>Under the &quot;Address Book&quot; option, select <strong>ldap.hawaii.edu </strong></li>
+    <li>Click on <strong>Advanced Find </strong></li>
+    <li>Type a <strong>first and/or last name </strong>in the appropriate box, and click <strong>OK</strong>. Some searches can take a while and cause Outlook to seem unresponsive; this is normal and Outlook should respond again once the query finishes or times out.</li>
+    <li>The search results will be displayed.&nbsp; Select the person you want, and click on either the <strong>To</strong>, <strong>Cc</strong>, or <strong>Bcc </strong>buttons.</li>
+    <li>Click <strong>OK</strong>.&nbsp; The person will be added to your message on the line you specified.</li>
+</ol>
+<p>&nbsp;&nbsp;</p>
+<h3>Mac Mail</h3>
+<p><em><strong>Setup </strong></em><br />
+&nbsp;</p>
+<ol>
+    <li>Go to the <strong>Mail </strong>menu and select <strong>Preferences </strong></li>
+    <li>Click on the <strong>Composing </strong>icon</li>
+    <li>Check the box for &quot;Automatically complete addresses&quot;</li>
+    <li>Click on <strong>Configure LDAP</strong></li>
+    <li>Click on the <strong>plus (+) </strong>button</li>
+    <li>Name: <strong>UH LDAP<br />
+    </strong>Server: <strong>ldap1.its.hawaii.edu<br />
+    </strong>Search Base: <strong>ou=people,dc=hawaii,dc=edu<br />
+    </strong>Leave everything else as the default</li>
+    <li>Click <strong>Save </strong></li>
+    <li>Click <strong>Done </strong></li>
+    <li>Close the Preferences window by clicking on the red dot in the upper right corner of the window.</li>
+</ol>
+<p><br />
+<em><strong>Usage</strong></em><br />
+&nbsp;</p>
+<ol>
+    <li>Create a new message</li>
+    <li>You can <strong>type part of the person's name or a combination of first and last</strong>, where you would type the email address.</li>
+    <li>Mac Mail will display a list of choices.&nbsp; Click on the correct choice and it will be inserted where your cursor is.</li>
+</ol>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/823" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="823" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:823">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=823">
+		823</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Wed, 15 Aug 2007 2:46pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Thu, 16 Jun 2016 11:47am</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

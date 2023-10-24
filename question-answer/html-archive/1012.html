@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1012">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Drupal @ UH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Drupal @ UH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<ul>
+    <p><a href="1012#drupal">What is Drupal?</a><br />
+    <a href="1012#version">What version of Drupal is ITS running?</a><br />
+    <a href="1012#request">How do I request a Drupal Site?</a><br />
+    <a href="1012#info">Where can I get more information regarding Drupal @ UH?</a><br />
+    <a href="1012#modules">Is there a list of Drupal modules that are supported by ITS?</a><br />
+    <a href="1012#nomodules">I do not see a module I need on the supported list.  What can I do?</a><br />
+    <a href="1012#themes">What themes are available?</a><br />
+    <a href="1012#customthemes">Where do I save my custom theme?</a><br />
+    <a href="1012#login">I can not find my login page, how can I get to it?</a><br />
+    <a href="1012#turnoff">How do I turn off the &quot;create your own account&quot; option?</a><br />
+    <a href="1012#uploads">How do I allow uploads?</a><br />
+    <a href="1012#cache">How do I clear the cache?</a><br />
+    <a href="1012#downtimes">Are there any downtimes for the server that is hosting my Drupal installation or MySQL database?</a><br />
+    <a href="1012#updates">How often are updates performed?</a><br />
+    <a href="1012#listserv">Is there a Drupal listserv I may subscribe too?</a></p>
+    <p>&nbsp;</p>
+</ul>
+<ul>    <a name="drupal"></a>
+    <h3>What is Drupal?</h3>
+    <p>Drupal is an open source content management system.</p>
+    <a name="version"></a>
+    <h3>What version of Drupal is ITS running?</h3>
+    <p>ITS has installed Drupal using its multi-site feature.  ITS will maintain the core files and supported modules.  <a href="http://www.drupal.org">Drupal 7.26</a> is available in the following environment:<br />
+    <br />
+    <a href="http://httpd.apache.org/">Apache web server 2.2.9</a><br />
+    <a href="http://www.php.net">PHP scripting 5.3.3</a><br />
+    <a href="http://www.mysql.com/">mySQL database server 5.5.25a</a></p>
+    <a name="request"></a>
+    <h3>How do I request a Drupal Site?</h3>
+    <p>To request a Drupal site, please complete the application form at visit <a target="_blank" href="http://www.hawaii.edu/infotech/webservice/apply.php">http://www.hawaii.edu/infotech/webservice/apply.php</a></p>
+    <a name="info"></a>
+    <h3>Where can I get more information regarding Drupal @ UH?</h3>
+    <p>More information on Drupal @ UH can be found at <a target="_blank" href="http://www.hawaii.edu/its/drupal">http://www.hawaii.edu/its/drupal</a>.</p>
+    <a name="modules"></a>
+    <h3>Is there a list of Drupal modules that are supported by ITS?</h3>
+    <p>A list of ITS supported modules can be found at <a target="_blank" href="http://www.hawaii.edu/its/drupal/modulelist">http://www.hawaii.edu/its/drupal/modulelist</a>.</p>
+    <a name="nomodules"></a>
+    <h3>I do not see a module I need on the supported list.  What can I do?</h3>
+    <p>If you feel the module will benefit the UH community, please email web-support-l@lists.hawaii.edu the information.  ITS will research it.  If not, you may install the module within your modules folder in the directory provided to you by ITS.</p>
+    <a name="themes"></a>
+    <h3>What themes are available?</h3>
+    <p>A list of themes can be found at <a target="_blank" href="http://www.hawaii.edu/its/drupal/node/31">http://www.hawaii.edu/its/drupal/themes</a></p>
+    <a name="customthemes"></a>
+    <h3>Where do I save my custom theme?</h3>
+    <p>Save your custom theme in your themes folder in the directory thats provided to you.</p>
+    <a name="login"></a>
+    <h3>I can not find my login page, how can I get to it?</h3>
+    <p>To get back to your login screen, visit http://youdrupalsite/user (For Drupal 6, visit http://yourdrupalsite/user/login)</p>
+    <a name="turnoff"></a>
+    <h3>How do you turn off the &quot;create your own account&quot; option?</h3>
+    <p>To turn of this function</p>
+    <ol>
+        <li>Login as the administrator</li>
+        <li>Click on Administrator link.</li>
+        <li>Then click on the User Management Link.</li>
+        <li>Then click on the User Settings Link.</li>
+        <li>Select &quot;Only site administrators can create new user accounts.&quot;</li>
+        <li>Then &quot;Save Configuration&quot;</li>
+    </ol>
+    <a name="uploads"></a>
+    <h3>How do I allow uploads?</h3>
+    <p>By default, the upload module is not enabled.  To enable the module</p>
+    <ol>
+        <li>Login has adminsitrator.</li>
+        <li>Click on Administer.</li>
+        <li>Then click on the Modules link.</li>
+        <li>Check Upload</li>
+    </ol>
+    <a name="cache"></a>
+    <h3>How do I clear the cache?</h3>
+    <ol>
+        <li>Login has administrator</li>
+        <li>Click on Administer</li>
+        <li>Then click on Performance.</li>
+        <li>Then select Clear Cached data.</li>
+    </ol>
+    <a name="configure"></a>
+    <h3>How do I configure the Home Page</h3>
+    <p>Default is /node</p>
+    <p>To change go to:</p>
+    <p>Administer -&gt; Site Configuration -&gt; Site Information</p>
+    <a name="downtimes"></a>
+    <h3>Are there any downtimes for the server that is hosting my Drupal installation or MySQL database?</h3>
+    <p>The server hosting the MySQL database is unavailable on Mondays from 3:00am - 6:00am for system backups.  There are no regularly scheduled downtimes for the server hosting your Drupal site.   There may be times when downtimes are scheduled for emergency maintenance.&nbsp; All downtimes will be listed at <a href="http://www.hawaii.edu">http://www.hawaii.edu/its</a></p>
+    <a name="updates"></a>
+    <h3>How often are updates performed</h3>
+    <p>Security updates to the Drupal files are done as soon as possible.  Non security updates are done at the end of each month.</p>
+    <a name="listserv"></a>
+    <h3>Is there a Drupal listserv I may subscribe too</h3>
+    Yes, there is a Drupal listserv.  The listserv will be used to announce security updates or server maintenance outages.  To subscribe send email to listserv@lists.hawaii.edu.  In the body, type 'subscribe its-drupal <firstname> <lastname>'</lastname></firstname> </ul>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1012" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1012" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1012">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1012">
+		1012</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Tue, 16 Jun 2009 9:17am
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Wed, 12 Feb 2014 9:53am</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

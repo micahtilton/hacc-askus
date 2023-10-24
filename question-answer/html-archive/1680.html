@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1680">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>UH Login Multi-Factor Authentication (MFA) - Getting started with your first device
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+UH Login Multi-Factor Authentication (MFA) - Getting started with your first device
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<ul>
+    <li><a href="#smartphone">Setting up a Smartphone</a></li>
+    <li><a href="#landline">Setting up a Landline</a></li>
+    <li><a href="#cellular">Setting up a non-Smartphone Cellular Phone</a></li>
+    <li><a href="#tablet">Setting up a Tablet</a></li>
+</ul>
+<p>For more information about UH Login and Multi-Factor Authentication (MFA), go to <a href="https://www.hawaii.edu/its/uhlogin">www.hawaii.edu/its/uhlogin</a>.</p>
+<p>Before going through this article, please review <a href="http://www.hawaii.edu/askus/1679">UH Login Multi-Factor Authentication (MFA) - Which authentication method should I use?</a> to determine which authentication method suits your situation best.  Once you have decided which method to use, use this document to register your first device.  This document will explain how to register a mobile device, landline, or tablet as your first device to use for MFA.</p>
+<p><b>We strongly recommend registering at least 2 devices</b>.  For example: a smartphone and an office landline.  Please refer to <a href="http://www.hawaii.edu/askus/1684">UH Login Multi-Factor Authentication (MFA) - Managing Devices</a> for information on managing registered devices, or <a href="http://www.hawaii.edu/askus/1681">UH Login Multi-Factor Authentication (MFA) - Adding Devices</a> for information on registering additional devices.</p>
+<h3><a name="smartphone">Setting up a Smartphone</a></h3>
+<p>Although the screenshots and instructions that follow are for an iPhone, the steps are the same for iPhones and Android phones, except for identifying the type of smartphone.</p>
+<p><a href="https://www.hawaii.edu/itunesu/v3/?&amp;f=/video-op/productions/mfa-smartphone"><b>Watch video</b></a></p>
+<ol>
+    <li>Login to the UH Login MFA Device Registration site at <a href="https://www.hawaii.edu/its/uhlogin/device-reg">www.hawaii.edu/its/uhlogin/device-reg</a>.</li>
+    <br />
+    <li>You will see the following screen. Click on the <em>Start setup</em> button.</li>
+    <br />
+    <img alt="Start Setup" src="/help/chasek/images/Image/start setup.jpg" width="500" height="267" /><br />
+    <br />
+    <li>Select <em>Mobile phone</em>, then click <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/add_new_first_time.jpg" alt="What device type are you adding?" width="500" height="268" /><br />
+    <br />
+    <li>If necessary, select the country of your phone.  Type your phone number, including area code (no parentheses or dashes are needed).  Double check that the correct phone number is shown immediately beneath the box.  If so, check the box next to the phone number.  Click on <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/enter_phone_number_mobile.jpg" alt="Enter your phone number" width="500" height="267" /><br />
+    <br />
+    <li>Select the type of smartphone (in this case iPhone), then click <em>Continue</em>.</li>
+    <br />
+    <img alt="What type of phone" src="/help/chasek/images/Image/type_of_device_mobile-nobb.jpg" width="500" height="267" /><br />
+    <br />
+    <li>If you have downloaded the Duo Mobile app to your phone, go to the next step.  If you have not yet downloaded the Duo Mobile app to your phone, follow the directions within the box to download.  You can also visit one of the following links from your smartphone (not your computer):<br />
+    iOS: <a href="https://itunes.apple.com/us/app/duo-mobile/id422663827?mt=8">Duo Mobile for iOS</a>     <br />
+    Android: <a href="https://play.google.com/store/apps/details?id=com.duosecurity.duomobile&amp;hl=en_US">Duo Mobile for Android</a><br />
+    [Note: to download from the Google Play Store, you need to be&nbsp;logged in with a gmail.com account or&nbsp;<a href="https://www.hawaii.edu/google/extra">enrolled in Consumer Apps</a>.]<br />
+    <br />
+    <img alt="Install Duo Mobile app" src="/help/chasek/images/Image/install_for_ios.jpg" width="500" height="268" /></li>
+    <br />
+    <li>Once you have downloaded the app to your phone, or if you already have the app downloaded to your phone, click on <em>I have Duo Mobile installed</em>.</li>
+    <li>
+    <p>You will see a barcode displayed.</p>
+    <p>Open the Duo Mobile app on your phone. If you are asked if you want to allow Duo Mobile to send Notifications, please allow notifications.</p>
+    <p>Press the <strong>+</strong> icon in the upper right corner, or press on the <em>Add Account</em> button. If you are asked if you want to allow Duo Mobile to access the Camera, please allow access.</p>
+    <p>Point your phone's camera (the camera's display should be shown on the phone's screen) at the barcode. Once the barcode is properly within the display, it will automatically be recognized.  You can tell it was successful if you see a green checkmark within the barcode.</p>
+    <p>Once you see the green checkmark, click on <em>Continue</em>.</p>
+    </li>
+    <img src="/help/chasek/images/Image/ios-activated.jpg" alt="Activate Duo Mobile app" width="500" height="268" /><br />
+    <br />
+    <li>At the next screen, you should see a green <em>Saved</em> button in the lower left.  The <em>When I log in</em> option should be set to <strong>Ask me to choose an authentication method</strong>.  Click on the <em>Continue to Login</em> button.<br />
+    <br />
+    <img alt="My Settings and Devices" src="/help/chasek/images/Image/continue_to_login-2.jpg" width="500" height="268" /></li>
+    <br />
+    <li>If you were registering your device through the UH Login MFA Device Registration site, at the bottom of the next screen, you should see the message <em>Enrollment successful!...&nbsp;</em>This means that you have successfully registered your smartphone.  You can now logout of the UH Login MFA Device Registration site.</li>
+</ol>
+<p>For further information on the Duo Mobile app, please refer to Duo's guides:<br />
+iPhone: <a href="https://guide.duo.com/iphone">https://guide.duo.com/iphone</a><br />
+Android: <a href="https://guide.duo.com/android">https://guide.duo.com/android</a></p>
+<h3><a name="landline">Setting up a Landline</a></h3>
+<p><a href="https://www.hawaii.edu/itunesu/v3/?&amp;f=/video-op/productions/mfa-landline"><b>Watch video</b></a></p>
+<ol>
+    <li>Login to the UH Login MFA Device Registration site at <a href="https://www.hawaii.edu/its/uhlogin/device-reg">www.hawaii.edu/its/uhlogin/device-reg</a>.</li>
+    <br />
+    <li>You will see the following screen. Click on the <em>Start setup</em> button.</li>
+    <br />
+    <img alt="Start setup" src="/help/chasek/images/Image/start setup.jpg" width="500" height="267" /><br />
+    <br />
+    <li>Select <em>Landline</em>, then click <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/add_landline.jpg" alt="What device type are you adding?" width="500" height="266" /><br />
+    <br />
+    <li>If necessary, select the country of your phone.  Type your phone number, including area code (no parentheses or dashes are needed). If you have an extension, type it in the <em>Extension:</em> box.  Double check that the correct phone number is shown immediately beneath the box.  If so, check the box next to the phone number.  Scroll down, and click on <em>Continue</em>.</li>
+    <br />
+    <img alt="Enter your phone number" src="/help/chasek/images/Image/landline enter phone number.jpg" width="500" height="268" /><br />
+    <br />
+    <li>At the next screen, you should see a green <em>Saved</em> button in the lower left. The <em>When I log in</em> option should be set to <strong>Ask me to choose an authentication method</strong>. Click on the <em>Continue to Login</em> button.<br />
+    <br />
+    <img src="/help/chasek/images/Image/landline_continue_to_login-2.jpg" alt="My Settings and Devices" width="500" height="266" /></li>
+    <br />
+    <li>If you were registering your device through the UH Login MFA Device Registration site, you should see the message <em>Enrollment successful!...</em>&nbsp; This means that you have successfully registered your landline.  You can now logout of the UH Login MFA Device Registration site.</li>
+</ol>
+<h3><a name="cellular">Setting up a non-Smartphone Cellular Phone</a></h3>
+<p><a href="https://www.hawaii.edu/itunesu/v3/?&amp;f=/video-op/productions/mfa-nonsmartphone"><b>Watch video</b></a></p>
+<ol>
+    <li>Login to the UH Login MFA Device Registration site at <a href="https://www.hawaii.edu/its/uhlogin/device-reg">www.hawaii.edu/its/uhlogin/device-reg</a>.</li>
+    <br />
+    <li>You will see the following screen. Click on the <em>Start setup</em> button.</li>
+    <br />
+    <img alt="Start setup" src="/help/chasek/images/Image/start setup.jpg" width="500" height="267" /><br />
+    <br />
+    <li>Select <em>Mobile phone</em>, then click <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/add_new_first_time.jpg" alt="What device type are you adding?" width="500" height="268" /><br />
+    <br />
+    <li>If necessary, select the country of your phone.  Type your phone number, including area code (no parentheses or dashes are needed).  Double check that the correct phone number is shown immediately beneath the box.  If so, check the box next to the phone number.  Scroll down, and click on <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/enter_phone_number_mobile.jpg" alt="Enter your phone number" width="500" height="267" /><br />
+    <br />
+    <li>Select <em>Other</em> as the type of phone, then click <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/type of phone nonsmart-nobb.jpg" width="500" height="267" alt="What type of phone" /><br />
+    <br />
+    <li>At the next screen, you should see a green <em>Saved</em> button in the lower left. The <em>When I log in</em> option should be set to <strong>Ask me to choose an authentication method</strong>. Click on the <em>Continue to Login</em> button.<br />
+    <br />
+    <img src="/help/chasek/images/Image/my settings nonsmart.jpg" width="500" height="266" alt="My Settings and Devices" /></li>
+    <br />
+    <li>If you were registering your device through the UH Login MFA Device Registration site, you should see the message <em>Enrollment successful!... </em>This means that you have successfully registered your non-smartphone cellular phone.  You can now logout of the UH Login MFA Device Registration site.</li>
+</ol>
+<h3><a name="tablet">Setting up a Tablet</a></h3>
+<p>Although the screenshots and instructions that follow are for an iPad, the steps are the same for Android tablets.</p>
+<ol>
+    <li>Login to the UH Login MFA Device Registration site at <a href="https://www.hawaii.edu/its/uhlogin/device-reg">www.hawaii.edu/its/uhlogin/device-reg</a>.</li>
+    <br />
+    <li>You will see the following screen. Click on the <em>Start setup</em> button.</li>
+    <br />
+    <img alt="Start setup" src="/help/chasek/images/Image/start setup.jpg" width="500" height="267" /><br />
+    <br />
+    <li>Select <em>Tablet</em>, then click <em>Continue</em>.<br />
+    <br />
+    <img src="/help/chasek/images/Image/type of device tablet.jpg" alt="What type of device are you adding?" width="500" height="263" /></li>
+    <br />
+    <li>Select the type of tablet. &nbsp;In this example, we will select&nbsp;<em>iOS</em>. Click <em>Continue</em>.</li>
+    <br />
+    <img src="/help/chasek/images/Image/type of tablet.jpg" alt="What type of tablet?" width="500" height="262" /><br />
+    <br />
+    <li>If you have downloaded the Duo Mobile app to your tablet, go to the next step.  If you have not yet downloaded the Duo Mobile app to your tablet, follow the directions within the box to download.  You can also visit one of the following links from your tablet (not your computer):<br />
+    iOS: <a href="https://itunes.apple.com/us/app/duo-mobile/id422663827?mt=8">Duo Mobile for iOS</a>     <br />
+    Android: <a href="https://play.google.com/store/apps/details?id=com.duosecurity.duomobile&amp;hl=en_US">Duo Mobile for Android</a><br />
+    [Note: to download from the Android Play Store, you need to be <a href="https://www.hawaii.edu/google/extra">enrolled in Consumer Apps</a> or logged in with a gmail.com account.]<br />
+    <br />
+    <img alt="Install Duo Mobile app" src="/help/chasek/images/Image/install_for_ios.jpg" width="500" height="268" /></li>
+    <br />
+    <li>
+    <p>You will see a barcode displayed.</p>
+    <p>Open the Duo Mobile app on your tablet. If you are asked if you want to allow Duo Mobile to send Notifications, please allow notifications.</p>
+    <p>Press the <strong>+</strong> icon in the upper right corner, or press on the <em>Add Account</em> button. If you are asked if you want to allow Duo Mobile to access the Camera, please allow access.</p>
+    <p>Point your tablet's camera (the camera's display should be shown on the phone's screen) at the barcode. Once the barcode is properly within the display, it will automatically be recognized.  You can tell it was successful if you see a green checkmark within the barcode.</p>
+    <p>Once you see the green checkmark, click on <em>Continue</em>.</p>
+    </li>
+    <img src="/help/chasek/images/Image/ios-activated.jpg" alt="Activate Duo Mobile app" width="500" height="268" /><br />
+    <br />
+    <li>At the next screen, you should see a green <em>Saved</em> button in the lower left.  The <em>When I log in</em> option should be set to <strong>Ask me to choose an authentication method</strong>.  Click on the <em>Continue to Login</em> button.<br />
+    <br />
+    <img src="/help/chasek/images/Image/my settings tablet.jpg" alt="My Settings and Devices" width="500" height="265" /></li>
+    <br />
+    <li>If you were registering your device through the UH Login MFA Device Registration site, at the bottom of the next screen, you should see the message <em>Enrollment successful!...&nbsp;</em>This means that you have successfully registered your tablet.  You can now logout of the UH Login MFA Device Registration site.</li>
+</ol>
+</div>
+<div class="kb_article_parentslink">
+	This article is part of the 
+<a href="/askus/1758">
+    Getting setup for Multi-Factor Authentication (MFA)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a>
+ article.
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1680" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1680" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1680">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1680">
+		1680</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Thu, 14 Jan 2016 2:21pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Tue, 15 Aug 2023 3:18pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

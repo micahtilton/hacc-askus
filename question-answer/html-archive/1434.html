@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1434">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Drupal 7: Using Panels
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Drupal 7: Using Panels
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<ol>
+    <li><a href="#add">How to add a page</a></li>
+    <li><a href="#epage">How to edit a page</a></li>
+    <li><a href="#addlink">How to add a link</a></li>
+    <li><a href="#upload">How to upload a file and link to text</a></li>
+    <li><a href="#image">How to upload and display an image</a></li>
+    <!--    <li><a href="addpage">How to add a new panel (to create a new page)</a></li>--> </ol>
+    <p><a name="add"></a><strong>How to add a page</strong></p>
+    <!--
+<p><img src="/help/chasek/images/Image/drupal/createpanel.jpg" width="750" height="426" alt="" /></p>
+-->
+    <ol>
+        <li>Login as admin.</li>
+        <li>Click on &quot;Add Content.&quot;</li>
+        <li>Click on &quot;Panel.&quot;</li>
+        <li>Choose your layout using the pull down menu under &quot;Category.&quot;</li>
+        <li>&nbsp;Then click on the layout you wish to use.</li>
+        <li>Enter Title.</li>
+        <li>Enable &quot;In-Place editor.&quot;</li>
+        <li>If a url path is needed, add it in the URL path settings section.</li>
+        <li>Then click on &quot;Save.&quot;</li>
+        <li>Click on &quot;Customize this Page&quot;</li>
+    </ol>
+    <p><a name="epage"></a><strong>How to edit a page</strong></p>
+    <ol>
+        <li>Login as admin.</li>
+        <li>Go to page you want to edit.</li>
+        <li>Click on &quot;Customize this page.&quot;</li>
+        <li>Click this icon to edit.</li>
+        <li>Make your edits.</li>
+        <li>Click on &ldquo;Finish&rdquo;</li>
+        <li>Click on &ldquo;Save&rdquo;&nbsp;</li>
+    </ol>
+    <p><a name="addlink"></a><strong>How to add a link</strong></p>
+    <ol>
+        <li>Login as admin.</li>
+        <li>Go to page you want to add a link to.</li>
+        <li>Click on &ldquo;Customize this page.&rdquo;</li>
+        <li>Click this icon to edit.</li>
+        <li>Enter the words you want to link to, then highlight them.</li>
+        <li>Click this icon to add a link.</li>
+        <li>The following window will open.    <!-- <img src="/help/chasek/images/Image/drupal/link.jpg" width="512" height="463" alt="" /></li> --></li>
+        <li>In &ldquo;URL&rdquo; enter the url.</li>
+        <li>Then click on &ldquo;OK.&rdquo;</li>
+        <li>Then click on &ldquo;Finish.&rdquo;</li>
+        <li>Then click on &ldquo;Save.&rdquo;</li>
+    </ol>
+    <p><a name="#upload"></a><strong>How to upload a file and link to text</strong></p>
+    <ol>
+        <li>Login as admin.</li>
+        <li>Go to page you want to upload a file to.</li>
+        <li>Click on &ldquo;Customize this page.&rdquo;</li>
+        <li>Click this icon to edit.</li>
+        <li>Highlight the words you want to link to.</li>
+        <li>Click this icon to add a link.</li>
+        <li>The following window will open.</li>
+        <li>Click on &ldquo;Browse Server.&rdquo;</li>
+        <li>The following window will open.</li>
+        <li>Click on the &ldquo;upload&rdquo; link and the following window will open.</li>
+        <li>Click on the &ldquo;Browse&rdquo; button.</li>
+        <li>A window will open depicting contents of your computer.</li>
+        <li>Find the file you would like to upload and double-click on it.</li>
+        <li>Then click on the &ldquo;Upload&rdquo; button.</li>
+        <li>Once the file is uploaded, click on the &ldquo;x&rdquo; to close the upload window.</li>
+        <li>Verify the title name is in the URL box, if not, click on &ldquo;Browse Server&rdquo; and double-click on the file you&rsquo;ve just uploaded.</li>
+        <li>Click on &ldquo;OK.&rdquo;</li>
+        <li>Click on &ldquo;Finish.&rdquo;</li>
+    </ol>
+    <p><a name="#image"></a><strong>How to upload and display an image</strong></p>
+    <ol>
+        <li>Login is admin</li>
+        <li>Go to page you want to upload a file to.</li>
+        <li>Click on &ldquo;Customize this page.&rdquo;</li>
+        <li>Click this icon to edit.</li>
+        <li>Click this icon to upload an image and the following will appear.</li>
+        <li>Click on the &ldquo;Browse Server&rdquo; link to upload a file and the following window will open.</li>
+        <li>Click on the &ldquo;Browse&rdquo;</li>
+        <li>A window will open depicting contents of your computer.</li>
+        <li>Find the file you would like to upload and double-click on it.</li>
+        <li>Then click on the &ldquo;Upload&rdquo; button.</li>
+        <li>Once the file is uploaded, click on the &ldquo;x&rdquo; to close the upload window.</li>
+        <li>Verify the title name is in the URL box, if not, click on &ldquo;Browse Server&rdquo; and double-click on the file you&rsquo;ve just uploaded.</li>
+        <li>Click on &ldquo;OK.&rdquo;</li>
+        <li>Click on &ldquo;Finish.&rdquo;</li>
+    </ol>
+    <!--<p><a name="#addpage"></a><strong>How to add a new panel (to create a new page)</strong></p>
+<ol>
+    <li>Click on &ldquo;Structures&rdquo; link.</li>
+    <li>Then, click on &ldquo;Panels&rdquo; link.</li>
+    <li>Within the Create New section, click on &ldquo;Panel Page.&rdquo;</li>
+    <li>Enter the information in the fields (title, path, etc)</li>
+    <li>Click on &ldquo;Continue.&rdquo;</li>
+    <li>On the next page, choose the layout and click on &ldquo;Continue.&rdquo;</li>
+    <li>On the next page, make sure under &ldquo;Render,&rdquo; &ldquo;In-Place Editor&rdquo; is chosen, then press &ldquo;Continue.&rdquo;</li>
+    <li>On the next page, click on &ldquo;Finish.&rdquo;</li>
+    <li>Then, click on &ldquo;Update.&rdquo;</li>
+    <li>Finally, click on &ldquo;Save.&rdquo;</li>
+</ol>
+-->
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1434" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1434" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1434">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1434">
+		1434</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Wed, 17 Oct 2012 4:52pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Mon, 06 May 2013 12:41pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>
