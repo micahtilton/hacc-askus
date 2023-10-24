@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1796">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Virtual Server: How to Protect Your Server with Duo MFA on SSH (Linux) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Virtual Server: How to Protect Your Server with Duo MFA on SSH (Linux) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<ol>
+    <h3>Before installing and configuring Duo MFA, please ensure you have accounts created on your server matching UH username accounts. Duo MFA will be configured to push on UH usernames, so any username that does not match an existing UH username (i.e., &quot;admin&quot; or &quot;user&quot;) could fail, thus locking you out of your server.&nbsp;</h3>
+    <h3>Please also note that using variations of your username (i.e. &quot;jdoe&quot; vs &quot;johndoe&quot;) for the server account that does not match your own username could potentially lock another person out of using Duo MFA, if they have that as an existing UH username.</h3>
+    <h3>See <a href="#optional">Optional </a>on bypassing accounts in Duo MFA.</h3>
+    <p>&nbsp;</p>
+    <li>Email <a href="mailto:itscs@hawaii.edu">itscs@hawaii.edu</a> to inform us that you'd like to setup Duo MFA on your Linux/Red Hat virtual server, and we will add your server to our Duo environment. Please verify that you are enrolled in Duo MFA. See&nbsp;<a href="http://hawaii.edu/askus/1758">Getting setup for Multi-Factor Authentication (MFA)</a>&nbsp;for more information.<br />
+    <br />
+    Please include the following information in your request:<br />
+    <br />
+    Hostname or VM name<br />
+    IP address<br />
+    <br />
+    <strong>NOTE: This is only provided to virtual server customers hosted under ITS Managed Services.</strong><br />
+    &nbsp;</li>
+    <li>We will filedrop you three keys, which are required in the Duo configuration on the server.<br />
+    <br />
+    <strong>Integration key<br />
+    Secret key<br />
+    API hostname</strong><br />
+    &nbsp;</li>
+    <li>
+    <div>Before you begin with the installation, <strong>please ensure that a local account matching your exact UH username</strong><strong> has been created on the server</strong>. Duo MFA will be configured to push on UH usernames, so any username that does not match an existing UH username (i.e., &quot;admin&quot; or &quot;user&quot;) could fail, thus locking you out of the server. <br />
+    <br />
+    Please also note that using variations of your username (i.e. &quot;jdoe&quot; vs &quot;johndoe&quot;) for the server account that does not match your own username could potentially lock another person out of using Duo MFA, if they have that as an existing UH username.<br />
+    &nbsp;</div>
+    </li>
+    <li>
+    <div>On your server, first install the OpenSSL development headers and libraries by running<br />
+    &nbsp;</div>
+    <div><code>yum install openssl-devel<br />
+    <br />
+    </code></div>
+    </li>
+    <li>Create <strong>/etc/yum.repos.d/duosecurity.repo</strong> with the following contents:<br />
+    <br />
+    <code>[duosecurity]<br />
+    name=Duo Security Repository<br />
+    baseurl=http://pkg.duosecurity.com/RedHat/$releasever/$basearch<br />
+    enabled=1<br />
+    gpgcheck=1<br />
+    <br />
+    </code></li>
+    <li><code> </code>
+    <div>Execute the following shell commands:<br />
+    <pre><code># rpm --import https://duo.com/DUO-GPG-PUBLIC-KEY.asc<br /># yum install duo_unix</code></pre>
+    </div>
+    </li>
+    <li>Once <strong>duo_unix</strong> is installed, edit <strong>login_duo.conf</strong> (in <strong>/etc/duo</strong> or <strong>/etc/security</strong>) to add the integration key, secret key, and API hostname from your Duo Unix application (replace the highlighted text with the keys that were sent to you).<br />
+    <p><code>[duo]<br />
+    ; Duo integration key<br />
+    ikey = <span style="background-color: rgb(255, 255, 0);">INTEGRATION_KEY</span><br />
+    ; Duo secret key<br />
+    skey = <span style="background-color: rgb(255, 255, 0);">SECRET_KEY</span><br />
+    ; Duo API hostname<br />
+    host = </code><span style="background-color: rgb(255, 255, 0);"><code>API_HOSTNAME</code></span></p>
+    <p><br />
+    Additional options in the <strong>login_duo.conf</strong> file can be edited by referencing this page: <a href="https://duo.com/docs/loginduo#duo-configuration-options">https://duo.com/docs/loginduo#duo-configuration-options</a></p>
+    </li>
+    <li>
+    <div>As a regular user, test <strong>login_duo</strong> manually by running<br />
+    <div><br />
+    <code>$ /usr/sbin/login_duo</code></div>
+    <div><br />
+    Note: On some systems, you may need to run <code>/usr/local/sbin/login_duo<br />
+    <br />
+    </code></div>
+    </div>
+    If everything is set up correctly, you should see a Duo prompt:<br />
+    <img src="https://duo.com/assets/img/documentation/duounix/login.png" class="figure" alt="" /><br />
+    &nbsp;</li>
+    <li>
+    <div>To protect remote access via SSH, you will need to edit your <strong>sshd_config</strong> (usually in<strong> /etc</strong> or <strong>/etc/ssh</strong>) to add the following line (NOTE: This is only available with OpenSSH 4.4+):
+    <pre><code>ForceCommand /usr/sbin/login_duo</code></pre>
+    </div>
+    </li>
+    <li>
+    <div>Restart SSH by running &quot;systemctl restart sshd&quot;<code><br />
+    </code></div>
+    </li>
+    <li>
+    <div>Make a test SSH connection to your server to ensure that the Duo push prompt comes up.</div>
+    </li>
+</ol>
+<p>&nbsp;</p>
+<p><a name="optional"></a></p>
+<p><strong>Optional</strong>:</p>
+<p>If you want to exclude usernames from being prompted for DUO MFA:</p>
+<ol>
+    <li>Create a group (ie. duoexclude) in /etc/group and add those usernames to this group.&nbsp;</li>
+    <li>Add the following to the bottom of the /etc/ssh/sshd_config file<br />
+    <code>Match Group *,!duoexclude </code>
+    <div><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ForceCommand /usr/sbin/login_duo</code><code><br />
+    </code></div>
+    </li>
+    <li>Add &quot;groups = *,!duoexclude&quot; to /etc/duo/login_duo.conf</li>
+    <li>Restart SSH.</li>
+</ol>
+<p>&nbsp;</p>
+<p><code> </code>For more references and information, please see this link: <a href="https://duo.com/docs/loginduo">https://duo.com/docs/loginduo</a><br />
+&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1796" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1796" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1796">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1796">
+		1796</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Tue, 03 Sep 2019 11:42am
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Thu, 15 Jun 2023 8:57am</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

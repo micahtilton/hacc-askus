@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1894">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Traveling with Duo Multi-Factor Authentication (MFA)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Traveling with Duo Multi-Factor Authentication (MFA)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<h3>Plan Ahead</h3>
+<p>There are&nbsp;<a href="https://www.hawaii.edu/askus/1679">many options</a>&nbsp;to authenticate with Duo MFA and several of them will still function even if you find yourself without cell service or a stable network connection on your travels. However, it's important to consider the conditions you might encounter on your travels that may impact how you authenticate. Planning ahead and understanding whether or not you may need to add devices or change how you authenticate <em>before</em>&nbsp;you board your flight will help ensure you're prepared and able to log in, no matter what.</p>
+<p><strong>Try to answer these key questions before traveling and as you continue to read below:</strong></p>
+<ul>
+    <li>Which second factor devices will you have access to during your travels?
+    <ul>
+        <li>Will you have access to a smartphone or tablet?</li>
+        <li>Will you have access to a (non-smart) cellphone?</li>
+        <li>Will you have access to a landline?</li>
+        <li>Do you have a hard token?</li>
+    </ul>
+    </li>
+    <li>Will you have access to cellular service, mobile data, or WiFi?</li>
+    <li>Are you traveling to a country subject to <a href="#exportControlledCountries">export controls</a>?</li>
+</ul>
+<p><strong>Short on time? Check out our quick reference guide:&nbsp;</strong><a href="https://docs.google.com/document/d/1K5cytqd4EmDh8nNxP6SA_Eo7cLzE6xyEJbNhzmpP4H0/edit?usp=sharing"><strong>The ABCs of Traveling with Duo MFA</strong></a><strong>.</strong></p>
+<h3>Select Appropriate MFA Method(s)&nbsp;</h3>
+<p>It is important to understand which authentication methods will work for you and under what circumstances before you travel. If the device or authentication method that you normally use will not work during your travels, you will need to add a different authentication method ahead of time.</p>
+<p>For instructions on adding any of the authentication methods below for use with your Duo MFA, please see our&nbsp;<a href="https://www.hawaii.edu/askus/1681">Adding Devices</a>&nbsp;article.</p>
+<p>For instructions on how to use any of the below methods to authenticate when logging in, please see our&nbsp;<a href="https://www.hawaii.edu/askus/1765">Logging in with MFA</a>&nbsp;article.</p>
+<h4>&nbsp;If&nbsp;you will have access to a smartphone or tablet:</h4>
+<ul>
+    <li>OPTION 1: Use the Duo Mobile app to send a push to your smartphone or tablet. <strong>Requires mobile data or WiFi.</strong></li>
+    <li>OPTION 2: Use the Duo Mobile app to generate a passcode. <strong>Does not require mobile data or WiFi</strong>, will work even when completely offline.</li>
+    <li>OPTION 3: Send yourself passcodes via SMS. Passcodes are sent in batches of ten (10) and you can use the passcodes in sequence to authenticate (once per passcode).&nbsp;<strong>Cell service is required</strong>&nbsp;to receive the SMS with the passcodes, but the ten (10) passcodes can be referenced and used even if you subsequently lose reception or service.</li>
+    <li>OPTION 4: Receive a phone call to your cellphone. Press '1' when prompted to approve your authentication.&nbsp;<strong>Cell service or WiFi calling is required</strong>&nbsp;to receive phone calls.</li>
+</ul>
+<h4>If you will have access to a (non-smart) cellphone:</h4>
+<ul>
+    <li>OPTION 1: Send yourself passcodes via SMS. Passcodes are sent in batches of ten (10) and you can use the passcodes in sequence to authenticate (once per passcode). <strong>Cell service is required</strong>&nbsp;to receive the SMS with the passcodes, but the ten (10) passcodes can be referenced and used even if you subsequently lose reception or service.</li>
+    <li>OPTION 2: Receive a phone call to your cellphone. Press '1' when prompted to approve your authentication. <strong>Cell service is required</strong> to receive phone calls.</li>
+</ul>
+<h4>If you will have access to a landline:</h4>
+<ul>
+    <li>OPTION 1: Receive a phone call to your landline. Press '1' when prompted to approve your authentication. <strong>Requires telephone service</strong>.</li>
+</ul>
+<h4>If you will have access to a hard token:</h4>
+<ul>
+    <li>OPTION 1: Plug your hard token into a USB port on your laptop/computer, and press the button on the hard token when prompted to authenticate.</li>
+</ul>
+<h3>General Recommendations</h3>
+<h4>Use the Duo Mobile app<strong><br type="_moz" />
+</strong></h4>
+<p>It is highly recommended to setup and use the Duo Mobile app if you will have access to a smartphone or tablet during your travels. The Duo Mobile app allows you to authenticate via push notifications if you have access to mobile data or WiFi. The Duo Mobile app also allows you to generate and use passcodes even if you find yourself completely offline!</p>
+<h4>Add multiple devices</h4>
+<p>It is recommended to add an additional device. Should your primary authentication device be lost or stolen, you may find yourself unable to login.</p>
+<h4>Send yourself a batch of SMS passcodes before you leave</h4>
+<p>Regardless of what method you ultimately choose for your travels, it is recommended to send yourself a batch of SMS passcodes before you leave. These passcodes can be accessed and used in sequence even if you do not have mobile data, WiFi, or reception. They can also be written or copied to another medium for use if you don't have access to your phone. Please remember to keep your passcodes secure! See our <a href="https://www.hawaii.edu/askus/1765#smstext">Logging in with MFA</a> article for instruction on how to send yourself a batch of SMS passcodes.</p>
+<h3><a name="exportControlledCountries">Traveling to Export Controlled Countries?</a></h3>
+<p>The following countries and regions are under sanctions by the <a href="https://ofac.treasury.gov/">U.S. Office of Foreign Assets Control (OFAC)</a>&nbsp;and all Duo authentication methods (Duo Mobile, Duo passcodes and SMS passciodes, phone calls, and hard tokens) will not function as they are <a href="https://help.duo.com/s/article/7544?language=en_US">blocked</a> within their borders.</p>
+<ul>
+    <li>Cuba (CU)</li>
+    <li>North Korea - Democratic People's Republic of Korea (KP)</li>
+    <li>Iran (IR)</li>
+    <li>Sudan (SD)</li>
+    <li>Syria (SY)</li>
+    <li>Crimea region (43)</li>
+    <li>Donetsk region (14)</li>
+    <li>Luhansk region (09)</li>
+    <li>Sevastopol region (40)</li>
+</ul>
+<p>Please contact the <a href="https://www.hawaii.edu/its/help-desk/">ITS Help Desk</a> if you are planning to travel to any these countries or regions. If you are traveling to these countries or regions, you are required to uninstall the Duo Mobile app from any devices you will be taking with you and are prohibited from traveling with hard tokens.&nbsp;All authentications from these embargoed destinations will result in an &quot;Access denied. Duo Security does not provide services in your current location.&quot; message.</p>
+<h3>Trouble Logging in When Traveling?</h3>
+<p>If you're having any difficulty logging in when traveling, please contact the&nbsp;<a href="https://www.hawaii.edu/its/help-desk/">ITS Help Desk</a>. Support available 24x7.</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1894" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1894" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1894">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1894">
+		1894</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Thu, 24 Aug 2023 10:16am
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Tue, 05 Sep 2023 9:38am</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

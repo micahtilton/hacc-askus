@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1800">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>McAfee compatibility on macOS Mojave 10.14 and later
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+McAfee compatibility on macOS Mojave 10.14 and later
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<h3>How has the installation procedure for new installs changed with newer versions of macOS?</h3>
+<ul>
+    <li>Starting with macOS 10.13 (High Sierra) and extending to macOS 10.15 (Catalina), when an application tries to enable a system extension during installation, you are prompted to allow the system extension to be enabled. (A system extension is also known as a kernel extension or kext.) Until the system extension is authorized, some McAfee products for macOS will not provide you with complete protection.</li>
+    <li>Starting with macOS Catalina, you must grant our security products Full Disk Access for them to provide complete protection. Full Disk Access is a security feature in macOS Catalina that requires apps to be given permission before they can access all files on your Mac.</li>
+</ul>
+<p>Until you enable kernels extensions and full disk access, you may receive the following errors:</p>
+<p><img src="https://www.hawaii.edu/itsdocs/1800/alert1.png" alt="First McAfee Alert error pop-up due to macOS permissions" width="600" height="296" /></p>
+<p><img src="https://www.hawaii.edu/itsdocs/1800/alert2.png" alt="Second McAfee Alert error pop-up due to macOS permissions" width="600" height="241" /></p>
+<p><img src="http://www.hawaii.edu/itsdocs/1800/mcafeeextension.png" alt="McAfee Alert error pop-up in McAfee general preferences due to macOS permissions" width="600" height="529" /></p>
+<p>McAfee products compatibility with Privacy Policy Preference Control(PPPC) on macOS 10.14 (Mojave) and later:</p>
+<p><a href="https://kc.mcafee.com/corporate/index?page=content&amp;id=KB91109">https://kc.mcafee.com/corporate/index?page=content&amp;id=KB91109</a></p>
+<h3>In order for McAfee to run properly:</h3>
+<ul>
+    <li>Kernel Extensions need to be enabled</li>
+    <li>Full Disk access must be granted</li>
+</ul>
+<h3>KEXT(Kernel Extensions) need to be enabled.&nbsp;</h3>
+<ol>
+    <li>Click the Apple menu at the top left of your desktop</li>
+    <li>Click <strong>System Preferences</strong></li>
+    <li>Click <strong>Security &amp; Privacy</strong></li>
+    <li>Click the lock to make changes</li>
+    <li>Click the <strong>General</strong> tab</li>
+    <li>Click on the lock to make changes.</li>
+    <img src="https://www.hawaii.edu/itsdocs/1800/lock.png" alt="" width="550" height="264" />
+    <li>Under <strong>Allow apps downloaded from</strong>, select: <strong>App Store and identified developers</strong></li>
+    <li>Click <strong>Allow</strong> to enable the extension from developer &quot;<strong>McAfee, Inc.</strong>&quot;</li>
+    <img src="https://www.hawaii.edu/itsdocs/1800/allow.png" alt="macOS login pop-up window to allow the extension permission" width="600" height="175" />
+    <li>Close the Security &amp; Privacy window</li>
+    <li>The kernel extension has been authorized.</li>
+</ol>
+<h3>Enable Full Disk Access</h3>
+<ol>
+    <li>Click the Apple menu</li>
+    <li>Click <strong>System Preferences</strong></li>
+    <li>Click <strong>Security &amp; Privacy</strong></li>
+    <li>Click <strong>Full Disk Access</strong> in the sidebar</li>
+    <li>Click on the lock icon and enter the Administrator password</li>
+    <li>Allow the apps below (check their boxes) to Full Disk Access:
+    <ul>
+        <li>(10.7.1 and earlier)</li>
+        <li>fmpd</li>
+        <li>VshieldScanner</li>
+        <li>VShieldService</li>
+        <li>VShieldTaskManager</li>
+        <li>&nbsp;</li>
+        <li>(10.7.5+)</li>
+        <li>fmpd</li>
+        <li>VShieldScanner</li>
+        <li>VShieldScanManager</li>
+    </ul>
+    </li>
+    <li>If you don't see &quot;VShieldService&quot;, &quot;VShieldScanManager&quot;, or &quot;VShieldTaskManager&quot;, under &quot;Full Disk Access&quot;, click on the Finder (face) icon in the Dock.<br />
+    <img src="/help/chasek/images/Image/finder-icon.png" alt="" width="161" height="61" /></li>
+    <li>Go to the &quot;Go&quot; menu, and select <strong>Go to Folder</strong>.</li>
+    <li>In the &quot;Go to the Folder&quot; box, enter <strong>/usr/local/McAfee/AntiMalware</strong><br />
+    <img src="/help/chasek/images/Image/go-to-folder(1).png" alt="" width="374" height="108" /><br />
+    and click <strong>Go</strong>.</li>
+    <li>If needed, go to the &quot;View&quot; menu and select <strong>as List</strong></li>
+</ol>
+<p style="margin-left: 40px;">Drag and drop the following items from the &quot;AntiMalware&quot; window into the &quot;Full Disk Access&quot; window</p>
+<ul>
+    <li>VShieldService</li>
+    <li>VShieldTaskManager</li>
+    <li>VShieldScanManager (10.7.5)<br />
+    <br />
+    <img src="/help/chasek/images/Image/antimalware-to-privacy(1).jpg" alt="" width="805" height="367" /></li>
+</ul>
+<p style="margin-left: 40px;">11. The&nbsp; Security &amp; Privacy window should now look like this:</p>
+<p style="margin-left: 40px;"><img src="/help/chasek/images/Image/full-disk-access(1).png" alt="" width="445" height="378" /></p>
+<p style="margin-left: 40px;">12. When you're done, click the lock to save your changes, then close System Preferences.</p>
+<p>&nbsp;</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1800" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1800" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1800">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1800">
+		1800</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Wed, 13 Nov 2019 1:48pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Wed, 13 Oct 2021 11:55am</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

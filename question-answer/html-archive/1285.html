@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1285">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Setting up Encryption in Windows
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Setting up Encryption in Windows
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p>Encryption is used to secure data that others shouldn't be able to read; for example, social security numbers (SSN) or financial data. These are suggested methods for using encryption in Windows, but they should always be used with discretion and caution. (You don't want to lock yourself out from the information either.) It is also highly advisable to make a backup of your information before implementing.</p>
+
+<p>As a best practice, whenever using encryption, create the necessary backups, recovery keys, certificate exports, etc. necessary to ensure you have a way to restore or recover your data.</p>
+
+<h2>BitLocker - Full Disk Encryption</h2>
+<p>
+    Windows 10 Professional provides disk encryption through BitLocker Drive Encryption. Microsoft describes BitLocker as, "A data protection feature that integrates with the operating system and addresses the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned computers. BitLocker provides the most protection when used with a Trusted Platform Module (TPM) version 1.2 or later. The TPM is a hardware component installed in many newer computers by the computer manufacturers. It works with BitLocker to help protect user data and to ensure that a computer has not been tampered with while the system was offline."</p>
+
+<p>
+Contact site licensing at <a href="https://www.hawaii.edu/sitelic/">https://www.hawaii.edu/sitelic/</a> to ensure you purchase the correct version of Windows 10 to use BitLocker Drive Encryption.</p>
+<p>
+If you enable BitLocker Drive Encryption, it is imperative you backup the recovery key during setup. If you do not backup your recovery key, your data will not be recoverable.
+</p>
+
+<h3>Internal Drive - Full Disk Encryption</h3>
+<ol>
+    <li>Turn on BitLocker
+        <ol type="a">
+            <li>Type BitLocker in the Windows search box, then press Enter.</li>
+            <li>Select Turn on BitLocker</li>
+        </ol>
+    </li>
+    <li>BitLocker Recovery Key Backup Options
+        <ol type="a">
+            <li><strong>IMPORTANT: Be sure to record and keep this BitLocker recovery key in a safe place. You cannot access the data without this recovery key.</strong></li>
+            <li>BitLocker gives you three options: Save to your Microsoft Account, Save to a file, or Print the recovery key. Choose the option that works best for you.</li>
+        </ol>
+    </li>
+    <li>Select how much of the disk to encrypt
+        <ol type="a">
+            <li>Encrypt entire drive (slower but better for PCs and drives already in use)</li>
+        </ol>
+    </li>
+    <li>Select Encryption Mode
+        <ol type="a">
+            <li>The ability to choose your encryption mode is a new feature in Windows 10. Select the encryption option that matches your situation. We recommend <strong>New encryption mode</strong></li>
+        </ol>
+    </li>
+    <li>BitLocker System Check
+        <ol type="a">
+            <li>It is recommended to run a BitLocker system check first before encrypting your drive. This ensures BitLocker can read your recovery key before starting the drive encryption.</li>
+            <li>When ready, select "Start encrypting" to begin the BitLocker process of encrypting your hard drive.</li>
+        </ol>
+    </li>
+</ol>
+<h3>External Drive (Portable HardDrive, FlashDrive) - Full Disk Encryption</h3>
+<ol>
+    <li>Plug in your external drive to an avaialbe USB slot</li>
+    <li>Type BitLocker in the Windows search box, then press Enter.</li>
+    <li>Under the <strong>Removeable data drives - BitLocker To Go</strong> heading, Click <strong>Turn on BitLocker</strong></li>
+    <li>On the <strong>Choose how you want to unlock this drive</strong> window, Check <strong>Use a password to unlock the drive</strong></li>
+    <li>Create a strong password that will be used to unlock the drive</li>
+    <li>Backup your recovery key using one or more of the available options</li>
+    <li>Select <strong>Encrypt Entire Drive</strong></li>
+    <li>Select <strong>Compatible mode</strong> if you will be using the exteranl drive on older Windows versions, otherwise select <strong>New encryption mode</strong></li>
+    <li>Read the prompt, and then click <strong>Start encrypting</strong></li>
+    <li>Do not move or make changes to files or unplug it while it is being encrypted</li>
+</ol>
+
+
+<h3>BitLocker Resources</h3>
+<ul>
+    <li><a href="https://community.windows.com/en-us/stories/what-is-bitlocker-windows-10">BitLocker and Windows 10 Pro Protect your data</a></li>
+    <li><a href="https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview">Bitlocker Overview</a></li>
+</ul>
+
+<h2>File and Folder Encryption</h2>
+<p>Microsoft also offers the ability to encrypt files and folders in Windows 10. File and folder encryption can be done in addition with BitLocker Drive Encryption.</p>
+<p>
+    Below are steps on encrypting files and folders, backing up your personal certificate, and decrypting files and folders.</p>
+
+<h3>Encrypting Files and Folders</h3>
+<ol>
+    <li>Click Start, point to All Programs, point to Accessories, then click on Windows Explorer</li>
+    <li>Locate and right-click on the file or folder* that you want to encrypt and click Properties.</li>
+    <li>On the General tab, click Advanced.</li>
+    <li>Under Compress or Encrypt attributes, select the Encrypt contents to secure data check box, and then click OK.</li>
+    <li>Click on OK to close the folders Properties window.</li>
+    <li>In the Confirm Attribute Changes dialog box, choose one.
+        <ul>
+            <li>If you want to encrypt only the folder, click Apply changes to this folder only, and then click OK.</li>
+            <li>If you want to encrypt the contents in the folder along with the folder click Apply changes to this folder, subfolders and files, and then click OK.</li>
+            <li>If you want to encrypt only the file, click “Encrypt the file only” and click OK.</li>
+        </ul>
+    </li>
+    <li>Windows will now proceed to encrypt your data. How long it takes depends on the amount and size of the files you choose to encrypt. When it is complete the folder will be encrypted. However, this does not mean that others cannot view the contents of the folder. Encrypting the files prevents them from opening items in the encrypted folder.</li>
+</ol>
+
+<p>Note: While it is possible to encrypt both files and folders, Microsoft's Best Practices suggest encrypting folders not individual files. This prevents applications from unintentionally removing the encryption from a file.</p>
+
+<h3>Things to do after you encrypt your data</h3>
+<p>Once you have encrypted your files or folders, it is important to backup your certificate to not lose access should you forget your password. If you do not backup your certificate and subsequently forget your password, there will be no way to recover your data. Back up your certificate and store it in a secure location.</p>
+
+<h4>Backup your Certificate</h4>
+<ol>
+    <li>Start Microsoft Internet Explorer</li>
+    <li>On the Tools menu, click Internet Options</li>
+    <li>On the Content tab, in the Certificates section, click Certificates.</li>
+    <li>Click the Personal tab.
+        <ul>
+            <li>Note: You may have multiple certificates listed. Click on each one until you find the certificate with the intended purposes field showing "Encrypting File System"</li>
+        </ul>
+    </li>
+    <li>Click Export to start the Certificate Export Wizard, and then click Next.</li>
+    <li>Click "Yes, export the private key" to export the private key, and then click Next.</li>
+    <li>Ensure the checkboxes next to “Include all certificates in the certification path if possible” and "Enable certificate privacy" are checked and click Next.</li>
+    <li>Click the Password checkbox, set the Encryption to AES256-SHA256, enter and confirm a password, then click Next. This password is to protect the exported certificate.</li>
+    <li>Specify the location of where you want to save the certificate. You can back up to another location on your hard-drive or a USB drive. You can also back up the certificate to multiple locations.</li>
+    <li>Specify the destination, click Save, and then Next.</li>
+    <li>Click Finish. You should be told the export was successful. Click OK.</li>
+    <li>Click Close to close the certificates window, then click OK to close the Internet Options window.</li>
+</ol>
+
+<h2>Decrypting Files of Folders</h2>
+<p>Decrypting a folder uses basically the same process of encrypting the file, but in reverse order.</p>
+
+<ol>
+    <li>
+        Right-click on the folder or file you want to decrypt, then click Properties.
+    </li>
+    <li>Click Advanced</li>
+    <li>Click to clear the Encrypt contents to secure data check box to decrypt</li>
+    <li>Click OK to close the Advanced Attributes dialog box.</li>
+    <li>Click on ok to close the folders Properties window</li>
+    <li>If it is a folder, and it has files in it, the Confirm Attribute Changes dialog box appears. You can choose to decrypt only the folder, but this won&rsquo;t decrypt any of the files in the folder.</li>
+    <li>If you want to decrypt all the contents of the folder, click Apply changes to this folder, subfolders, and files, and then click OK.</li>
+</ol>
+
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1285" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1285" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1285">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1285">
+		1285</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Thu, 24 Feb 2011 12:38pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Thu, 18 Jun 2020 4:18pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

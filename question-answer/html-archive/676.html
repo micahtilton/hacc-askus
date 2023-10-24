@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/676">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Setting Up Encryption on macOS
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Setting Up Encryption on macOS
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p>If you have a need to store sensitive data such as social security numbers (SSNs) or student records on your Mac&rsquo;s hard drive, you should make sure this data is encrypted. The following are two suggested methods for encrypting data on a Mac. Please be aware that forgetting the password you use to encrypt the data means you will no longer be able to access the data. There is no way around this, so proceed with caution.</p>
+<h2 id="internal-fde">FileVault - Full Drive Encryption</h2>
+<p>FileVault is the built-in full disk encryption solution offered by Apple. In addition to the security benefits of encryption, FileVault also enables: Needing a password to log in when your Mac is in sleep and after the screen saver; Only users with FileVault enabled can log in. All other users will need an administrator to log in first.</p>
+<ol>
+    <li>On your Mac, choose Apple menu &gt; System Preferences</li>
+    <li>Click Security &amp; Privacy</li>
+    <li>Click FileVault</li>
+    <li>Click the lock icon to unlock it, then enter an administrator name and password.</li>
+    <li>Click Turn On FileVault</li>
+    <li>Choose how to unlock your disk and reset your login password if you forget it:
+    <ul>
+        <li>Use your iCloud account: Click Allow my iCloud account to unlock my disk.</li>
+        <li>Create a recovery key: Click &quot;Create a recovery key and do not use my iCloud account.&quot; Write down the recovery key and keep it in a safe place. If for some reason you forget your login password, the recovery key may allow you to recover your data.</li>
+    </ul>
+    </li>
+    <li>Click Continue.
+    <ul>
+        <li>If your Mac has additional users, their information is also encrypted. Users unlock the encrypted disk with their login password.</li>
+        <li>If there&rsquo;s an Enable Users button, you must enter a user&rsquo;s login password before they can unlock the encrypted disk. Click Enable Users, select a user, enter the login password, click OK, then click Continue.</li>
+    </ul>
+    </li>
+</ol>
+<h3 id="additional-fv-resources">Additional FileVault Resources</h3>
+<ul>
+    <li><a href="https://support.apple.com/en-us/HT204837">https://support.apple.com/en-us/HT204837</a></li>
+    <li><a href="https://support.apple.com/guide/mac-help/encrypt-mac-data-with-filevault-mh11785/mac">https://support.apple.com/guide/mac-help/encrypt-mac-data-with-filevault-mh11785/mac</a></li>
+    <li><a href="https://support.apple.com/guide/mac-help/how-does-filevault-encryption-work-on-a-mac-flvlt001/10.15/mac/10.15">https://support.apple.com/guide/mac-help/how-does-filevault-encryption-work-on-a-mac-flvlt001/10.15/mac/10.15</a></li>
+</ul>
+<h2 id="container-encryption">Secure Disk Image - Container Encryption</h2>
+<p>An encrypted container is a location where you can store individual files, which will be encrypted. Apple refers to encrypted containers as a secure disk image (.dmg file), which is a file that looks and acts like a mountable device or volume.</p>
+<ol>
+    <li>In the Disk Utility app on your Mac, choose File &gt; New Image &gt; Blank Image.</li>
+    Enter a filename for the disk image, add tags if necessary, then choose where to save it. This is the name that appears in the Finder, where you save the disk image file before opening it.
+    <li>In the Name field, enter the name for the disk image. This is the name that appears on your desktop and in the Finder sidebar, after you open the disk image.</li>
+    <li>In the Size field, enter a size for the disk image.</li>
+    <li>Click the Format pop-up menu, then choose a format:
+    <ul>
+        <li>If you're using the encrypted disk image with a Mac computer using macOS 10.13 or later, choose APFS or APFS (Case-sensitive).</li>
+        <li>If you're using the encrypted disk image with a Mac computer using macOS 10.12 or earlier, choose Mac OS Extended (Journaled) or Mac OS Extended (Case-sensitive, Journaled).</li>
+    </ul>
+    </li>
+    <li>Click the Encryption pop-up menu, then choose an encryption option.</li>
+    <li>Enter and re-enter a password to unlock the disk image, then click Choose.
+    <ul>
+        <li>WARNING: If you forget this password, you won&rsquo;t be able to open the disk image and view any of the files.</li>
+    </ul>
+    </li>
+    <li>Use the default settings for the rest of the options:
+    <ul>
+        <li>Click the Partitions pop-up menu, then choose Single partition - GUID Partition Map.</li>
+        <li>Click the Image Format pop-up menu, then choose &ldquo;read/write&rdquo; disk image.</li>
+    </ul>
+    </li>
+    <li>Click Save, then click Done. Disk Utility creates the disk image file where you saved it in the Finder and mounts its disk icon on your desktop and in the Finder sidebar.</li>
+    <li>In the Finder, copy the documents you want to protect to the disk image.</li>
+    <li>If you want to erase the original documents so they can&rsquo;t be recovered, drag them to the Trash, then choose Finder &gt; Empty Trash.</li>
+</ol>
+<p>When not using your secure disk image, be sure to eject the secure disk image. This way, others with access to your computer will not be able to access these files.</p>
+<p><strong>Important: Be sure to record and keep this password in a safe place. You cannot access the data without this password.</strong></p>
+<p>The following Apple support article was used to provide the setup steps: <a href="https://support.apple.com/guide/disk-utility/create-a-disk-image-dskutl11888/mac">https://support.apple.com/guide/disk-utility/create-a-disk-image-dskutl11888/mac</a></p>
+<h2 id="removeable-media-fde">Removable Media (e.g., CD/DVDs, USB Drives, and Memory Cards) - Full Drive Encryption</h2>
+<p><strong>WARNING:</strong> When you encrypt a disk or other media, the disk format is converted to the APFS format and then encrypted. Macs with older versions of macOS that don&rsquo;t support the APFS format will not be able to read the device&rsquo;s data.</p>
+<ol>
+    <li>In the Finder on your Mac, open a window, then Control-click the item you want to encrypt in the sidebar.</li>
+    <li>Choose Encrypt [item name] from the shortcut menu.</li>
+    <li>Create a password for the disk and click Encrypt Disk.</li>
+</ol>
+<p><strong>Important:</strong> Be sure to record and keep this password in a safe place. You cannot access the data without this password.</p>
+<p>To decrypt an encrypted disk, Control-click the disk you want to decrypt, then choose Decrypt [item name] from the shortcut menu.</p>
+<p>The following Apple support article was used to provide the setup steps: <a href="https://support.apple.com/guide/mac-help/encrypt-disks-memory-cards-protect-mac-mh40593/mac">https://support.apple.com/guide/mac-help/encrypt-disks-memory-cards-protect-mac-mh40593/mac</a>. <br />
+An alternate method can be found here: <a href="https://support.apple.com/guide/disk-utility/encrypt-protect-a-storage-device-password-dskutl35612/mac">https://support.apple.com/guide/disk-utility/encrypt-protect-a-storage-device-password-dskutl35612/mac</a></p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/676" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="676" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:676">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=676">
+		676</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Fri, 29 Dec 2006 11:15am
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Fri, 19 Jun 2020 4:58pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

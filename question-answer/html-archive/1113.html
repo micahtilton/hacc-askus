@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1113">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Laulima: Upload & Download Multiple Files via WebDAV
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Laulima: Upload & Download Multiple Files via WebDAV
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p><span style="color: rgb(0, 102, 0);"><strong><span style="font-size: x-large;">Laulima: Upload &amp; Download Multiple Files via WebDAV</span></strong></span></p>
+<p>WebDAV stands for &quot;Web-based Distributed Authoring and Versioning&rdquo;. WebDAV can be used to manage files (eg. upload/download) on remote web servers (eg. Laulima). The interface is similar to having an external hard drive/flash drive attached to your computer, allowing you to drag copies of multiple files to the server.</p>
+<p>For more information on WebDAV see: <a target="_blank" href="http://webdav.org">http://webdav.org</a></p>
+<p>You can use WebDAV to upload multiple files to the Resources Tool in Laulima. You can also access information on how to do this via the &ldquo;Transfer Files&rdquo; tab in the Resources Tool within Laulima or at the TALENT page (<a target="_blank" href="http://www.hawaii.edu/talent">http://www.hawaii.edu/talent</a>).</p>
+<p>WebDAV works differently depending on which computer operating system and version you use (eg. Windows 7, Windows 10, Mac OSX). Listed below is basic information on setting up some common operating systems to connect with Laulima via WebDAV.</p>
+<p><a href="https://www.hawaii.edu/askus/1113#windows10">Microsoft Windows 8/10</a><br />
+<a href="https://www.hawaii.edu/askus/1113#macosx">Mac OSX</a><br />
+<a href="https://www.hawaii.edu/askus/1113#linux">Linux</a><br />
+<a href="https://www.hawaii.edu/askus/1113#cyberduck">Other (Cyberduck)</a></p>
+<hr />
+<p><a name="windows10"><strong><span style="font-size: large;">Microsoft Windows 10</span></strong></a></p>
+<ol>
+    <li>From the Desktop, click File Explorer and make sure 'This PC' is selected in the left-hand pane.</li>
+    <li>At the top of the File Explorer window, click Computer &gt; Map Network Drive &gt; Map network drive.</li>
+    <li>Select a vacant drive letter (e.g., Z) from the Drive drop down menu.</li>
+    <li>In the Folder field, type (or copy and paste) the URL for this site (shown near the top of the Transfer Files area). Click Finish.</li>
+    <li>When prompted, enter your username and password and click OK.</li>
+    <li>You can now drag files and folders to and from your computer and the site Resources folder.</li>
+</ol>
+<p><em>Alternate method of setting up WebDAV on Windows</em>:</p>
+<p>If  the process above yields connections errors, you may  be able to  utilize the WebDAV functionality to access your files using a  free  third-party client called <a href="https://www.hawaii.edu/askus/1113#cyberduck"><span class="activateTab">Cyberduck</span></a>.</p>
+<hr />
+<p><a name="windows10"><strong><span style="font-size: large;">Microsoft Windows 11</span></strong></a></p>
+<ol>
+    <li>From the Desktop, click File Explorer and make sure 'This PC' is selected in the left-hand pane.</li>
+    <li>At the top of the File Explorer window, click the three dots ...&gt; Map Network Drive.</li>
+    <li>Select a vacant drive letter (e.g., Z) from the Drive drop down menu.</li>
+    <li>In the Folder field, type (or copy and paste) the URL for this  site (shown near the top of the Transfer Files area). Click Finish.</li>
+    <li>When prompted, enter your username and password and click OK.</li>
+    <li>You can now drag files and folders to and from your computer and the site Resources folder.</li>
+</ol>
+<p><em>Alternate method of setting up WebDAV on Windows</em>:</p>
+<p>If  the process above yields connections errors, you may  be able to   utilize the WebDAV functionality to access your files using a  free   third-party client called <a href="https://www.hawaii.edu/askus/1113#cyberduck"><span class="activateTab">Cyberduck</span></a>.</p>
+<hr />
+<p><a name="macosx"><strong><span style="font-size: large;">Mac OSX</span></strong></a></p>
+<p>Note: Depending upon the exact update of OS X, The Webdav support in the Macintosh Finder may well be too buggy to use. If you have problems with this approach, consider using <a href="https://www.hawaii.edu/askus/1113#cyberduck">Cyberduck</a>.</p>
+<ol>
+    <li>From the menu bar at the top of the screen in Finder, select Go &gt; Connect to Server...</li>
+    <li>In the Server Address dialog box, type (or copy and paste) the path (shown near the top of the Transfer Files area).</li>
+    <li>Press the + button to save this path for future use.</li>
+    <li>Click Connect.</li>
+    <li>Type in your username and password and click Connect.</li>
+</ol>
+<p>The window will then show the contents of your Resources folder. You can then drag files to and from this window to copy files, or move files into different folders in Laulima, etc</p>
+<p>As noted previously, you can alternatively set up WebDAV with <a href="https://www.hawaii.edu/askus/1113#cyberduck">Cyberduck</a></p>
+<p>.</p>
+<hr />
+<p><a name="linux"><strong><span style="font-size: large;">Linux</span></strong></a></p>
+<p>Note: Linux is not an officially supported OS by ITS</p>
+<p>Setting up WebDAV for Linux (Gnome):</p>
+<ol>
+    <li>Go to Files &gt; Connect to Server...</li>
+    <li>In Server adress, type (or copy and paste) the URL shown near the top of the Transfer Files area.</li>
+    <li>Click on Connect.</li>
+    <li>Supply your password.</li>
+</ol>
+<p>You will now see a new drive under Files. This represents the resources in your site. It will act like any other folder on your computer. You can now drag and drop files into or out of this window and delete files by dragging them to the Trash.</p>
+<p>&nbsp;</p>
+<p>Setting up WebDAV for older versions of Linux (Gnome):</p>
+<p>Go to Places &gt; Connect to Server...</p>
+<ol>
+    <li>In Service, type select WebDav (HTTP/SSL).</li>
+    <li>In Server, type (or copy and paste): laulima.hawaii.edu.</li>
+    <li>In Port, type (or copy and paste): 443</li>
+    <li>In Folder, type (or copy and paste) the last part of the URL shown near the top of the Transfer Files area (the part of the url starting with &quot;dav&quot;).</li>
+    <li>Check the option Add bookmark</li>
+    <li>&nbsp;In Bookmark name, supply the name of the folder to create under &quot;Network&quot; and click Next.</li>
+    <li>&nbsp;Click on Connect.</li>
+    <li>&nbsp;Supply your password.</li>
+</ol>
+<p>You will now see a new drive under Places. This represents the resources in your site. It will act like any other folder on your computer. You can now drag and drop files into or out of this window and delete files by dragging them to the Trash.</p>
+<p>Setting up WebDAV for Linux (KDE):</p>
+<ol>
+    <li>Open the file manager (Dolphin).</li>
+    <li>On the left side, in Places, choose Network.</li>
+    <li>Click on Add network folder.</li>
+    <li>Check web folder (webdav) and click on Next.</li>
+    <li>In Name supply the name of the folder to create under &quot;Network&quot; and click Next.</li>
+    <li>In User supply your username.</li>
+    <li>In Server, type (or copy and paste): laulima.hawaii.edu</li>
+    <li>In Folder, type (or copy and paste) the last part of the URL shown near the top of the Transfer Files area (the part of the url starting with &quot;dav&quot;).</li>
+    <li>If the URL uses HTTPS, check the option Encoded, and the port will change automatically to 443.</li>
+    <li>Check the option Create an icon for this remote folder.</li>
+    <li>Click on Save and connect.</li>
+    <li>Supply your password.</li>
+</ol>
+<p>You will now see a new drive under Network inside the file manager (Dolphin). This represents the resources in your site. It will act like any other folder from your computer. You can now drag and drop files into or out of this window and delete files by dragging them to the Trash.</p>
+<p>&nbsp;</p>
+<p>Setting up WebDAV for Linux (console)</p>
+<ol>
+    <li>Open a new terminal.</li>
+    <li>Type in the command cadaver and the url shown near the top of the Transfer Files area (eg. cadaver https://laulima.hawaii.edu/dav/~yoursiteid)</li>
+    <li>You might be asked to accept a certificate</li>
+    <li>Type in your username and password</li>
+    <li>Now you can download and upload documents from the command line.</li>
+</ol>
+<p>Type help for all avaliable commands.</p>
+<hr />
+<p><a name="cyberduck"><strong><span style="font-size: large;">Cyberduck</span></strong></a></p>
+<p>WebDAV may be implemented differently in different versions of operating systems. A WebDAV client like Cyberduck may provide a more reliable experience with WebDAV. Note that UH does not officially support the Cyberduck software.</p>
+<ol>
+    <li>Download the Cyberduck WebDAV client.
+    <ul>
+        <li>For Windows or OS X version 10.5 and later, download and install the most recent software at: <a href="http://cyberduck.io/" target="_blank">http://cyberduck.io/</a></li>
+        <li>OS X versions before 10.5, download the Cyberduck WebDAV client at: <a href="http://update.cyberduck.io/Cyberduck-2.8.5.dmg" target="_blank">http://update.cyberduck.io/Cyberduck-2.8.5.dmg</a>
+        <ul>
+            <li>Decompress the file and double-click on the .dmg file.  (Depending on the configuration of your decompression software, the disk  image may automatically mount.)</li>
+            <li>A disk image with a name similar to <em>Cyberduck-2.8.5</em>                     				should now be available. Simply drag and drop  the folder from the disk image to your Applications folder.</li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li>Open the Cyberduck application in your Applications folder.</li>
+    <li>Click the Open Connection button.</li>
+    <li>In Server, copy and paste the url shown near the top of the Transfer Files area.                  	This will autofill all needed fields.                  	Also, you can manually introduce the requested information:
+    <ul>
+        <li>Select WebDAV <span class="webDavService">(HTTP/SSL)</span></li>
+        <li>In Server, type: <span class="webDavHostName">laulima.hawaii.edu</span></li>
+        <li>In <b>Port</b>, type: <span class="webDavPort">443</span></li>
+        <li>Click on More options, 		                    and type (or copy and paste) in Folder 		                    the last part of the URL shown near the top of the Transfer Files area (the part of the url starting with &quot;dav&quot;).</li>
+    </ul>
+    </li>
+    <li>Disable the Anonymous Login option.</li>
+    <li>Type in your username and password</li>
+    <li>Click on Connect.</li>
+</ol>
+<p>You will now see a window on your screen that represents the resources that are in your site. Simply drag and drop between this window and other folders on your computer to transfer files to and from your site's resources folder.<br />
+<br />
+You can save these settings for future connections:</p>
+<ol>
+    <li>Click on Bookmark in top menu bar.</li>
+    <li>Click on New bookmark option.</li>
+    <li>In the pop-up window, change the nickname. Remove &quot;laulima.hawaii.edu &ndash; WebDAV (HTTPS)&quot; and type the name for this connection.</li>
+    <li>Close this window.</li>
+</ol>
+<hr />
+<p>&nbsp;</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1113" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1113" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1113">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1113">
+		1113</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Wed, 07 Apr 2010 1:49pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Mon, 23 May 2022 12:47pm</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>

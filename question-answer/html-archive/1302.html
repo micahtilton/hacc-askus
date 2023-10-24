@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<base href="https://www.hawaii.edu/askus/1302">
+<head>
+  <meta test="askus/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="University of Hawaii, Information Technology Services" />
+  <meta name="description" content="Ask Us, University of Hawaii System" />
+  <title>Securing Linux Servers
+
+
+
+ :: ASK US, University of Hawaii System</title>
+  <link rel="stylesheet" type="text/css" href="styles-2016/its.css">
+  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/its/template/2016/its/simple/styles/its-ie8.css"><![endif]-->
+</head>
+<body>
+  <div class="page">
+    <div id="header">
+      <div id="top-header" class="page-width">
+        <div id="top-header-wrap">
+          <div id="top-header-left">
+            <a id="menu-icon-top" href="#menu-icon-top" aria-label="top-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Mobile top menu toggle" alt="Mobile top menu toggle" /></a>
+            <div id="top-nav-mobile-menu" role="navigation">
+              <ul id="top-nav">
+                <li><a href="https://myuh.hawaii.edu">My <abbr title="University of Hawaii">UH</abbr></a></li>
+                <li><a href="http://www.hawaii.edu/google">Google@<abbr title="University of Hawaii">UH</abbr></a></li>
+              </ul>
+            </div>
+          </div> <!-- top-header-left -->
+          <div id="top-header-right">
+            <div id="rss" class="imager">
+              <a href="http://www.hawaii.edu/its/feed/" target="_blank"><img src="styles-2016/images/rss.png" title="Feed icon" alt="Feed icon" /></a>
+            </div>
+            <div class="search">
+              <form id="ask-us-form" name="askus" action="/askus/" method="post">
+                <input id="action" name="action" type="hidden" value="search" />
+                <input id="prevSearch_id" name="prevSearch_id" type="hidden" value="" />
+                <input onClick="this.select();" id="searchstring" name="searchstring" type="text" value="" autofocus placeholder="Have a question?" required>
+                <button class="askusSearchButton" type="submit">
+                  Ask Us
+                </button>
+              </form> 
+            </div>
+          </div>  <!-- top-header-right -->
+        </div>  <!-- top-header-wrap -->
+      </div>  <!-- top-header -->
+      <div id="bottom-header" class="page-width">
+        <div id="bottom-header-wrap">
+          <div id="its-logo">
+            <a target="_blank" href="http://www.hawaii.edu/its"><img src="styles-2016/images/its_logo_uppercase_out.png" alt="Information Technology Services" title="Information Technology Services"/></a>
+          </div>  <!-- its-logo -->
+          <a id="menu-icon-bottom" href="#menu-icon-bottom" aria-label="main-nav-mobile-menu"><img src="styles-2016/images/nav-list.png" title="Information Technology Services main mobile menu toggle" alt="Information Technology Services main mobile menu toggle" /></a>
+          <div id="main-nav-mobile-menu">
+            <ul id="main-nav">
+              <li><a href="http://www.hawaii.edu/its/help-desk/" title="Help Desk">Help Desk</a> </li>
+              <li><a href="http://www.hawaii.edu/its/services/" title="Services">Services</a> </li>
+              <li><a href="http://www.hawaii.edu/infosec/" title="Information Security">Information Security</a> </li>
+              <li><a href="http://www.hawaii.edu/its/alerts/" title="Alerts">Alerts</a> </li>
+              <li><a href="http://www.hawaii.edu/its/about/" title="About">About</a> </li>
+            </ul>  <!-- main-nav --> 
+          </div>  <!-- main-nav-mobile-menu -->
+        </div>  <!-- bottom-header-wrap-->
+      </div>  <!-- bottom-header -->
+    </div>  <!-- header -->
+    <div id="screen-check"></div>
+    <div id="content-wrap">
+      <div id="content" class="page-width">
+<h2 id="kb_article_question">
+Securing Linux Servers
+
+
+
+</h2>
+<div id="kb_article_text">
+	<p>It is important when installing and maintaining a Linux server to perform initial and maintenance security checks on the server. Below is a checklist of basic tasks that should be performed on each server on initial setup and monthly to ensure continued security of the server. Please note that adding additional services like MySQL or Apache requires additional tasks to be performed routinely.</p>
+<p><strong>Choosing a Distro</strong> - Linux servers come in many flavors (distributions) and you should choose one that you are familiar with and suits your needs.&nbsp; When choosing a distribution, you should note at what point in its life cycle your current distribution lies.&nbsp; Distributions will typically state how long they will provide updates for their product and if you plan on using the server for longer than the time listed, you should schedule time to upgrade the system before the cutoff date or possibly look for a distribution with a longer life cycle.&nbsp; Larger, more popular distributions are also recommended as distros with small developer lists and user bases are more likely to end-prematurely due to lack of funding or interest.</p>
+<p><strong>Installing Linux</strong> - When installing linux in a production environment, it is recommended that you only install the services and applications that are required to accomplish the task the server needs to provide.&nbsp; Choose a custom installation if possible as &ldquo;default installs&rdquo; may install many extra programs and services that will not be used.&nbsp; Vulnerabilities in these applications and services could be used to make your server vulnerable to attack.&nbsp; &lsquo;Server&rsquo; or &lsquo;Minimal&rsquo; installs may be available depending on distro and should be leveraged for maximum benefit.</p>
+<p><strong>Software Update</strong> - One of the most important steps after installing a new Linux server is to bring your server up to date by performing a software update. The software update process differs between linux distributions, so please acquaint yourself with the update program that your particular distro uses.&nbsp; For reference, &lsquo;apt&rsquo; and &lsquo;yum&rsquo; are two popular package managers that are commonly used among current distributions. If the distribution you are installing from isn&rsquo;t up to date, make sure to check that your firewall is set properly before updating to disallow access to your computer&rsquo;s services as your updates are being installed.&nbsp; Regularly schedule a time to run software updates to the system.</p>
+<p><strong>Firewall</strong> - Ensure that your server&rsquo;s firewall is turned on and that only the services and ports necessary are allowed for inbound and outbound traffic. Check this often and close ports that are no longer needed.&nbsp; If possible, limit access to services by subnet or IP.</p>
+<p><strong>SELinux</strong> &ndash; If not installed by your distro by default, install SELinux and set it to &lsquo;enforcing&rsquo; mode.&nbsp; You can disable individual policies as needed for your system but do not completely disable or set to permissive mode to bypass the SELinux rulesets.<br />
+Restricting Services by Subnet/IP - If possible through service configuration, limit access to your services by subnet or IP address.</p>
+<p><strong>Limit sudo use</strong> &ndash; Sudo is convenient, but requiring root login can make it more difficult for someone to get full access to the system.<br />
+<br />
+<strong>Set Administrator password to something difficult</strong> - For auditing and security purposes it is best to set user and the root passwords to something using upper and lower case characters, numbers, special characters and a length greater than 8.&nbsp; Do not use the same password for multiple users (including root), and refrain from using words that can be found in a dictionary.</p>
+<p><strong>Set Password Expiration</strong> - To ensure the continued security of the server over time, set passwords to expire after a year to force users to set new passwords.</p>
+<p><strong>Disable/Remove Guest Accounts</strong> - Always ensure that all &quot;guest&quot; accounts (if any) are disabled or removed.</p>
+<p><strong>Service Accounts</strong> - Check out the shadow and password file to verify that accounts created for services cannot be used to login to the system.</p>
+<p><strong>Minimal Services</strong> - make sure that only the services that you need are running on each server, and check that only the services you want are scheduled to be turned on at server reboot.<br />
+Patch 3rd party software - Make sure that all 3rd party software installed on the system are patched regularly.</p>
+<p><strong>Logging</strong> - Turn on logging for services and applications. Review logs at least monthly for unauthorized activity.&nbsp; Many distributions have logwatching programs available that email log sumarries daily to the administrator.</p>
+<p><strong>Unused Accounts</strong> - Verify that all usused accounts have either been removed or disabled.</p>
+<h2>Related Articles</h2>
+<p><a href="http://www.hawaii.edu/askus/1259">Securing&nbsp;Windows Servers<br />
+Securing Mac Servers</a></p>
+<p>&nbsp;</p>
+</div>
+<div id="kb_article_footer"><div id="article_feedback">
+	<form id="feedback" name="feedback" action="/askus/1302" method="post">
+		<input id="action" name="action" type="hidden" value="view" />
+		<input id="kbid" name="kbid" type="hidden" value="1302" />
+		Please rate the quality of this answer: 
+		<input id="askus_rating" name="askus_rating" type="radio" value="1" />Poor
+		<input id="askus_rating" name="askus_rating" type="radio" value="2" />Fair
+		<input id="askus_rating" name="askus_rating" type="radio" value="3" />Okay
+		<input id="askus_rating" name="askus_rating" type="radio" value="4" />Good
+		<input id="askus_rating" name="askus_rating" type="radio" value="5" />Excellent
+		<input id="feedback_submit" name="feedback_submit" type="submit" value="Submit" />
+	</form>
+</div>
+<div id="article_contactus">
+	Not the answer you were looking for? Try different keyword combinations and if you still can&rsquo;t find your answer, please <a href="http://www.hawaii.edu/its/contact/?to=web-support-l&q1=ASK US ID:1302">
+contact us</a>.
+
+</div>
+<div id="kb_article_id">
+	<span class="label">Article ID: </span>
+	<a href="admin.php?action=edit&kbid=1302">
+		1302</a>
+</div>
+<div id="kb_article_created">
+	<span class="label">Created: </span>
+	Tue, 17 May 2011 3:32pm
+</div><div id="kb_article_modified">
+	<span class="label">Modified: </span>
+	Thu, 23 Feb 2012 8:14am</div>
+</div>
+      </div>  <!-- content -->
+    </div>  <!-- content-wrap -->
+    <div id="footer-wrap">
+      <div id="footer" class="page-width">
+        <div id="to-top">
+          <a href="#header">&#94;<br /> BACK TO TOP</a>
+        </div>  <!-- to-top -->  
+        <p>&nbsp;</p>
+        <div id="column-wrap">
+          <div id="col-1">
+            <h3>MAILING ADDRESS</h4>
+            Information Technology Services<br />
+            2520 Correa Road<br />
+            Honolulu, HI 96822<br />
+          </div>   <!-- col-1 -->
+          <div id="spacing-1">&nbsp;</div>
+          <div id="col-2">
+            <h3>STUDENT EMPLOYMENT</h4>
+            Information Technology Services posts available positions for <abbr title="University of Hawaii">UH</abbr> students on <a href="http://www.hawaii.edu/sece/">SECE</a>
+          </div>   <!-- col-2 -->
+          <div id="spacing-2">&nbsp;</div>
+          <div id="col-3">
+            <h3><abbr title="University of Hawaii">UH</abbr> SYSTEM HOME</h4>
+            <a href="http://www.hawaii.edu"><img src="styles-2016/images/UHSystemLogo240white-e1431548955359.png" title="UH System logo" alt="UH System logo" /></a>
+          </div>  <!-- col-3 -->
+        </div>  <!-- column-wrap -->
+        <p>&nbsp;</p>
+        <div id="footer-menu-wrap">
+          <div id="footer-menu">
+            <ul>
+              <li><a href="http://www.hawaii.edu/its/">HOME</a></li>
+              <li><a href="http://www.hawaii.edu/its/about/">ABOUT</a></li>
+              <li><a href="http://www.hawaii.edu/its/news/">NEWS</a></li>
+              <li><a href="http://www.hawaii.edu/its/contact/">CONTACT</a></li>
+            </ul>
+          </div>  <!-- footer-menu -->
+        </div> 
+        <!-- footer-menu-wrap -->
+        <div id="eoaa">
+          Use of this site implies consent with our Usage Policy | The University of Hawai&#8216;i is an Equal Opportunity/Affirmative Action Institution
+          <br />
+          &copy; 2015 Information Technology Services | All Rights Reserved | University of Hawai&#8216;i System<br /><br />
+        </div>  <!-- eoaa -->
+      </div>  <!-- footer -->
+    </div>  <!-- footer-wrap -->
+  </div>  <!-- page -->
+  <!-- Include jQuery -->
+  <!-- <script src="javascripts/jquery.js"></script> -->
+  <!-- Include the Sidr JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.sidr.min.js"></script>
+  <script src="js/nav-panel.js"></script>
+</body>
+</html>
