@@ -1,11 +1,9 @@
 import React from 'react';
-import { Hello } from './Hello.jsx';
-import { Info } from './Info.jsx';
+import ChatBot from './ChatBot';
 
 export const App = () => (
-  <div>
+  <React.StrictMode>
     <h1>Welcome to Meteor!</h1>
-    <Hello/>
-    <Info/>
-  </div>
+    <ChatBot />
+  </React.StrictMode>
 );
