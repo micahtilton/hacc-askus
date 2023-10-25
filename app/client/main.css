@@ -1,4 +1,26 @@
-body {
-  padding: 10px;
-  font-family: sans-serif;
+.chat-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 700px;
+  width: 500px;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.6);
 }
+
+*:focus {
+  outline: none;
+}
+
+.send-text {
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+.chat-dropdown {
+  background-color: transparent;
+  border: white 2px solid;
+}
+
+.chat-dropdown:hover {
+
+}
+
