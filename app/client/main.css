@@ -56,3 +56,16 @@
 .delay-3 {
   animation-delay: 0.66s;
 }
+
+body {
+  /*padding: 10px;*/
+  font-family: sans-serif;
+}
+
+.navbar, footer {
+  background-color: #1b4f24;
+}
+
+#basic-navbar-nav div a, footer {
+  color: white;
+}
