@@ -1,3 +1,62 @@
+.chat-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 700px;
+  width: 500px;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.6);
+}
+
+*:focus {
+  outline: none;
+}
+
+.send-text {
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+.chat-dropdown {
+  background-color: transparent;
+  border: white 2px solid;
+}
+
+.chat-dropdown:hover {
+
+}
+
+@keyframes change-color {
+  0%, 100% {
+    background-color: white;
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.dot {
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 3px;
+  display: inline-block;
+  animation: change-color 1s infinite ease-in-out;
+}
+
+.rotate {
+
+}
+
+.delay-1 {
+  animation-delay: 0s;
+}
+.delay-2 {
+  animation-delay: 0.33s;
+}
+.delay-3 {
+  animation-delay: 0.66s;
+}
+
 body {
   /*padding: 10px;*/
   font-family: sans-serif;
