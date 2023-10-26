@@ -32,7 +32,7 @@ const ChatBot = () => {
 
 
   return (
-    <div className="chat-container m-3 d-flex flex-column rounded-3">
+    <div className="chat-container m-3 d-flex flex-column rounded-3 bg-white">
       <div className="d-flex justify-content-between p-3 bg-primary rounded-top-3">
         <div className="fw-bold fs-5 text-white">Hoku: Virtual Assistant</div>
         <button onClick={() => { setChatOpen(!chatOpen) }} className="chat-dropdown rounded-circle text-white">
