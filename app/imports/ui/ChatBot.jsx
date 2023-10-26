@@ -15,6 +15,9 @@ const ChatBot = () => {
 
   const handleSend = (e) => {
     e.preventDefault()
+
+    if (!text) return;
+
     insertMessage({sender: "user", text: text});
 
     setHokuLoading(true);
@@ -40,12 +43,15 @@ const ChatBot = () => {
         </button>
       </div>
 
-      <div className="overflow-auto d-flex flex-column">
-        {messages.map(data => data.sender === "user" ? <UserChatMessage text = { data.text }/> : <AiChatMessage text = { data.text } />)}
-        {hokuLoading && <AiChatMessage loading={ hokuLoading } text = { "loading..." } />}
+      <div className="overflow-auto flex-grow-1">
+        <div className="d-flex flex-column">
+          {messages.map(data => data.sender === "user" ? <UserChatMessage text = { data.text }/> : <AiChatMessage text = { data.text } />)}
+          {hokuLoading && <AiChatMessage loading={ hokuLoading } text = { "loading..." } />}
+        </div>
+
+        <div className="flex-grow-1"></div>
       </div>
 
-      <div className="flex-grow-1"></div>
       <form className="chat-input d-flex flex-row m-2 p-1" onSubmit={handleSend}>
         <input onChange={e => {
           setText(e.target.value)
