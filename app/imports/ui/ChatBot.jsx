@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CaretDown, CaretUp, Send } from 'react-bootstrap-icons';
+import { CaretDown, Send } from 'react-bootstrap-icons';
 import UserChatMessage from './UserChatMessage';
 import AiChatMessage from './AiChatMessage';
 

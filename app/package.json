@@ -21,7 +21,10 @@
     "mainModule": {
       "client": "client/main.jsx",
       "server": "server/main.js"
-    },
-    "testModule": "tests/main.js"
+    }
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.22.9",
+    "@babel/preset-react": "^7.22.5"
   }
 }

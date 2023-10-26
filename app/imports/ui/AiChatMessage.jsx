@@ -1,5 +1,4 @@
 import React from 'react';
-import { ChatDots, Dot, ThreeDots } from 'react-bootstrap-icons';
 
 const AiChatMessage = ({ text, loading=false }) => (
   <div className="align-self-start d-flex justify-content-start p-2 m-2 bg-primary rounded-3 mw-75 text-white">
