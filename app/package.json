@@ -10,12 +10,15 @@
   "dependencies": {
     "@babel/runtime": "^7.20.7",
     "bootstrap": "^5.3.2",
+    "mathjs": "^11.11.2",
     "meteor-node-stubs": "^1.2.5",
+    "openai": "^4.14.0",
     "react": "^18.2.0",
     "react-addons-pure-render-mixin": "^15.6.3",
     "react-bootstrap": "^2.9.1",
     "react-bootstrap-icons": "^1.10.3",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "simpl-schema": "^3.4.1"
   },
   "meteor": {
     "mainModule": {
