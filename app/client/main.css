@@ -1,12 +1,36 @@
 body {
-  /*padding: 10px;*/
   font-family: sans-serif;
 }
 
-.navbar, footer {
-  background-color: #1b4f24;
+.navbar  {
+  background-color: white;
 }
 
-#basic-navbar-nav div a, footer {
-  color: white;
+footer {
+  background-color: white;
 }
+#basic-navbar-nav div a {
+  color: #0B6191;
+}
+
+#header {
+  background-image: url("https://www.usgbc.org/sites/default/files/2020-06/1%288%29.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+}
+
+
+
+#tint {
+  height: 100%;
+  background-color: #0B6191;
+  opacity: 0.45;
+}
+
+#description {
+  height: 600px;
+}
+
+
+
