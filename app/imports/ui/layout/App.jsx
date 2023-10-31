@@ -5,11 +5,13 @@ import Home from '../pages/Home';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Middle from '../components/Middle';
+import ChatBox from '../components/ChatBox';
 
 export const App = () => (
   <div className="d-flex flex-column min-vh-100">
     <NavBar />
     <Middle />
+    <ChatBox />
     <Footer />
   </div>
 );

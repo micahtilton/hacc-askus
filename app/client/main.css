@@ -32,5 +32,26 @@ footer {
   height: 600px;
 }
 
+/*ChatBox*/
+
+.chatbox-open {
+  position: absolute;
+  left: 80%;
+  top: 85%;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  border-radius: 50%;
+  text-align: center;
+  background: #0B6191;
+  color: white;
+  border: none
+}
+
+.wrapper {
+  animation: popup 1s;
+}
+
+
 
 
