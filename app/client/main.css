@@ -57,15 +57,39 @@
   animation-delay: 0.66s;
 }
 
+:root {
+  --matr-navbar-text-color: #DDEBE9;
+  --matr-navbar-highlight-text: #3F8880;
+}
+
 body {
   /*padding: 10px;*/
   font-family: sans-serif;
+  background-color: #DDEBE9;
 }
 
-.navbar, footer {
-  background-color: #1b4f24;
+footer {
+  background-color: #0B6191;
+  color: var(--matr-navbar-text-color);
 }
 
-#basic-navbar-nav div a, footer {
-  color: white;
+#basic-navbar-nav div a {
+  color: black;
+  padding: 10px 20px 10px 20px;
 }
+
+#basic-navbar-nav div a:hover {
+  color: var(--matr-navbar-highlight-text);
+}
+
+#socials {
+  font-size: 18px;
+  --bs-nav-link-hover-color: var(--matr-navbar-highlight-text);
+}
+
+
+
+
+
+
+

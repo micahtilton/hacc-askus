@@ -8,7 +8,7 @@ export const App = () => (
   <div className="d-flex flex-column min-vh-100">
     <NavBar />
     <Home />
-    <ChatBot />
+    {/*<ChatBot/> */}
     <Footer />
   </div>
 );
