@@ -3,27 +3,15 @@ import SimpleSchema from 'simpl-schema';
 
 const EmbeddingCollection = new Mongo.Collection("embeddings");
 
-const DataSchema = new SimpleSchema({
-  "id": {type: String},
-  "question": {type: String},
-  "answer": {type: String}
-})
-
 const EmbeddingSchema = new SimpleSchema({
+  "source": {type: String},
   "embedding": {type: Array},
   'embedding.$': {
-    type: Number,
+    type: Number
   },
-  "data": {type: DataSchema}
+  "text": {type: String}
 })
 
-const EmbeddingDataSchema = new SimpleSchema({
-  "embedding-data": {type: Array},
-  "embedding-data.$": {
-    type: EmbeddingSchema
-  }
-})
-
-EmbeddingCollection.schema = EmbeddingSchema;
+EmbeddingCollection.attachSchema(EmbeddingSchema);
 
 export { EmbeddingCollection };
