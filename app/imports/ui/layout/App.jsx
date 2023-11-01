@@ -1,26 +1,21 @@
-import React from "react";
-import Home from "../pages/Home";
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import ChatBot from "../ChatBot";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-
-const MainPage = () => (
-  <>
-    <NavBar />
-    <Home />
-    <ChatBot />
-    <Footer />
-  </>
-);
+import React from 'react';
+import Home from '../pages/Home';
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
+import ChatBot from '../ChatBot';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HelpDesk from '../pages/HelpDesk';
 
 export const App = () => (
-  <BrowserRouter>
+  <Router>
     <div className="d-flex flex-column min-vh-100">
+      <NavBar/>
       <Routes>
-        <Route path={"/admin"} element={<div>Hello world</div>} />
-        <Route exact path={"/"} element={<MainPage />} />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/helpdesk" element={<HelpDesk />} />
       </Routes>
+      <ChatBot/>
+      <Footer/>
     </div>
-  </BrowserRouter>
+  </Router>
 );
