@@ -65,26 +65,59 @@
 body {
   /*padding: 10px;*/
   font-family: sans-serif;
-  background-color: #DDEBE9;
+  background-color: var(--matr-navbar-text-color);
 }
 
-footer {
+footer, footer a {
   background-color: #0B6191;
   color: var(--matr-navbar-text-color);
 }
 
-#basic-navbar-nav div a {
-  color: black;
-  padding: 10px 20px 10px 20px;
+footer a:hover {
+  color: var(--matr-navbar-highlight-text);
 }
 
-#basic-navbar-nav div a:hover {
+#basic-navbar-nav div a {
+  color: black;
+  font-size: 15px;
+  position: relative;
+  transition: all 0.4s;
+  padding: 0 20px 10px 20px;
+}
+
+#basic-navbar-nav div a:hover::after, #basic-navbar-nav div a:focus, #basic-navbar-nav div a:focus::after {
   color: var(--matr-navbar-highlight-text);
+  opacity: 1;
+}
+
+#basic-navbar-nav div a::after  {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background: #0B6191;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  opacity: 0;
+  transition: all 0.2s;
 }
 
 #socials {
   font-size: 18px;
   --bs-nav-link-hover-color: var(--matr-navbar-highlight-text);
+}
+
+#helpDesk div h1 {
+  color: var(--matr-navbar-highlight-text);
+}
+
+#hd-images {
+  border-radius: 100%;
+  width: 300px;
+}
+
+#hoku {
+  float: left;
 }
 
 
