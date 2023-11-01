@@ -25,13 +25,16 @@ def create_ai_context(question, embedding_fp):
     embeddings.sort(key=lambda x: np.dot(question_embedding, x['embedding']), reverse=True)
 
     context = []
-    for e in embeddings[0:5]:
+    data = []
+    for e in embeddings[0:2]:
         context.append(e["text"])
-    return " ".join(context)
+        data.append(e)
+
+    return " ".join(context), data
 
 
 def get_answer(question, embedding_fp):
-    context = create_ai_context(question, embedding_fp)
+    context, data = create_ai_context(question, embedding_fp)
 
     try:
         prompt = f"Context: {context}\n\nyou are hoku, a ai chat assistant to help users. you give at most 3 sentence answers in the form of a text message based only on the context given. do not mention any external sources. if the question can't be answered based on the context, say \"I'm sorry, I don't have the answer to that question\"\n\nQuestion:{question}\nAnswer: "
@@ -50,4 +53,4 @@ def get_answer(question, embedding_fp):
         print(e)
         return "Sorry, Hoku is not available at the moment."
 
-    return chat_response["choices"][0]["text"].strip()
+    return chat_response["choices"][0]["text"].strip(), data

@@ -3,8 +3,7 @@
   bottom: 0;
   right: 0;
   height: 70vh;
-  width: 30vw;
-  box-shadow: 0 0 6px 0 rgba(0,0,0,0.6);
+  width: 40vw;
 }
 
 *:focus {

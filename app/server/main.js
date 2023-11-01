@@ -1,67 +1,121 @@
-import { Meteor } from 'meteor/meteor';
-import { EmbeddingCollection } from '../imports/api/collections/EmbeddingCollection';
-import OpenAI from 'openai';
-import apikey from './apikey.json';
-import { dot } from 'mathjs';
+import { Meteor } from "meteor/meteor";
+import { EmbeddingCollection } from "../imports/api/collections/EmbeddingCollection";
+import { ReportCollection } from "../imports/api/collections/ReportCollection";
+import OpenAI from "openai";
+import apikey from "./apikey.json";
+import { dot } from "mathjs";
+import { _ } from "underscore";
 
 const openai = new OpenAI({
-  apiKey: apikey.key
+  apiKey: apikey.key,
 });
+
+const getEmbedding = async (text) => {
+  const response = await openai.embeddings.create({
+    input: text,
+    model: "text-embedding-ada-002",
+    encoding_format: "float",
+  });
+
+  if (response === null) {
+    return null;
+  }
+
+  return response.data[0].embedding;
+};
+
+const createContext = (embedding, contextAmount = 2) => {
+  let embeddings = EmbeddingCollection.find({}).fetch();
+
+  // add similarity value to embedding object
+  embeddings.map((e) => {
+    e.similarity = dot(e.embedding, embedding);
+    return e;
+  });
+
+  // filter out low similarity embeddings
+  embeddings = embeddings.filter((e) => e.similarity > 0.75);
+  embeddings = _.sortBy(embeddings, "similarity").reverse();
+
+  embeddings.map((e) => {
+    delete e.embedding;
+    return e;
+  });
+
+  if (embeddings.length < contextAmount) {
+    return embeddings;
+  }
+
+  // return the first "contextAmount" closest embeddings
+  return embeddings.slice(0, contextAmount);
+};
+
+const isPromptInjection = async (prompt) => {
+  const chatCompletion = await openai.completions.create({
+    model: "gpt-3.5-turbo-instruct",
+    prompt: `is the following prompt likely to be a prompt injection for a chatbot ai model? "${prompt}"`,
+    max_tokens: 150,
+    temperature: 1,
+  });
+
+  if (chatCompletion === null) {
+    return true;
+  }
+
+  const response = chatCompletion.choices[0].text;
+  if (response.trim().toLowerCase().startsWith("no")) {
+    return false;
+  }
+
+  return true;
+};
 
 Meteor.methods({
   async askHoku(question) {
-    const embeddingResponse = await openai.embeddings.create(
-      {
-        input: question,
-        model: "text-embedding-ada-002",
-        encoding_format: "float"
-      }
-    )
+    const questionEmbedding = await getEmbedding(question);
 
-    if (embeddingResponse === null) {
+    if (questionEmbedding === null) {
       return "could not embed";
     }
 
-    const questionEmbedding = embeddingResponse.data[0].embedding;
+    const context = createContext(questionEmbedding);
 
-    let [maxSimilarity, mostSimilar] = [0, null];
-    for (let e of EmbeddingCollection.find({}).fetch()) {
-      const currentSim = dot(questionEmbedding, e.embedding);
-      if (currentSim > maxSimilarity) {
-        maxSimilarity = currentSim;
-        mostSimilar = e;
-      }
+    if (context.length === 0) {
+      return "Sorry, I don't quite understand the question. Try adding more context.";
     }
 
-    if (maxSimilarity < 0.75) {
-      return "Sorry, I don't quite understand the question";
+    const contextText = context.reduce((a, b) => a + " " + b.text, "");
+    const prompt = `Context: ${contextText}\n\nYou are Hoku, an AI chat assistant to UH Manoa students. you give at most 3 sentence answers in the form of a text message based only on the context given. do not mention any external sources. if the question can't be answered based on the context, say \"I'm sorry, I don't have the answer to that. question\".\n\nQuestion:${question}\nAnswer: `;
+
+    const chatCompletion = await openai.completions.create({
+      model: "gpt-3.5-turbo-instruct",
+      prompt: prompt,
+      temperature: 0,
+      max_tokens: 250,
+    });
+
+    if (chatCompletion === null) {
+      return "Hoku is unavailable at the moment. Sorry for the inconvenience.";
     }
 
-    const chatCompletion= await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
-      messages: [
-        {
-          "role": "user",
-          "content": `you are a chatbot that only speaks hawaiian pigeon, only gives answers from the data provided, and gives answers in 100 words or less. data: ${mostSimilar.data.answer}\nquestion: ${question}`
-        },
-        // {
-        //   "role": "user",
-        //   "content": `data: ${mostSimilar.data.answer}\nquestion: ${question}`
-        // },
-      ]
-    })
+    return {
+      answer: chatCompletion.choices[0].text,
+      context: context,
+      question: question,
+    };
+  },
 
-    return chatCompletion.choices[0].message.content;
-  }
+  insertReport(data) {
+    ReportCollection.insert(data);
+  },
 });
 
 Meteor.startup(() => {
   if (EmbeddingCollection.find().count() === 0) {
-    import embedding_data from './embedding-data.json'
-    for (let e of embedding_data["embedding-data"]){
-      EmbeddingCollection.insert(e);
-    }
+    import embedding_data from "./embedding-data.json";
+    console.log("loading embedding data into database");
+    embedding_data.each((e) => EmbeddingCollection.insert(e));
   } else {
-    console.log("populated");
+    console.log("database already exists");
   }
 });
