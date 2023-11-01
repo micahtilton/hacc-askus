@@ -14,4 +14,4 @@ const EmbeddingSchema = new SimpleSchema({
 
 EmbeddingCollection.attachSchema(EmbeddingSchema);
 
-export { EmbeddingCollection };
+export { EmbeddingCollection, EmbeddingSchema };
