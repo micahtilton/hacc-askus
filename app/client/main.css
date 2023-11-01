@@ -1,17 +1,16 @@
 .chat-container {
-  position: absolute;
+  width: 40vw;
+  max-height: 100vh;
+}
+
+.chat-area {
+  max-height: 30vh;
+}
+
+.bottom-right {
+  position: fixed;
   bottom: 0;
   right: 0;
-  height: 70vh;
-  width: 40vw;
-}
-
-*:focus {
-  outline: none;
-}
-
-.send-text {
-  border-color: rgba(0, 0, 0, 0.4);
 }
 
 .chat-dropdown {
@@ -20,7 +19,6 @@
 }
 
 .chat-dropdown:hover {
-
 }
 
 .collapse {
@@ -67,7 +65,7 @@ body {
 }
 
 .navbar, footer {
-  background-color: #1b4f24;
+  background-color: rgb(5, 62, 43);
 }
 
 #basic-navbar-nav div a, footer {
