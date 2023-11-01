@@ -114,7 +114,7 @@ Meteor.startup(() => {
   if (EmbeddingCollection.find().count() === 0) {
     import embedding_data from "./embedding-data.json";
     console.log("loading embedding data into database");
-    embedding_data.each((e) => EmbeddingCollection.insert(e));
+    embedding_data.forEach((e) => EmbeddingCollection.insert(e));
   } else {
     console.log("database already exists");
   }
