@@ -4,9 +4,11 @@ import { EmbeddingSchema } from "./EmbeddingCollection";
 
 const ReportCollection = new Mongo.Collection("reports");
 
-const EmbeddingSchemaExtended = EmbeddingSchema.extend({
-  similarity: { type: Number },
-}).omit("embedding");
+const EmbeddingSchemaExtended = EmbeddingSchema.clone()
+  .extend({
+    similarity: { type: Number },
+  })
+  .omit("embedding");
 
 const ReportSchema = new SimpleSchema({
   context: { type: Array },
