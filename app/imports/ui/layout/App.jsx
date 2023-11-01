@@ -14,7 +14,7 @@ export const App = () => (
         <Route exact path="/" element={<Home />} />
         <Route exact path="/helpdesk" element={<HelpDesk />} />
       </Routes>
-      {/*<ChatBot/> */}
+      <ChatBot/>
       <Footer/>
     </div>
   </Router>
