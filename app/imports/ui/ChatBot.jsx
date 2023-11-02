@@ -1,11 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import {
-  Chat,
-  ChatDotsFill,
-  ChatFill,
-  Send,
-  SendFill,
-} from "react-bootstrap-icons";
+import { ChatDotsFill, SendFill } from "react-bootstrap-icons";
 import UserChatMessage from "./UserChatMessage";
 import AiChatMessage from "./AiChatMessage";
 import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
@@ -57,7 +51,7 @@ const ChatBot = () => {
         <Col sm={12} md={{ span: 8, offset: 4 }} lg={{ span: 6, offset: 6 }}>
           {chatOpen && (
             <div>
-              <div className="d-flex justify-content-between ps-2 p-2 bg-primary rounded-top-3">
+              <div className="d-flex justify-content-between ps-2 p-2 bg-vibrant-primary rounded-top-3">
                 <div className="d-flex fw-medium fs-5 m-1 text-white align-items-center">
                   <Image src={"hoku-pfp.png"} width={50} />
                   <h1 className={"ps-3 m-0"}>Hoku</h1>
@@ -89,7 +83,7 @@ const ChatBot = () => {
                 <Form.Control
                   type={"text"}
                   className={
-                    "m-2 p-1 fw-light d-flex px-2 rounded-pill chat-field"
+                    "m-2 p-1 mt-3 fw-light d-flex px-2 rounded-pill chat-field"
                   }
                   placeholder={"Ask Hoku"}
                   onChange={(e) => {
@@ -107,7 +101,7 @@ const ChatBot = () => {
                   <Button
                     size={"sm"}
                     type={"submit"}
-                    className={"rounded-circle"}
+                    className={"rounded-circle btn-vibrant-primary mt-2"}
                   >
                     <SendFill />
                   </Button>
@@ -120,7 +114,7 @@ const ChatBot = () => {
 
       <div className={"d-flex justify-content-end align-items-center"}>
         <Button
-          className={"d-flex mt-2 p-2 rounded-3"}
+          className={"d-flex mt-2 p-2 rounded-3 btn-vibrant-primary shadow-lg"}
           onClick={() => {
             setChatOpen(!chatOpen);
           }}
