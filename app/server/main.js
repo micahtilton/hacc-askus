@@ -1,6 +1,6 @@
 import { Meteor } from "meteor/meteor";
-import { EmbeddingCollection } from "../imports/api/collections/EmbeddingCollection";
-import { ReportCollection } from "../imports/api/collections/ReportCollection";
+import { EmbeddingCollection } from "../imports/api/EmbeddingCollection";
+import { ReportCollection } from "../imports/api/ReportCollection";
 import OpenAI from "openai";
 import apikey from "./apikey.json";
 import { dot } from "mathjs";
@@ -108,9 +108,19 @@ Meteor.methods({
   insertReport(data) {
     ReportCollection.insert(data);
   },
+
+  getReports() {
+    return ReportCollection.find({}).fetch();
+  },
 });
 
 Meteor.startup(() => {
+  if (ReportCollection.find().count() === 0) {
+    console.log("report collection is empty");
+  } else {
+    console.log("report collection is not empty");
+  }
+
   if (EmbeddingCollection.find().count() === 0) {
     import embedding_data from "./embedding-data.json";
     console.log("loading embedding data into database");
