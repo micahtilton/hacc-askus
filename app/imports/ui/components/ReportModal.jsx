@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
-import { ReportCollection } from "../../api/collections/ReportCollection";
+import { ReportCollection } from "../../api/ReportCollection";
 
 const reportTypes = [
   "Inaccurate Information",
@@ -38,8 +38,10 @@ const ReportModal = ({ context, show, handleClose, onSubmit }) => {
           onSubmit={(e) => {
             e.preventDefault();
             const fullReport = {
+              resolved: false,
               ...reportDetails,
               ...context,
+              date: new Date(),
             };
             fullReport.categories = Array.from(fullReport.categories);
             onSubmit(fullReport);
