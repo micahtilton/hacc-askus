@@ -61,26 +61,27 @@
 }
 
 :root {
-  --matr-navbar-text-color: #DDEBE9;
-  --matr-navbar-highlight-text: #3F8880;
+  --primary: #5593C7;
+  --secondary: #0B6191;
+  --text: #D5F4FF;
+  --hover: #DEBF88;
 }
 
 body {
   font-family: sans-serif;
-  background-color: var(--matr-navbar-text-color);
 }
 
-footer, footer a {
-  background-color: #0B6191;
-  color: var(--matr-navbar-text-color);
+#navbar, #navbar a, footer, footer a {
+  background-color: var(--primary);
+  color: var(--text);
 }
 
 footer a:hover {
-  color: var(--matr-navbar-highlight-text);
+  color: var(--hover);
 }
 
 #basic-navbar-nav div a {
-  color: black;
+  color: var(--text);
   font-size: 15px;
   position: relative;
   transition: all 0.4s;
@@ -88,7 +89,7 @@ footer a:hover {
 }
 
 #basic-navbar-nav div a:hover::after, #basic-navbar-nav div a:focus, #basic-navbar-nav div a:focus::after {
-  color: var(--matr-navbar-highlight-text);
+  color: var(--secondary);
   opacity: 1;
 }
 
@@ -96,7 +97,7 @@ footer a:hover {
   content: '';
   height: 2px;
   width: 100%;
-  background: #0B6191;
+  background: var(--hover);
   position: absolute;
   left: 0;
   bottom: -2px;
@@ -106,11 +107,14 @@ footer a:hover {
 
 #socials {
   font-size: 18px;
-  --bs-nav-link-hover-color: var(--matr-navbar-highlight-text);
+}
+
+#socials div a:hover {
+  color: var(--hover);
 }
 
 #helpDesk div h1 {
-  color: var(--matr-navbar-highlight-text);
+  color: var(--secondary);
 }
 
 #hd-images {

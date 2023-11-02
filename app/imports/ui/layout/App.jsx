@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import ChatBot from '../ChatBot';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HelpDesk from '../pages/HelpDesk';
+import AdminLogin from '../pages/AdminLogin';
 
 export const App = () => (
   <Router>
@@ -13,6 +14,7 @@ export const App = () => (
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/helpdesk" element={<HelpDesk />} />
+        <Route exact path="/admin" element={<AdminLogin />} />
       </Routes>
       <ChatBot/>
       <Footer/>

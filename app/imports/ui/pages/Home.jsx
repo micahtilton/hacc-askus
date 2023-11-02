@@ -13,7 +13,7 @@ const Home = () => (
         <Button>Ask a Question</Button>
       </Col>
       <Col className="align-middle">
-        <Image src="images/Hoku.png" id="hoku" fluid />
+        <Image src="images/Hoku.png" id="hoku" fluid className="p-4"/>
       </Col>
     </Row>
   </Container>
