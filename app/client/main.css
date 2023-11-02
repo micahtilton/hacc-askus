@@ -8,6 +8,10 @@
   --accent: #DCA13C;
 }
 
+.text-dull-light {
+  color: var(--dull-light);
+}
+
 .btn-vibrant-primary {
   background-color: var(--vibrant-primary) !important;
   border-color: var(--vibrant-primary) !important;
