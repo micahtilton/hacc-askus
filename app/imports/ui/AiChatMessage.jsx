@@ -3,6 +3,7 @@ import { ExclamationCircle } from "react-bootstrap-icons";
 import ReportModal from "./components/ReportModal";
 import { ReportCollection } from "../api/collections/ReportCollection";
 import { Image } from "react-bootstrap";
+import Typewriter from '../Typewriter';
 
 function ChatLoading() {
   return (
@@ -16,6 +17,7 @@ function ChatLoading() {
 
 const AiChatMessage = ({ context, loading = false }) => {
   const [show, setShow] = useState(false);
+
   const onSubmit = (data) => {
     Meteor.call("insertReport", data, (err, res) => {
       if (err) {
@@ -30,13 +32,14 @@ const AiChatMessage = ({ context, loading = false }) => {
   };
 
   return (
-    <div className={"d-flex"}>
+    <div className={"d-flex align-items-end"}>
       <Image src={"hoku-pfp.png"} width={40} height={40} className={"mx-2"} />
-      <div className="align-self-start d-flex p-2 justify-content-start bg-primary rounded-4 text-white text-break me-lg-5 me-sm-2">
+      <div className="ai-text-box align-self-start d-flex p-2 justify-content-start bg-primary text-white text-break me-lg-5 me-sm-2">
         {loading ? (
           <ChatLoading />
         ) : (
           <div className={"d-flex"}>
+            {/*<Typewriter text={context.answer} />*/}
             <div>{context.answer}</div>
             <div className={"d-flex"}>
               <ExclamationCircle
