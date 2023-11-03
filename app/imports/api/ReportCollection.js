@@ -25,4 +25,4 @@ const ReportSchema = new SimpleSchema({
 
 ReportCollection.attachSchema(ReportSchema);
 
-export { ReportCollection, ReportSchema, getReports };
+export { ReportCollection, ReportSchema };
