@@ -1,14 +1,14 @@
 import React from "react";
 import { Col, Container } from "react-bootstrap";
 import { useTracker } from "meteor/react-meteor-data";
-import { ResolvedCollection } from "../../../api/ResolvedCollection";
+import { FAQCollection } from "../../../api/FAQCollection";
 import FAQRow from "./FAQRow";
 import AddFAQModal from "./AddFAQModal";
 
 Meteor.subscribe("resolved");
 
 const ManageFAQPage = () => {
-  const faqs = useTracker(() => ResolvedCollection.find({}).fetch());
+  const faqs = useTracker(() => FAQCollection.find({}).fetch());
 
   return (
     <Container>

@@ -13,7 +13,7 @@ const ResolveModal = ({ report }) => {
     setShow(true);
   };
   const deleteReport = ({ _id }) => {
-    ReportCollection.remove(_id);
+    Meteor.call("removeReport", _id);
     handleClose();
   };
 
@@ -39,7 +39,7 @@ const ResolveModal = ({ report }) => {
 
               const res = {
                 question: questionText,
-                answer: questionText + "?  " + answerText,
+                answer: answerText,
               };
 
               Meteor.call(

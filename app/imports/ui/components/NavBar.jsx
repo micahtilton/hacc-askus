@@ -1,14 +1,13 @@
 import React from "react";
-import { Container, Navbar, Nav, Image, Button } from "react-bootstrap";
+import { Container, Navbar, Nav, Image } from "react-bootstrap";
 import { Facebook, Instagram, Twitter, Youtube } from "react-bootstrap-icons";
-import { NavLink } from "react-router-dom";
 
 function Logo() {
   return (
     <div className={"d-flex"}>
       <Image
         height={55}
-        src={"logo.png"}
+        src={"images/logo.png"}
         className={"pe-2 align-self-center"}
       />
       <div className={"logo"}>

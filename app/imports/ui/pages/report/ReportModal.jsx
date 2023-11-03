@@ -21,6 +21,29 @@ const ReportModal = ({ context, show, handleClose, onSubmit }) => {
     });
   };
 
+  const toggleReportType = (reportType, checked) => {
+    const copy = { ...reportDetails };
+    if (checked) {
+      copy.categories.add(reportType);
+    } else {
+      copy.categories.delete(reportType);
+    }
+    setReportDetails(copy);
+  };
+
+  const handleSubmit = () => {
+    const fullReport = {
+      resolved: false,
+      ...reportDetails,
+      ...context,
+      date: new Date(),
+    };
+    fullReport.categories = Array.from(fullReport.categories);
+    onSubmit(fullReport);
+    clearForm();
+    handleClose();
+  };
+
   const close = () => {
     clearForm();
     handleClose();
@@ -36,29 +59,14 @@ const ReportModal = ({ context, show, handleClose, onSubmit }) => {
           id={"report-form"}
           onSubmit={(e) => {
             e.preventDefault();
-            const fullReport = {
-              resolved: false,
-              ...reportDetails,
-              ...context,
-              date: new Date(),
-            };
-            fullReport.categories = Array.from(fullReport.categories);
-            onSubmit(fullReport);
-            clearForm();
-            handleClose();
+            handleSubmit();
           }}
         >
           {reportTypes.map((reportType) => (
             <Form.Check
               checked={reportDetails.categories.has(reportType)}
               onChange={(e) => {
-                const copy = { ...reportDetails };
-                if (e.target.checked) {
-                  copy.categories.add(reportType);
-                } else {
-                  copy.categories.delete(reportType);
-                }
-                setReportDetails(copy);
+                toggleReportType(reportType, e.target.checked);
               }}
               key={reportType}
               type={"checkbox"}

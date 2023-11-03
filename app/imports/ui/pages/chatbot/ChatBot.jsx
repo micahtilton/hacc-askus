@@ -53,7 +53,7 @@ const ChatBot = () => {
             <div>
               <div className="d-flex justify-content-between ps-2 p-2 bg-vibrant-primary rounded-top-3">
                 <div className="d-flex fw-medium fs-5 m-1 text-white align-items-center">
-                  <Image src={"hoku-pfp.png"} width={50} />
+                  <Image src={"images/hoku-pfp.png"} width={50} />
                   <h1 className={"ps-3 m-0"}>Hoku</h1>
                 </div>
               </div>

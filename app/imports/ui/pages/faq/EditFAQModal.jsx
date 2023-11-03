@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ResolvedCollection } from "../../../api/ResolvedCollection";
+import { FAQCollection } from "../../../api/FAQCollection";
 import { Button, Form, Modal } from "react-bootstrap";
 
 const EditFAQModal = ({ faq }) => {
@@ -15,18 +15,17 @@ const EditFAQModal = ({ faq }) => {
   };
 
   const handleSubmit = () => {
+    handleClose();
     Meteor.call("editFAQ", faq._id, questionText, answerText, (err) => {
       if (err) {
         console.log(err);
       }
     });
-
-    handleClose();
   };
 
   const handleDelete = () => {
-    ResolvedCollection.remove(faq._id);
     handleClose();
+    Meteor.call("removeFAQ", faq._id);
   };
 
   return (
@@ -63,6 +62,7 @@ const EditFAQModal = ({ faq }) => {
               <Form.Label>Answer</Form.Label>
               <Form.Control
                 type="text"
+                as="textarea"
                 placeholder="Answer"
                 value={answerText}
                 onChange={(e) => {

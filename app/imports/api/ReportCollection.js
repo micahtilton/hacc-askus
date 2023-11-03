@@ -1,5 +1,6 @@
 import { Mongo } from "meteor/mongo";
 import SimpleSchema from "simpl-schema";
+import { addFAQ } from "./FAQCollection";
 
 const ReportCollection = new Mongo.Collection("reports");
 
@@ -25,4 +26,24 @@ const ReportSchema = new SimpleSchema({
 
 ReportCollection.attachSchema(ReportSchema);
 
-export { ReportCollection, ReportSchema };
+const addReport = (report) => {
+  ReportCollection.insert(report);
+};
+
+const resolveReport = async (id, question, answer) => {
+  addFAQ(question, answer);
+  removeReport(id);
+  return true;
+};
+
+const removeReport = (id) => {
+  ReportCollection.remove(id);
+};
+
+export {
+  ReportCollection,
+  ReportSchema,
+  addReport,
+  removeReport,
+  resolveReport,
+};
