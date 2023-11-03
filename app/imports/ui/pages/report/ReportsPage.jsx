@@ -1,8 +1,10 @@
 import React from "react";
 import { useTracker } from "meteor/react-meteor-data";
-import ReportView from "../components/ReportView";
+import ReportView from "./ReportView";
 import { Col, Container, Row } from "react-bootstrap";
-import { ReportCollection } from "../../api/ReportCollection";
+import { ReportCollection } from "../../../api/ReportCollection";
+
+Meteor.subscribe("reports");
 
 const ReportsPage = () => {
   const reports = useTracker(() => ReportCollection.find({}).fetch());

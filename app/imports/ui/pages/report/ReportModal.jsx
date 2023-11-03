@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
-import { ReportCollection } from "../../api/ReportCollection";
 
 const reportTypes = [
   "Inaccurate Information",
@@ -46,6 +45,7 @@ const ReportModal = ({ context, show, handleClose, onSubmit }) => {
             fullReport.categories = Array.from(fullReport.categories);
             onSubmit(fullReport);
             clearForm();
+            handleClose();
           }}
         >
           {reportTypes.map((reportType) => (
