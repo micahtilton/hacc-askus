@@ -2,13 +2,12 @@ import { Meteor } from "meteor/meteor";
 import { EmbeddingCollection } from "../imports/api/EmbeddingCollection";
 import { ReportCollection } from "../imports/api/ReportCollection";
 import OpenAI from "openai";
-import apikey from "./apikey.json";
 import { dot } from "mathjs";
 import { _ } from "underscore";
 import { ResolvedCollection } from "../imports/api/ResolvedCollection";
 
 const openai = new OpenAI({
-  apiKey: apikey.key,
+  apiKey: Meteor.settings["openai-api-key"],
 });
 
 const isPromptInjection = async (prompt) => {
@@ -182,7 +181,7 @@ Meteor.startup(() => {
   }
 
   if (EmbeddingCollection.find().count() === 0) {
-    import embedding_data from "./embedding-data.json";
+    import embedding_data from "./data/embedding-data.json";
     console.log("loading embedding data into database");
     embedding_data.forEach((e) => EmbeddingCollection.insert(e));
   } else {
