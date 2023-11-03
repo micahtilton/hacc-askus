@@ -11,7 +11,7 @@ const ManageFAQPage = () => {
   const faqs = useTracker(() => FAQCollection.find({}).fetch());
 
   return (
-    <Container>
+    <Container fluid>
       <Col className={"d-flex justify-content-center pt-3"}>
         <AddFAQModal />
       </Col>

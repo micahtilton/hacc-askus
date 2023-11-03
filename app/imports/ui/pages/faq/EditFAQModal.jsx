@@ -36,7 +36,7 @@ const EditFAQModal = ({ faq }) => {
 
       <Modal centered show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Update Faq</Modal.Title>
+          <Modal.Title>Update FAQ</Modal.Title>
         </Modal.Header>
         <Modal.Body className={"overflow-y-auto"}>
           <Form
