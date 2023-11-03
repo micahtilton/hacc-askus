@@ -15,6 +15,10 @@ const FAQSchema = new SimpleSchema({
 FAQCollection.attachSchema(FAQSchema);
 
 const addFAQ = (question, answer) => {
+  if (!Meteor.call("isAdmin")) {
+    return;
+  }
+
   const embedding = Meteor.call("getEmbedding", question + " " + answer);
 
   if (embedding === null) return false;
@@ -29,11 +33,19 @@ const addFAQ = (question, answer) => {
   FAQCollection.insert(resolveInfo);
 };
 const editFAQ = async (id, question, answer) => {
+  if (!Meteor.call("isAdmin")) {
+    return;
+  }
+
   removeFAQ(id);
   addFAQ(question, answer);
 };
 
 const removeFAQ = (id) => {
+  if (!Meteor.call("isAdmin")) {
+    return;
+  }
+
   FAQCollection.remove(id);
 };
 

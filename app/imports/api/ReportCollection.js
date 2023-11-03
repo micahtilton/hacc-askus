@@ -31,12 +31,20 @@ const addReport = (report) => {
 };
 
 const resolveReport = async (id, question, answer) => {
+  if (!Meteor.call("isAdmin")) {
+    return false;
+  }
+
   addFAQ(question, answer);
   removeReport(id);
   return true;
 };
 
 const removeReport = (id) => {
+  if (!Meteor.call("isAdmin")) {
+    return;
+  }
+
   ReportCollection.remove(id);
 };
 

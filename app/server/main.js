@@ -18,7 +18,7 @@ import { askHoku } from "./openai/hoku-tools";
 import { getEmbedding } from "./openai/openai-tools";
 
 const isAdmin = () =>
-  Meteor.userId() && Roles.userIsInRole(Meteor.userId(), "admin");
+  Meteor.userId() !== null && Roles.userIsInRole(Meteor.userId(), "admin");
 
 Meteor.methods({
   isAdmin,

@@ -1,6 +1,12 @@
 import React from "react";
 import { Container, Navbar, Nav, Image } from "react-bootstrap";
-import { Facebook, Instagram, Twitter, Youtube } from "react-bootstrap-icons";
+import {
+  BoxArrowRight,
+  Facebook,
+  Instagram,
+  Twitter,
+  Youtube,
+} from "react-bootstrap-icons";
 import { useTracker } from "meteor/react-meteor-data";
 import { Meteor } from "meteor/meteor";
 import { useNavigate } from "react-router";
@@ -43,7 +49,7 @@ const NavBar = () => {
             <Nav.Link href="#">CONTACT US</Nav.Link>
           </Nav>
 
-          <Nav className={"d-flex justify-content-center ms-auto"}>
+          <Nav className={"d-flex justify-content-center mx-auto"}>
             <Nav.Link href="https://twitter.com/UHawaiiNews" className={"p-2"}>
               <Twitter />
             </Nav.Link>
@@ -65,19 +71,24 @@ const NavBar = () => {
             >
               <Youtube />
             </Nav.Link>
-            {loggedIn && (
-              <Nav.Link
-                href="#"
-                onClick={() => {
-                  Meteor.logout();
-                  navigate("/");
-                }}
-              >
-                SIGN OUT
-              </Nav.Link>
-            )}
           </Nav>
         </Navbar.Collapse>
+        {loggedIn && (
+          <Nav.Link
+            href="#"
+            onClick={() => {
+              Meteor.logout();
+              navigate("/");
+            }}
+          >
+            {Meteor.user() && (
+              <div>
+                {Meteor.user().username}
+                <BoxArrowRight className={"ms-2"} />
+              </div>
+            )}
+          </Nav.Link>
+        )}
       </Container>
     </Navbar>
   );
