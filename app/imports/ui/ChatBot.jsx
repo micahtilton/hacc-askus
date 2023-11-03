@@ -5,21 +5,23 @@ import {
   ChatFill,
   Send,
   SendFill,
+  X,
 } from "react-bootstrap-icons";
 import UserChatMessage from "./UserChatMessage";
 import AiChatMessage from "./AiChatMessage";
 import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
+import WelcomeMessage from './pages/WelcomeMessage';
 
 const ChatBot = () => {
   const [messages, setMessages] = useState([]);
   const [text, setText] = useState("");
   const [hokuLoading, setHokuLoading] = useState(false);
   const [chatOpen, setChatOpen] = useState(false);
-  const bottomOfChat = useRef();
+  const bottomOfChat = useRef(null);
 
   useEffect(() => {
     if (bottomOfChat.current) {
-      bottomOfChat.current.scrollIntoView({ behavior: "smooth" });
+      bottomOfChat.current.scrollIntoView({ behavior: "smooth"});
     }
   }, [messages]);
 
@@ -51,7 +53,7 @@ const ChatBot = () => {
   return (
     <Container
       fluid
-      className="chat-container bottom-right d-flex flex-column rounded-3 mb-3"
+      id="slide" className="chat-container bottom-right d-flex flex-column rounded-3 mb-3"
     >
       <Row>
         <Col sm={12} md={{ span: 8, offset: 4 }} lg={{ span: 6, offset: 6 }}>
@@ -70,7 +72,7 @@ const ChatBot = () => {
                     data.sender === "user" ? (
                       <UserChatMessage key={i} text={data.text} />
                     ) : (
-                      <AiChatMessage key={i} context={data.context} />
+                      <AiChatMessage key={i} context={data.context}/>
                     ),
                   )}
                   {hokuLoading && (
@@ -78,8 +80,6 @@ const ChatBot = () => {
                   )}
                   <div ref={bottomOfChat}></div>
                 </div>
-
-                <div className="flex-grow-1"></div>
               </div>
 
               <Form
@@ -126,11 +126,20 @@ const ChatBot = () => {
           }}
         >
           <div className={"text-white d-flex"}>
-            Hoku Virtual Assistant
             <ChatDotsFill className={"ms-2 mt-1"} />
           </div>
         </Button>
       </div>
+
+
+      {/*<div className="talk-bubble d-flex justify-content-end align-items-center me-4 p-0">*/}
+      {/*  <div className="talktext">*/}
+      {/*    <div className="talk-bubble-header text-center">*/}
+      {/*      <Image className="m-2" src={"hoku-pfp.png"} width={50} />*/}
+      {/*      How can I help you?</div>*/}
+      {/*    <p className="m-3">Hi I am Hoku! I am a Chatbot to assit you in the ITS homepage.</p>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
     </Container>
   );
 };

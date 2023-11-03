@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 
 const NavBar = () => (
-  <Navbar expand='lg'>
+  <Navbar className="nav" expand='lg'>
     <Container>
       <Nav className="justify-content-start position-relative">
         <Navbar.Brand as={NavLink} to="/">

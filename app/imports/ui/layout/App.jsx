@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import ChatBot from '../ChatBot';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HelpDesk from '../pages/HelpDesk';
+import WelcomeMessage from '../pages/WelcomeMessage';
 
 export const App = () => (
   <Router>
