@@ -1,10 +1,10 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 
-const Admin = () => (
+const SignIn = () => (
   <Container>
     <h1>Admin</h1>
   </Container>
 );
 
-export default Admin;
+export default SignIn;
