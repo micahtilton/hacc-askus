@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { ExclamationCircle } from "react-bootstrap-icons";
 import ReportModal from "../report/ReportModal";
-import { ReportCollection } from "../../../api/ReportCollection";
 import { Image } from "react-bootstrap";
 
 function ChatLoading() {
@@ -17,7 +16,7 @@ function ChatLoading() {
 const AiChatMessage = ({ context, loading = false }) => {
   const [show, setShow] = useState(false);
   const onSubmit = (data) => {
-    Meteor.call("insertReport", data, (err, res) => {
+    Meteor.call("insertReport", data, (err) => {
       if (err) {
         console.log("could not report message");
       } else {
