@@ -4,12 +4,13 @@ import { FAQCollection } from "../../imports/api/FAQCollection";
 import { EmbeddingCollection } from "../../imports/api/EmbeddingCollection";
 import { getEmbedding, openai } from "./openai-tools";
 
-const createContextFromFAQ = (
+const createContextFrom = (
+  collection,
   embedding,
   contextAmount = 1,
-  similarityThreshold = 0.8,
+  similarityThreshold = 1,
 ) => {
-  let embeddings = FAQCollection.find({}).fetch();
+  let embeddings = collection.find({}).fetch();
 
   // add similarity value to embedding object
   embeddings.map((e) => {
@@ -35,7 +36,7 @@ const createContextFromFAQ = (
 };
 
 const createContext = (embedding, contextAmount = 2) => {
-  const resolvedContext = createContextFromFAQ(embedding);
+  const resolvedContext = createContextFrom(FAQCollection, embedding, 1, 0.8);
 
   if (resolvedContext.length === 1) {
     return resolvedContext;
