@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ExclamationCircle } from "react-bootstrap-icons";
-import ReportModal from "./components/ReportModal";
-import { ReportCollection } from "../api/ReportCollection";
+import ReportModal from "../report/ReportModal";
+import { ReportCollection } from "../../../api/ReportCollection";
 import { Image } from "react-bootstrap";
 
 function ChatLoading() {
