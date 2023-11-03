@@ -52,6 +52,11 @@ const askHoku = async (question) => {
     question: question,
   };
 
+  if (!Meteor.call("isAdmin")) {
+    defaultAnswer.answer = "Login for me to answer your questions :)";
+    return defaultAnswer;
+  }
+
   const questionEmbedding = await getEmbedding(question);
 
   if (questionEmbedding === null) {

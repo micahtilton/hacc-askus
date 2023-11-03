@@ -24,3 +24,5 @@ react-meteor-data       # React higher-order component for reactively tracking M
 aldeed:collection2
 # autopublish
 insecure
+alanning:roles
+accounts-password
