@@ -34,9 +34,8 @@ const createContext = (embedding, contextAmount = 2) => {
   });
 
   // filter out low similarity embeddings
-  embeddings = embeddings.filter((e) => e.similarity > 0.75);
+  embeddings = embeddings.filter((e) => e.similarity > 0.79);
   embeddings = _.sortBy(embeddings, "similarity").reverse();
-
   embeddings.map((e) => {
     delete e.embedding;
     return e;
@@ -70,22 +69,45 @@ const isPromptInjection = async (prompt) => {
   return true;
 };
 
+// const splitPrompt = async (prompt) => {
+//   const chatCompletion = await openai.completions.create({
+//     model: "gpt-3.5-turbo-instruct",
+//     prompt: `is the following prompt more than one statement or question? List all of the statements or questions in array like this: ['statement/question 1', 'statement/question 2'...]. Prompt: "${prompt}"`,
+//     max_tokens: 150,
+//     temperature: 1,
+//   });
+//
+//   let arr = chatCompletion.choices.split("[");
+//   let deleteBeginning = arr.shift();
+//   let putIntoArray= deleteBeginning.split("', '");
+//   return putIntoArray;
+// };
+
+
 Meteor.methods({
   async askHoku(question) {
+    const defaultAnswer = {
+      answer: "",
+      context: [],
+      question: question,
+    };
     const questionEmbedding = await getEmbedding(question);
 
     if (questionEmbedding === null) {
-      return "could not embed";
+      defaultAnswer.answer = "could not embed";
+      return defaultAnswer;
     }
 
     const context = createContext(questionEmbedding);
+    defaultAnswer.context = context;
 
     if (context.length === 0) {
-      return "Sorry, I don't quite understand the question. Try adding more context.";
+      defaultAnswer.answer = "sorry, I don't quite understand the question. Try adding more context.";
+      return defaultAnswer;
     }
 
     const contextText = context.reduce((a, b) => a + " " + b.text, "");
-    const prompt = `Context: ${contextText}\n\nYou are Hoku, an AI chat assistant to UH Manoa students. you give at most 3 sentence answers in the form of a text message based only on the context given. do not mention any external sources. if the question can't be answered based on the context, say \"I'm sorry, I don't have the answer to that. question\".\n\nQuestion:${question}\nAnswer: `;
+    const prompt = `Context Information: ${contextText}\\n\\nYou are Hoku, an AI chat assistant to University of Hawaii students. If the following question then determine if the each question is mentioned in the context information. If yes the question is mentioned in the context information, then you give at most 3 sentence answers in the form of a text message that only answers the question based on the context information. If the question can't be answered based on the context information, say "I'm sorry, I don't have the answer to that." \\n\\nQuestion:${question}\\nAnswer: `;
 
     const chatCompletion = await openai.completions.create({
       model: "gpt-3.5-turbo-instruct",
@@ -95,14 +117,13 @@ Meteor.methods({
     });
 
     if (chatCompletion === null) {
-      return "Hoku is unavailable at the moment. Sorry for the inconvenience.";
+      defaultAnswer.answer = "Hoku is unavailable at the moment. Sorry for the inconvenience.";
+      return defaultAnswer;
     }
 
-    return {
-      answer: chatCompletion.choices[0].text,
-      context: context,
-      question: question,
-    };
+    defaultAnswer.answer = chatCompletion.choices[0].text;
+
+    return defaultAnswer;
   },
 
   insertReport(data) {
