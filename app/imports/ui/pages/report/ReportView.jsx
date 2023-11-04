@@ -3,15 +3,21 @@ import { Col, Row } from "react-bootstrap";
 import ContextModal from "./ContextModal";
 import ResolveModal from "./ResolveModal";
 
+const formatDate = (date) => {
+  return date.toLocaleString("en-US");
+}
+
 const ReportView = ({ report, index }) => {
   const bgTag = index % 2 === 0 ? "bg-dark-subtle" : "";
 
   return (
     <>
+
       <Row className={`py-2 ${bgTag}`}>
         <Col md={1}>
           <span className={"fw-bold d-md-none"}>Comment: </span>
           <span>{report.comment}</span>
+          <Col>{report.date.toLocaleString("en-US")}</Col>
         </Col>
         <Col md={2}>
           <span className={"fw-bold d-md-none"}>Question: </span>
@@ -40,6 +46,9 @@ const ReportView = ({ report, index }) => {
         <Col md={1} className={""}>
           <ResolveModal report={report} />
         </Col>
+      </Row>
+      <Row className={`py-2 ${bgTag}`}>
+
       </Row>
     </>
   );
