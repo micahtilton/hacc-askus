@@ -69,20 +69,6 @@ const isPromptInjection = async (prompt) => {
   return true;
 };
 
-// const splitPrompt = async (prompt) => {
-//   const chatCompletion = await openai.completions.create({
-//     model: "gpt-3.5-turbo-instruct",
-//     prompt: `is the following prompt more than one statement or question? List all of the statements or questions in array like this: ['statement/question 1', 'statement/question 2'...]. Prompt: "${prompt}"`,
-//     max_tokens: 150,
-//     temperature: 1,
-//   });
-//
-//   let arr = chatCompletion.choices.split("[");
-//   let deleteBeginning = arr.shift();
-//   let putIntoArray= deleteBeginning.split("', '");
-//   return putIntoArray;
-// };
-
 
 Meteor.methods({
   async askHoku(question) {
