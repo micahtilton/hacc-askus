@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { ExclamationCircle } from "react-bootstrap-icons";
-import ReportModal from "../report/ReportModal";
+import React, { useEffect, useState } from "react";
 import { Image } from "react-bootstrap";
+import { ExclamationCircle } from "react-bootstrap-icons";
+import ReportModal from "../components/ReportModal";
 
 function ChatLoading() {
   return (
@@ -12,31 +12,18 @@ function ChatLoading() {
     </div>
   );
 }
-
-const AiChatMessage = ({ context, loading = false }) => {
+const WelcomeMessage = (text, loading) => {
   const [show, setShow] = useState(false);
-
-  const onSubmit = (data) => {
-    Meteor.call("addReport", data, (err) => {
-      if (err) {
-        console.log("could not report message");
-      } else {
-        console.log("successfully inserted report");
-      }
-    });
-  };
-  const handleClose = () => {
-    setShow(false);
-  };
 
   return (
     <div className={"d-flex align-items-end"}>
-      <Image src={"images/hoku-pfp.png"} width={40} height={40} className={"mx-2"} />
+      <Image src={"hoku-pfp.png"} width={40} height={40} className={"mx-2"} />
       <div className="ai-text-box align-self-start d-flex p-2 justify-content-start bg-primary text-white text-break me-lg-5 me-sm-2">
         {loading ? (
           <ChatLoading />
         ) : (
           <div className={"d-flex"}>
+            {/*<Typewriter text={context.answer} />*/}
             <div>{context.answer}</div>
             <div className={"d-flex"}>
               <ExclamationCircle className={"ms-2"} onClick={() => setShow(true)} />
@@ -49,4 +36,4 @@ const AiChatMessage = ({ context, loading = false }) => {
   );
 };
 
-export default AiChatMessage;
+export default WelcomeMessage;

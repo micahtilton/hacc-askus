@@ -1,12 +1,6 @@
 import React from "react";
 import { Container, Navbar, Nav, Image } from "react-bootstrap";
-import {
-  BoxArrowRight,
-  Facebook,
-  Instagram,
-  Twitter,
-  Youtube,
-} from "react-bootstrap-icons";
+import { BoxArrowRight, Facebook, Instagram, Twitter, Youtube } from "react-bootstrap-icons";
 import { useTracker } from "meteor/react-meteor-data";
 import { Meteor } from "meteor/meteor";
 import { useNavigate } from "react-router";
@@ -14,11 +8,7 @@ import { useNavigate } from "react-router";
 function Logo() {
   return (
     <div className={"d-flex"}>
-      <Image
-        height={55}
-        src={"images/logo.png"}
-        className={"pe-2 align-self-center"}
-      />
+      <Image height={55} src={"images/logo.png"} className={"pe-2 align-self-center"} />
       <div className={"logo"}>
         <div className={"m-0 p-0"}>Information</div>
         <div className={"m-0 p-0"}>Technology</div>
@@ -53,22 +43,13 @@ const NavBar = () => {
             <Nav.Link href="https://twitter.com/UHawaiiNews" className={"p-2"}>
               <Twitter />
             </Nav.Link>
-            <Nav.Link
-              href="https://www.facebook.com/universityofhawaii"
-              className="p-2"
-            >
+            <Nav.Link href="https://www.facebook.com/universityofhawaii" className="p-2">
               <Facebook />
             </Nav.Link>
-            <Nav.Link
-              href="https://instagram.com/uhawaiinews/"
-              className={"p-2"}
-            >
+            <Nav.Link href="https://instagram.com/uhawaiinews/" className={"p-2"}>
               <Instagram />
             </Nav.Link>
-            <Nav.Link
-              href="https://www.youtube.com/user/uhmagazine"
-              className={"p-2"}
-            >
+            <Nav.Link href="https://www.youtube.com/user/uhmagazine" className={"p-2"}>
               <Youtube />
             </Nav.Link>
           </Nav>

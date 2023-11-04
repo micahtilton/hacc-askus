@@ -65,6 +65,14 @@ footer a {
   max-height: 30vh;
 }
 
+.ai-text-box {
+  border-radius: 15px 15px 15px 1px;
+}
+
+.user-text-box {
+  border-radius: 15px 15px 1px 15px;
+}
+
 .bottom-right {
   position: fixed;
   bottom: 0;
@@ -100,7 +108,18 @@ footer a {
   animation-delay: 0.66s;
 }
 
+:root {
+  --matr-navbar-text-color: #DDEBE9;
+  --matr-navbar-highlight-text: #3F8880;
 
+
+  --light-cyan: #D5F4FF;
+  --celestial-blue: #5593C7;
+  --lapis-lazuli: #0B6191;
+  --dark-goldenrod: #BC9244;
+  --ecru:#DEBF88;
+  --papaya: #FFECCB;
+}
 
 body {
   font-family: sans-serif;
@@ -123,7 +142,99 @@ body {
   float: left;
 }
 
+.its-image {
+  background-image: url("https://www.usgbc.org/sites/default/files/2020-06/1%288%29.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
 
+.banner {
+  background-color: rgba(0,0,0,50%);
+  color: var(--light-cyan);
+  font-size: 50px;
+}
+
+.aloha {
+  color: var(--light-cyan);
+  font-family: 'Dancing Script', cursive;
+  font-size: 150px;
+  text-shadow: black 7px 0 0;
+}
+.divider {
+  height: 50px;
+  background-color: #0B6191;
+}
+
+.text-animation  {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+  font-size: 100px;
+}
+
+/*.text-animation:first-of-type {*/
+/*  animation: showup 7s infinite;*/
+/*}*/
+
+/*.text-animation:last-of-type {*/
+/*  width:0px;*/
+/*  animation: reveal 7s infinite;*/
+/*}*/
+
+/*.text-animation:last-of-type span {*/
+/*  margin-left:-355px;*/
+/*  animation: slidein 7s infinite;*/
+/*}*/
+
+/*@keyframes showup {*/
+/*  0% {opacity:0;}*/
+/*  20% {opacity:1;}*/
+/*  80% {opacity:1;}*/
+/*  100% {opacity:0;}*/
+/*}*/
+
+/*@keyframes slidein {*/
+/*  0% { margin-left:-800px; }*/
+/*  20% { margin-left:-800px; }*/
+/*  35% { margin-left:0px; }*/
+/*  100% { margin-left:0px; }*/
+/*}*/
+
+/*@keyframes reveal {*/
+/*  0% {opacity:0;width:0px;}*/
+/*  20% {opacity:1;width:0px;}*/
+/*  30% {width:355px;}*/
+/*  80% {opacity:1;}*/
+/*  100% {opacity:0;width:355px;}*/
+/*}*/
+
+/*.talk-bubble {*/
+/*  background: #efefef;*/
+/*  font-size: 1.2rem;*/
+/*  max-width: 400px;*/
+/*  padding: 15px;*/
+/*  position: absolute;*/
+/*  right: 0;*/
+/*  bottom: 30px;*/
+/*  border-radius: 20px;*/
+
+/*  &::after {*/
+/*    border-left: 20px solid transparent;*/
+/*    border-top: 20px solid #efefef;*/
+/*    bottom: -20px;*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    right: 20px;*/
+/*  }*/
+/*}*/
+
+/*.talk-bubble-header {*/
+/*  background-color: var(--lapis-lazuli);*/
+/*  height: 25%;*/
+/*  border-top-right-radius: 20px;*/
+/*  border-top-left-radius: 20px;*/
+/*}*/
 
 
 
