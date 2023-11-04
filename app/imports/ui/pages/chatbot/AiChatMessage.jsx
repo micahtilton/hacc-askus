@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { ExclamationCircle } from "react-bootstrap-icons";
-import ReportModal from "./components/ReportModal";
-import { ReportCollection } from "../api/collections/ReportCollection";
+import ReportModal from "../report/ReportModal";
 import { Image } from "react-bootstrap";
-import Typewriter from '../Typewriter';
 
 function ChatLoading() {
   return (
@@ -19,7 +17,7 @@ const AiChatMessage = ({ context, loading = false }) => {
   const [show, setShow] = useState(false);
 
   const onSubmit = (data) => {
-    Meteor.call("insertReport", data, (err, res) => {
+    Meteor.call("addReport", data, (err) => {
       if (err) {
         console.log("could not report message");
       } else {
@@ -39,7 +37,6 @@ const AiChatMessage = ({ context, loading = false }) => {
           <ChatLoading />
         ) : (
           <div className={"d-flex"}>
-            {/*<Typewriter text={context.answer} />*/}
             <div>{context.answer}</div>
             <div className={"d-flex"}>
               <ExclamationCircle
