@@ -9,7 +9,16 @@ import { getEmbedding } from "./openai/openai-tools";
 
 const isAdmin = () => Meteor.userId() !== null && Roles.userIsInRole(Meteor.userId(), "admin");
 
+const getUsername = () => {
+  if (Meteor.user() === null) {
+    return "hello";
+  } else {
+    return Meteor.user().username;
+  }
+};
+
 Meteor.methods({
+  getUsername,
   isAdmin,
   getEmbedding,
   askHoku,

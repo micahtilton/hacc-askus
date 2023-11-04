@@ -24,7 +24,7 @@ const addFAQ = (question, answer) => {
   if (embedding === null) return false;
 
   const resolveInfo = {
-    source: "ITS Admin",
+    source: Meteor.call("getUsername"),
     embedding: embedding,
     text: answer,
     question: question,
@@ -32,6 +32,7 @@ const addFAQ = (question, answer) => {
 
   FAQCollection.insert(resolveInfo);
 };
+
 const editFAQ = async (id, question, answer) => {
   if (!Meteor.call("isAdmin")) {
     return;
