@@ -1,0 +1,8 @@
+{
+  "openai-api-key": "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",
+
+  "accounts": [
+    { "email": "admin@hawaii.edu", "password": "hacc2023", "role": "admin" },
+    { "email": "user@hawaii.edu", "password": "hacc2023" }
+  ]
+}
