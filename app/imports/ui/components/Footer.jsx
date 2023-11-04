@@ -14,8 +14,8 @@ const Footer = () => (
         <Col className="text-center">
           <h4>STUDENT EMPLOYMENT</h4>
           <p>
-            Information Technology Services posts available positions for UH
-            students on <a href="http://www.hawaii.edu/sece/">SECE</a>{" "}
+            Information Technology Services posts available positions for UH students on{" "}
+            <a href="http://www.hawaii.edu/sece/">SECE</a>{" "}
           </p>
         </Col>
         <Col className="text-center">

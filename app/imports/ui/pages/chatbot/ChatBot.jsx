@@ -43,10 +43,7 @@ const ChatBot = () => {
   };
 
   return (
-    <Container
-      fluid
-      className="chat-container bottom-right d-flex flex-column rounded-3 mb-3"
-    >
+    <Container fluid className="chat-container bottom-right d-flex flex-column rounded-3 mb-3">
       <Row>
         <Col sm={12} md={{ span: 8, offset: 4 }} lg={{ span: 6, offset: 6 }}>
           {chatOpen && (
@@ -67,24 +64,17 @@ const ChatBot = () => {
                       <AiChatMessage key={i} context={data.context} />
                     ),
                   )}
-                  {hokuLoading && (
-                    <AiChatMessage loading={hokuLoading} text={"loading..."} />
-                  )}
+                  {hokuLoading && <AiChatMessage loading={hokuLoading} text={"loading..."} />}
                   <div ref={bottomOfChat}></div>
                 </div>
 
                 <div className="flex-grow-1"></div>
               </div>
 
-              <Form
-                className="d-flex flex-row bg-white rounded-bottom-3"
-                onSubmit={handleSend}
-              >
+              <Form className="d-flex flex-row bg-white rounded-bottom-3" onSubmit={handleSend}>
                 <Form.Control
                   type={"text"}
-                  className={
-                    "m-2 p-1 mt-3 fw-light d-flex px-2 rounded-pill chat-field"
-                  }
+                  className={"m-2 p-1 mt-3 fw-light d-flex px-2 rounded-pill chat-field"}
                   placeholder={"Ask Hoku"}
                   onChange={(e) => {
                     if (e.target.value.length > 120) {
@@ -95,14 +85,8 @@ const ChatBot = () => {
                   value={text}
                 ></Form.Control>
 
-                <div
-                  className={"d-flex flex-column justify-content-center pe-2"}
-                >
-                  <Button
-                    size={"sm"}
-                    type={"submit"}
-                    className={"rounded-circle btn-vibrant-primary mt-2"}
-                  >
+                <div className={"d-flex flex-column justify-content-center pe-2"}>
+                  <Button size={"sm"} type={"submit"} className={"rounded-circle btn-vibrant-primary mt-2"}>
                     <SendFill />
                   </Button>
                 </div>

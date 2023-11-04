@@ -2,23 +2,12 @@ import { Meteor } from "meteor/meteor";
 import { EmbeddingCollection } from "../imports/api/EmbeddingCollection";
 import { Accounts } from "meteor/accounts-base";
 import { Roles } from "meteor/alanning:roles";
-import {
-  addReport,
-  removeReport,
-  ReportCollection,
-  resolveReport,
-} from "../imports/api/ReportCollection";
-import {
-  addFAQ,
-  editFAQ,
-  FAQCollection,
-  removeFAQ,
-} from "../imports/api/FAQCollection";
+import { addReport, removeReport, ReportCollection, resolveReport } from "../imports/api/ReportCollection";
+import { addFAQ, editFAQ, FAQCollection, removeFAQ } from "../imports/api/FAQCollection";
 import { askHoku } from "./openai/hoku-tools";
 import { getEmbedding } from "./openai/openai-tools";
 
-const isAdmin = () =>
-  Meteor.userId() !== null && Roles.userIsInRole(Meteor.userId(), "admin");
+const isAdmin = () => Meteor.userId() !== null && Roles.userIsInRole(Meteor.userId(), "admin");
 
 Meteor.methods({
   isAdmin,
@@ -76,13 +65,9 @@ Meteor.startup(() => {
   if (Meteor.users.find().count() === 0) {
     if (Meteor.settings.accounts) {
       console.log("Creating the default user(s)");
-      Meteor.settings.accounts.forEach(({ email, password, role }) =>
-        createUser(email, password, role),
-      );
+      Meteor.settings.accounts.forEach(({ email, password, role }) => createUser(email, password, role));
     } else {
-      console.log(
-        "Cannot initialize the database!  Please invoke meteor with a settings file.",
-      );
+      console.log("Cannot initialize the database!  Please invoke meteor with a settings file.");
     }
   }
 });

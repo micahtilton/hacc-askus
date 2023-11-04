@@ -48,10 +48,4 @@ const removeReport = (id) => {
   ReportCollection.remove(id);
 };
 
-export {
-  ReportCollection,
-  ReportSchema,
-  addReport,
-  removeReport,
-  resolveReport,
-};
+export { ReportCollection, ReportSchema, addReport, removeReport, resolveReport };

@@ -31,12 +31,7 @@ const AiChatMessage = ({ context, loading = false }) => {
 
   return (
     <div className={"d-flex align-items-end"}>
-      <Image
-        src={"images/hoku-pfp.png"}
-        width={40}
-        height={40}
-        className={"mx-2"}
-      />
+      <Image src={"images/hoku-pfp.png"} width={40} height={40} className={"mx-2"} />
       <div className="ai-text-box align-self-start d-flex p-2 justify-content-start bg-primary text-white text-break me-lg-5 me-sm-2">
         {loading ? (
           <ChatLoading />
@@ -44,17 +39,9 @@ const AiChatMessage = ({ context, loading = false }) => {
           <div className={"d-flex"}>
             <div>{context.answer}</div>
             <div className={"d-flex"}>
-              <ExclamationCircle
-                className={"ms-2"}
-                onClick={() => setShow(true)}
-              />
+              <ExclamationCircle className={"ms-2"} onClick={() => setShow(true)} />
             </div>
-            <ReportModal
-              context={context}
-              show={show}
-              handleClose={handleClose}
-              onSubmit={onSubmit}
-            />
+            <ReportModal context={context} show={show} handleClose={handleClose} onSubmit={onSubmit} />
           </div>
         )}
       </div>

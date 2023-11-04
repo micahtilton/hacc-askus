@@ -42,12 +42,7 @@ const ResolveModal = ({ report }) => {
                 answer: answerText,
               };
 
-              Meteor.call(
-                "resolveReport",
-                report._id,
-                res.question,
-                res.answer,
-              );
+              Meteor.call("resolveReport", report._id, res.question, res.answer);
 
               clearForm();
               handleClose();

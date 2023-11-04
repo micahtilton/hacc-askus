@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 
 const useTypingEffect = (textToType, interKeyStrokeDurationInMs) => {
   const [currentPosition, setCurrentPosition] = useState(0);
@@ -21,9 +21,9 @@ const useTypingEffect = (textToType, interKeyStrokeDurationInMs) => {
   }, [interKeyStrokeDurationInMs, textToType]);
 
   return textToType.substring(0, currentPosition);
-}
+};
 
-const Typewriter = ({ text, speed = 20}) => {
+const Typewriter = ({ text, speed = 20 }) => {
   const displayText = useTypingEffect(text, speed);
 
   return <>{displayText}</>;

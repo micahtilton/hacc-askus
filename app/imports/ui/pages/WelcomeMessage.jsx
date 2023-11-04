@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Image } from 'react-bootstrap';
-import { ExclamationCircle } from 'react-bootstrap-icons';
-import ReportModal from '../components/ReportModal';
+import React, { useEffect, useState } from "react";
+import { Image } from "react-bootstrap";
+import { ExclamationCircle } from "react-bootstrap-icons";
+import ReportModal from "../components/ReportModal";
 
 function ChatLoading() {
   return (
@@ -12,7 +12,7 @@ function ChatLoading() {
     </div>
   );
 }
-const WelcomeMessage = (text, loading ) => {
+const WelcomeMessage = (text, loading) => {
   const [show, setShow] = useState(false);
 
   return (
@@ -26,22 +26,14 @@ const WelcomeMessage = (text, loading ) => {
             {/*<Typewriter text={context.answer} />*/}
             <div>{context.answer}</div>
             <div className={"d-flex"}>
-              <ExclamationCircle
-                className={"ms-2"}
-                onClick={() => setShow(true)}
-              />
+              <ExclamationCircle className={"ms-2"} onClick={() => setShow(true)} />
             </div>
-            <ReportModal
-              context={context}
-              show={show}
-              handleClose={handleClose}
-              onSubmit={onSubmit}
-            />
+            <ReportModal context={context} show={show} handleClose={handleClose} onSubmit={onSubmit} />
           </div>
         )}
       </div>
     </div>
   );
-}
+};
 
 export default WelcomeMessage;

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import React from "react";
+import { Col, Container, Image, Row } from "react-bootstrap";
 
 const HelpDesk = () => (
   <Container className="py-3" id="helpDesk">
@@ -16,7 +16,9 @@ const HelpDesk = () => (
         <h1>Live Chat Support Hours</h1>
         <h5>9/1/2023 Special Hours: 8:00am - 11:00am</h5>
         <h6>Monday - Friday, 8:00am - 3:00pm (excluding Holidays)</h6>
-        <h6><a href="https://www.hawaii.edu/help/chat/">Click here to chat with us. </a></h6>
+        <h6>
+          <a href="https://www.hawaii.edu/help/chat/">Click here to chat with us. </a>
+        </h6>
       </Col>
       <Col>
         <Image src="images/phone-email-hours.png" width="200px" id="hd-images" />
