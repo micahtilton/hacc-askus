@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Navbar, Nav, Image } from "react-bootstrap";
 import { BoxArrowRight, Facebook, Instagram, Twitter, Youtube } from "react-bootstrap-icons";
 import { useTracker } from "meteor/react-meteor-data";
@@ -21,6 +21,7 @@ function Logo() {
 const NavBar = () => {
   const loggedIn = useTracker(() => Meteor.userId() !== null);
   const navigate = useNavigate();
+  const username = useTracker(() => (Meteor.user() === null ? "" : Meteor.user().username));
 
   return (
     <Navbar expand="lg" className={"d-flex"}>
@@ -62,12 +63,10 @@ const NavBar = () => {
               navigate("/");
             }}
           >
-            {Meteor.user() && (
-              <div>
-                {Meteor.user().username}
-                <BoxArrowRight className={"ms-2"} />
-              </div>
-            )}
+            <div>
+              {username}
+              <BoxArrowRight className={"ms-2"} />
+            </div>
           </Nav.Link>
         )}
       </Container>
