@@ -41,6 +41,7 @@ const NavBar = () => {
           </Nav>
 
           <Nav className={"d-flex justify-content-center mx-auto"}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
             <Nav.Link href="https://twitter.com/UHawaiiNews" className={"p-2"}>
               <Twitter />
             </Nav.Link>
@@ -53,6 +54,7 @@ const NavBar = () => {
             <Nav.Link href="https://www.youtube.com/user/uhmagazine" className={"p-2"}>
               <Youtube />
             </Nav.Link>
+            </div>
           </Nav>
         </Navbar.Collapse>
         {loggedIn && (

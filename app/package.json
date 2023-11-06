@@ -23,7 +23,8 @@
     "react-router": "^6.18.0",
     "react-router-dom": "^6.18.0",
     "simpl-schema": "^3.4.1",
-    "underscore": "^1.13.6"
+    "underscore": "^1.13.6",
+    "uniforms-bootstrap5": "^4.0.0-alpha.5"
   },
   "meteor": {
     "mainModule": {

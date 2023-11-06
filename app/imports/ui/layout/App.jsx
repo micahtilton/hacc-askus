@@ -16,7 +16,7 @@ import { Button } from "react-bootstrap";
 
 const ProtectedRoute = ({ children }) => {
   const isLogged = Meteor.userId() !== null;
-  return isLogged ? children : <Navigate to="/signin" />;
+  return isLogged ? children : <Navigate to="/admin" />;
 };
 
 const AdminProtectedRoute = ({ ready, children }) => {
