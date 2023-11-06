@@ -5,7 +5,7 @@ import React from "react";
 const FAQRow = ({ faq, index }) => {
   const rowTag = index % 2 == 1 ? "bg-dull-light" : "";
   return (
-    <Row className={`py-3 ${rowTag}`}>
+    <Row className={`py-3 ${rowTag} rounded-3`}>
       <Col>
         <div className={"fw-bold"}>Question: </div>
         <div>{faq.question}</div>

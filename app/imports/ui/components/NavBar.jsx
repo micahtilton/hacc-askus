@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container, Navbar, Nav, Image } from "react-bootstrap";
-import { BoxArrowRight, Facebook, Instagram, Twitter, Youtube } from "react-bootstrap-icons";
+import { BoxArrowRight, DoorOpen, DoorOpenFill, Facebook, Instagram, Twitter, Youtube } from "react-bootstrap-icons";
 import { useTracker } from "meteor/react-meteor-data";
 import { Meteor } from "meteor/meteor";
 import { useNavigate } from "react-router";
@@ -19,7 +19,9 @@ function Logo() {
 }
 
 const NavBar = () => {
-  const loggedIn = useTracker(() => Meteor.userId() !== null);
+  const userId = useTracker(() => Meteor.userId());
+  const loggedIn = userId !== null;
+  const isAdmin = loggedIn ? Roles.userIsInRole(userId, "admin") : false;
   const navigate = useNavigate();
 
   const username = useTracker(() => {
@@ -38,31 +40,25 @@ const NavBar = () => {
         </Navbar.Brand>
 
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className={"ms-auto"}>
-            <Nav.Link href="/helpdesk">HELP DESK</Nav.Link>
+          <Nav className={"mx-auto"}>
             <Nav.Link href="#">SERVICES</Nav.Link>
             <Nav.Link href="#">INFORMATION SECURITY</Nav.Link>
             <Nav.Link href="#">ALERTS</Nav.Link>
             <Nav.Link href="#">ABOUT</Nav.Link>
             <Nav.Link href="#">CONTACT US</Nav.Link>
           </Nav>
-
-          <Nav className={"d-flex justify-content-center mx-auto"}>
-            <Nav.Link href="https://twitter.com/UHawaiiNews" className={"p-2"}>
-              <Twitter />
-            </Nav.Link>
-            <Nav.Link href="https://www.facebook.com/universityofhawaii" className="p-2">
-              <Facebook />
-            </Nav.Link>
-            <Nav.Link href="https://instagram.com/uhawaiinews/" className={"p-2"}>
-              <Instagram />
-            </Nav.Link>
-            <Nav.Link href="https://www.youtube.com/user/uhmagazine" className={"p-2"}>
-              <Youtube />
-            </Nav.Link>
-          </Nav>
+          {isAdmin && (
+            <Nav className={"d-flex justify-content-center me-auto"}>
+              <Nav.Link href="/admin/faq" className={"p-2"}>
+                FAQ
+              </Nav.Link>
+              <Nav.Link href="/admin/report" className={"p-2"}>
+                Reports
+              </Nav.Link>
+            </Nav>
+          )}
         </Navbar.Collapse>
-        {loggedIn && (
+        {loggedIn ? (
           <Nav.Link
             href="#"
             onClick={() => {
@@ -73,6 +69,19 @@ const NavBar = () => {
             <div>
               {username}
               <BoxArrowRight className={"ms-2"} />
+            </div>
+          </Nav.Link>
+        ) : (
+          <Nav.Link
+            href="#"
+            onClick={() => {
+              Meteor.logout();
+              navigate("/admin");
+            }}
+          >
+            <div>
+              Sign In
+              <DoorOpen className={"ms-2"} />
             </div>
           </Nav.Link>
         )}
