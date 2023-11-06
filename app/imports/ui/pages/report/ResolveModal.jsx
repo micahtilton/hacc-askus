@@ -23,7 +23,7 @@ const ResolveModal = ({ report }) => {
 
   return (
     <>
-      <Button className={"me-5"} size={"sm"} onClick={handleShow}>
+      <Button className={"me-5 btn-vibrant-primary border-0"} size={"sm"} onClick={handleShow}>
         Resolve
       </Button>
 

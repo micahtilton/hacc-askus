@@ -39,6 +39,9 @@ const ReportModal = ({ context, show, handleClose, onSubmit }) => {
       date: new Date(),
     };
     fullReport.categories = Array.from(fullReport.categories);
+    if (fullReport.comment.trim() === "") {
+      fullReport.comment = "none given";
+    }
     onSubmit(fullReport);
     clearForm();
     handleClose();

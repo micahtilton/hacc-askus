@@ -21,15 +21,22 @@ function Logo() {
 const NavBar = () => {
   const loggedIn = useTracker(() => Meteor.userId() !== null);
   const navigate = useNavigate();
-  const username = useTracker(() => (Meteor.user() === null ? "" : Meteor.user().username));
+
+  const username = useTracker(() => {
+    const user = Meteor.user();
+    if (user) {
+      return user.username;
+    }
+    return "";
+  });
 
   return (
-    <Navbar expand="lg" className={"d-flex"}>
+    <Navbar expand="lg" className={"text-center navbar-dark"}>
       <Container>
         <Navbar.Brand href="/">
           <Logo />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className={"ms-auto"}>
             <Nav.Link href="/helpdesk">HELP DESK</Nav.Link>
@@ -69,6 +76,7 @@ const NavBar = () => {
             </div>
           </Nav.Link>
         )}
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
       </Container>
     </Navbar>
   );
