@@ -12,6 +12,7 @@ import { Meteor } from "meteor/meteor";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { useTracker } from "meteor/react-meteor-data";
 import { Roles } from "meteor/alanning:roles";
+import SignIn from '../pages/SignIn';
 
 const AdminProtectedRoute = ({ ready, children }) => {
   const isLogged = Meteor.userId() !== null;
@@ -48,6 +49,7 @@ export const App = () => {
           <Route exact path="/" element={<Home />} />
           <Route path="/help" element={<HelpDesk />} />
           <Route path="/notauthorized" element={<Page text={"You Are Not Authorized"} />} />
+          <Route path="/signin" element={<SignIn />} />
           <Route path="/admin" element={<AdminLogin />} />
           <Route
             path="/admin/report"

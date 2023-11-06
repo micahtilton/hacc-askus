@@ -76,7 +76,7 @@ const NavBar = () => {
             href="#"
             onClick={() => {
               Meteor.logout();
-              navigate("/admin");
+              navigate("/signin");
             }}
           >
             <div>
