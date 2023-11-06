@@ -14,7 +14,7 @@ import {
 const Home = () => (
   <Container className={"p-5"}>
     <Row className={"gx-5"}>
-      <Col xs={9}>
+      <Col xs={12} md={8}>
         <Row>
           <div className={"bg-dull-light fw-bold p-2 rounded-4 fs-5"}>
             <CheckCircleFill className={"m-4 text-accent"} size={40} />
@@ -22,7 +22,7 @@ const Home = () => (
           </div>
         </Row>
         <Row className={"py-4"}>
-          <Col xs={2}>
+          <Col xs={3}>
             <ClipboardCheckFill size={50} className={"m-2 text-accent"} />
           </Col>
           <Col>
@@ -31,7 +31,7 @@ const Home = () => (
           </Col>
         </Row>
         <Row className={"py-4"}>
-          <Col xs={2}>
+          <Col xs={3}>
             <ChatDotsFill size={50} className={"m-2 text-accent"} />
           </Col>
           <Col>
@@ -43,7 +43,7 @@ const Home = () => (
           </Col>
         </Row>
         <Row className={"py-4"}>
-          <Col xs={2}>
+          <Col xs={3}>
             <Server size={50} className={"m-2 text-accent"} />
           </Col>
           <Col>
@@ -55,7 +55,7 @@ const Home = () => (
           </Col>
         </Row>
         <Row className={"py-4"}>
-          <Col xs={2}>
+          <Col xs={3}>
             <LaptopFill size={50} className={"m-2 text-accent"} />
           </Col>
           <Col>
@@ -67,7 +67,7 @@ const Home = () => (
           </Col>
         </Row>
         <Row className={"py-4"}>
-          <Col xs={2}>
+          <Col xs={3}>
             <BuildingFill size={50} className={"m-2 text-accent"} />
           </Col>
           <Col>
@@ -79,7 +79,7 @@ const Home = () => (
           </Col>
         </Row>
         <Row className={"py-4"}>
-          <Col xs={2}>
+          <Col xs={3}>
             <Newspaper size={50} className={"m-2 text-accent"} />
           </Col>
           <Col>
