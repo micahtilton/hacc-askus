@@ -23,8 +23,22 @@ Meteor.methods({
 
 Meteor.startup(() => {
   if (EmbeddingCollection.find().count() === 0) {
-    import embedding_data from "./data/embedding-data.json";
-    console.log("loading embedding data into database");
-    embedding_data.forEach((e) => EmbeddingCollection.insert(e));
+    import embedding_data_archive from "./data/embedding-data-archive.json";
+    console.log("loading embedding data archive into database");
+    embedding_data_archive.forEach((e) => {
+      if (e.text.trim() === "") {
+        return;
+      }
+      EmbeddingCollection.insert(e);
+    });
+
+    import embedding_data_bonus from "./data/embedding-data-bonus.json";
+    console.log("loading embedding data bonus into database");
+    embedding_data_bonus.forEach((e) => {
+      if (e.text.trim() === "") {
+        return;
+      }
+      EmbeddingCollection.insert(e);
+    });
   }
 });
