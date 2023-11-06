@@ -23,7 +23,7 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   return (
-    <Navbar expand="lg" className={"d-flex"}>
+    <Navbar expand="lg" className={"navbar-main d-flex"}>
       <Container>
         <Navbar.Brand href="/">
           <Logo />
@@ -40,36 +40,24 @@ const NavBar = () => {
           </Nav>
 
           <Nav className={"d-flex justify-content-center mx-auto"}>
-            <Nav.Link href="https://twitter.com/UHawaiiNews" className={"p-2"}>
-              <Twitter />
-            </Nav.Link>
-            <Nav.Link href="https://www.facebook.com/universityofhawaii" className="p-2">
-              <Facebook />
-            </Nav.Link>
-            <Nav.Link href="https://instagram.com/uhawaiinews/" className={"p-2"}>
-              <Instagram />
-            </Nav.Link>
-            <Nav.Link href="https://www.youtube.com/user/uhmagazine" className={"p-2"}>
-              <Youtube />
-            </Nav.Link>
+            {loggedIn && (
+              <Nav.Link
+                href="#"
+                onClick={() => {
+                  Meteor.logout();
+                  navigate("/");
+                }}
+              >
+                {Meteor.user() && (
+                  <div>
+                    {Meteor.user().username}
+                    <BoxArrowRight className={"ms-2"} />
+                  </div>
+                )}
+              </Nav.Link>
+            )}
           </Nav>
         </Navbar.Collapse>
-        {loggedIn && (
-          <Nav.Link
-            href="#"
-            onClick={() => {
-              Meteor.logout();
-              navigate("/");
-            }}
-          >
-            {Meteor.user() && (
-              <div>
-                {Meteor.user().username}
-                <BoxArrowRight className={"ms-2"} />
-              </div>
-            )}
-          </Nav.Link>
-        )}
       </Container>
     </Navbar>
   );
