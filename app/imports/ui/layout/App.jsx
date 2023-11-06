@@ -12,12 +12,6 @@ import { Meteor } from "meteor/meteor";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { useTracker } from "meteor/react-meteor-data";
 import { Roles } from "meteor/alanning:roles";
-import { Button } from "react-bootstrap";
-
-const ProtectedRoute = ({ children }) => {
-  const isLogged = Meteor.userId() !== null;
-  return isLogged ? children : <Navigate to="/signin" />;
-};
 
 const AdminProtectedRoute = ({ ready, children }) => {
   const isLogged = Meteor.userId() !== null;

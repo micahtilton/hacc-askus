@@ -25,7 +25,9 @@ const AddFAQModal = () => {
 
   return (
     <>
-      <Button onClick={handleShow}>Add FAQ</Button>
+      <Button className={"btn-vibrant-primary"} onClick={handleShow}>
+        Add FAQ
+      </Button>
 
       <Modal centered show={show} onHide={handleClose}>
         <Modal.Header closeButton>

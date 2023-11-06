@@ -3,9 +3,9 @@ import EditFAQModal from "./EditFAQModal";
 import React from "react";
 
 const FAQRow = ({ faq, index }) => {
-  const rowTag = index % 2 == 1 ? "bg-dark-subtle" : "";
+  const rowTag = index % 2 === 1 ? "bg-dull-light" : "";
   return (
-    <Row className={`py-3 ${rowTag}`}>
+    <Row className={`py-3 ${rowTag} rounded-3`}>
       <Col>
         <div className={"fw-bold"}>Question: </div>
         <div>{faq.question}</div>
@@ -18,7 +18,7 @@ const FAQRow = ({ faq, index }) => {
         <div className={"fw-bold"}>Source: </div>
         <div>{faq.source}</div>
       </Col>
-      <Col className={"d-flex justify-content-end"}>
+      <Col xs={12} md={1} className={"d-flex justify-content-center pt-2"}>
         <EditFAQModal faq={faq} />
       </Col>
     </Row>
