@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FAQCollection } from "../../../api/FAQCollection";
 import { Button, Form, Modal } from "react-bootstrap";
 
 const EditFAQModal = ({ faq }) => {

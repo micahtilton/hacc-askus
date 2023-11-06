@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { ReportCollection } from "../../../api/ReportCollection";
 import { Button, Form, Modal } from "react-bootstrap";
 
 const ResolveModal = ({ report }) => {

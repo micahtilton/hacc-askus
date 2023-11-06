@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { ChatDotsFill, SendFill } from "react-bootstrap-icons";
 import UserChatMessage from "./UserChatMessage";
 import AiChatMessage from "./AiChatMessage";
-import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
+import { Button, Form, Image } from "react-bootstrap";
 
 const ChatBot = () => {
   const [messages, setMessages] = useState([]);
