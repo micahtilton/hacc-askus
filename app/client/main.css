@@ -1,11 +1,12 @@
 :root {
-  --vibrant-primary: #005FC4;
+  --vibrant-primary: #06669b;
   --vibrant-secondary: rgb(172, 204, 231);
   --vibrant-light: #D5F4FF;
   --dull-primary: #6C6153;
   --dull-secondary: #BAA98D;
-  --dull-light: #FFECCB;
-  --accent: #DCA13C;
+  --dull-light: #ffeecd;
+  --bg: #fff7e9;
+  --accent: #f4b242;
 }
 
 .text-dull-light {
@@ -27,6 +28,18 @@
 
 .bg-vibrant-primary {
   background-color: var(--vibrant-primary) !important;
+}
+
+.bg-dull-secondary {
+  background-color: var(--dull-secondary) !important;
+}
+
+.bg-dull-light {
+  background-color: var(--dull-light) !important;
+}
+
+.text-accent {
+  color: var(--accent);
 }
 
 nav {
@@ -57,9 +70,17 @@ footer a {
 }
 
 .chat-container {
-  width: 40vw;
+  width: 800px;
   max-height: 100vh;
 }
+
+@media (max-width: 900px) {
+  .chat-container {
+    width: 100vw;
+    max-width: 100%;
+  }
+}
+
 
 .chat-area {
   max-height: 30vh;
@@ -123,7 +144,15 @@ footer a {
 
 body {
   font-family: sans-serif;
-  background-color: whitesmoke !important;
+  background-color: var(--bg) !important;
+}
+
+body .fw-bold {
+  color: var(--dull-primary);
+}
+
+body a {
+  color: var(--accent);
 }
 
 #socials {
@@ -146,7 +175,10 @@ body {
   background-image: url("https://www.usgbc.org/sites/default/files/2020-06/1%288%29.jpg");
   background-size: cover;
   background-position: center;
-  height: 500px;
+}
+
+.meet-hoku {
+  font-size: 100px;
 }
 
 .banner {
@@ -172,69 +204,6 @@ body {
   white-space:nowrap;
   font-size: 100px;
 }
-
-/*.text-animation:first-of-type {*/
-/*  animation: showup 7s infinite;*/
-/*}*/
-
-/*.text-animation:last-of-type {*/
-/*  width:0px;*/
-/*  animation: reveal 7s infinite;*/
-/*}*/
-
-/*.text-animation:last-of-type span {*/
-/*  margin-left:-355px;*/
-/*  animation: slidein 7s infinite;*/
-/*}*/
-
-/*@keyframes showup {*/
-/*  0% {opacity:0;}*/
-/*  20% {opacity:1;}*/
-/*  80% {opacity:1;}*/
-/*  100% {opacity:0;}*/
-/*}*/
-
-/*@keyframes slidein {*/
-/*  0% { margin-left:-800px; }*/
-/*  20% { margin-left:-800px; }*/
-/*  35% { margin-left:0px; }*/
-/*  100% { margin-left:0px; }*/
-/*}*/
-
-/*@keyframes reveal {*/
-/*  0% {opacity:0;width:0px;}*/
-/*  20% {opacity:1;width:0px;}*/
-/*  30% {width:355px;}*/
-/*  80% {opacity:1;}*/
-/*  100% {opacity:0;width:355px;}*/
-/*}*/
-
-/*.talk-bubble {*/
-/*  background: #efefef;*/
-/*  font-size: 1.2rem;*/
-/*  max-width: 400px;*/
-/*  padding: 15px;*/
-/*  position: absolute;*/
-/*  right: 0;*/
-/*  bottom: 30px;*/
-/*  border-radius: 20px;*/
-
-/*  &::after {*/
-/*    border-left: 20px solid transparent;*/
-/*    border-top: 20px solid #efefef;*/
-/*    bottom: -20px;*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    right: 20px;*/
-/*  }*/
-/*}*/
-
-/*.talk-bubble-header {*/
-/*  background-color: var(--lapis-lazuli);*/
-/*  height: 25%;*/
-/*  border-top-right-radius: 20px;*/
-/*  border-top-left-radius: 20px;*/
-/*}*/
 
 #envelope, #lock {
   position: absolute;

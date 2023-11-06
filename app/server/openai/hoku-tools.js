@@ -4,12 +4,7 @@ import { FAQCollection } from "../../imports/api/FAQCollection";
 import { EmbeddingCollection } from "../../imports/api/EmbeddingCollection";
 import { getEmbedding, openai } from "./openai-tools";
 
-const createContextFrom = (
-  collection,
-  embedding,
-  contextAmount = 1,
-  similarityThreshold = 1,
-) => {
+const createContextFrom = (collection, embedding, contextAmount = 1, similarityThreshold = 1) => {
   let embeddings = collection.find({}).fetch();
 
   // add similarity value to embedding object
@@ -52,10 +47,10 @@ const askHoku = async (question) => {
     question: question,
   };
 
-  if (!Meteor.call("isAdmin")) {
-    defaultAnswer.answer = "Login for me to answer your questions :)";
-    return defaultAnswer;
-  }
+  // if (!Meteor.call("isAdmin")) {
+  //   defaultAnswer.answer = "Login for me to answer your questions :)";
+  //   return defaultAnswer;
+  // }
 
   const questionEmbedding = await getEmbedding(question);
 
@@ -67,8 +62,7 @@ const askHoku = async (question) => {
   const context = createContext(questionEmbedding);
   defaultAnswer.context = context;
   if (context.length === 0) {
-    defaultAnswer.answer =
-      "Sorry, I don't quite understand the question. Try adding more context.";
+    defaultAnswer.answer = "Sorry, I don't quite understand the question. Try adding more context.";
     return defaultAnswer;
   }
 
@@ -84,8 +78,7 @@ const askHoku = async (question) => {
   });
 
   if (chatCompletion === null) {
-    defaultAnswer.answer =
-      "Hoku is unavailable at the moment. Sorry for the inconvenience.";
+    defaultAnswer.answer = "Hoku is unavailable at the moment. Sorry for the inconvenience.";
     return defaultAnswer;
   }
 

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Navbar, Nav, Image } from "react-bootstrap";
-import { BoxArrowRight, Facebook, Instagram, Twitter, Youtube } from "react-bootstrap-icons";
+import { BoxArrowRight, DoorOpen } from "react-bootstrap-icons";
 import { useTracker } from "meteor/react-meteor-data";
 import { Meteor } from "meteor/meteor";
 import { useNavigate } from "react-router";
@@ -19,45 +19,46 @@ function Logo() {
 }
 
 const NavBar = () => {
-  const loggedIn = useTracker(() => Meteor.userId() !== null);
+  const userId = useTracker(() => Meteor.userId());
+  const loggedIn = userId !== null;
+  const isAdmin = loggedIn ? Roles.userIsInRole(userId, "admin") : false;
   const navigate = useNavigate();
-  const username = useTracker(() => (Meteor.user() === null ? "" : Meteor.user().username));
+
+  const username = useTracker(() => {
+    const user = Meteor.user();
+    if (user) {
+      return user.username;
+    }
+    return "";
+  });
 
   return (
-    <Navbar expand="lg" className={"d-flex"}>
+    <Navbar expand="lg" className={"text-center navbar-dark"}>
       <Container>
         <Navbar.Brand href="/">
           <Logo />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className={"ms-auto"}>
-            <Nav.Link href="/helpdesk">HELP DESK</Nav.Link>
+          <Nav className={"mx-auto"}>
             <Nav.Link href="#">SERVICES</Nav.Link>
             <Nav.Link href="#">INFORMATION SECURITY</Nav.Link>
             <Nav.Link href="#">ALERTS</Nav.Link>
             <Nav.Link href="#">ABOUT</Nav.Link>
             <Nav.Link href="#">CONTACT US</Nav.Link>
           </Nav>
+          {isAdmin && (
+            <Nav className={"d-flex justify-content-center me-auto"}>
+              <Nav.Link href="/admin/faq" className={"p-2"}>
+                FAQ
+              </Nav.Link>
+              <Nav.Link href="/admin/report" className={"p-2"}>
+                Reports
+              </Nav.Link>
+            </Nav>
+          )}
         </Navbar.Collapse>
-
-        {/*<Nav className={"d-flex justify-content-center mx-auto"}>*/}
-          {/*  <div style={{ display: 'flex', alignItems: 'center' }}>*/}
-          {/*  <Nav.Link href="https://twitter.com/UHawaiiNews" className={"p-2"}>*/}
-          {/*    <Twitter />*/}
-          {/*  </Nav.Link>*/}
-          {/*  <Nav.Link href="https://www.facebook.com/universityofhawaii" className="p-2">*/}
-          {/*    <Facebook />*/}
-          {/*  </Nav.Link>*/}
-          {/*  <Nav.Link href="https://instagram.com/uhawaiinews/" className={"p-2"}>*/}
-          {/*    <Instagram />*/}
-          {/*  </Nav.Link>*/}
-          {/*  <Nav.Link href="https://www.youtube.com/user/uhmagazine" className={"p-2"}>*/}
-          {/*    <Youtube />*/}
-          {/*  </Nav.Link>*/}
-          {/*  </div>*/}
-          {/*</Nav>*/}
-        {loggedIn && (
+        {loggedIn ? (
           <Nav.Link
             href="#"
             onClick={() => {
@@ -70,7 +71,21 @@ const NavBar = () => {
               <BoxArrowRight className={"ms-2"} />
             </div>
           </Nav.Link>
+        ) : (
+          <Nav.Link
+            href="#"
+            onClick={() => {
+              Meteor.logout();
+              navigate("/admin");
+            }}
+          >
+            <div>
+              Sign In
+              <DoorOpen className={"ms-2"} />
+            </div>
+          </Nav.Link>
         )}
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
       </Container>
     </Navbar>
   );

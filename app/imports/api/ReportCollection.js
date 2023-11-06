@@ -20,7 +20,7 @@ const ReportSchema = new SimpleSchema({
   answer: { type: String },
   categories: { type: Array },
   "categories.$": { type: String },
-  comment: { type: String },
+  comment: { type: String, optional: true },
   date: { type: Date },
 });
 
