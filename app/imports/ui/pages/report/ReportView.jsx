@@ -4,7 +4,7 @@ import ContextModal from "./ContextModal";
 import ResolveModal from "./ResolveModal";
 
 const ReportView = ({ report, index }) => {
-  const bgTag = index % 2 === 0 ? "bg-dark-subtle" : "";
+  const bgTag = index % 2 === 0 ? "bg-dull-light" : "";
 
   return (
     <>

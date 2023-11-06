@@ -3,7 +3,7 @@ import EditFAQModal from "./EditFAQModal";
 import React from "react";
 
 const FAQRow = ({ faq, index }) => {
-  const rowTag = index % 2 == 1 ? "bg-dark-subtle" : "";
+  const rowTag = index % 2 == 1 ? "bg-dull-light" : "";
   return (
     <Row className={`py-3 ${rowTag}`}>
       <Col>

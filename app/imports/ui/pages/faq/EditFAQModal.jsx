@@ -31,7 +31,9 @@ const EditFAQModal = ({ faq }) => {
   return (
     <>
       <div>
-        <Button onClick={handleShow}>Edit</Button>
+        <Button className={"btn-vibrant-primary"} onClick={handleShow}>
+          Edit
+        </Button>
       </div>
 
       <Modal centered show={show} onHide={handleClose}>
