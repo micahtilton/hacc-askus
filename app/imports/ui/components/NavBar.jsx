@@ -39,24 +39,24 @@ const NavBar = () => {
             <Nav.Link href="#">ABOUT</Nav.Link>
             <Nav.Link href="#">CONTACT US</Nav.Link>
           </Nav>
-
-          <Nav className={"d-flex justify-content-center mx-auto"}>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-            <Nav.Link href="https://twitter.com/UHawaiiNews" className={"p-2"}>
-              <Twitter />
-            </Nav.Link>
-            <Nav.Link href="https://www.facebook.com/universityofhawaii" className="p-2">
-              <Facebook />
-            </Nav.Link>
-            <Nav.Link href="https://instagram.com/uhawaiinews/" className={"p-2"}>
-              <Instagram />
-            </Nav.Link>
-            <Nav.Link href="https://www.youtube.com/user/uhmagazine" className={"p-2"}>
-              <Youtube />
-            </Nav.Link>
-            </div>
-          </Nav>
         </Navbar.Collapse>
+
+        {/*<Nav className={"d-flex justify-content-center mx-auto"}>*/}
+          {/*  <div style={{ display: 'flex', alignItems: 'center' }}>*/}
+          {/*  <Nav.Link href="https://twitter.com/UHawaiiNews" className={"p-2"}>*/}
+          {/*    <Twitter />*/}
+          {/*  </Nav.Link>*/}
+          {/*  <Nav.Link href="https://www.facebook.com/universityofhawaii" className="p-2">*/}
+          {/*    <Facebook />*/}
+          {/*  </Nav.Link>*/}
+          {/*  <Nav.Link href="https://instagram.com/uhawaiinews/" className={"p-2"}>*/}
+          {/*    <Instagram />*/}
+          {/*  </Nav.Link>*/}
+          {/*  <Nav.Link href="https://www.youtube.com/user/uhmagazine" className={"p-2"}>*/}
+          {/*    <Youtube />*/}
+          {/*  </Nav.Link>*/}
+          {/*  </div>*/}
+          {/*</Nav>*/}
         {loggedIn && (
           <Nav.Link
             href="#"
