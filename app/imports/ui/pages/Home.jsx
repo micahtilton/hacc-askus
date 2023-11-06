@@ -15,11 +15,13 @@ const Home = () => (
   <Container className={"p-5"}>
     <Row className={"gx-5"}>
       <Col xs={12} md={8}>
-        <Row>
-          <div className={"bg-dull-light fw-bold p-2 rounded-4 fs-5"}>
-            <CheckCircleFill className={"m-4 text-accent"} size={40} />
-            All of our systems are currently operational
-          </div>
+        <Row className={"bg-dull-light fw-bold rounded-4 p-3"}>
+          <Col xs={2}>
+            <CheckCircleFill className={"text-accent"} size={40} />
+          </Col>
+          <Col>
+            <div className={"m-2 text-center"}>All of our systems are currently operational</div>
+          </Col>
         </Row>
         <Row className={"py-4"}>
           <Col xs={3}>
