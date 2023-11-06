@@ -31,7 +31,7 @@ const NavBar = () => {
   });
 
   return (
-    <Navbar expand="lg" className={"text-center"}>
+    <Navbar expand="lg" className={"text-center navbar-dark"}>
       <Container>
         <Navbar.Brand href="/">
           <Logo />
