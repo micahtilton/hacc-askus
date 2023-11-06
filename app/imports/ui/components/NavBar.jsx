@@ -49,6 +49,7 @@ const NavBar = () => {
           </Nav>
           {isAdmin && (
             <Nav className={"d-flex justify-content-center me-auto"}>
+              <br/>
               <Nav.Link href="/admin/faq" className={"p-2"}>
                 FAQ
               </Nav.Link>
