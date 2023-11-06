@@ -18,7 +18,7 @@ const FAQRow = ({ faq, index }) => {
         <div className={"fw-bold"}>Source: </div>
         <div>{faq.source}</div>
       </Col>
-      <Col className={"d-flex justify-content-end"}>
+      <Col xs={12} md={1} className={"d-flex justify-content-center pt-2"}>
         <EditFAQModal faq={faq} />
       </Col>
     </Row>
