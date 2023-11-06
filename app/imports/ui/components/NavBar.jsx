@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Navbar, Nav, Image } from "react-bootstrap";
-import { BoxArrowRight, DoorOpen, DoorOpenFill, Facebook, Instagram, Twitter, Youtube } from "react-bootstrap-icons";
+import { BoxArrowRight, DoorOpen } from "react-bootstrap-icons";
 import { useTracker } from "meteor/react-meteor-data";
 import { Meteor } from "meteor/meteor";
 import { useNavigate } from "react-router";
