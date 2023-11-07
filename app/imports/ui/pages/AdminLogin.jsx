@@ -1,32 +1,38 @@
-import React, { useState } from 'react';
-import { Meteor } from 'meteor/meteor';
-import { Button, Col, Container, Form, Image, Row } from 'react-bootstrap';
-import { Navigate } from 'react-router-dom';
-import { EnvelopeAtFill, LockFill } from 'react-bootstrap-icons';
+import React, { useState } from "react";
+import { Meteor } from "meteor/meteor";
+import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
+import { EnvelopeAtFill, LockFill } from "react-bootstrap-icons";
+import { useNavigate } from "react-router";
 
 const AdminLogin = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [redirect, setRedirect] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const [error, setError] = useState("");
 
   const resetForm = () => {
-    setEmail('');
-    setPassword('');
+    setEmail("");
+    setPassword("");
+    setError("");
   };
+
   const handleSubmit = () => {
+    if (password === "" || email === "") {
+      setError("Please Enter an Email and Password");
+      return;
+    }
     Meteor.loginWithPassword(email, password, (err) => {
       if (err) {
         resetForm();
+        setError("Incorrect Username or Password");
       } else {
         resetForm();
-        setRedirect(true);
+        navigate("/admin/report");
       }
     });
   };
 
-  return redirect ? (
-    <Navigate to="/admin/report" />
-  ) : (
+  return (
     <Container className="py-5">
       <Row className="justify-content-center">
         <Col sm={6}>
@@ -39,12 +45,12 @@ const AdminLogin = () => {
             }}
           >
             <Col className="text-center">
-              <Image src="/images/hoku-pfp.png" roundedCircle style={{ width: '90px', height: '90px' }} />
+              <Image src="/images/hoku-pfp.png" className={"mb-3"} width={90} />
               <h2>Admin Login</h2>
             </Col>
             <Form.Group className="pb-3">
               <Form.Label className="mb-0 mx-sm-3">Email address</Form.Label>
-              <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div style={{ display: "flex", alignItems: "center" }}>
                 <EnvelopeAtFill className="mx-sm-3 mb-1" size="20" id="envelope" />
                 <Form.Control
                   id="email"
@@ -60,7 +66,7 @@ const AdminLogin = () => {
 
             <Form.Group className="pb-3">
               <Form.Label className="mb-0 mx-sm-3">Password</Form.Label>
-              <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div style={{ display: "flex", alignItems: "center" }}>
                 <LockFill className="mx-sm-3 mb-1" size="20" id="lock" />
                 <Form.Control
                   id="password"
@@ -73,7 +79,8 @@ const AdminLogin = () => {
                 />
               </div>
             </Form.Group>
-            <Button variant="primary" type="submit">
+            {error !== "" && <div className={"text-danger text-center"}>{error}</div>}
+            <Button className={"btn-vibrant-primary"} type="submit">
               Login
             </Button>
           </Form>

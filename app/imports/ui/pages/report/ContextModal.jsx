@@ -11,6 +11,7 @@ const ContextModal = ({ context }) => {
       <li>
         <a
           href="#"
+          className={"text-break"}
           onClick={(e) => {
             e.preventDefault();
             handleShow();
