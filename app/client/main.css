@@ -52,8 +52,9 @@ nav {
   border-bottom: 2px solid transparent;
 }
 
-.navbar a:hover {
+.navbar a:hover{
   border-bottom: 2px solid var(--accent) !important;
+  color: var(--vibrant-secondary) !important;
 }
 
 .logo {
