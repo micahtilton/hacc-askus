@@ -39,7 +39,7 @@ const SignIn = () => {
             }}
           >
             <Col className="text-center">
-              <Image src="/images/hoku-pfp.png" roundedCircle style={{ width: '90px', height: '90px' }} />
+              <Image src="/images/NEW-Hoku.png" roundedCircle style={{ width: '90px', height: '90px' }} />
               <h2>Sign In</h2>
             </Col>
             <Form.Group className="pb-3">
