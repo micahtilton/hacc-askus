@@ -52,8 +52,9 @@ nav {
   border-bottom: 2px solid transparent;
 }
 
-.navbar a:hover {
+.navbar a:hover{
   border-bottom: 2px solid var(--accent) !important;
+  color: var(--vibrant-secondary) !important;
 }
 
 .logo {
@@ -204,3 +205,24 @@ body a {
   white-space:nowrap;
   font-size: 100px;
 }
+
+#envelope, #lock {
+  position: absolute;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  opacity: .5;
+}
+
+#email, #password {
+  border: none;
+  outline: none;
+  background-color: var(--vibrant-light);
+  padding: 1rem 1rem;
+  padding-left: calc(1rem * 3);
+  border-radius: 100px;
+  width: 100%;
+}
+
+
+
+
