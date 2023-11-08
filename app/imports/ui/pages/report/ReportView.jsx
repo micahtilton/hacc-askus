@@ -2,6 +2,8 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import ContextModal from "./ContextModal";
 import ResolveModal from "./ResolveModal";
+import { useTracker } from 'meteor/react-meteor-data';
+import { ReportCollection } from '../../../api/ReportCollection';
 
 const ReportView = ({ report, index }) => {
   const bgTag = index % 2 === 0 ? "bg-dark-subtle" : "";

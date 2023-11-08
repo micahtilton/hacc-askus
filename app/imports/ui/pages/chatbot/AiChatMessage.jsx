@@ -13,7 +13,7 @@ function ChatLoading() {
   );
 }
 
-const AiChatMessage = ({ context, loading, intro = false }) => {
+const AiChatMessage = ({ context, loading = false }) => {
   const [show, setShow] = useState(false);
 
   const onSubmit = (data) => {
@@ -31,15 +31,13 @@ const AiChatMessage = ({ context, loading, intro = false }) => {
 
   return (
     <div className={"d-flex align-items-end"}>
-      <Image className="ai-pfp position-relative" src={"images/hoku-pfp.png"} width={40} height={40} className={"mx-2"} />
-      <div className="ai-text-box align-self-start d-flex p-2 justify-content-start bg-primary text-white text-break me-lg-5 me-sm-2">
+      <Image fluid className="ai-pfp position-relative mx-2" src={"images/hoku-pfp.png"} width={40} height={40} />
+      <div className="ai-text-box align-self-start d-flex p-2 justify-content-start bg-primary text-white text-break me-lg-5 me-2">
         {loading ? (
           <ChatLoading />
         ) : (
           <div className={"d-flex"}>
-            {intro ? (<div>Hi I am Hoku</div>) : (
-              <div>{context.answer}</div>
-              )}
+            <div>{context.answer}</div>
             <div className={"d-flex"}>
               <ExclamationCircle className={"ms-2"} onClick={() => setShow(true)} />
             </div>

@@ -89,6 +89,34 @@ footer a {
   right: 0;
 }
 
+.slide-in {
+  position: relative;
+  animation: 0.5s slide-left ease-in-out;
+}
+
+.slide-out {
+  position: relative;
+  animation: 0.5s slide-right ease-in-out forwards;
+}
+
+@keyframes slide-left {
+  0% {
+    right: -100vw;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -100vw;
+  }
+}
+
 @keyframes change-color {
   0%, 100% {
     background-color: white;
@@ -192,5 +220,8 @@ body {
     background-position: 200% center;
   }
 }
+
+
+
 
 

@@ -3,7 +3,7 @@ import React from "react";
 
 const AboutHoku = () => (
   <Row className="align-middle text-center m-5" xs={1} md={2}>
-    <Col className="text-center">
+    <Col className="d-flex flex-column text-center mt-4">
       <h1 className="text-animation">MEET HOKU</h1>
       <p>
         Ask Us is a knowledge base of frequently asked questions (FAQs) related to information technology. Enter
@@ -13,8 +13,8 @@ const AboutHoku = () => (
       </p>
       <button type="btn" className="btn btn-outline-dark">Learn More</button>
     </Col>
-    <Col className="align-content-center">
-      <Image src="images/Hoku.png" id="hoku" />
+    <Col className="d-flex flex-column mt-4">
+      <Image src="images/hoku-pfp.png" id="hoku" />
     </Col>
   </Row>
 );
