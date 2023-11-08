@@ -13,7 +13,7 @@ import {
 /* A simple static component to render some text for the landing page. */
 const Home = () => (
   <Container className={"pb-5"}>
-    <Row className="text-center d-flex p-5" xs={1} md={2}>
+    <Row className="text-center d-flex p-2" xs={1} md={2}>
       <Col sm={12} className={"d-flex flex-column justify-content-center"}>
         <h1 className="text-animation">MEET HOKU</h1>
         <div className={"fs-5"}>
@@ -23,7 +23,7 @@ const Home = () => (
         </div>
       </Col>
       <Col sm={12}>
-        <Image src="images/hoku-pfp.png" width={300} />
+        <Image src="images/hoku-pfp.png" width={300} className={"my-3"} />
       </Col>
     </Row>
 
