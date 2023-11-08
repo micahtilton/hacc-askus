@@ -33,7 +33,7 @@ const NavBar = () => {
   });
 
   return (
-    <Navbar expand="lg" className={"text-center navbar-dark"}>
+    <Navbar expand="lg" className={"text-center navbar-dark mb-3"}>
       <Container>
         <Navbar.Brand
           href="#"

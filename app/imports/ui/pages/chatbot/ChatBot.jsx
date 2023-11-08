@@ -67,7 +67,7 @@ const ChatBot = () => {
         <div className="d-flex justify-content-between ps-2 p-2 bg-vibrant-primary rounded-top-4">
           <div className="d-flex fw-medium fs-5 m-1 text-white align-items-center">
             <Image src={"images/hoku-pfp.png"} width={50} />
-            <h1 className={"ps-3 m-0"}>Hoku</h1>
+            <h1 className={"ps-3 m-0"}>Ask Hoku</h1>
           </div>
         </div>
 
@@ -87,7 +87,7 @@ const ChatBot = () => {
           <div className="flex-grow-1"></div>
         </div>
 
-        <Form className="d-flex flex-row bg-white rounded-bottom-3" onSubmit={handleSend}>
+        <Form className="d-flex flex-row bg-white rounded-bottom-4" onSubmit={handleSend}>
           <Form.Control
             type={"text"}
             className={"m-2 p-1 mt-3 fw-light d-flex px-2 rounded-pill chat-field"}
