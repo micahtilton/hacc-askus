@@ -18,7 +18,7 @@ const Home = () => (
         <h1 className="text-animation">MEET HOKU</h1>
         <div className={"fs-5"}>
           Hoku is the newest addition to the ITS 'ohana. She is an AI Virtual Assistant suited for answering questions
-          bases on ITS frequently asked questions, services, and policies. To ask Hoku a question, click the chat button
+          based on ITS frequently asked questions, services, and policies. To ask Hoku a question, click the chat button
           on the bottom right to open a chat window. Try asking Hoku where the ITS building is located!
         </div>
       </Col>
