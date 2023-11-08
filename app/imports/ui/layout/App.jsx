@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-d
 import HelpDesk from "../pages/HelpDesk";
 import ReportsPage from "../pages/report/ReportsPage";
 import ManageFAQPage from "../pages/faq/ManageFAQPage";
-import AdminLogin from "../pages/AdminLogin";
 import { Meteor } from "meteor/meteor";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { useTracker } from "meteor/react-meteor-data";
@@ -49,7 +48,6 @@ export const App = () => {
           <Route path="/help" element={<HelpDesk />} />
           <Route path="/notauthorized" element={<Page text={"You Are Not Authorized"} />} />
           <Route path="/signin" element={<SignIn />} />
-          <Route path="/admin" element={<AdminLogin />} />
           <Route
             path="/admin/report"
             element={

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Meteor } from "meteor/meteor";
 import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
-import { EnvelopeAtFill, LockFill } from "react-bootstrap-icons";
+import { EnvelopeFill, LockFill } from "react-bootstrap-icons";
 import { useNavigate } from "react-router";
 
 const SignIn = () => {
@@ -34,11 +34,11 @@ const SignIn = () => {
 
   return (
     <Container className="py-5">
-      <Row className="justify-content-center">
+      <Row className="justify-content-center text-center">
         <Col sm={6}>
           <Form
             id="login"
-            className="p-3 m-5 rounded-3 border border-2 bg-white"
+            className="p-3 m-5 rounded-3 bg-white border border-2 shadow-lg"
             onSubmit={(e) => {
               e.preventDefault();
               handleSubmit();
@@ -49,13 +49,13 @@ const SignIn = () => {
               <h2>Sign In</h2>
             </Col>
             <Form.Group className="pb-3">
-              <Form.Label className="mb-0 mx-sm-3">Email address</Form.Label>
               <div style={{ display: "flex", alignItems: "center" }}>
-                <EnvelopeAtFill className="mx-sm-3 mb-1" size="20" id="envelope" />
+                <EnvelopeFill className="mx-sm-3 mb-1" size="30" id="envelope" />
                 <Form.Control
                   id="email"
                   type="email"
                   placeholder="Enter email"
+                  className={"p-3 rounded-pill bg-info-subtle"}
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -65,13 +65,13 @@ const SignIn = () => {
             </Form.Group>
 
             <Form.Group className="pb-3">
-              <Form.Label className="mb-0 mx-sm-3">Password</Form.Label>
               <div style={{ display: "flex", alignItems: "center" }}>
-                <LockFill className="mx-sm-3 mb-1" size="20" id="lock" />
+                <LockFill className="mx-sm-3 mb-1" size="30" id="lock" />
                 <Form.Control
                   id="password"
                   type="password"
                   placeholder="Password"
+                  className={"p-3 rounded-pill bg-info-subtle"}
                   value={password}
                   onChange={(e) => {
                     setPassword(e.target.value);
@@ -80,7 +80,7 @@ const SignIn = () => {
               </div>
             </Form.Group>
             {error !== "" && <div className={"text-danger text-center"}>{error}</div>}
-            <Button className={"btn-vibrant-primary"} type="submit">
+            <Button className={"btn-vibrant-primary rounded-pill"} type="submit">
               Login
             </Button>
           </Form>
