@@ -1,28 +1,75 @@
 import React from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
+import { Facebook, Instagram, Twitter, Youtube } from "react-bootstrap-icons";
 
 const Footer = () => (
   <footer className="mt-auto py-3">
     <Container>
       <Row>
         <Col>
-          <h4>MAILING ADDRESS</h4>
-          <p>Information Technology Services</p>
-          <p>2520 Correa Road</p>
-          <p>Honolulu, HI 96822</p>
+          <Row>
+            <Image
+              className={"pb-2"}
+              src={"https://www.hawaii.edu/its/wp-content/themes/system2018/images/footer-logo.png"}
+            />
+            <div>2444 Dole Street</div>
+            <div>Honolulu, HI 96822</div>
+          </Row>
         </Col>
-        <Col className="text-center">
-          <h4>STUDENT EMPLOYMENT</h4>
-          <p>
-            Information Technology Services posts available positions for UH students on{" "}
-            <a href="http://www.hawaii.edu/sece/">SECE</a>{" "}
-          </p>
+        <Col>
+          <Row>
+            <div>
+              An <a href={"#"}>equal opportunity/affirmative action institution</a>
+            </div>
+            <div>
+              Use of this site implies consent with out <a href={"#"}>Usage Policy</a> copyright © 2018{" "}
+              <a href={"#"}>University of Hawaiʻi</a>
+            </div>
+          </Row>
         </Col>
-        <Col className="text-center">
-          <h4>UH SYSTEM HOME</h4>
-          <a href="https://www.hawaii.edu/">
-            <Image src="https://www.hawaii.edu/askus/styles-2016/images/UHSystemLogo240white-e1431548955359.png" />
-          </a>
+        <Col>
+          <Row>
+            <div>
+              <a href={"#"}>Calendar</a>
+            </div>
+            <div>
+              <a href={"#"}>Directory</a>
+            </div>
+            <div>
+              <a href={"#"}>Emergency Information</a>
+            </div>
+            <div>
+              <a href={"#"}>MyUH</a>
+            </div>
+            <div>
+              <a href={"#"}>Privacy Statement</a>
+            </div>
+            <div>
+              <a href={"#"}>Work at UH</a>
+            </div>
+          </Row>
+        </Col>
+        <Col>
+          <Row>
+            <div>
+              <Twitter className={"m-2"} />
+              <Facebook className={"m-2"} />
+              <Instagram className={"m-2"} />
+              <Youtube className={"m-2"} />
+            </div>
+          </Row>
+          <Row>
+            <div>
+              <a href={"#"}>Contact UH</a>
+            </div>
+            <div>
+              If required, information contained on this website can be made available in an alternative format upon
+              request.
+            </div>
+            <div>
+              <a href={"#"}>Get Adobe Acrobat Reader</a>
+            </div>
+          </Row>
         </Col>
       </Row>
     </Container>

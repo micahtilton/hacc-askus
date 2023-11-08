@@ -4,12 +4,7 @@ import { FAQCollection } from "../../imports/api/FAQCollection";
 import { EmbeddingCollection } from "../../imports/api/EmbeddingCollection";
 import { getEmbedding, openai } from "./openai-tools";
 
-const createContextFrom = (
-  collection,
-  embedding,
-  contextAmount = 1,
-  similarityThreshold = 1,
-) => {
+const createContextFrom = (collection, embedding, contextAmount = 1, similarityThreshold = 1) => {
   let embeddings = collection.find({}).fetch();
 
   // add similarity value to embedding object
@@ -36,14 +31,22 @@ const createContextFrom = (
 };
 
 const createContext = (embedding, contextAmount = 2) => {
-  const resolvedContext = createContextFrom(FAQCollection, embedding, 1, 0.8);
+  const faqContext = createContextFrom(FAQCollection, embedding, 2, 0.8);
 
-  if (resolvedContext.length === 1) {
-    return resolvedContext;
+  if (faqContext.length > 0) {
+    return faqContext;
   }
 
-  return createContextFrom(EmbeddingCollection, embedding, contextAmount, 0.75);
+  const archiveContext = createContextFrom(EmbeddingCollection, embedding, contextAmount, 0.75);
+
+  if (archiveContext.length < contextAmount) {
+    return archiveContext;
+  }
+
+  return archiveContext.slice(0, contextAmount);
 };
+
+const hokuRepeat = async (toRepeat) => {};
 
 const askHoku = async (question) => {
   const defaultAnswer = {
@@ -52,10 +55,10 @@ const askHoku = async (question) => {
     question: question,
   };
 
-  if (!Meteor.call("isAdmin")) {
-    defaultAnswer.answer = "Login for me to answer your questions :)";
-    return defaultAnswer;
-  }
+  // if (!Meteor.call("isAdmin")) {
+  //   defaultAnswer.answer = "Login for me to answer your questions :)";
+  //   return defaultAnswer;
+  // }
 
   const questionEmbedding = await getEmbedding(question);
 
@@ -67,14 +70,13 @@ const askHoku = async (question) => {
   const context = createContext(questionEmbedding);
   defaultAnswer.context = context;
   if (context.length === 0) {
-    defaultAnswer.answer =
-      "Sorry, I don't quite understand the question. Try adding more context.";
+    defaultAnswer.answer = "Sorry, I don't have the answer to that.";
     return defaultAnswer;
   }
 
   const contextText = context.reduce((a, b) => a + " " + b.text, "");
 
-  const prompt = `Context: ${contextText}\n\nYou are Hoku, an AI chat assistant to UH Manoa students. you give at most 3 sentence answers in the form of a text message. do not mention any external sources. You MUST ONLY give information given in the context above. if the question cant be answered based ONLY on the context above, say \"I'm sorry, I don't have the answer to that. question\".\n\nQuestion:${question}\nAnswer: `;
+  const prompt = `Context: ${contextText}\n\nYou are Hoku, an AI chat assistant to UH Manoa students. you give at most 3 sentence answers in the form of a text message. do not mention the context or any external sources. You MUST ONLY give information based on the context above. if the question cant be answered based ONLY on the context above, say \"I'm sorry, I don't have the answer to that. question\".\n\nQuestion:${question}\nAnswer: `;
 
   const chatCompletion = await openai.completions.create({
     model: "gpt-3.5-turbo-instruct",
@@ -84,8 +86,7 @@ const askHoku = async (question) => {
   });
 
   if (chatCompletion === null) {
-    defaultAnswer.answer =
-      "Hoku is unavailable at the moment. Sorry for the inconvenience.";
+    defaultAnswer.answer = "Hoku is unavailable at the moment. Sorry for the inconvenience.";
     return defaultAnswer;
   }
 

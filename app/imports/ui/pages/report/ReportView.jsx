@@ -6,7 +6,7 @@ import { useTracker } from 'meteor/react-meteor-data';
 import { ReportCollection } from '../../../api/ReportCollection';
 
 const ReportView = ({ report, index }) => {
-  const bgTag = index % 2 === 0 ? "bg-dark-subtle" : "";
+  const bgTag = index % 2 === 0 ? "bg-dull-light" : "";
 
   return (
     <>
@@ -14,6 +14,7 @@ const ReportView = ({ report, index }) => {
         <Col md={1}>
           <span className={"fw-bold d-md-none"}>Comment: </span>
           <span>{report.comment}</span>
+          <Col className={"text-black-50"}>{report.date.toLocaleString("en-US")}</Col>
         </Col>
         <Col md={2}>
           <span className={"fw-bold d-md-none"}>Question: </span>
@@ -43,6 +44,7 @@ const ReportView = ({ report, index }) => {
           <ResolveModal report={report} />
         </Col>
       </Row>
+      <Row className={`py-2 ${bgTag}`}></Row>
     </>
   );
 };

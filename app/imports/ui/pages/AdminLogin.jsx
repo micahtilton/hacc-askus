@@ -1,68 +1,91 @@
 import React, { useState } from "react";
-import { Button, Container, Form } from "react-bootstrap";
-import { Navigate, redirect } from "react-router-dom";
+import { Meteor } from "meteor/meteor";
+import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
+import { EnvelopeAtFill, LockFill } from "react-bootstrap-icons";
+import { useNavigate } from "react-router";
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [redirect, setRedirect] = useState(false);
+  const navigate = useNavigate();
+  const [error, setError] = useState("");
 
   const resetForm = () => {
     setEmail("");
     setPassword("");
+    setError("");
   };
+
   const handleSubmit = () => {
+    if (password === "" || email === "") {
+      setError("Please Enter an Email and Password");
+      return;
+    }
     Meteor.loginWithPassword(email, password, (err) => {
       if (err) {
         resetForm();
+        setError("Incorrect Username or Password");
       } else {
         resetForm();
-        setRedirect(true);
+        navigate("/admin/report");
       }
     });
   };
 
-  return redirect ? (
-    <Navigate to="/admin/report" />
-  ) : (
-    <Container>
-      <Form
-        className={"p-3 m-5 rounded-3 border border-2 bg-white "}
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleSubmit();
-        }}
-      >
-        <div>
-          <h2 className={"pb-3"}>Sign In</h2>
-        </div>
-        <Form.Group className={"pb-3"}>
-          <Form.Label className={"mb-0"}>Email address</Form.Label>
-          <Form.Control
-            type="email"
-            placeholder="Enter email"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
+  return (
+    <Container className="py-5">
+      <Row className="justify-content-center">
+        <Col sm={6}>
+          <Form
+            id="login"
+            className="p-3 m-5 rounded-3 border border-2 bg-white"
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSubmit();
             }}
-          />
-        </Form.Group>
+          >
+            <Col className="text-center">
+              <Image src="/images/hoku-pfp.png" className={"mb-3"} width={90} />
+              <h2>Admin Login</h2>
+            </Col>
+            <Form.Group className="pb-3">
+              <Form.Label className="mb-0 mx-sm-3">Email address</Form.Label>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <EnvelopeAtFill className="mx-sm-3 mb-1" size="20" id="envelope" />
+                <Form.Control
+                  id="email"
+                  type="email"
+                  placeholder="Enter email"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                />
+              </div>
+            </Form.Group>
 
-        <Form.Group className="mb-3">
-          <Form.Label className={"mb-0"}>Password</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-          />
-        </Form.Group>
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form>
+            <Form.Group className="pb-3">
+              <Form.Label className="mb-0 mx-sm-3">Password</Form.Label>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <LockFill className="mx-sm-3 mb-1" size="20" id="lock" />
+                <Form.Control
+                  id="password"
+                  type="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                />
+              </div>
+            </Form.Group>
+            {error !== "" && <div className={"text-danger text-center"}>{error}</div>}
+            <Button className={"btn-vibrant-primary"} type="submit">
+              Login
+            </Button>
+          </Form>
+        </Col>
+      </Row>
     </Container>
   );
 };

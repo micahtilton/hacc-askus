@@ -11,6 +11,7 @@ const ContextModal = ({ context }) => {
       <li>
         <a
           href="#"
+          className={"text-break"}
           onClick={(e) => {
             e.preventDefault();
             handleShow();
@@ -25,9 +26,16 @@ const ContextModal = ({ context }) => {
           <Modal.Title>Context</Modal.Title>
         </Modal.Header>
         <Modal.Body className={"overflow-y-auto"}>
-          <span className={"fw-bold"}>Similarity:</span>
-          <span className={"ps-2"}>{context.similarity}</span>
-
+          <div>
+            <span className={"fw-bold"}>Similarity:</span>
+            <span className={"ps-2"}>{context.similarity}</span>
+          </div>
+          <div>
+            <span className={"fw-bold"}>Source:</span>
+            <a target="_blank" href={context.source} className={"ps-2"}>
+              {context.source}
+            </a>
+          </div>
           <div className={"fw-bold"}>AI Context: </div>
           <div>{context.text}</div>
         </Modal.Body>

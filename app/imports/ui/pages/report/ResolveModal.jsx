@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { ReportCollection } from "../../../api/ReportCollection";
 import { Button, Form, Modal } from "react-bootstrap";
 
 const ResolveModal = ({ report }) => {
@@ -23,7 +22,7 @@ const ResolveModal = ({ report }) => {
 
   return (
     <>
-      <Button className={"me-5"} size={"sm"} onClick={handleShow}>
+      <Button className={"me-5 btn-vibrant-primary border-0"} size={"sm"} onClick={handleShow}>
         Resolve
       </Button>
 

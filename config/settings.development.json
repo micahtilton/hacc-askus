@@ -3,6 +3,9 @@
 
   "accounts": [
     { "email": "admin@hawaii.edu", "password": "hacc2023", "role": "admin" },
+    { "email": "kayleeagorilla@hawaii.edu", "password": "hacc2023", "role": "admin" },
+    { "email": "malisalo@hawaii.edu", "password": "hacc2023", "role": "admin" },
+    { "email": "micahtilton@hawaii.edu", "password": "hacc2023", "role": "admin" },
     { "email": "user@hawaii.edu", "password": "hacc2023" }
   ]
 }

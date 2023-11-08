@@ -31,8 +31,8 @@ const AiChatMessage = ({ context, loading = false }) => {
 
   return (
     <div className={"d-flex align-items-end"}>
-      <Image fluid className="ai-pfp position-relative mx-2" src={"images/hoku-pfp.png"} width={40} height={40} />
-      <div className="ai-text-box align-self-start d-flex p-2 justify-content-start bg-primary text-white text-break me-lg-5 me-2">
+      <Image src={"images/hoku-pfp.png"} width={40} height={40} className={"mx-2"} />
+      <div className="ai-text-box align-self-start d-flex p-2 justify-content-start bg-vibrant-primary text-white text-break me-lg-5 me-2">
         {loading ? (
           <ChatLoading />
         ) : (

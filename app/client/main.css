@@ -1,11 +1,12 @@
 :root {
-  --vibrant-primary: #005FC4;
+  --vibrant-primary: #06669b;
   --vibrant-secondary: rgb(172, 204, 231);
   --vibrant-light: #D5F4FF;
   --dull-primary: #6C6153;
   --dull-secondary: #BAA98D;
-  --dull-light: #FFECCB;
-  --accent: #DCA13C;
+  --dull-light: #ffeecd;
+  --bg: #fff7e9;
+  --accent: #f4b242;
 }
 
 .text-dull-light {
@@ -27,6 +28,18 @@
 
 .bg-vibrant-primary {
   background-color: var(--vibrant-primary) !important;
+}
+
+.bg-dull-secondary {
+  background-color: var(--dull-secondary) !important;
+}
+
+.bg-dull-light {
+  background-color: var(--dull-light) !important;
+}
+
+.text-accent {
+  color: var(--accent);
 }
 
 nav {
@@ -57,22 +70,20 @@ footer a {
 }
 
 .chat-container {
-  width: 40vw;
+  width: 800px;
   max-height: 100vh;
 }
 
+@media (max-width: 900px) {
+  .chat-container {
+    width: 100vw;
+    max-width: 100%;
+  }
+}
+
+
 .chat-area {
   max-height: 30vh;
-}
-
-.welcome {
-  border-radius: 15px 15px 1px 15px;
-  animation: fadeIn 1.5s;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
 }
 
 .ai-text-box {
@@ -161,7 +172,15 @@ footer a {
 
 body {
   font-family: sans-serif;
-  background-color: whitesmoke !important;
+  background-color: var(--bg) !important;
+}
+
+body .fw-bold {
+  color: var(--dull-primary);
+}
+
+body a {
+  color: var(--accent);
 }
 
 #helpDesk div h1 {
@@ -180,7 +199,10 @@ body {
   background-image: url("https://www.usgbc.org/sites/default/files/2020-06/1%288%29.jpg");
   background-size: cover;
   background-position: center;
-  height: 500px;
+}
+
+.meet-hoku {
+  font-size: 100px;
 }
 
 .banner {
