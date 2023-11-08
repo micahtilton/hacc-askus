@@ -4,7 +4,7 @@ import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import { EnvelopeAtFill, LockFill } from "react-bootstrap-icons";
 import { useNavigate } from "react-router";
 
-const AdminLogin = () => {
+const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ const AdminLogin = () => {
         setError("Incorrect Username or Password");
       } else {
         resetForm();
-        navigate("/admin/report");
+        navigate("/");
       }
     });
   };
@@ -46,7 +46,7 @@ const AdminLogin = () => {
           >
             <Col className="text-center">
               <Image src="/images/NEW-Hoku.png" className={"mb-3"} width={90} />
-              <h2>Admin Login</h2>
+              <h2>Sign In</h2>
             </Col>
             <Form.Group className="pb-3">
               <Form.Label className="mb-0 mx-sm-3">Email address</Form.Label>
@@ -90,4 +90,4 @@ const AdminLogin = () => {
   );
 };
 
-export default AdminLogin;
+export default SignIn;
