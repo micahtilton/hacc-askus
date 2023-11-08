@@ -4,7 +4,7 @@ import "./Accounts";
 import "./Publications";
 import { addReport, removeReport, resolveReport } from "../imports/api/ReportCollection";
 import { addFAQ, editFAQ, removeFAQ } from "../imports/api/FAQCollection";
-import { askHoku } from "./openai/hoku-tools";
+import { askHoku, hokuRepeat } from "./openai/hoku-tools";
 import { getEmbedding } from "./openai/openai-tools";
 import { getUsername, isAdmin } from "./Accounts";
 
@@ -12,6 +12,7 @@ Meteor.methods({
   getUsername,
   isAdmin,
   getEmbedding,
+  hokuRepeat,
   askHoku,
   addReport,
   removeReport,

@@ -3,7 +3,6 @@ import { useTracker } from "meteor/react-meteor-data";
 import ReportView from "./ReportView";
 import { Col, Container, Row } from "react-bootstrap";
 import { ReportCollection } from "../../../api/ReportCollection";
-import Search from '../../Search';
 
 Meteor.subscribe("reports");
 
@@ -13,9 +12,7 @@ const ReportsPage = () => {
   return (
     <Container fluid>
       <Col className={""}>
-        <Row><Search/></Row>
         <Row className={"d-none d-md-flex"}>
-
           <Col md={1} className={"fw-bold"}>
             Comment
           </Col>

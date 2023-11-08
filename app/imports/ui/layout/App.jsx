@@ -67,7 +67,6 @@ export const App = () => {
           />
           <Route path="*" element={<Page text={"Error 404: Page Not Found"} />} />
         </Routes>
-        <ChatBot />
         <Footer />
       </div>
     </Router>

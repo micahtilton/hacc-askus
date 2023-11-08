@@ -56,10 +56,6 @@ nav {
   border-bottom: 2px solid var(--accent) !important;
 }
 
-.logo {
-  font-size: 14px;
-}
-
 footer {
   background-color: var(--dull-primary);
   color: var(--dull-light);
@@ -69,9 +65,12 @@ footer a {
   color: var(--accent);
 }
 
+.logo {
+  font-size: 14px;
+}
+
 .chat-container {
   width: 800px;
-  max-height: 100vh;
 }
 
 @media (max-width: 900px) {
@@ -112,7 +111,7 @@ footer a {
 
 @keyframes slide-left {
   0% {
-    right: -100vw;
+    right: -1000px;
   }
   100% {
     right: 0;
@@ -124,7 +123,7 @@ footer a {
     right: 0;
   }
   100% {
-    right: -100vw;
+    right: -1000px;
   }
 }
 
@@ -234,7 +233,7 @@ body a {
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-  font-size: 10vw;
+  font-size: 80px;
 }
 
 @keyframes textclip {
