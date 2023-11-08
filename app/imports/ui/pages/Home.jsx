@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import {
   BuildingFill,
   ChatDotsFill,
@@ -12,7 +12,16 @@ import {
 
 /* A simple static component to render some text for the landing page. */
 const Home = () => (
-  <Container className={"p-5"}>
+  <Container className={"pb-5"}>
+    <Row className="text-center d-flex p-5" xs={1} md={2}>
+      <Col sm={12} className={"d-flex flex-column justify-content-center"}>
+        <h1 className="text-animation">MEET HOKU</h1>
+      </Col>
+      <Col sm={12}>
+        <Image src="images/hoku-pfp.png" width={200} />
+      </Col>
+    </Row>
+
     <Row className={"gx-5"}>
       <Col xs={12} md={8}>
         <Row className={"bg-dull-light fw-bold rounded-4 p-3"}>

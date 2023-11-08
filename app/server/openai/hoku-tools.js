@@ -46,7 +46,14 @@ const createContext = (embedding, contextAmount = 2) => {
   return archiveContext.slice(0, contextAmount);
 };
 
-const hokuRepeat = async (toRepeat) => {};
+const hokuRepeat = async (toRepeat, delayMS) => {
+  await new Promise((r) => setTimeout(r, delayMS));
+  return {
+    answer: toRepeat,
+    context: [],
+    question: "",
+  };
+};
 
 const askHoku = async (question) => {
   const defaultAnswer = {
@@ -94,4 +101,4 @@ const askHoku = async (question) => {
   return defaultAnswer;
 };
 
-export { askHoku, createContext, createContextFrom };
+export { askHoku, createContext, createContextFrom, hokuRepeat };
