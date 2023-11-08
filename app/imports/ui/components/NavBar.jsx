@@ -35,7 +35,12 @@ const NavBar = () => {
   return (
     <Navbar expand="lg" className={"text-center navbar-dark"}>
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand
+          href="#"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
           <Logo />
         </Navbar.Brand>
 
@@ -49,11 +54,22 @@ const NavBar = () => {
           </Nav>
           {isAdmin && (
             <Nav className={"d-flex justify-content-center me-auto"}>
-              <br/>
-              <Nav.Link href="/admin/faq" className={"p-2"}>
+              <br />
+              <Nav.Link
+                onClick={() => {
+                  navigate("/admin/faq");
+                }}
+                href="#"
+                className={"p-2"}
+              >
                 FAQ
               </Nav.Link>
-              <Nav.Link href="/admin/report" className={"p-2"}>
+              <Nav.Link
+                onClick={() => {
+                  navigate("/admin/report");
+                }}
+                className={"p-2"}
+              >
                 Reports
               </Nav.Link>
             </Nav>

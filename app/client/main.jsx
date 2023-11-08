@@ -9,6 +9,7 @@ import ChatBot from "../imports/ui/pages/chatbot/ChatBot";
 Meteor.startup(() => {
   const container = document.getElementById("react-target");
   const root = createRoot(container);
+  console.log("startup");
   root.render(
     <>
       <App />

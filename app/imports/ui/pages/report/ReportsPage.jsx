@@ -10,8 +10,8 @@ const ReportsPage = () => {
   const reports = useTracker(() => ReportCollection.find({}).fetch());
 
   return (
-    <Container fluid>
-      <Col className={""}>
+    <Container>
+      <Col>
         <Row className={"d-none d-md-flex"}>
           <Col md={1} className={"fw-bold"}>
             Comment
@@ -33,7 +33,6 @@ const ReportsPage = () => {
           <ReportView key={report._id} index={index} report={report} />
         ))}
       </Col>
-      <Col md={1}></Col>
     </Container>
   );
 };

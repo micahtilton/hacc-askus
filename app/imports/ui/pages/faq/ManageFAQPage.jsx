@@ -12,7 +12,7 @@ const ManageFAQPage = () => {
 
   return (
     <Container>
-      <Col className={"d-flex justify-content-center pt-3"}>
+      <Col className={"d-flex justify-content-center p-2"}>
         <AddFAQModal />
       </Col>
       <Col>

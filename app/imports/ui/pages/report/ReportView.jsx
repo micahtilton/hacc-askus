@@ -8,7 +8,7 @@ const ReportView = ({ report, index }) => {
 
   return (
     <>
-      <Row className={`py-2 ${bgTag}`}>
+      <Row className={`py-2 rounded-3 ${bgTag}`}>
         <Col md={1}>
           <span className={"fw-bold d-md-none"}>Comment: </span>
           <span>{report.comment}</span>
@@ -38,11 +38,10 @@ const ReportView = ({ report, index }) => {
             ))}
           </ul>
         </Col>
-        <Col md={1} className={""}>
+        <Col md={1}>
           <ResolveModal report={report} />
         </Col>
       </Row>
-      <Row className={`py-2 ${bgTag}`}></Row>
     </>
   );
 };

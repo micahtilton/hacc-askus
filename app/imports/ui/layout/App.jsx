@@ -2,7 +2,6 @@ import React from "react";
 import Home from "../pages/Home";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import ChatBot from "../pages/chatbot/ChatBot";
 import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom";
 import HelpDesk from "../pages/HelpDesk";
 import ReportsPage from "../pages/report/ReportsPage";
@@ -12,7 +11,7 @@ import { Meteor } from "meteor/meteor";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { useTracker } from "meteor/react-meteor-data";
 import { Roles } from "meteor/alanning:roles";
-import SignIn from '../pages/SignIn';
+import SignIn from "../pages/SignIn";
 
 const AdminProtectedRoute = ({ ready, children }) => {
   const isLogged = Meteor.userId() !== null;
