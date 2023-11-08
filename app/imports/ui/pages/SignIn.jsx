@@ -50,12 +50,12 @@ const SignIn = () => {
             </Col>
             <Form.Group className="pb-3">
               <div style={{ display: "flex", alignItems: "center" }}>
-                <EnvelopeFill className="d-none d-sm-inline me-2" size="30" id="envelope" />
+                <EnvelopeFill className="d-none d-sm-inline me-2" size="25" id="envelope" />
                 <Form.Control
                   id="email"
                   type="email"
                   placeholder="Enter email"
-                  className={"p-3 rounded-pill bg-light"}
+                  className={"p-2 rounded-pill bg-light"}
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -66,12 +66,12 @@ const SignIn = () => {
 
             <Form.Group className="pb-3">
               <div style={{ display: "flex", alignItems: "center" }}>
-                <LockFill className="d-none d-sm-inline me-2" size="30" id="lock" />
+                <LockFill className="d-none d-sm-inline me-2" size="25" id="lock" />
                 <Form.Control
                   id="password"
                   type="password"
                   placeholder="Password"
-                  className={"p-3 rounded-pill bg-light"}
+                  className={"p-2 rounded-pill bg-light"}
                   value={password}
                   onChange={(e) => {
                     setPassword(e.target.value);

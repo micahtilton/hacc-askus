@@ -128,6 +128,7 @@ footer a {
   100% {
     right: -1000px;
     display: none;
+    pointer-events: none;
   }
 }
 
