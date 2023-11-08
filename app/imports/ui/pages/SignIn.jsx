@@ -33,9 +33,9 @@ const SignIn = () => {
   };
 
   return (
-    <Container className="py-5">
+    <Container fluid className="py-5">
       <Row className="justify-content-center text-center">
-        <Col sm={6}>
+        <Col lg={8} xl={6}>
           <Form
             id="login"
             className="p-3 m-5 rounded-3 bg-white border border-2 shadow-lg"
@@ -50,12 +50,12 @@ const SignIn = () => {
             </Col>
             <Form.Group className="pb-3">
               <div style={{ display: "flex", alignItems: "center" }}>
-                <EnvelopeFill className="mx-sm-3 mb-1" size="30" id="envelope" />
+                <EnvelopeFill className="d-none d-sm-inline me-2" size="30" id="envelope" />
                 <Form.Control
                   id="email"
                   type="email"
                   placeholder="Enter email"
-                  className={"p-3 rounded-pill bg-info-subtle"}
+                  className={"p-3 rounded-pill bg-light"}
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -66,12 +66,12 @@ const SignIn = () => {
 
             <Form.Group className="pb-3">
               <div style={{ display: "flex", alignItems: "center" }}>
-                <LockFill className="mx-sm-3 mb-1" size="30" id="lock" />
+                <LockFill className="d-none d-sm-inline me-2" size="30" id="lock" />
                 <Form.Control
                   id="password"
                   type="password"
                   placeholder="Password"
-                  className={"p-3 rounded-pill bg-info-subtle"}
+                  className={"p-3 rounded-pill bg-light"}
                   value={password}
                   onChange={(e) => {
                     setPassword(e.target.value);
