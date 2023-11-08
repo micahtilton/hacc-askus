@@ -3,7 +3,7 @@ import { Col, Container, Image, Row } from "react-bootstrap";
 import { Facebook, Instagram, Twitter, Youtube } from "react-bootstrap-icons";
 
 const Footer = () => (
-  <footer className="mt-auto py-3">
+  <footer className="mt-auto py-3 pb-5">
     <Container>
       <Row>
         <Col>
