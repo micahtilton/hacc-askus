@@ -1,8 +1,8 @@
 :root {
   --vibrant-primary: #06669b;
-  --vibrant-secondary: rgb(172, 204, 231);
+  --vibrant-secondary: #5593C7;
   --vibrant-light: #D5F4FF;
-  --dull-primary: #6C6153;
+  --dull-primary: #4387BA;
   --dull-secondary: #BAA98D;
   --dull-light: #ffeecd;
   --bg: #fff7e9;
@@ -50,10 +50,6 @@ body .fw-bold {
 
 body a {
   color: var(--accent);
-}
-
-.bg-dull-secondary {
-  background-color: var(--dull-secondary) !important;
 }
 
 .bg-dull-light {
@@ -179,9 +175,10 @@ body a {
   background-image: linear-gradient(
       -225deg,
       var(--vibrant-primary) 0%,
-      var(--vibrant-secondary) 29%,
-      var(--accent) 55%,
-      var(--dull-light) 75%,
+      var(--vibrant-secondary) 20%,
+      var(--accent) 40%,
+      var(--dull-light) 60%,
+      var(--vibrant-secondary) 80%,
       var(--vibrant-primary) 100%
   );
   /* Text Clip */
