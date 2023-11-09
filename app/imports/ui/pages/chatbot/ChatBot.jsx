@@ -87,7 +87,7 @@ const ChatBot = () => {
           <div className="flex-grow-1"></div>
         </div>
 
-        <Form className="d-flex flex-row bg-white rounded-bottom-4" onSubmit={handleSend}>
+        <Form className="d-flex flex-row bg-white rounded-bottom-4 shadow" onSubmit={handleSend}>
           <Form.Control
             type={"text"}
             className={"m-2 p-1 mt-3 fw-light d-flex px-2 rounded-pill chat-field"}
