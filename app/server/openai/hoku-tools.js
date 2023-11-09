@@ -83,7 +83,7 @@ const askHoku = async (question) => {
 
   const contextText = context.reduce((a, b) => a + " " + b.text, "");
 
-  const prompt = `Context: ${contextText}\n\nYou are Hoku, an AI chat assistant to UH Manoa students. you give at most 3 sentence answers in the form of a text message. do not mention the context or any external sources. You MUST ONLY give information based on the context above. if the question cant be answered based ONLY on the context above, say \"I'm sorry, I don't have the answer to that. question\".\n\nQuestion:${question}\nAnswer: `;
+  const prompt = `Context: ${contextText}\n\nYou are Hoku, an AI chat assistant to UH Manoa students. you give at most 3 sentence answers in the form of a text message. DO NOT mention the context or any external sources. You MUST ONLY give information based on the context above. if the question cant be answered based ONLY on the context above, say \"I'm sorry, I don't have the answer to that. question\".\n\nQuestion:${question}\nAnswer: `;
 
   const chatCompletion = await openai.completions.create({
     model: "gpt-3.5-turbo-instruct",
