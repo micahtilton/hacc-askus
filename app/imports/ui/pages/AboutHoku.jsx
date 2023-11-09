@@ -11,10 +11,12 @@ const AboutHoku = () => (
         be displayed. Click on the match that best answers your question. Click on "Ask Us" again to return to the list
         of matches, or enter new keywords for a new search.
       </p>
-      <button type="btn" className="btn btn-outline-dark">Learn More</button>
+      <button type="btn" className="btn btn-outline-dark">
+        Learn More
+      </button>
     </Col>
     <Col className="d-flex flex-column mt-4">
-      <Image src="images/hoku-pfp.png" id="hoku" />
+      <Image src="images/hoku-pfp.png" />
     </Col>
   </Row>
 );

@@ -9,39 +9,7 @@
   --accent: #f4b242;
 }
 
-.text-dull-light {
-  color: var(--dull-light);
-}
-
-.btn-vibrant-primary {
-  background-color: var(--vibrant-primary) !important;
-  border-color: var(--vibrant-primary) !important;
-}
-
-.btn-vibrant-primary:hover {
-  filter: brightness(90%);
-}
-
-.btn-vibrant-primary:active {
-  filter: brightness(80%);
-}
-
-.bg-vibrant-primary {
-  background-color: var(--vibrant-primary) !important;
-}
-
-.bg-dull-secondary {
-  background-color: var(--dull-secondary) !important;
-}
-
-.bg-dull-light {
-  background-color: var(--dull-light) !important;
-}
-
-.text-accent {
-  color: var(--accent);
-}
-
+/* Navbar CSS */
 nav {
   background-color: var(--dull-primary) !important;
 }
@@ -56,6 +24,11 @@ nav {
   border-bottom: 2px solid var(--accent) !important;
 }
 
+.logo {
+  font-size: 14px;
+}
+
+/* Footer CSS */
 footer {
   background-color: var(--dull-primary);
   color: var(--dull-light);
@@ -65,10 +38,33 @@ footer a {
   color: var(--accent);
 }
 
-.logo {
-  font-size: 14px;
+/* Body CSS */
+body {
+  font-family: sans-serif;
+  background-color: var(--bg) !important;
 }
 
+body .fw-bold {
+  color: var(--dull-primary);
+}
+
+body a {
+  color: var(--accent);
+}
+
+.bg-dull-secondary {
+  background-color: var(--dull-secondary) !important;
+}
+
+.bg-dull-light {
+  background-color: var(--dull-light) !important;
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+/* Chatbox CSS */
 .chat-container {
   width: 800px;
 }
@@ -92,6 +88,54 @@ footer a {
   border-radius: 15px 15px 1px 15px;
 }
 
+.btn-vibrant-primary {
+  background-color: var(--vibrant-primary) !important;
+  border-color: var(--vibrant-primary) !important;
+}
+
+.btn-vibrant-primary:hover {
+  filter: brightness(90%);
+}
+
+.btn-vibrant-primary:active {
+  filter: brightness(80%);
+}
+
+.bg-vibrant-primary {
+  background-color: var(--vibrant-primary) !important;
+}
+
+/* Loading AI Message Animation */
+@keyframes change-color {
+  0%, 100% {
+    background-color: white;
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.dot {
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 3px;
+  display: inline-block;
+  animation: change-color 1s infinite ease-in-out;
+}
+
+.delay-1 {
+  animation-delay: 0s;
+}
+.delay-2 {
+  animation-delay: 0.33s;
+}
+.delay-3 {
+  animation-delay: 0.66s;
+}
+
+/* Chatbot slide in animation */
 .bottom-right {
   position: fixed;
   bottom: 0;
@@ -128,52 +172,8 @@ footer a {
   }
 }
 
-@keyframes change-color {
-  0%, 100% {
-    background-color: white;
-  }
-  50% {
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-}
 
-.dot {
-  height: 9px;
-  width: 9px;
-  border-radius: 50%;
-  background-color: white;
-  margin: 3px;
-  display: inline-block;
-  animation: change-color 1s infinite ease-in-out;
-}
-
-.delay-1 {
-  animation-delay: 0s;
-}
-.delay-2 {
-  animation-delay: 0.33s;
-}
-.delay-3 {
-  animation-delay: 0.66s;
-}
-
-body {
-  font-family: sans-serif;
-  background-color: var(--bg) !important;
-}
-
-body .fw-bold {
-  color: var(--dull-primary);
-}
-
-body a {
-  color: var(--accent);
-}
-
-#hoku {
-  float: left;
-}
-
+/* Meet Hoku animation */
 .text-animation  {
   text-transform: uppercase;
   background-image: linear-gradient(
