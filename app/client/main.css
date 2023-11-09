@@ -180,11 +180,12 @@ body a {
       -225deg,
       var(--vibrant-primary) 0%,
       var(--vibrant-secondary) 29%,
-      var(--accent) 67%,
-      var(--dull-light) 100%
+      var(--accent) 55%,
+      var(--dull-light) 75%,
+      var(--vibrant-primary) 100%
   );
+  /* Text Clip */
   background-size: 200% auto;
-  color: #fff;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
