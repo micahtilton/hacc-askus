@@ -24,7 +24,7 @@ const ChatBot = () => {
     Meteor.call(
       "hokuRepeat",
       "Aloha, I am Hoku! I can help you answer any questions you have about ITS!",
-      2000,
+      1000,
       (err, res) => {
         if (err) {
           setHokuLoading(false);
