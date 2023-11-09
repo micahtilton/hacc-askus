@@ -38,7 +38,7 @@ A prompt injection is a type of cyberattack on an AI system designed to enable t
 
 - A character limit is put on the prompt to avoid complicated prompt injection attacks.
 
-- Only context that has a similarity of 0.8 (1.0 being most similar) or higher is considered. This means that if the user's question is not similar to any data in the database, a request to ChatGPT 3.5 is not made. In this case, a prompt injection is not possible.
+- Only context that has a similarity of 0.8 (1.0 being most similar) or higher is considered. This means that if the user's question is not similar to any data in the database, a request to OpenAI's GPT 3.5 model is not made. In this case, a prompt injection is not possible.
 - We prompt Hoku with this
 ```
 You are Hoku, an AI chat assistant to help UH Manoa students. 
