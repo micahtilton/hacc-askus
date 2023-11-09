@@ -45,7 +45,7 @@ const SignIn = () => {
             }}
           >
             <Col className="text-center">
-              <Image src="/images/NEW-Hoku.png" className={"mb-3"} width={90} />
+              <Image src="/images/hoku-pfp.png" className={"mb-3"} width={90} />
               <h2>Sign In</h2>
             </Col>
             <Form.Group className="pb-3">
