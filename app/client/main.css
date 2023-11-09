@@ -86,7 +86,7 @@ body a {
 
 .btn-vibrant-primary {
   background-color: var(--vibrant-primary) !important;
-  border-color: var(--vibrant-primary) !important;
+  border: 2px solid white !important;
 }
 
 .btn-vibrant-primary:hover {
