@@ -71,7 +71,7 @@ const ChatBot = () => {
           </div>
         </div>
 
-        <div className="chat-area overflow-y-auto flex-grow-1 bg-white shadow-lg">
+        <div className="chat-area overflow-y-auto flex-grow-1 bg-white shadow">
           <div className="d-flex flex-column">
             {messages.map((data, i) =>
               data.sender === "user" ? (
@@ -111,7 +111,7 @@ const ChatBot = () => {
 
       <div>
         <Button
-          className={"mt-2 p-2 rounded-3 btn-vibrant-primary shadow-lg"}
+          className={"mt-2 p-2 rounded-3 btn-vibrant-primary shadow"}
           onClick={() => {
             setChatOpen(!chatOpen);
           }}
