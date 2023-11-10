@@ -165,6 +165,7 @@ body a {
     right: -1000px;
     display: none;
     pointer-events: none;
+    visibility: hidden;
   }
 }
 
