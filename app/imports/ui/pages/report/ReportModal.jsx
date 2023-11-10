@@ -49,7 +49,7 @@ const ReportModal = ({ context, show, handleClose, onSubmit }) => {
 
   const links = [];
   for (let c of context.context) {
-    if (!c.source.includes("@")) {
+    if (!c.source.includes("@") && c.similarity > 0.81) {
       links.push(c.source);
     }
   }
@@ -69,14 +69,14 @@ const ReportModal = ({ context, show, handleClose, onSubmit }) => {
         {links.length !== 0 && (
           <>
             <h5>Try reading these articles</h5>
-            {links.map((link) => (
-              <div>
+            {links.map((link, index) => (
+              <div key={index}>
                 <a href={link} target="_blank">
                   {link}
                 </a>
               </div>
             ))}
-            <h5 className={"mt-3"}>Inaccurate Information? Report here</h5>
+            <h5 className={"mt-3"}>Inaccurate Information? Report it here</h5>
           </>
         )}
         <Form
