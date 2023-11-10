@@ -1,5 +1,6 @@
 import html2text
-
+from unidecode import unidecode
+import re
 
 def get_html2text_handler():
     h = html2text.HTML2Text()
@@ -12,21 +13,8 @@ def get_html2text_handler():
     return h
 
 
-def clean_webpage(page):
-    page = page.replace("*", " ")
-    page = page.replace("###", " ")
-    page = page.replace("##", " ")
-    page = page.replace("“", "\"")
-    page = page.replace("”", "\"")
-    page = page.encode("ascii", "ignore").decode()
+def clean_text(page):
+    page = unidecode(page)
+    page = re.sub(r'\s+', ' ', page)
 
-    cleaned_page = []
-    for line in page.split("\n"):
-        line_text = line.strip()
-
-        if not line_text:
-            continue
-
-        cleaned_line = " ".join(line_text.split())
-        cleaned_page.append(cleaned_line)
-    return " ".join(cleaned_page)
+    return page
