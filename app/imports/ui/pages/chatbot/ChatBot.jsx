@@ -24,7 +24,7 @@ const ChatBot = () => {
     Meteor.call(
       "hokuRepeat",
       "Aloha, I am Hoku! I can help you answer any questions you have about ITS!",
-      2000,
+      1000,
       (err, res) => {
         if (err) {
           setHokuLoading(false);
@@ -71,7 +71,7 @@ const ChatBot = () => {
           </div>
         </div>
 
-        <div className="chat-area overflow-y-auto flex-grow-1 bg-white shadow-lg">
+        <div className="chat-area overflow-y-auto flex-grow-1 bg-white shadow">
           <div className="d-flex flex-column">
             {messages.map((data, i) =>
               data.sender === "user" ? (
@@ -87,7 +87,7 @@ const ChatBot = () => {
           <div className="flex-grow-1"></div>
         </div>
 
-        <Form className="d-flex flex-row bg-white rounded-bottom-4" onSubmit={handleSend}>
+        <Form className="d-flex flex-row bg-white rounded-bottom-4 shadow" onSubmit={handleSend}>
           <Form.Control
             type={"text"}
             className={"m-2 p-1 mt-3 fw-light d-flex px-2 rounded-pill chat-field"}
@@ -111,7 +111,7 @@ const ChatBot = () => {
 
       <div>
         <Button
-          className={"mt-2 p-2 rounded-3 btn-vibrant-primary shadow-lg"}
+          className={"mt-2 p-2 rounded-3 btn-vibrant-primary shadow"}
           onClick={() => {
             setChatOpen(!chatOpen);
           }}

@@ -1,47 +1,15 @@
 :root {
   --vibrant-primary: #06669b;
-  --vibrant-secondary: rgb(172, 204, 231);
+  --vibrant-secondary: #5593C7;
   --vibrant-light: #D5F4FF;
-  --dull-primary: #6C6153;
+  --dull-primary: #4387BA;
   --dull-secondary: #BAA98D;
   --dull-light: #ffeecd;
-  --bg: #fff7e9;
+  --bg: white;
   --accent: #f4b242;
 }
 
-.text-dull-light {
-  color: var(--dull-light);
-}
-
-.btn-vibrant-primary {
-  background-color: var(--vibrant-primary) !important;
-  border-color: var(--vibrant-primary) !important;
-}
-
-.btn-vibrant-primary:hover {
-  filter: brightness(90%);
-}
-
-.btn-vibrant-primary:active {
-  filter: brightness(80%);
-}
-
-.bg-vibrant-primary {
-  background-color: var(--vibrant-primary) !important;
-}
-
-.bg-dull-secondary {
-  background-color: var(--dull-secondary) !important;
-}
-
-.bg-dull-light {
-  background-color: var(--dull-light) !important;
-}
-
-.text-accent {
-  color: var(--accent);
-}
-
+/* Navbar CSS */
 nav {
   background-color: var(--dull-primary) !important;
 }
@@ -56,6 +24,11 @@ nav {
   border-bottom: 2px solid var(--accent) !important;
 }
 
+.logo {
+  font-size: 14px;
+}
+
+/* Footer CSS */
 footer {
   background-color: var(--dull-primary);
   color: var(--dull-light);
@@ -65,10 +38,29 @@ footer a {
   color: var(--accent);
 }
 
-.logo {
-  font-size: 14px;
+/* Body CSS */
+body {
+  font-family: sans-serif;
+  background-color: var(--bg) !important;
 }
 
+body .fw-bold {
+  color: var(--dull-primary);
+}
+
+body a {
+  color: var(--accent);
+}
+
+.bg-dull-light {
+  background-color: var(--dull-light) !important;
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+/* Chatbox CSS */
 .chat-container {
   width: 800px;
 }
@@ -78,10 +70,6 @@ footer a {
     width: 100vw;
     max-width: 100%;
   }
-}
-
-.passthrough {
-  pointer-events: none;
 }
 
 .chat-area {
@@ -96,6 +84,54 @@ footer a {
   border-radius: 15px 15px 1px 15px;
 }
 
+.btn-vibrant-primary {
+  background-color: var(--vibrant-primary) !important;
+  border: 2px solid white !important;
+}
+
+.btn-vibrant-primary:hover {
+  filter: brightness(90%);
+}
+
+.btn-vibrant-primary:active {
+  filter: brightness(80%);
+}
+
+.bg-vibrant-primary {
+  background-color: var(--vibrant-primary) !important;
+}
+
+/* Loading AI Message Animation */
+@keyframes change-color {
+  0%, 100% {
+    background-color: white;
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.dot {
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 3px;
+  display: inline-block;
+  animation: change-color 1s infinite ease-in-out;
+}
+
+.delay-1 {
+  animation-delay: 0s;
+}
+.delay-2 {
+  animation-delay: 0.33s;
+}
+.delay-3 {
+  animation-delay: 0.66s;
+}
+
+/* Chatbot slide in animation */
 .bottom-right {
   position: fixed;
   bottom: 0;
@@ -132,107 +168,21 @@ footer a {
   }
 }
 
-@keyframes change-color {
-  0%, 100% {
-    background-color: white;
-  }
-  50% {
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-}
 
-.dot {
-  height: 9px;
-  width: 9px;
-  border-radius: 50%;
-  background-color: white;
-  margin: 3px;
-  display: inline-block;
-  animation: change-color 1s infinite ease-in-out;
-}
-
-.delay-1 {
-  animation-delay: 0s;
-}
-.delay-2 {
-  animation-delay: 0.33s;
-}
-.delay-3 {
-  animation-delay: 0.66s;
-}
-
-:root {
-  --matr-navbar-text-color: #DDEBE9;
-  --matr-navbar-highlight-text: #3F8880;
-
-
-  --light-cyan: #D5F4FF;
-  --celestial-blue: #5593C7;
-  --lapis-lazuli: #0B6191;
-  --dark-goldenrod: #BC9244;
-  --ecru:#DEBF88;
-  --papaya: #FFECCB;
-}
-
-body {
-  font-family: sans-serif;
-  background-color: var(--bg) !important;
-}
-
-body .fw-bold {
-  color: var(--dull-primary);
-}
-
-body a {
-  color: var(--accent);
-}
-
-#helpDesk div h1 {
-}
-
-#hd-images {
-  border-radius: 100%;
-  width: 300px;
-}
-
-#hoku {
-  float: left;
-}
-
-.its-image {
-  background-image: url("https://www.usgbc.org/sites/default/files/2020-06/1%288%29.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.meet-hoku {
-  font-size: 100px;
-}
-
-.banner {
-  background-color: rgba(0,0,0,50%);
-  color: var(--light-cyan);
-  font-size: 50px;
-}
-
-.aloha {
-  color: var(--light-cyan);
-  font-family: 'Dancing Script', cursive;
-  font-size: 150px;
-  text-shadow: black 7px 0 0;
-}
-
+/* Meet Hoku animation */
 .text-animation  {
   text-transform: uppercase;
   background-image: linear-gradient(
       -225deg,
       var(--vibrant-primary) 0%,
-      var(--vibrant-secondary) 29%,
-      var(--accent) 67%,
-      var(--dull-light) 100%
+      var(--vibrant-secondary) 20%,
+      var(--accent) 40%,
+      var(--dull-light) 60%,
+      var(--vibrant-secondary) 80%,
+      var(--vibrant-primary) 100%
   );
+  /* Text Clip */
   background-size: 200% auto;
-  color: #fff;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
