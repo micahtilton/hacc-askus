@@ -27,7 +27,7 @@ const Home = () => (
       </Col>
     </Row>
 
-    <Row className={"gx-5"}>
+    <Row>
       <Col xs={12} md={8}>
         <Row className={"bg-dull-light fw-bold rounded-4 p-3"}>
           <Col xs={2}>

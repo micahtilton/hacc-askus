@@ -198,7 +198,7 @@ body a {
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-  font-size: 80px;
+  font-size: 60px;
 }
 
 @keyframes textclip {
