@@ -23,7 +23,7 @@ const Home = () => (
         </div>
       </Col>
       <Col sm={12}>
-        <Image src="images/hoku-pfp.png" width={300} className={"my-3"} />
+        <Image src="images/hoku-pfp.png" width={300} className={"my-3"} alt={"Hoku Picture"} />
       </Col>
     </Row>
 

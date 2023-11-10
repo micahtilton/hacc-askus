@@ -66,7 +66,7 @@ const ChatBot = () => {
       <div className={`w-100 ${animationTag}`}>
         <div className="d-flex justify-content-between ps-2 p-2 bg-vibrant-primary rounded-top-4">
           <div className="d-flex fw-medium fs-5 m-1 text-white align-items-center">
-            <Image src={"images/hoku-pfp.png"} width={50} />
+            <Image src={"images/hoku-pfp.png"} width={50} alt={"Hoku Picture"} />
             <h1 className={"ps-3 m-0"}>Ask Hoku</h1>
           </div>
         </div>
@@ -102,7 +102,7 @@ const ChatBot = () => {
           ></Form.Control>
 
           <div className={"d-flex flex-column justify-content-center pe-2"}>
-            <Button size={"sm"} type={"submit"} className={"rounded-circle btn-vibrant-primary mt-2"}>
+            <Button aria-label="Send" size={"sm"} type={"submit"} className={"rounded-circle btn-vibrant-primary mt-2"}>
               <SendFill />
             </Button>
           </div>
