@@ -32,6 +32,7 @@ const insertEmbeddings = (data) => {
 };
 
 Meteor.startup(() => {
+  console.log(Meteor.settings);
   if (EmbeddingCollection.find().count() === 0) {
     import embedding_data_archive from "./data/embedding-data-archive.json";
     import embedding_data_bonus from "./data/embedding-data-bonus.json";
