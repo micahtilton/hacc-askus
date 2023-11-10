@@ -7,7 +7,6 @@ import { addFAQ, editFAQ, removeFAQ } from "../imports/api/FAQCollection";
 import { askHoku, hokuRepeat } from "./openai/hoku-tools";
 import { getEmbedding } from "./openai/openai-tools";
 import { getUsername, isAdmin } from "./Accounts";
-import embedding_data_archive from "./data/embedding-data-archive.json";
 
 Meteor.methods({
   getUsername,
