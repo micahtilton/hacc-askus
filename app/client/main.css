@@ -150,19 +150,19 @@ body a {
 
 @keyframes slide-left {
   0% {
-    right: -1000px;
+    transform: translateX(1000px);
   }
   100% {
-    right: 0;
+    transform: translateX(0);
   }
 }
 
 @keyframes slide-right {
   0% {
-    right: 0;
+    transform: translateX(0);
   }
   100% {
-    right: -1000px;
+    transform: translateX(1000px);
     display: none;
     pointer-events: none;
   }
