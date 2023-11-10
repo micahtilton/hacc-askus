@@ -161,11 +161,18 @@ body a {
   0% {
     right: 0;
   }
+  80% {
+    right: -1000px;
+    display: none;
+    pointer-events: none;
+    visibility: hidden;
+  }
   100% {
     right: -1000px;
     display: none;
     pointer-events: none;
     visibility: hidden;
+    max-width: 0;
   }
 }
 
