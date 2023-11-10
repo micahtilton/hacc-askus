@@ -29,7 +29,7 @@ const Home = () => (
 
     <Row>
       <Col xs={12} md={8}>
-        <Row className={"bg-dull-light fw-bold rounded-4 p-3"}>
+        <Row className={"bg-dull-light fw-bold rounded-4 p-3 m-1"}>
           <Col xs={2}>
             <CheckCircleFill className={"text-accent"} size={40} />
           </Col>

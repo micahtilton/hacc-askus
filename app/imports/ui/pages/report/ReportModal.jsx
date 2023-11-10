@@ -57,6 +57,13 @@ const ReportModal = ({ context, show, handleClose, onSubmit }) => {
     )
   };
 
+  const links = [];
+  for (let c of context.context) {
+    if (!c.source.includes("@") && c.similarity > 0.81) {
+      links.push(c.source);
+    }
+  }
+
   const close = () => {
     clearForm();
     handleClose();
@@ -65,9 +72,23 @@ const ReportModal = ({ context, show, handleClose, onSubmit }) => {
   return (
     <Modal show={show} onHide={close}>
       <Modal.Header closeButton>
-        <Modal.Title>Report AI Message</Modal.Title>
+        <Modal.Title>{links.length !== 0 ? "Can't find what you are looking for?" : "Report"}</Modal.Title>
       </Modal.Header>
+
       <Modal.Body>
+        {links.length !== 0 && (
+          <>
+            <h5>Try reading these articles</h5>
+            {links.map((link, index) => (
+              <div key={index}>
+                <a href={link} target="_blank">
+                  {link}
+                </a>
+              </div>
+            ))}
+            <h5 className={"mt-3"}>Inaccurate Information? Report it here</h5>
+          </>
+        )}
         <Form
           id={"report-form"}
           onSubmit={(e) => {
