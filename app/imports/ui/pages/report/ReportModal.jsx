@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
+import { toast } from 'react-toastify';
 
 const reportTypes = [
   "Inaccurate Information",
@@ -31,6 +32,8 @@ const ReportModal = ({ context, show, handleClose, onSubmit }) => {
     setReportDetails(copy);
   };
 
+  const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve, 3000));
+
   const handleSubmit = () => {
     const fullReport = {
       resolved: false,
@@ -45,6 +48,13 @@ const ReportModal = ({ context, show, handleClose, onSubmit }) => {
     onSubmit(fullReport);
     clearForm();
     handleClose();
+    toast.promise(
+      resolveAfter3Sec,
+      {
+        pending: 'Sending Report...',
+        success: 'Report Sent Successfully',
+      }
+    )
   };
 
   const close = () => {

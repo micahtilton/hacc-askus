@@ -4,6 +4,7 @@ import { BoxArrowRight, DoorOpen } from "react-bootstrap-icons";
 import { useTracker } from "meteor/react-meteor-data";
 import { Meteor } from "meteor/meteor";
 import { useNavigate } from "react-router";
+import { toast } from 'react-toastify';
 
 function Logo() {
   return (
@@ -81,6 +82,7 @@ const NavBar = () => {
             onClick={() => {
               Meteor.logout();
               navigate("/");
+              toast.success('Signed Out Successfully');
             }}
           >
             <div>

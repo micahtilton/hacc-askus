@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
+import { toast } from 'react-toastify';
 
 const ResolveModal = ({ report }) => {
   const [questionText, setQuestionText] = useState(report.question);
@@ -11,9 +12,19 @@ const ResolveModal = ({ report }) => {
     setQuestionText(report.question);
     setShow(true);
   };
+
+  const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve, 3000));
+
   const deleteReport = ({ _id }) => {
     Meteor.call("removeReport", _id);
     handleClose();
+    toast.promise(
+      resolveAfter3Sec,
+      {
+        pending: 'Deleting Report...',
+        success: 'Report Deleted',
+      }
+    )
   };
 
   const clearForm = () => {
@@ -81,7 +92,20 @@ const ResolveModal = ({ report }) => {
           >
             Delete
           </Button>
-          <Button form={"resolve-form"} type={"submit"} variant="primary">
+          <Button
+            form="resolve-form"
+            type="submit"
+            variant="primary"
+            onClick={() => {
+              toast.promise(
+                resolveAfter3Sec,
+                {
+                  pending: 'Resolving...',
+                  success: 'Report Resolved',
+                }
+              )
+            }}
+          >
             Resolve
           </Button>
         </Modal.Footer>

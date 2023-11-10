@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
+import { toast } from 'react-toastify';
 
 const EditFAQModal = ({ faq }) => {
   const [questionText, setQuestionText] = useState("");
@@ -13,11 +14,23 @@ const EditFAQModal = ({ faq }) => {
     setShow(true);
   };
 
+  const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve, 3000));
+
   const handleSubmit = () => {
     handleClose();
     Meteor.call("editFAQ", faq._id, questionText, answerText, (err) => {
       if (err) {
         console.log(err);
+        toast.error('FAQ Not Updated');
+      }
+      else {
+        toast.promise(
+          resolveAfter3Sec,
+          {
+            pending: 'Updating...',
+            success: 'FAQ Updated Successfully',
+          }
+        )
       }
     });
   };
@@ -25,6 +38,7 @@ const EditFAQModal = ({ faq }) => {
   const handleDelete = () => {
     handleClose();
     Meteor.call("removeFAQ", faq._id);
+    toast.success('FAQ Deleted');
   };
 
   return (
