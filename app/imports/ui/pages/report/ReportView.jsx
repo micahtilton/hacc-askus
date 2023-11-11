@@ -4,6 +4,7 @@ import ContextModal from "./ContextModal";
 import ResolveModal from "./ResolveModal";
 
 const ReportView = ({ report, index }) => {
+  // Alternate between light and dark, for the report row
   const bgTag = index % 2 === 0 ? "bg-dull-light" : "";
 
   return (

@@ -21,6 +21,7 @@ const ReportModal = ({ context, show, handleClose, onSubmit }) => {
     });
   };
 
+  // Uses a set to keep track of selected items
   const toggleReportType = (reportType, checked) => {
     const copy = { ...reportDetails };
     if (checked) {
@@ -32,6 +33,7 @@ const ReportModal = ({ context, show, handleClose, onSubmit }) => {
   };
 
   const handleSubmit = () => {
+    // Create the full report from form
     const fullReport = {
       resolved: false,
       ...reportDetails,
@@ -39,16 +41,21 @@ const ReportModal = ({ context, show, handleClose, onSubmit }) => {
       date: new Date(),
     };
 
+    // Turn set into an array
     fullReport.categories = Array.from(fullReport.categories);
+
+    // Replace empty comment with "No Comment Provided"
     if (fullReport.comment.trim() === "") {
-      fullReport.comment = "none given";
+      fullReport.comment = "No Comment Provided";
     }
 
+    // Use the onSubmit callback passed in by props
     onSubmit(fullReport);
     clearForm();
     handleClose();
   };
 
+  // Store all non emails in links array
   const links = [];
   for (let c of context.context) {
     if (!c.source.includes("@") && c.similarity > 0.81) {
@@ -56,6 +63,7 @@ const ReportModal = ({ context, show, handleClose, onSubmit }) => {
     }
   }
 
+  // Handle modal close
   const close = () => {
     clearForm();
     handleClose();

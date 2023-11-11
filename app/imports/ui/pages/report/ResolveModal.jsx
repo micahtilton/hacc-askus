@@ -3,6 +3,7 @@ import { Button, Form, Modal } from "react-bootstrap";
 import { toast } from "react-toastify";
 
 const ResolveModal = ({ report }) => {
+  // Populate questionText with the question the user asked
   const [questionText, setQuestionText] = useState(report.question);
   const [answerText, setAnswerText] = useState("");
 
@@ -13,9 +14,27 @@ const ResolveModal = ({ report }) => {
     setShow(true);
   };
 
+  // Delete report with id and close modal
   const deleteReport = ({ _id }) => {
     Meteor.call("removeReport", _id);
     toast.success("Removed Report");
+    handleClose();
+  };
+
+  const handleSubmit = () => {
+    const res = {
+      question: questionText,
+      answer: answerText,
+    };
+
+    if (res.question.trim() === "" || res.answer.trim() === "") {
+      return;
+    }
+
+    Meteor.call("resolveReport", report._id, res.question, res.answer);
+    toast.success("Report Resolved");
+
+    clearForm();
     handleClose();
   };
 
@@ -38,21 +57,7 @@ const ResolveModal = ({ report }) => {
             id={"resolve-form"}
             onSubmit={(e) => {
               e.preventDefault();
-
-              const res = {
-                question: questionText,
-                answer: answerText,
-              };
-
-              if (res.question.trim() === "" || res.answer.trim() === "") {
-                return;
-              }
-
-              Meteor.call("resolveReport", report._id, res.question, res.answer);
-              toast.success("Report Resolved");
-
-              clearForm();
-              handleClose();
+              handleSubmit();
             }}
           >
             <Form.Group className="mb-3">

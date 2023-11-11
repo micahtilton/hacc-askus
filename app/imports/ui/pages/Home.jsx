@@ -10,6 +10,9 @@ import {
   Server,
 } from "react-bootstrap-icons";
 
+// Basic mock-up of the ITS Homepage
+// Links do not work
+// Data taken from ITS webpage 11/6/2023
 const Home = () => (
   <Container className={"pb-5"}>
     <Row className="text-center d-flex p-2" xs={1} md={2}>

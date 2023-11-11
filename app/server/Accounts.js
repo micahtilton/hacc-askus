@@ -16,6 +16,7 @@ const createUser = (email, password, role) => {
   }
 };
 
+// Create users database if empty
 if (Meteor.users.find().count() === 0) {
   if (Meteor.settings.private.accounts) {
     console.log("Creating the default user(s)");
@@ -25,11 +26,14 @@ if (Meteor.users.find().count() === 0) {
   }
 }
 
+// Check if logged-in user is admin
+// Returns false if not logged-in
 const isAdmin = () => Meteor.userId() !== null && Roles.userIsInRole(Meteor.userId(), "admin");
 
+// Get username of the logged-in user
 const getUsername = () => {
   if (Meteor.user() === null) {
-    return "hello";
+    return "";
   } else {
     return Meteor.user().username;
   }
