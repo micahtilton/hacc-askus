@@ -2,7 +2,7 @@ import OpenAI from "openai";
 import { Meteor } from "meteor/meteor";
 
 const openai = new OpenAI({
-  apiKey: Meteor.settings["openai-api-key"],
+  apiKey: Meteor.settings.private["openai-api-key"],
 });
 
 const getEmbedding = async (text) => {

@@ -1,12 +1,21 @@
 :root {
-  --vibrant-primary: #06669b;
+  --vibrant-primary: #0073ab;
   --vibrant-secondary: #5593C7;
   --vibrant-light: #D5F4FF;
-  --dull-primary: #4387BA;
+  --dull-primary: #404243;
   --dull-secondary: #BAA98D;
-  --dull-light: #ffeecd;
-  --bg: #fff6ed;
-  --accent: #f4b242;
+  --dull-light: #fff9ec;
+  --bg: white;
+  --accent: #ffd151;
+
+  /*--vibrant-primary: #06669b;*/
+  /*--vibrant-secondary: #5593C7;*/
+  /*--vibrant-light: #D5F4FF;*/
+  /*--dull-primary: #4387BA;*/
+  /*--dull-secondary: #BAA98D;*/
+  /*--dull-light: #ffeecd;*/
+  /*--bg: #fff6ed;*/
+  /*--accent: #f4b242;*/
 }
 
 /* Navbar CSS */
@@ -16,7 +25,7 @@ nav {
 
 .navbar a {
   outline-color: var(--dull-light);
-  color: var(--dull-light) !important;
+  color: var(--bg) !important;
   border-bottom: 2px solid transparent;
 }
 
@@ -35,7 +44,7 @@ footer {
 }
 
 footer a {
-  color: var(--accent);
+  color: var(--accent) !important;
 }
 
 /* Body CSS */
@@ -49,7 +58,7 @@ body .fw-bold {
 }
 
 body a {
-  color: var(--accent);
+  color: var(--vibrant-primary);
 }
 
 .bg-dull-light {
@@ -86,7 +95,7 @@ body a {
 
 .btn-vibrant-primary {
   background-color: var(--vibrant-primary) !important;
-  border: 2px solid white !important;
+  border: none !important;
 }
 
 .btn-vibrant-primary:hover {
@@ -150,25 +159,21 @@ body a {
 
 @keyframes slide-left {
   0% {
-    right: -1000px;
+    transform: translateX(1000px);
   }
   100% {
-    right: 0;
+    transform: translateX(0);
   }
 }
 
 @keyframes slide-right {
   0% {
-    right: 0;
+    transform: translateX(0);
   }
   80% {
-    right: -1000px;
-    display: none;
-    pointer-events: none;
-    visibility: hidden;
+    transform: translateX(1000px);
   }
   100% {
-    right: -1000px;
     display: none;
     pointer-events: none;
     visibility: hidden;

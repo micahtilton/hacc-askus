@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
 function Logo() {
   return (
     <div className={"d-flex"}>
-      <Image height={55} src={"images/logo.png"} className={"pe-2 align-self-center"} />
+      <Image height={55} src={"images/logo.png"} className={"pe-2 align-self-center"} alt={"Hoku Picture"} />
       <div className={"logo"}>
         <div className={"m-0 p-0"}>Information</div>
         <div className={"m-0 p-0"}>Technology</div>
