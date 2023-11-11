@@ -4,7 +4,7 @@
   --vibrant-light: #D5F4FF;
   --dull-primary: #404243;
   --dull-secondary: #BAA98D;
-  --dull-light: #fff7e5;
+  --dull-light: #fff9ec;
   --bg: white;
   --accent: #ffd151;
 
@@ -58,7 +58,7 @@ body .fw-bold {
 }
 
 body a {
-  color: var(--accent);
+  color: var(--vibrant-primary);
 }
 
 .bg-dull-light {
