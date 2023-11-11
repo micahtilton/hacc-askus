@@ -5,7 +5,7 @@
   --dull-primary: #4387BA;
   --dull-secondary: #BAA98D;
   --dull-light: #ffeecd;
-  --bg: white;
+  --bg: #fff6ed;
   --accent: #f4b242;
 }
 
@@ -161,10 +161,20 @@ body a {
   0% {
     transform: translateX(0);
   }
+  80% {
+    right: -1000px;
+    display: none;
+    pointer-events: none;
+    visibility: hidden;
+  }
   100% {
     transform: translateX(1000px);
     display: none;
     pointer-events: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    max-width: 0;
   }
 }
 
@@ -188,7 +198,7 @@ body a {
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-  font-size: 80px;
+  font-size: 60px;
 }
 
 @keyframes textclip {
