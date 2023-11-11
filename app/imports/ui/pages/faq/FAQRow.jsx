@@ -3,6 +3,7 @@ import EditFAQModal from "./EditFAQModal";
 import React from "react";
 
 const FAQRow = ({ faq, index }) => {
+  // Alternates the background color for FAQ rows.
   const rowTag = index % 2 === 1 ? "" : "bg-dull-light";
   return (
     <Row className={`py-3 ${rowTag} rounded-3`}>

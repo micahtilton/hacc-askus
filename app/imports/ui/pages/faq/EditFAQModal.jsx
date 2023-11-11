@@ -7,18 +7,25 @@ const EditFAQModal = ({ faq }) => {
   const [answerText, setAnswerText] = useState(faq.text);
 
   const [show, setShow] = useState(false);
+
+  // Function to close the modal.
   const handleClose = () => setShow(false);
+
+  // Function to show the modal and set question and answer text based on the 'faq' prop.
   const handleShow = () => {
     setQuestionText(faq.question);
     setAnswerText(faq.text);
     setShow(true);
   };
 
+  // Function to handle form submission for editing an FAQ.
   const handleSubmit = () => {
+    // Close the modal.
     handleClose();
+
+    // Call the 'editFAQ' method on the server with FAQ id, question and answer text.
     Meteor.call("editFAQ", faq._id, questionText, answerText, (err) => {
       if (err) {
-        console.log(err);
         toast.error("Could not update FAQ");
       } else {
         toast.success("FAQ Updated");
@@ -26,6 +33,7 @@ const EditFAQModal = ({ faq }) => {
     });
   };
 
+  // Function to handle deleting an FAQ.
   const handleDelete = () => {
     handleClose();
     Meteor.call("removeFAQ", faq._id);
