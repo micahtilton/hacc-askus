@@ -10,9 +10,9 @@ const ChatBot = () => {
   const [hokuLoading, setHokuLoading] = useState(false);
   const [chatOpen, setChatOpen] = useState(true);
   const bottomOfChat = useRef();
-
   const animationTag = chatOpen ? "slide-in" : "slide-out";
 
+  // Scroll to the bottom of the chat when a new message is received.
   useEffect(() => {
     if (bottomOfChat.current) {
       bottomOfChat.current.scrollIntoView({ behavior: "smooth" });
@@ -21,6 +21,7 @@ const ChatBot = () => {
 
   useEffect(() => {
     setHokuLoading(true);
+    // Call the 'hokuRepeat' method on the server to initiate the conversation with Hoku
     Meteor.call(
       "hokuRepeat",
       "Aloha, I am Hoku! I can help you answer any questions you have about ITS! If I don't give you a helpful answer, click the info button on the top right and I will try to recommend some articles for you to take a look at.",
@@ -30,30 +31,36 @@ const ChatBot = () => {
           setHokuLoading(false);
         } else {
           setHokuLoading(false);
+          // Insert the Hoku introduction message into the messages state
           insertMessage({ sender: "hoku", context: res, reportable: false });
         }
       },
     );
   }, []);
 
+  // Function to insert a message.
   const insertMessage = (message) => {
     setMessages((p) => [...p, message]);
   };
 
+  // Function to handle user message submission.
   const handleSend = (e) => {
     e.preventDefault();
 
+    // If the user input is empty or whitespace, do not proceed
     if (!text.trim()) return;
 
     insertMessage({ sender: "user", text: text });
-
     setHokuLoading(true);
 
+    // Call the 'askHoku' method on the server to get a response to the user's message.
     Meteor.call("askHoku", text, (err, res) => {
       if (err) {
         console.log(err);
       } else {
         setHokuLoading(false);
+
+        // Insert Hoku's response into the messages array with the option to report.
         insertMessage({ sender: "hoku", context: res, reportable: true });
       }
     });

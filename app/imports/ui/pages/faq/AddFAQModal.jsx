@@ -5,19 +5,23 @@ import { toast } from "react-toastify";
 const AddFAQModal = () => {
   const [questionText, setQuestionText] = useState("");
   const [answerText, setAnswerText] = useState("");
-
   const [show, setShow] = useState(false);
+
+  // Function to close the FAQ modal.
   const handleClose = () => setShow(false);
+
+  // Function to show the FAQ modal and reset question and answer text.
   const handleShow = () => {
     setQuestionText("");
     setAnswerText("");
     setShow(true);
   };
 
+  // Function to handle FAQ submission.
   const handleSubmit = () => {
+    // Call the 'addFAQ' method on the server with question and answer text.
     Meteor.call("addFAQ", questionText, answerText, (err) => {
       if (err) {
-        console.log(err);
         toast.error("FAQ Not Added");
       } else {
         toast.success("FAQ Added");
