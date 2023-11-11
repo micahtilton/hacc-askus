@@ -33,9 +33,9 @@ const SignIn = () => {
   };
 
   return (
-    <Container fluid className="py-5">
+    <Container className="py-5">
       <Row className="justify-content-center text-center">
-        <Col lg={8} xl={6}>
+        <Col lg={8}>
           <Form
             id="login"
             className="p-3 m-5 rounded-3 bg-white border border-2 shadow-lg"
