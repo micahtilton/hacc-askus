@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 const ResolveModal = ({ report }) => {
   const [questionText, setQuestionText] = useState(report.question);
@@ -13,18 +13,10 @@ const ResolveModal = ({ report }) => {
     setShow(true);
   };
 
-  const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve, 3000));
-
   const deleteReport = ({ _id }) => {
     Meteor.call("removeReport", _id);
+    toast.success("Removed Report");
     handleClose();
-    toast.promise(
-      resolveAfter3Sec,
-      {
-        pending: 'Deleting Report...',
-        success: 'Report Deleted',
-      }
-    )
   };
 
   const clearForm = () => {
@@ -52,7 +44,12 @@ const ResolveModal = ({ report }) => {
                 answer: answerText,
               };
 
+              if (res.question.trim() === "" || res.answer.trim() === "") {
+                return;
+              }
+
               Meteor.call("resolveReport", report._id, res.question, res.answer);
+              toast.success("Report Resolved");
 
               clearForm();
               handleClose();
@@ -85,27 +82,15 @@ const ResolveModal = ({ report }) => {
         </Modal.Body>
         <Modal.Footer>
           <Button
+            className={"me-auto"}
             variant="danger"
             onClick={() => {
               deleteReport(report);
             }}
           >
-            Delete
+            Delete Report
           </Button>
-          <Button
-            form="resolve-form"
-            type="submit"
-            variant="primary"
-            onClick={() => {
-              toast.promise(
-                resolveAfter3Sec,
-                {
-                  pending: 'Resolving...',
-                  success: 'Report Resolved',
-                }
-              )
-            }}
-          >
+          <Button form="resolve-form" type="submit" variant="primary">
             Resolve
           </Button>
         </Modal.Footer>

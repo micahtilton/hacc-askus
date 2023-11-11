@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ExclamationCircle } from "react-bootstrap-icons";
 import ReportModal from "../report/ReportModal";
 import { Image } from "react-bootstrap";
+import { toast } from "react-toastify";
 
 function ChatLoading() {
   return (
@@ -20,8 +21,10 @@ const AiChatMessage = ({ context, loading = false, reportable = true }) => {
     Meteor.call("addReport", data, (err) => {
       if (err) {
         console.log("could not report message");
+        toast.error("Report could not send");
       } else {
         console.log("successfully inserted report");
+        toast.success("Report Sent");
       }
     });
   };

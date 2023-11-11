@@ -11,8 +11,8 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import { useTracker } from "meteor/react-meteor-data";
 import { Roles } from "meteor/alanning:roles";
 import SignIn from "../pages/SignIn";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AdminProtectedRoute = ({ ready, children }) => {
   const isLogged = Meteor.userId() !== null;
@@ -70,14 +70,15 @@ export const App = () => {
         </Routes>
         <ToastContainer
           position="bottom-left"
-          autoClose={5000}
-          hideProgressBar={false}
+          autoClose={1700}
+          closeButton={false}
+          hideProgressBar={true}
           newestOnTop={false}
-          closeOnClick
+          closeOnClick={false}
+          draggable={false}
+          pauseOnFocusLoss={false}
+          pauseOnHover={false}
           rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
           theme="colored"
         />
         <Footer />

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 const AddFAQModal = () => {
   const [questionText, setQuestionText] = useState("");
@@ -14,22 +14,13 @@ const AddFAQModal = () => {
     setShow(true);
   };
 
-  const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve, 3000));
-
   const handleSubmit = () => {
     Meteor.call("addFAQ", questionText, answerText, (err) => {
       if (err) {
         console.log(err);
-        toast.error('FAQ Not Added');
-      }
-      else {
-        toast.promise(
-          resolveAfter3Sec,
-          {
-            pending: 'Submitting...',
-            success: 'FAQ Added Successfully',
-          }
-        )
+        toast.error("FAQ Not Added");
+      } else {
+        toast.success("FAQ Added");
       }
     });
 

@@ -2,11 +2,16 @@
   --vibrant-primary: #0073ab;
   --vibrant-secondary: #5593C7;
   --vibrant-light: #D5F4FF;
-  --dull-primary: #404243;
+  --dull-primary: #2f2f31;
   --dull-secondary: #BAA98D;
   --dull-light: #fff9ec;
   --bg: white;
-  --accent: #ffd151;
+  --accent: #ffd368;
+
+  /*--toastify-color-info: #929292 !important;*/
+  /*--toastify-color-success: var(--vibrant-primary) !important;*/
+  /*--toastify-color-error: #df5345;*/
+  /*--toastify-color-transparent: #000;*/
 
   /*--vibrant-primary: #06669b;*/
   /*--vibrant-secondary: #5593C7;*/
