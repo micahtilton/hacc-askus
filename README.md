@@ -19,7 +19,7 @@ meteor npm run start
 Note: python3 should be installed in your path environment variable
 ### Python venv setup
 ```bash
-cd question-answer
+cd data-extraction
 python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
@@ -60,4 +60,4 @@ Even if prompt injections were made impossible and unauthorized data access is p
 
 This problem could be solved by a self-hosted LLM that Manoa would run on site. This does have its own problems, cost being one of them. But at least we would know exactly how our data is managed.
 
-## For a full list of scraped websites, [Click Here](https://github.com/micahtilton/hacc-askus/blob/main/question-answer/data/seen_urls.txt)
+## For a full list of scraped websites, [Click Here](https://github.com/micahtilton/hacc-askus/blob/main/data-extraction/data/seen_urls.txt)
