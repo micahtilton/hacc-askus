@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
+import { toast } from "react-toastify";
 
 const EditFAQModal = ({ faq }) => {
   const [questionText, setQuestionText] = useState("");
@@ -18,6 +19,9 @@ const EditFAQModal = ({ faq }) => {
     Meteor.call("editFAQ", faq._id, questionText, answerText, (err) => {
       if (err) {
         console.log(err);
+        toast.error("Could not update FAQ");
+      } else {
+        toast.success("FAQ Updated");
       }
     });
   };
@@ -25,11 +29,12 @@ const EditFAQModal = ({ faq }) => {
   const handleDelete = () => {
     handleClose();
     Meteor.call("removeFAQ", faq._id);
+    toast.success("FAQ Deleted");
   };
 
   return (
     <>
-      <div>
+      <div className={"d-flex flex-column justify-content-center"}>
         <Button className={"btn-vibrant-primary"} onClick={handleShow}>
           Edit
         </Button>
@@ -74,8 +79,8 @@ const EditFAQModal = ({ faq }) => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="danger" onClick={handleDelete}>
-            Delete
+          <Button className={"me-auto"} variant="danger" onClick={handleDelete}>
+            Delete FAQ
           </Button>
           <Button variant="secondary" onClick={handleClose}>
             Close

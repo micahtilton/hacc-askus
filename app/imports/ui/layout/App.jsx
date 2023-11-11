@@ -11,6 +11,8 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import { useTracker } from "meteor/react-meteor-data";
 import { Roles } from "meteor/alanning:roles";
 import SignIn from "../pages/SignIn";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AdminProtectedRoute = ({ ready, children }) => {
   const isLogged = Meteor.userId() !== null;
@@ -66,6 +68,19 @@ export const App = () => {
           />
           <Route path="*" element={<Page text={"Error 404: Page Not Found"} />} />
         </Routes>
+        <ToastContainer
+          position="bottom-left"
+          autoClose={1700}
+          closeButton={false}
+          hideProgressBar={true}
+          newestOnTop={false}
+          closeOnClick={false}
+          draggable={false}
+          pauseOnFocusLoss={false}
+          pauseOnHover={false}
+          rtl={false}
+          theme="colored"
+        />
         <Footer />
       </div>
     </Router>

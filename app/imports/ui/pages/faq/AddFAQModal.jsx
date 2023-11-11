@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
+import { toast } from "react-toastify";
 
 const AddFAQModal = () => {
   const [questionText, setQuestionText] = useState("");
@@ -17,6 +18,9 @@ const AddFAQModal = () => {
     Meteor.call("addFAQ", questionText, answerText, (err) => {
       if (err) {
         console.log(err);
+        toast.error("FAQ Not Added");
+      } else {
+        toast.success("FAQ Added");
       }
     });
 

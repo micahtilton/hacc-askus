@@ -1,6 +1,7 @@
 import { Mongo } from "meteor/mongo";
 import SimpleSchema from "simpl-schema";
 import { addFAQ } from "./FAQCollection";
+import { toast } from "react-toastify";
 
 const ReportCollection = new Mongo.Collection("reports");
 
@@ -44,7 +45,6 @@ const removeReport = (id) => {
   if (!Meteor.call("isAdmin")) {
     return;
   }
-
   ReportCollection.remove(id);
 };
 

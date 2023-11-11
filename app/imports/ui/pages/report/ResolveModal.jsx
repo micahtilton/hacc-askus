@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
+import { toast } from "react-toastify";
 
 const ResolveModal = ({ report }) => {
   const [questionText, setQuestionText] = useState(report.question);
@@ -11,8 +12,10 @@ const ResolveModal = ({ report }) => {
     setQuestionText(report.question);
     setShow(true);
   };
+
   const deleteReport = ({ _id }) => {
     Meteor.call("removeReport", _id);
+    toast.success("Removed Report");
     handleClose();
   };
 
@@ -41,7 +44,12 @@ const ResolveModal = ({ report }) => {
                 answer: answerText,
               };
 
+              if (res.question.trim() === "" || res.answer.trim() === "") {
+                return;
+              }
+
               Meteor.call("resolveReport", report._id, res.question, res.answer);
+              toast.success("Report Resolved");
 
               clearForm();
               handleClose();
@@ -74,14 +82,15 @@ const ResolveModal = ({ report }) => {
         </Modal.Body>
         <Modal.Footer>
           <Button
+            className={"me-auto"}
             variant="danger"
             onClick={() => {
               deleteReport(report);
             }}
           >
-            Delete
+            Delete Report
           </Button>
-          <Button form={"resolve-form"} type={"submit"} variant="primary">
+          <Button form="resolve-form" type="submit" variant="primary">
             Resolve
           </Button>
         </Modal.Footer>

@@ -15,6 +15,13 @@ const ManageFAQPage = () => {
       <Col className={"d-flex justify-content-center p-2"}>
         <AddFAQModal />
       </Col>
+
+      {faqs.length === 0 && (
+        <Col>
+          <h1 className={"text-center"}>No FAQ's in Database</h1>
+        </Col>
+      )}
+
       <Col>
         {faqs.map((faq, index) => (
           <FAQRow faq={faq} index={index} />

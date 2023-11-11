@@ -3,6 +3,7 @@ import { Meteor } from "meteor/meteor";
 import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import { EnvelopeFill, LockFill } from "react-bootstrap-icons";
 import { useNavigate } from "react-router";
+import { toast } from "react-toastify";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -25,9 +26,11 @@ const SignIn = () => {
       if (err) {
         resetForm();
         setError("Incorrect Username or Password");
+        toast.error("Unsuccessful Sign In");
       } else {
         resetForm();
         navigate("/");
+        toast.success("Signed In Successfully");
       }
     });
   };
@@ -55,7 +58,7 @@ const SignIn = () => {
                   id="email"
                   type="email"
                   placeholder="Enter email"
-                  className={"p-2 rounded-pill bg-light"}
+                  className={"p-2 rounded-pill bg-info-subtle"}
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -71,7 +74,7 @@ const SignIn = () => {
                   id="password"
                   type="password"
                   placeholder="Password"
-                  className={"p-2 rounded-pill bg-light"}
+                  className={"p-2 rounded-pill bg-info-subtle"}
                   value={password}
                   onChange={(e) => {
                     setPassword(e.target.value);
