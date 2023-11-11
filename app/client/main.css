@@ -162,13 +162,12 @@ body a {
     transform: translateX(0);
   }
   80% {
-    right: -1000px;
+    transform: translateX(1000px);
     display: none;
     pointer-events: none;
     visibility: hidden;
   }
   100% {
-    transform: translateX(1000px);
     display: none;
     pointer-events: none;
     visibility: hidden;
