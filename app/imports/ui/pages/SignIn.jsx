@@ -17,7 +17,9 @@ const SignIn = () => {
     setError("");
   };
 
+  // Uses Meteor's account mechanism to handle sign in
   const handleSubmit = () => {
+    // Returns an error if the user does not enter a password or email
     if (password === "" || email === "") {
       setError("Please Enter an Email and Password");
       return;
@@ -25,16 +27,19 @@ const SignIn = () => {
     Meteor.loginWithPassword(email, password, (err) => {
       if (err) {
         resetForm();
+        // Returns an error if the user enters an incorrect password or email
         setError("Incorrect Username or Password");
         toast.error("Unsuccessful Sign In");
       } else {
         resetForm();
+        // Returns user to Home page after successful sign in
         navigate("/");
         toast.success("Signed In Successfully");
       }
     });
   };
 
+  // Render the signin form
   return (
     <Container className="py-5">
       <Row className="justify-content-center text-center">

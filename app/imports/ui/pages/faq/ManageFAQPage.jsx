@@ -8,15 +8,19 @@ import AddFAQModal from "./AddFAQModal";
 Meteor.subscribe("resolved");
 
 const ManageFAQPage = () => {
+  // Get the FAQs from the database if there are any
   const faqs = useTracker(() => FAQCollection.find({}).fetch());
 
+  // Renders the FAQ page
   return (
     <Container>
       <Col className={"d-flex justify-content-center p-2"}>
         <AddFAQModal />
       </Col>
 
+
       {faqs.length === 0 && (
+        // If there are no FAQs in the database, display this message
         <Col>
           <h1 className={"text-center"}>No FAQ's in Database</h1>
         </Col>
