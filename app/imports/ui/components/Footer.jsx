@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import { Facebook, Instagram, Twitter, Youtube } from "react-bootstrap-icons";
 
+// Renders the footer
 const Footer = () => (
   <footer className="mt-auto py-3 pb-5">
     <Container>

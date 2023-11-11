@@ -6,7 +6,6 @@ import tiktoken
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-
 def get_embedding(text):
     response = openai.Embedding.create(
         input=text,
@@ -57,7 +56,7 @@ def get_answer(question, embedding_fp):
     return chat_response["choices"][0]["text"].strip(), data
 
 
-def split_by_tokens(text, max_tokes = 500):
+def split_by_tokens(text, max_tokes=500):
     enc = tiktoken.get_encoding("cl100k_base")
     tokens = enc.encode(text)
     n_tokens = len(tokens)

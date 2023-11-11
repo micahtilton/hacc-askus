@@ -2,6 +2,7 @@ import html2text
 from unidecode import unidecode
 import re
 
+
 def get_html2text_handler():
     h = html2text.HTML2Text()
     h.ignore_emphasis = True

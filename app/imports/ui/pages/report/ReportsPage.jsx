@@ -7,6 +7,7 @@ import { ReportCollection } from "../../../api/ReportCollection";
 Meteor.subscribe("reports");
 
 const ReportsPage = () => {
+  // Reactive data for the reports database
   const reports = useTracker(() => ReportCollection.find({}).fetch());
 
   return (

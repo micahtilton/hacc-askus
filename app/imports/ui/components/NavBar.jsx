@@ -33,6 +33,7 @@ const NavBar = () => {
     return "";
   });
 
+  // Renders the navbar
   return (
     <Navbar expand="lg" className={"text-center navbar-dark mb-3"}>
       <Container>
@@ -54,6 +55,7 @@ const NavBar = () => {
             <Nav.Link href="#">CONTACT US</Nav.Link>
           </Nav>
           {isAdmin && (
+            // If the current user is signed in and is an admin, display the FAQ and Report in the NavBar
             <Nav className={"d-flex justify-content-center me-auto"}>
               <br />
               <Nav.Link

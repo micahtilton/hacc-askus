@@ -13,19 +13,26 @@ import SignIn from "../pages/SignIn";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+// Only allow admins to view these routes
 const AdminProtectedRoute = ({ ready, children }) => {
   const isLogged = Meteor.userId() !== null;
+
+  // Return to signin page if user not logged-in
   if (!isLogged) {
-    return <Navigate to="/admin" />;
+    return <Navigate to="/signin" />;
   }
+
   if (!ready) {
     return <LoadingSpinner />;
   }
+
   const isAdmin = Roles.userIsInRole(Meteor.userId(), "admin");
 
+  // Navigates to not authorized page if user is not admin
   return isLogged && isAdmin ? children : <Navigate to="/notauthorized" />;
 };
 
+// Basic page with text
 const Page = ({ text }) => (
   <div className={"d-flex justify-content-center"}>
     <h1 className={"p-5"}>{text}</h1>
