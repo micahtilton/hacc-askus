@@ -8,10 +8,7 @@ const Footer = () => (
       <Row>
         <Col>
           <Row>
-            <Image
-              className={"pb-2"}
-              src={"https://www.hawaii.edu/its/wp-content/themes/system2018/images/footer-logo.png"}
-            />
+            <Image className={"pb-2"} src={"images/uh-footer-logo.png"} alt={"UH-Logo"} />
             <div>2444 Dole Street</div>
             <div>Honolulu, HI 96822</div>
           </Row>
