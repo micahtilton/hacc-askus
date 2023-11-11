@@ -33,10 +33,12 @@ const createContextFrom = (collection, embedding, contextAmount = 1, similarityT
 const createContext = (embedding, contextAmount = 2) => {
   const faqContext = createContextFrom(FAQCollection, embedding, 2, 0.8);
 
+  // Prioritize context from the FAQ database
   if (faqContext.length > 0) {
     return faqContext;
   }
 
+  // Get context from scraped data
   const archiveContext = createContextFrom(EmbeddingCollection, embedding, contextAmount, 0.75);
 
   if (archiveContext.length < contextAmount) {
@@ -46,6 +48,7 @@ const createContext = (embedding, contextAmount = 2) => {
   return archiveContext.slice(0, contextAmount);
 };
 
+// Used to simulate a chat response from Hoku
 const hokuRepeat = async (toRepeat, delayMS) => {
   await new Promise((r) => setTimeout(r, delayMS));
   return {
@@ -55,6 +58,7 @@ const hokuRepeat = async (toRepeat, delayMS) => {
   };
 };
 
+//
 const askHoku = async (question) => {
   const defaultAnswer = {
     answer: "",
@@ -62,6 +66,7 @@ const askHoku = async (question) => {
     question: question,
   };
 
+  // Uncomment to block logged-out users from using Hoku
   // if (!Meteor.call("isAdmin")) {
   //   defaultAnswer.answer = "Login for me to answer your questions :)";
   //   return defaultAnswer;
@@ -69,11 +74,13 @@ const askHoku = async (question) => {
 
   const questionEmbedding = await getEmbedding(question);
 
+  // Error checking
   if (questionEmbedding === null) {
     defaultAnswer.answer = "could not embed";
     return defaultAnswer;
   }
 
+  // Error checking
   const context = createContext(questionEmbedding);
   defaultAnswer.context = context;
   if (context.length === 0) {
@@ -81,8 +88,10 @@ const askHoku = async (question) => {
     return defaultAnswer;
   }
 
+  // Concat the text from the context
   const contextText = context.reduce((a, b) => a + " " + b.text, "");
 
+  // Hoku's prompt
   const prompt = `Context: ${contextText}\n\nYou are Hoku, an AI chat assistant to UH Manoa students. you give at most 3 sentence answers in the form of a text message. DO NOT mention the context or any external sources. You MUST ONLY give information based on the context above. if the question cant be answered based ONLY on the context above, say \"I'm sorry, I don't have the answer to that. question\".\n\nQuestion:${question}\nAnswer: `;
 
   const chatCompletion = await openai.completions.create({
@@ -92,11 +101,13 @@ const askHoku = async (question) => {
     max_tokens: 250,
   });
 
+  // Error checking
   if (chatCompletion === null) {
     defaultAnswer.answer = "Hoku is unavailable at the moment. Sorry for the inconvenience.";
     return defaultAnswer;
   }
 
+  // Return GPT response
   defaultAnswer.answer = chatCompletion.choices[0].text;
   return defaultAnswer;
 };

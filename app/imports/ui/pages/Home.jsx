@@ -10,7 +10,6 @@ import {
   Server,
 } from "react-bootstrap-icons";
 
-/* A simple static component to render some text for the landing page. */
 const Home = () => (
   <Container className={"pb-5"}>
     <Row className="text-center d-flex p-2" xs={1} md={2}>

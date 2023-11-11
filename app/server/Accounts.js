@@ -2,6 +2,7 @@ import { Meteor } from "meteor/meteor";
 import { Accounts } from "meteor/accounts-base";
 import { Roles } from "meteor/alanning:roles";
 
+// Create a user given email, password and role
 const createUser = (email, password, role) => {
   console.log(`  Creating user ${email}.`);
   const userID = Accounts.createUser({

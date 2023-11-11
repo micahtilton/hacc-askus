@@ -1,10 +1,12 @@
 import OpenAI from "openai";
 import { Meteor } from "meteor/meteor";
 
+// Load OpenAI with API key from Meteor Settings
 const openai = new OpenAI({
   apiKey: Meteor.settings.private["openai-api-key"],
 });
 
+// Async wrapper for text embedding
 const getEmbedding = async (text) => {
   const response = await openai.embeddings.create({
     input: text,

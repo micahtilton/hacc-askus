@@ -3,7 +3,6 @@ import Home from "../pages/Home";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom";
-import HelpDesk from "../pages/HelpDesk";
 import ReportsPage from "../pages/report/ReportsPage";
 import ManageFAQPage from "../pages/faq/ManageFAQPage";
 import { Meteor } from "meteor/meteor";
@@ -47,7 +46,6 @@ export const App = () => {
         <NavBar />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/help" element={<HelpDesk />} />
           <Route path="/notauthorized" element={<Page text={"You Are Not Authorized"} />} />
           <Route path="/signin" element={<SignIn />} />
           <Route
