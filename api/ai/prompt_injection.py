@@ -6,8 +6,8 @@ import os
 absolute_path = os.path.dirname(__file__)
 
 # Load data
-test = pd.read_parquet(os.path.join(absolute_path, "./data/test.parquet"))
-train = pd.read_parquet(os.path.join(absolute_path, "./data/train.parquet"))
+test = pd.read_parquet(os.path.join(absolute_path, "data/test.parquet"))
+train = pd.read_parquet(os.path.join(absolute_path, "data/train.parquet"))
 
 # Parse data
 X_train, y_train = train["text"], train["label"]
