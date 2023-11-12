@@ -1,10 +1,13 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 import pandas as pd
+import os
+
+absolute_path = os.path.dirname(__file__)
 
 # Load data
-test = pd.read_parquet("./data/test.parquet")
-train = pd.read_parquet("./data/train.parquet")
+test = pd.read_parquet(os.path.join(absolute_path, "./data/test.parquet"))
+train = pd.read_parquet(os.path.join(absolute_path, "./data/train.parquet"))
 
 # Parse data
 X_train, y_train = train["text"], train["label"]
