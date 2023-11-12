@@ -3,6 +3,31 @@ import { _ } from "underscore";
 import { FAQCollection } from "../../imports/api/FAQCollection";
 import { EmbeddingCollection } from "../../imports/api/EmbeddingCollection";
 import { getEmbedding, openai } from "./openai-tools";
+import axios from "axios";
+
+// Sends post request to flask API for prompt injection detection
+const isPromptInjection = async (text) => {
+  const url = 'http://127.0.0.1:8000/prompt_injection';
+  const data = {text: text};
+
+  let response = null;
+  try {
+    response = await axios.post(url, data, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  } catch {
+    console.error("error connecting to flask api")
+    return null;
+  }
+
+  if (response) {
+    return response.data["prompt_injection"];
+  } else {
+    return null;
+  }
+}
 
 const createContextFrom = (collection, embedding, contextAmount = 1, similarityThreshold = 1) => {
   let embeddings = collection.find({}).fetch();
@@ -31,7 +56,7 @@ const createContextFrom = (collection, embedding, contextAmount = 1, similarityT
 };
 
 const createContext = (embedding, contextAmount = 2) => {
-  const faqContext = createContextFrom(FAQCollection, embedding, 2, 0.8);
+  const faqContext = createContextFrom(FAQCollection, embedding, 2, 0.78);
 
   // Prioritize context from the FAQ database
   if (faqContext.length > 0) {
@@ -39,7 +64,7 @@ const createContext = (embedding, contextAmount = 2) => {
   }
 
   // Get context from scraped data
-  const archiveContext = createContextFrom(EmbeddingCollection, embedding, contextAmount, 0.75);
+  const archiveContext = createContextFrom(EmbeddingCollection, embedding, contextAmount, 0.78);
 
   if (archiveContext.length < contextAmount) {
     return archiveContext;
@@ -65,6 +90,15 @@ const askHoku = async (question) => {
     context: [],
     question: question,
   };
+
+  // Make API call for prompt injection detection
+  if (await isPromptInjection(question)) {
+    console.log("Prompt injection detected.");
+    // Slow down Hoku's immediate response to a prompt injection
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    defaultAnswer.answer= "Sorry, I don't quite understand the request.";
+    return defaultAnswer;
+  }
 
   // Uncomment to block logged-out users from using Hoku
   // if (!Meteor.call("isAdmin")) {
@@ -92,7 +126,7 @@ const askHoku = async (question) => {
   const contextText = context.reduce((a, b) => a + " " + b.text, "");
 
   // Hoku's prompt
-  const prompt = `Context: ${contextText}\n\nYou are Hoku, an AI chat assistant to UH Manoa students. you give at most 3 sentence answers in the form of a text message. DO NOT mention the context or any external sources. You MUST ONLY give information based on the context above. if the question cant be answered based ONLY on the context above, say \"I'm sorry, I don't have the answer to that. question\".\n\nQuestion:${question}\nAnswer: `;
+  const prompt = `Context: ${contextText}\n\nYou are Hoku, an AI chat assistant to UH Manoa students. you give at most 3 sentence answers in the form of a text message. DO NOT mention the context or any external sources. You MUST ONLY give answers based on the context above. If you cant answer a question based ONLY on the context above, say \"I'm sorry, I don't have the answer to that.\".\nQuestion:${question}\nAnswer: `;
 
   const chatCompletion = await openai.completions.create({
     model: "gpt-3.5-turbo-instruct",
