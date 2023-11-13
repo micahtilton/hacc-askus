@@ -56,6 +56,7 @@ if the question can't be answered based ONLY on the context above, say
 - No prompt is perfect but this is a decent way to get Hoku to respond with  information based only on the data provided in the prompt.
 - Hoku's response is limited to a max of 250 tokens. No prompt injection could make Hoku ignore this max token limit. It makes it harder for attackers to receive tons of data from Hoku at once.
 - A report system was created to allow users to report Hoku's responses for inaccurate, inadequate, or possibly harmful information. These reports can be resolved by ITS admins which then get inserted into a curated database of questions and answers. When the same question is asked, Hoku uses the updated information.
+- A Naive Bayes TF-IDF prompt injection classifier was trained on a dataset of roughly 600 labeled prompts. This model is being hosted on a Flask API endpoint. Hoku will first check if a user's question is likely to be a prompt injection and if so, She will not respond.
 ## Managing data access
 Currently, Hoku's database consists of only publicly available information. However, if Hoku's knowledge is expanded to private/protected information, data privacy would be a great concern. Prompt injections could possibly lead to a leak of private/sensitive data.
 ### What did we do to prepare for this?
