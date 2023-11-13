@@ -66,3 +66,11 @@ Even if prompt injections were made impossible and unauthorized data access is p
 This problem could be solved by a self-hosted LLM that Manoa would run on site. This does have its own problems, cost being one of them. But at least we would know exactly how our data is managed.
 
 ## For a full list of scraped websites, [Click Here](https://github.com/micahtilton/hacc-askus/blob/main/data-extraction/data/seen_urls.txt)
+<div align="center">
+  <h4>Developed By:</h4>
+  DarkMode
+  <br/>
+  <a href="https://kayleeagorilla.github.io/">Kaylee Agorilla</a>, 
+  <a href="https://malisalo.github.io/">Malisa Lo</a>, 
+  <a href="https://micahtilton.github.io/">Micah Tilton</a>
+</div>
