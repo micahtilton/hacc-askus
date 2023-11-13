@@ -48,11 +48,11 @@ const NavBar = () => {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className={"mx-auto"}>
-            <Nav.Link href="#">SERVICES</Nav.Link>
-            <Nav.Link href="#">INFORMATION SECURITY</Nav.Link>
-            <Nav.Link href="#">ALERTS</Nav.Link>
-            <Nav.Link href="#">ABOUT</Nav.Link>
-            <Nav.Link href="#">CONTACT US</Nav.Link>
+            <Nav.Link href="https://www.hawaii.edu/its/services/">SERVICES</Nav.Link>
+            <Nav.Link href="https://www.hawaii.edu/infosec/">INFORMATION SECURITY</Nav.Link>
+            <Nav.Link href="https://www.hawaii.edu/its/alerts/">ALERTS</Nav.Link>
+            <Nav.Link href="https://www.hawaii.edu/its/about/">ABOUT</Nav.Link>
+            <Nav.Link href="https://www.hawaii.edu/its/contact/">CONTACT ITS</Nav.Link>
           </Nav>
           {isAdmin && (
             // If the current user is signed in and is an admin, display the FAQ and Report in the NavBar

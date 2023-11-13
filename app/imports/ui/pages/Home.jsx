@@ -44,7 +44,7 @@ const Home = () => (
             <ClipboardCheckFill size={50} className={"m-2 text-accent"} />
           </Col>
           <Col>
-            <a href={"#"}>Distance Resources</a>
+            <a href={"https://www.hawaii.edu/its/covid-19-resources/"}>Distance Resources</a>
             <div>Teaching and Learning Remotely, Working Remotely, Video conferencing, Software Licenses</div>
           </Col>
         </Row>
@@ -53,7 +53,7 @@ const Home = () => (
             <ChatDotsFill size={50} className={"m-2 text-accent"} />
           </Col>
           <Col>
-            <a href={"#"}>Support Tools</a>
+            <a href={"https://www.hawaii.edu/its/support-tools/"}>Support Tools</a>
             <div>
               Email Account Practices, Google@UH, Laulima, MyUH, Reset Password, Supported Software, UH Alert Emergency
               Notification, UH Username, Wireless Information, OVPIT/CIO procurement approval requests
@@ -65,7 +65,7 @@ const Home = () => (
             <Server size={50} className={"m-2 text-accent"} />
           </Col>
           <Col>
-            <a href={"#"}>Servers, Data Center & Storage Services</a>
+            <a href={"https://www.hawaii.edu/its/servers-data-center-storage-services/"}>Servers, Data Center & Storage Services</a>
             <div>
               Cabinet Technical Specifications, Colocation Services, Data Center Services, Quick Start Guide, Resources,
               Service Expectations, VM Hosted Solutions
@@ -77,7 +77,7 @@ const Home = () => (
             <LaptopFill size={50} className={"m-2 text-accent"} />
           </Col>
           <Col>
-            <a href={"#"}>Instructional Technologies</a>
+            <a href={"https://www.hawaii.edu/its/instructional-technology/"}>Instructional Technologies</a>
             <div>
               Computer Labs, Distance Learning, UH Online Innovation Center, Educational Cable Access, Video
               Conferencing, Laulima
@@ -89,7 +89,7 @@ const Home = () => (
             <BuildingFill size={50} className={"m-2 text-accent"} />
           </Col>
           <Col>
-            <a href={"#"}>Cyberinfrastructure</a>
+            <a href={"https://www.hawaii.edu/its/ci/"}>Cyberinfrastructure</a>
             <div>
               Collaborative Research, Data Management, High Performance Computing Resources, Research Data Storage,
               Research Software Engineering, Research Virtual Machines
@@ -101,7 +101,7 @@ const Home = () => (
             <Newspaper size={50} className={"m-2 text-accent"} />
           </Col>
           <Col>
-            <a href={"#"}>News & Information</a>
+            <a href={"https://www.hawaii.edu/its/category/news/"}>News & Information</a>
             <div>View the latest news and information in the Information Technology Services department.</div>
           </Col>
         </Row>
@@ -110,37 +110,37 @@ const Home = () => (
       <Col>
         <Row className={"my-3"}>
           <div className={"fw-bold fs-4"}>Current & Recent Outages</div>
-          <a href={"#"} className={"p-3"}>
-            [RESOLVED] UH Manoa Wireless Network Maintenance 11/5/2023 at 6:00pm HST to 11/6/2023 5:00am (Nov 5)
+          <a href={"https://www.hawaii.edu/its/alerts/?t=2&id=20084"} className={"p-3"}>
+            [RESOLVED] AT-WEB: Wordpress Updates for multisite installations (Nov 9)
           </a>
-          <a href={"#"} className={"p-3"}>
-            [RESOLVED] Hardware issue in data center caused server reboots (Nov 4)
+          <a href={"https://www.hawaii.edu/its/alerts/?t=2&id=20074"} className={"p-3"}>
+            [RESOLVED] AT-WEB: Wordpress Updates for multisite installations (Nov 8)
           </a>
         </Row>
         <Row className={"my-3"}>
           <div className={"fw-bold fs-4"}>Security Alerts</div>
-          <a href={"#"} className={"p-3"}>
-            Security Alert: Multiple security vulnerabilities in the SoftEther VPN client
+          <a href={"https://www.hawaii.edu/its/alerts/?t=3&id=10378"} className={"p-3"}>
+            Phishing Attempt: Office of the Dean - Important message
           </a>
-          <a href={"#"} className={"p-3"}>
-            Phishing Attempt: **URGENT** Declared Major Change
+          <a href={"https://www.hawaii.edu/its/alerts/?t=3&id=10374"} className={"p-3"}>
+            Security Alert: Multiple security vulnerabilities in the SoftEther VPN client
           </a>
         </Row>
         <Row className={"my-3"}>
           <div className={"fw-bold fs-4"}>Scheduled Maintenance</div>
-          <a href={"#"} className={"p-3"}>
+          <a href={"https://www.hawaii.edu/its/alerts/?t=2&id=20002"} className={"p-3"}>
             BANNER: Apply December 2023 Upgrade Bundle (Dec 2)
           </a>
-          <a href={"#"} className={"p-3"}>
+          <a href={"https://www.hawaii.edu/its/alerts/?t=2&id=19781"} className={"p-3"}>
             Scheduled Maintenance for apply.hawaii.edu (Jan 20)
           </a>
         </Row>
         <Row className={"my-3"}>
           <div className={"fw-bold fs-4"}>General Notices</div>
-          <a href={"#"} className={"p-3"}>
+          <a href={"https://www.hawaii.edu/its/alerts/?t=4&id=10376"} className={"p-3"}>
             Notice: End of support for macOS 11 (Big Sur)
           </a>
-          <a href={"#"} className={"p-3"}>
+          <a href={"https://www.hawaii.edu/its/alerts/?t=4&id=10365"} className={"p-3"}>
             Notice: macOS 14 (Sonoma) advisory
           </a>
         </Row>
