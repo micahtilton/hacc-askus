@@ -20,7 +20,7 @@ const Footer = () => (
               An <a href={"https://www.hawaii.edu/offices/eeo/policies/"}>equal opportunity/affirmative action institution</a>
             </div>
             <div>
-              Use of this site implies consent with out <a href={"https://www.hawaii.edu/infotech/policies/itpolicy.html"}>Usage Policy</a> copyright © 2018{" "}
+              Use of this site implies consent with out <a href={"https://www.hawaii.edu/infotech/policies/itpolicy.html"}>Usage Policy</a> copyright © 2023{" "}
               <a href={"https://www.hawaii.edu/"}>University of Hawaiʻi</a>
             </div>
           </Row>
