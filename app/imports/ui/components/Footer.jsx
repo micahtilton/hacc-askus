@@ -17,33 +17,33 @@ const Footer = () => (
         <Col>
           <Row>
             <div>
-              An <a href={"#"}>equal opportunity/affirmative action institution</a>
+              An <a href={"https://www.hawaii.edu/offices/eeo/policies/"}>equal opportunity/affirmative action institution</a>
             </div>
             <div>
-              Use of this site implies consent with out <a href={"#"}>Usage Policy</a> copyright © 2018{" "}
-              <a href={"#"}>University of Hawaiʻi</a>
+              Use of this site implies consent with out <a href={"https://www.hawaii.edu/infotech/policies/itpolicy.html"}>Usage Policy</a> copyright © 2023{" "}
+              <a href={"https://www.hawaii.edu/"}>University of Hawaiʻi</a>
             </div>
           </Row>
         </Col>
         <Col>
           <Row>
             <div>
-              <a href={"#"}>Calendar</a>
+              <a href={"https://www.hawaii.edu/calendar/"}>Calendar</a>
             </div>
             <div>
-              <a href={"#"}>Directory</a>
+              <a href={"https://www.hawaii.edu/directory/"}>Directory</a>
             </div>
             <div>
-              <a href={"#"}>Emergency Information</a>
+              <a href={"https://www.hawaii.edu/emergency/"}>Emergency Information</a>
             </div>
             <div>
-              <a href={"#"}>MyUH</a>
+              <a href={"https://myuh.hawaii.edu/"}>MyUH</a>
             </div>
             <div>
-              <a href={"#"}>Privacy Statement</a>
+              <a href={"https://www.hawaii.edu/privacy/"}>Privacy Statement</a>
             </div>
             <div>
-              <a href={"#"}>Work at UH</a>
+              <a href={"http://workatuh.hawaii.edu/"}>Work at UH</a>
             </div>
           </Row>
         </Col>
@@ -58,14 +58,14 @@ const Footer = () => (
           </Row>
           <Row>
             <div>
-              <a href={"#"}>Contact UH</a>
+              <a href={"https://www.hawaii.edu/contact/"}>Contact UH</a>
             </div>
             <div>
               If required, information contained on this website can be made available in an alternative format upon
               request.
             </div>
             <div>
-              <a href={"#"}>Get Adobe Acrobat Reader</a>
+              <a href={"https://get.adobe.com/reader/"}>Get Adobe Acrobat Reader</a>
             </div>
           </Row>
         </Col>
