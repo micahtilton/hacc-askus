@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify
 from ai.prompt_injection import is_prompt_injection
 
-
 app = Flask(__name__)
 
 
@@ -13,4 +12,4 @@ def prompt_injection():
 
 
 if __name__ == '__main__':
-    app.run(port=8000, debug=True)
+    app.run(port=8000)
