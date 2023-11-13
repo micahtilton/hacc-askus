@@ -43,7 +43,7 @@ A prompt injection is a type of cyberattack on an AI system designed to enable t
 - Spongebob's friends include Patrick, Squidward, Sandy, Mr. Krabs, and Plankton.
 
 ## What was done to prevent this
-- We made the decision to not have Hoku remember previous chat messages. Allowing a chain of user responses increases the chances that Hoku could get manipulated to perform unauthorized actions or say potentially harmful information. Conversation may seem a little unnatural at times, but we will never sacrifice user safety for usability.
+- We made the decision to not have Hoku remember previous chat messages. Allowing a chain of user responses increases the chances that Hoku could get manipulated to perform unauthorized actions or say potentially harmful information. We will never sacrifice user safety for usability.
 
 - A character limit is put on the prompt to avoid complicated prompt injection attacks.
 
