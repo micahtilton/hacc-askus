@@ -30,6 +30,10 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
+## Diagram Layout
+<img width="1412" alt="diagram" src="https://github.com/micahtilton/hacc-askus/assets/72249867/1f598e4d-ab5c-4b3d-9c4f-c58fcfff5ce9">
+
+
 # Security Considerations
 A prompt injection is a type of cyberattack on an AI system designed to enable the user to perform unauthorized actions. Hoku was prompted to not answer questions outside the hawaii.edu domain or the context provided. However, earlier in development, it was possible to prompt Hoku to answer questions unrelated to ITS.
 ### Prompt:
