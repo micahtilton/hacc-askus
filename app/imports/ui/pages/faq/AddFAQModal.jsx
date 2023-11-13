@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Form, Modal } from "react-bootstrap";
+import { Button, Form, InputGroup, Modal } from "react-bootstrap";
 import { toast } from "react-toastify";
 
 const AddFAQModal = () => {
@@ -19,6 +19,9 @@ const AddFAQModal = () => {
 
   // Function to handle FAQ submission.
   const handleSubmit = () => {
+    if (questionText.trim() === "" || answerText.trim() === "") {
+      return;
+    }
     // Call the 'addFAQ' method on the server with question and answer text.
     Meteor.call("addFAQ", questionText, answerText, (err) => {
       if (err) {
@@ -51,26 +54,34 @@ const AddFAQModal = () => {
           >
             <Form.Group className="mb-3">
               <Form.Label>Question</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Question"
-                value={questionText}
-                onChange={(e) => {
-                  setQuestionText(e.target.value);
-                }}
-              />
+              <InputGroup hasValidation>
+                <Form.Control
+                  type="text"
+                  placeholder="Question"
+                  value={questionText}
+                  isInvalid={questionText.trim() === ""}
+                  onChange={(e) => {
+                    setQuestionText(e.target.value);
+                  }}
+                />
+                <Form.Control.Feedback type="invalid">Question field is required</Form.Control.Feedback>
+              </InputGroup>
             </Form.Group>
 
             <Form.Group className="mb-3">
               <Form.Label>Answer</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Answer"
-                value={answerText}
-                onChange={(e) => {
-                  setAnswerText(e.target.value);
-                }}
-              />
+              <InputGroup hasValidation>
+                <Form.Control
+                  type="text"
+                  placeholder="Answer"
+                  value={answerText}
+                  isInvalid={answerText.trim() === ""}
+                  onChange={(e) => {
+                    setAnswerText(e.target.value);
+                  }}
+                />
+                <Form.Control.Feedback type="invalid">Answer field is required</Form.Control.Feedback>
+              </InputGroup>
             </Form.Group>
           </Form>
         </Modal.Body>
