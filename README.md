@@ -21,6 +21,13 @@ cd app
 meteor reset
 meteor npm run start
 ```
+### Create Meteor settings directory
+```bash
+cd app
+mkdir config
+cd config
+touch settings.development.json
+```
 Note: python3 should be installed in your path environment variable
 ### Python venv setup
 ```bash
@@ -50,7 +57,7 @@ A prompt injection is a type of cyberattack on an AI system designed to enable t
 - Only contexts that have a similarity of 0.8 (1.0 being most similar) or higher are considered. This means that if the user's question is not similar to any data in the database, a request to OpenAI's GPT 3.5 model is not made. In this case, a prompt injection is not possible.
 - We prompt Hoku with this
 ```
-You are Hoku, an AI chat assistant to help UH Manoa students. 
+You are Hoku, an AI chat assistant to help UH students. 
 You give at most 3 sentence answers in the form of a text message. 
 DO NOT mention the context or any external sources. 
 You MUST ONLY give information based on the context above. 
